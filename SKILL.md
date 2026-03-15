@@ -114,7 +114,7 @@ Após confirmação, gerar SKILL.md com `references/skill-anatomy.md` e ir para 
 
 ## QA Automático
 
-Executar TODOS os 9 checks antes de mostrar o SKILL.md gerado. Não pular nenhum.
+Executar TODOS os 10 checks antes de mostrar o SKILL.md gerado. Não pular nenhum.
 
 ```
 □ 1. Nome em kebab-case? (sem espaços, sem underscores, sem maiúsculas)
@@ -126,10 +126,11 @@ Executar TODOS os 9 checks antes de mostrar o SKILL.md gerado. Não pular nenhum
 □ 7. Sem linguagem vaga? ("handle appropriately", "format nicely", "as needed" são proibidos)
 □ 8. Negative boundaries definidos no YAML?
 □ 9. SKILL.md contém credencial, senha, token ou API key hardcoded?
+□ 10. Pelo menos 2 evals preparados para evals/evals.json? (prompt + expected_output)
 ```
 
 **Score < 7:** corrigir os itens com falha automaticamente, sem mostrar ao usuário.
-**Score ≥ 7:** mostrar SKILL.md com score "QA: X/9 ✓" e listar o que ainda poderia melhorar.
+**Score ≥ 7:** mostrar SKILL.md com score "QA: X/10 ✓" e listar o que ainda poderia melhorar.
 
 ### Se check 9 falhar (credencial detectada):
 
@@ -166,7 +167,25 @@ Após aprovação do SKILL.md:
 
 1. Criar pasta `~/.claude/skills/{nome-da-skill}/`
 2. Salvar o SKILL.md nessa pasta.
-3. Confirmar: "✓ Deployado em ~/.claude/skills/{nome}/"
+3. Criar `evals/evals.json` com os exemplos coletados durante o QA (check 10):
+   ```json
+   {
+     "skill_name": "{nome-da-skill}",
+     "evals": [
+       {
+         "id": 1,
+         "prompt": "{input real do exemplo 1}",
+         "expected_output": "{output esperado do exemplo 1}"
+       },
+       {
+         "id": 2,
+         "prompt": "{input real do exemplo 2}",
+         "expected_output": "{output esperado do exemplo 2}"
+       }
+     ]
+   }
+   ```
+4. Confirmar: "Deployado em ~/.claude/skills/{nome}/ (SKILL.md + evals/evals.json)"
 
 ### GitHub (opcional)
 
@@ -178,8 +197,15 @@ Se sim:
 2. Perguntar: "Qual o nome do seu repositório? (ex: {SEU_USUARIO}/skills)"
 3. Verificar se repo existe: `gh repo view {REPO}`
    - Se não existe: `gh repo create {REPO} --public`
-4. Commit e push com mensagem: `feat: add {nome} skill`
-5. Confirmar com URL do arquivo no GitHub.
+4. Gerar SKILL-publico.md: copiar o SKILL.md removendo:
+   - Paths absolutos internos (ex: `~/.claude/`, `/root/...`)
+   - Referências a vaults ou credentials específicos
+   - Lógica de deploy específica de ambiente
+   - Qualquer menção a contexto pessoal (nomes de pessoas, equipe interna)
+   E mantendo intactos: workflow, edge cases, QA checklist, exemplos, lógica da skill.
+5. Subir SKILL-publico.md (não o SKILL.md interno) + evals/evals.json.
+6. Commit e push com mensagem: `feat: add {nome} skill`
+7. Confirmar com URL do arquivo no GitHub.
 
 ---
 

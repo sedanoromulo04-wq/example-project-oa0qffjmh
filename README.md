@@ -77,11 +77,12 @@ O agente faz perguntas para entender o que entra, o que sai, e como é um result
 ```
 Você descreve →  Claude estrutura o workflow
                     ↓
-              QA automático (9 checks)
+              QA automático (10 checks)
                     ↓
               Você revisa e aprova
                     ↓
               Deploy em ~/.claude/skills/
+              (SKILL.md + evals/evals.json)
                     ↓
               Skill pronta para usar
 ```
@@ -93,6 +94,27 @@ O QA automático verifica:
 - Exemplos reais de input e output
 - Edge cases cobertos
 - Sem credenciais expostas no arquivo
+- Evals preparados para teste (prompt + output esperado)
+
+---
+
+## Estrutura de uma skill gerada
+
+Toda skill criada pelo `/criar-skill` gera no mínimo:
+
+```
+skill-name/
+├── SKILL.md              # Workflow, regras, edge cases
+└── evals/
+    └── evals.json        # Casos de teste (prompt + expected_output)
+```
+
+O `evals.json` permite testar se a skill está funcionando corretamente após refinamentos e serve como documentação de uso para quem instalar a skill.
+
+Opcionais (quando necessário):
+- `references/` — docs de apoio, specs, guias de estilo
+- `scripts/` — código executável (ex: geração de imagem, PDF)
+- `assets/` — fontes, templates, arquivos estáticos
 
 ---
 
@@ -113,8 +135,10 @@ skill-creator/
 ├── SKILL.md                        # A skill em si (instalar aqui)
 ├── README.md                       # Este arquivo
 ├── prompt-instalacao.md            # Prompt para configurar via agente
+├── evals/
+│   └── evals.json                  # Casos de teste do próprio skill-creator
 └── references/
-    ├── skill-anatomy.md            # Template de anatomia de um SKILL.md
+    ├── skill-anatomy.md            # Template de anatomia de uma skill
     └── guia-refinamento.md         # Guia de refinamento pós-deploy
 ```
 

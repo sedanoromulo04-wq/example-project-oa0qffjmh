@@ -63,3 +63,36 @@ Output: [como Claude deve reagir]
 ## Tamanho ideal
 - 100 a 300 linhas
 - Acima de 300: considerar dividir em múltiplas skills ou mover conteúdo para references/
+
+## Estrutura de pastas
+
+Uma skill completa tem no mínimo:
+
+```
+skill-name/
+  ├── SKILL.md              ← workflow, regras, edge cases
+  └── evals/
+      └── evals.json        ← casos de teste (prompt + expected_output)
+```
+
+O `evals/evals.json` segue este formato:
+
+```json
+{
+  "skill_name": "nome-da-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "input real que o usuário digitaria",
+      "expected_output": "descrição concreta do que a skill deve produzir"
+    }
+  ]
+}
+```
+
+Mínimo 2 evals por skill: 1 happy path + 1 edge case.
+
+Opcionais (só quando necessário):
+- `references/` — docs de apoio, specs, guias de estilo
+- `scripts/` — código executável (ex: geração de imagem, PDF)
+- `assets/` — fontes, templates, arquivos estáticos
