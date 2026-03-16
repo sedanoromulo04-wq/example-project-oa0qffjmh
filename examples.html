@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exemplos de Skills — Pixel Educacao</title>
+<title>Exemplos de Skills — Pixel Educação</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -88,7 +88,7 @@
     font-size: 11px; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.5px; margin-bottom: 10px;
   }
-  .skill-card .card-cat.conteudo { color: var(--accent); }
+  .skill-card .card-cat.conteudo, .skill-card .card-cat.conteúdo { color: var(--accent); }
   .skill-card .card-cat.produtividade { color: var(--green); }
   .skill-card .card-cat.financeiro { color: var(--yellow); }
   .skill-card .card-cat.dev { color: var(--purple); }
@@ -160,7 +160,7 @@
 
   <div class="categories" id="categories">
     <button class="cat-btn active" onclick="setCategory('all')">Todas</button>
-    <button class="cat-btn" onclick="setCategory('conteudo')">Conteudo</button>
+    <button class="cat-btn" onclick="setCategory('conteudo')">Conteúdo</button>
     <button class="cat-btn" onclick="setCategory('marketing')">Marketing</button>
     <button class="cat-btn" onclick="setCategory('produtividade')">Produtividade</button>
     <button class="cat-btn" onclick="setCategory('financeiro')">Financeiro</button>
@@ -170,7 +170,7 @@
 
   <div class="count" id="count"></div>
   <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" style="display:none">Nenhuma skill encontrada.</div>
+  <div class="empty" id="empty" style="display:none">Nenhuma skill encontrada. Tente outro termo.</div>
 
   <div class="footer-text">
     <a href="https://github.com/okjpg/skill-creator" target="_blank">github.com/okjpg/skill-creator</a>
@@ -179,7 +179,7 @@
 
 <script>
 const SKILLS = [
-  // ─── Conteudo ─────────────────────────────────────────
+  // ─── Conteúdo ─────────────────────────────────────────
   { cat: 'conteudo', name: 'post-linkedin', desc: 'Gera posts LinkedIn a partir de tema, insight ou experiencia', input: 'Tema ou insight', output: 'Post 1000-1500 chars com hook, desenvolvimento e CTA',
     triggers: ['cria post linkedin','escreve post','post sobre esse tema','linkedin post','transforma isso num post'],
     negatives: ['NAO usar para artigos longos','NAO usar para newsletter'],
@@ -210,7 +210,7 @@ const SKILLS = [
     negatives: ['NAO usar para criar o roteiro do video','NAO usar para editar video'],
     examples: [{input:'Reel sobre 3 ferramentas de vibe coding que uso todo dia',output:'Legenda: "Essas 3 ferramentas mudaram minha produtividade" + 10 hashtags relevantes'},{input:'(transcricao do reel colada)',output:'Extrai o gancho principal e gera legenda alinhada'}],
     edgeCases: ['Se tema generico: pedir especificidade','Se legenda > 2200 chars: encurtar'] },
-  { cat: 'conteudo', name: 'repurpose-conteudo', desc: 'Transforma 1 conteudo em multiplos formatos', input: 'Conteudo original (video, post, newsletter)', output: 'Versoes para LinkedIn, Instagram, Twitter, Newsletter',
+  { cat: 'conteudo', name: 'repurpose-conteudo', desc: 'Transforma 1 conteudo em multiplos formatos', input: 'Conteúdo original (video, post, newsletter)', output: 'Versoes para LinkedIn, Instagram, Twitter, Newsletter',
     triggers: ['repurpose esse conteudo','distribui pras redes','transforma em outros formatos','expande esse post','waterfall de conteudo'],
     negatives: ['NAO usar para criar conteudo do zero','NAO usar para traduzir'],
     examples: [{input:'(post linkedin colado com 1200 chars)',output:'Gera: 1 thread Twitter, 1 script de reel 60s, 1 carrossel 8 slides, 1 paragrafo de newsletter'},{input:'link do youtube',output:'Busca transcricao, mapeia angulos, gera formatos'}],

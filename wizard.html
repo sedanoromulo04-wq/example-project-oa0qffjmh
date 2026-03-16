@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skill Creator — Pixel Educacao</title>
+<title>Skill Creator — Pixel Educação</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -319,7 +319,7 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="badge">Pixel Educacao</div>
+    <div class="badge">Pixel Educação</div>
     <h1>Skill <span>Creator</span></h1>
     <p>Crie skills para Claude Code e OpenClaw em 4 passos</p>
   </div>
@@ -328,7 +328,7 @@
   <div class="steps">
     <div class="step-indicator active" data-step="0">
       <div class="bar"></div>
-      <span class="label">Definicao</span>
+      <span class="label">Definição</span>
     </div>
     <div class="step-indicator" data-step="1">
       <div class="bar"></div>
@@ -359,51 +359,51 @@
   <!-- Step 1 -->
   <div class="step-content active" id="step-0">
     <div class="card">
-      <h2>Definicao da Skill</h2>
-      <p class="subtitle">O que essa skill faz? Descreva o basico.</p>
+      <h2>Definição da Skill</h2>
+      <p class="subtitle">O que essa skill faz? Descreva o básico.</p>
 
       <div class="field">
-        <label>Nome da skill <span class="hint">(kebab-case, sem espacos)</span></label>
+        <label>Nome da skill <span class="hint">(kebab-case, sem espaços)</span></label>
         <input type="text" id="skillName" placeholder="responder-instagram" />
-        <div class="helper">Sem espacos, sem maiusculas, sem acentos. Ex: gerar-relatorio</div>
+        <div class="helper">Sem espaços, sem maiúsculas, sem acentos. Ex: gerar-relatorio</div>
       </div>
 
       <div class="field">
         <label>O que essa skill faz?</label>
-        <textarea id="skillPurpose" rows="3" placeholder="Sugere respostas para comentarios do Instagram no tom conversacional do usuario"></textarea>
+        <textarea id="skillPurpose" rows="3" placeholder="Sugere respostas para comentários do Instagram no tom conversacional do usuário"></textarea>
       </div>
 
       <div class="field">
-        <label>Qual e o input? <span class="hint">(o que o usuario fornece)</span></label>
-        <input type="text" id="skillInput" placeholder="Texto do comentario colado pelo usuario" />
+        <label>Qual é o input? <span class="hint">(o que o usuário fornece)</span></label>
+        <input type="text" id="skillInput" placeholder="Texto do comentário colado pelo usuário" />
       </div>
 
       <div class="field">
-        <label>Qual e o output? <span class="hint">(o que a skill produz)</span></label>
-        <input type="text" id="skillOutput" placeholder="3 sugestoes de resposta curtas no tom conversacional" />
+        <label>Qual é o output? <span class="hint">(o que a skill produz)</span></label>
+        <input type="text" id="skillOutput" placeholder="3 sugestões de resposta curtas no tom conversacional" />
       </div>
 
       <div class="field">
         <label>Passos do workflow <span class="hint">(o que a skill faz, passo a passo)</span></label>
         <div class="list-field" id="workflowList">
-          <div class="list-row"><input type="text" placeholder="Ex: Receber o comentario colado pelo usuario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
-          <div class="list-row"><input type="text" placeholder="Ex: Identificar tipo (elogio, pergunta, critica, spam)" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Receber o comentário colado pelo usuário" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Identificar tipo (elogio, pergunta, crítica, spam)" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
           <div class="list-row"><input type="text" placeholder="Ex: SE spam → sugerir ignorar ou deletar" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
-          <div class="list-row"><input type="text" placeholder="Ex: Gerar 3 opcoes de resposta com tons diferentes" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
-          <div class="list-row"><input type="text" placeholder="Ex: Apresentar as opcoes numeradas para o usuario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Gerar 3 opções de resposta com tons diferentes" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Apresentar as opções numeradas para o usuário" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
         </div>
-        <button class="btn-add" onclick="addRow('workflowList', 'Proximo passo...')">+ Adicionar passo</button>
-        <div class="helper">Cada passo = 1 acao. Use "SE [condicao] → [acao]" para condicionais.</div>
+        <button class="btn-add" onclick="addRow('workflowList', 'Próximo passo...')">+ Adicionar passo</button>
+        <div class="helper">Cada passo = 1 ação. Use "SE [condição] → [ação]" para condicionais.</div>
         <div style="background:rgba(121,192,255,0.08); border:1px solid rgba(121,192,255,0.2); border-radius:10px; padding:14px 16px; margin-top:12px; font-size:12px; line-height:1.7; color:var(--text-body);">
           <strong style="color:var(--blue);">Dica para workflows complexos</strong><br>
-          Se sua skill envolve passos detalhados — como acessar um site especifico, clicar em botoes na interface, preencher formularios, chamar rotas de API, ou navegar entre telas — escreva os passos de forma mais explicativa aqui (ex: "Acessar portal X, clicar no menu Y, preencher campo Z com o CNPJ"). Quanto mais detalhe, melhor o agente executa.<br><br>
-          Nao precisa ficar perfeito agora. O caminho real e: <strong style="color:var(--text);">gere a skill → rode no agente → ajuste o que nao funcionou</strong>. Cada vez que voce corrige um passo no SKILL.md, a skill fica mais precisa. Skills complexas geralmente precisam de 2-3 rodadas de refinamento ate ficarem solidas.
+          Se sua skill envolve passos detalhados — como acessar um site específico, clicar em botões na interface, preencher formulários, chamar rotas de API, ou navegar entre telas — escreva os passos de forma mais explicativa aqui (ex: "Acessar portal X, clicar no menu Y, preencher campo Z com o CNPJ"). Quanto mais detalhe, melhor o agente executa.<br><br>
+          Não precisa ficar perfeito agora. O caminho real é: <strong style="color:var(--text);">gere a skill → rode no agente → ajuste o que não funcionou</strong>. Cada vez que você corrige um passo no SKILL.md, a skill fica mais precisa. Skills complexas geralmente precisam de 2-3 rodadas de refinamento até ficarem sólidas.
         </div>
       </div>
     </div>
     <div class="actions">
       <div></div>
-      <button class="btn btn-primary" onclick="goTo(1)">Proximo</button>
+      <button class="btn btn-primary" onclick="goTo(1)">Próximo</button>
     </div>
   </div>
 
@@ -411,10 +411,10 @@
   <div class="step-content" id="step-1">
     <div class="card">
       <h2>Triggers e Limites</h2>
-      <p class="subtitle">Quando essa skill deve (e nao deve) ativar?</p>
+      <p class="subtitle">Quando essa skill deve (e não deve) ativar?</p>
 
       <div class="field">
-        <label>Trigger phrases <span class="hint">(minimo 5 — frases que o usuario digitaria)</span></label>
+        <label>Trigger phrases <span class="hint">(mínimo 5 — frases que o usuário digitaria)</span></label>
         <div class="list-field" id="triggersList">
           <div class="list-row"><input type="text" placeholder="Ex: responde esse comentario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
           <div class="list-row"><input type="text" placeholder="Ex: sugere resposta pro Instagram" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
@@ -426,7 +426,7 @@
       </div>
 
       <div class="field">
-        <label>Negative boundaries <span class="hint">(o que NAO deve ativar essa skill)</span></label>
+        <label>Negative boundaries <span class="hint">(o que NÃO deve ativar essa skill)</span></label>
         <div class="list-field" id="negativesList">
           <div class="list-row"><input type="text" placeholder="Ex: NAO usar para DMs" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
           <div class="list-row"><input type="text" placeholder="Ex: NAO usar para criar posts" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
@@ -436,7 +436,7 @@
     </div>
     <div class="actions">
       <button class="btn btn-secondary" onclick="goTo(0)">Voltar</button>
-      <button class="btn btn-primary" onclick="goTo(2)">Proximo</button>
+      <button class="btn btn-primary" onclick="goTo(2)">Próximo</button>
     </div>
   </div>
 
@@ -444,7 +444,7 @@
   <div class="step-content" id="step-2">
     <div class="card">
       <h2>Exemplos Concretos</h2>
-      <p class="subtitle">Mostre input real e output real. Minimo 2 exemplos.</p>
+      <p class="subtitle">Mostre input real e output real. Mínimo 2 exemplos.</p>
 
       <div id="examplesList">
         <div class="eval-pair">
@@ -455,7 +455,7 @@
           </div>
           <div class="field">
             <label>Output esperado</label>
-            <textarea rows="3" class="eval-output" placeholder="Ex: Gera 3 opcoes de resposta: 1 direta, 1 com pergunta, 1 com humor"></textarea>
+            <textarea rows="3" class="eval-output" placeholder="Ex: Gera 3 opções de resposta: 1 direta, 1 com pergunta, 1 com humor"></textarea>
           </div>
         </div>
         <div class="eval-pair">
@@ -474,7 +474,7 @@
     </div>
     <div class="actions">
       <button class="btn btn-secondary" onclick="goTo(1)">Voltar</button>
-      <button class="btn btn-primary" onclick="goTo(3)">Proximo</button>
+      <button class="btn btn-primary" onclick="goTo(3)">Próximo</button>
     </div>
   </div>
 
@@ -482,11 +482,11 @@
   <div class="step-content" id="step-3">
     <div class="card">
       <h2>Edge Cases</h2>
-      <p class="subtitle">O que acontece quando o input e inesperado?</p>
+      <p class="subtitle">O que acontece quando o input é inesperado?</p>
 
       <div class="list-field" id="edgeCasesList">
-        <div class="field"><div class="list-row"><input type="text" placeholder="Ex: Se usuario nao colar nenhum comentario: pedir o comentario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div></div>
-        <div class="field"><div class="list-row"><input type="text" placeholder="Ex: Se comentario for spam: sugerir deletar" /><button class="btn-remove" onclick="removeRow(this)">x</button></div></div>
+        <div class="field"><div class="list-row"><input type="text" placeholder="Ex: Se usuário não colar nenhum comentário: pedir o comentário" /><button class="btn-remove" onclick="removeRow(this)">x</button></div></div>
+        <div class="field"><div class="list-row"><input type="text" placeholder="Ex: Se comentário for spam: sugerir deletar" /><button class="btn-remove" onclick="removeRow(this)">x</button></div></div>
         <div class="field"><div class="list-row"><input type="text" placeholder="Ex: Se input em outro idioma: perguntar em qual idioma responder" /><button class="btn-remove" onclick="removeRow(this)">x</button></div></div>
       </div>
       <button class="btn-add" onclick="addEdgeCase()">+ Adicionar edge case</button>
@@ -519,7 +519,7 @@
       </div>
 
       <div class="install-hint">
-        <p><strong>Como instalar:</strong> Crie a pasta <code>~/.claude/skills/NOME/</code> e cole o <code>SKILL.md</code> la dentro. Crie tambem <code>evals/evals.json</code> na mesma pasta. Reinicie o Claude Code e a skill estara disponivel.</p>
+        <p><strong>Como instalar:</strong> Crie a pasta <code>~/.claude/skills/NOME/</code> e cole o <code>SKILL.md</code> lá dentro. Crie também <code>evals/evals.json</code> na mesma pasta. Reinicie o Claude Code e a skill estará disponível.</p>
         <p style="margin-top:8px"><strong>OpenClaw:</strong> Cole o conteudo do SKILL.md no seu workspace de skills.</p>
       </div>
     </div>
@@ -742,7 +742,7 @@ function addEdgeCase() {
   const list = document.getElementById('edgeCasesList');
   const field = document.createElement('div');
   field.className = 'field';
-  field.innerHTML = `<div class="list-row"><input type="text" placeholder="Se [condicao]: [acao]" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>`;
+  field.innerHTML = `<div class="list-row"><input type="text" placeholder="Se [condição]: [ação]" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>`;
   list.appendChild(field);
   field.querySelector('input').focus();
 }
@@ -772,7 +772,7 @@ function getData() {
 function generate() {
   const d = getData();
   if (!d.name || !d.purpose) {
-    alert('Preencha pelo menos o nome e o proposito da skill.');
+    alert('Preencha pelo menos o nome e o propósito da skill.');
     goTo(0);
     return;
   }
@@ -782,13 +782,13 @@ function generate() {
 
   const workflowStr = d.workflow.length > 0
     ? d.workflow.map((w, i) => `${i + 1}. ${w}`).join('\n')
-    : `1. Receber o input do usuario: ${d.input || '[definir input]'}.\n2. Processar e gerar o output: ${d.output || '[definir output]'}.\n3. Apresentar o resultado para o usuario.`;
+    : `1. Receber o input do usuário: ${d.input || '[definir input]'}.\n2. Processar e gerar o output: ${d.output || '[definir output]'}.\n3. Apresentar o resultado para o usuário.`;
 
   generatedSkill = `---
 name: ${d.name}
 description: >
   ${d.purpose}.
-  Ative quando o usuario pedir para executar essa tarefa.
+  Ative quando o usuário pedir para executar essa tarefa.
   Triggers: ${triggerStr}.
   NAO use para: ${negStr}.
 ---
@@ -807,7 +807,7 @@ ${d.output || '[Descreva o formato exato do output aqui]'}
 
 ## Edge Cases
 
-${d.edgeCases.length > 0 ? d.edgeCases.map(e => '- ' + e).join('\n') : '- Se input vazio: pedir o input ao usuario\n- Se input ambiguo: pedir esclarecimento'}
+${d.edgeCases.length > 0 ? d.edgeCases.map(e => '- ' + e).join('\n') : '- Se input vazio: pedir o input ao usuário\n- Se input ambíguo: pedir esclarecimento'}
 
 ## Examples
 
