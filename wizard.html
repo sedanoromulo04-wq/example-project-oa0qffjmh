@@ -443,29 +443,29 @@
   <!-- Step 3 -->
   <div class="step-content" id="step-2">
     <div class="card">
-      <h2>Exemplos Concretos</h2>
-      <p class="subtitle">Mostre input real e output real. Mínimo 2 exemplos.</p>
+      <h2>Exemplos de Uso</h2>
+      <p class="subtitle">Coloque pelo menos 2 exemplos reais: o que o usuário digita e o que a skill deve fazer.</p>
 
       <div id="examplesList">
         <div class="eval-pair">
-          <div class="eval-label">Exemplo 1 — happy path</div>
+          <div class="eval-label">Exemplo 1 — uso normal</div>
           <div class="field">
-            <label>Input</label>
-            <textarea rows="2" class="eval-input" placeholder="Ex: Cara, esse conteudo mudou minha visao. Obrigado!"></textarea>
+            <label>O que o usuário digita ou cola</label>
+            <textarea rows="2" class="eval-input" placeholder="Ex: Cara, esse conteúdo mudou minha visão. Obrigado!"></textarea>
           </div>
           <div class="field">
-            <label>Output esperado</label>
+            <label>O que a skill deve fazer</label>
             <textarea rows="3" class="eval-output" placeholder="Ex: Gera 3 opções de resposta: 1 direta, 1 com pergunta, 1 com humor"></textarea>
           </div>
         </div>
         <div class="eval-pair">
-          <div class="eval-label">Exemplo 2 — edge case</div>
+          <div class="eval-label">Exemplo 2 — situação problemática</div>
           <div class="field">
-            <label>Input</label>
+            <label>O que o usuário digita ou cola</label>
             <textarea rows="2" class="eval-input" placeholder="Ex: GANHE R$ 5.000 POR DIA clique no link"></textarea>
           </div>
           <div class="field">
-            <label>Output esperado</label>
+            <label>O que a skill deve fazer</label>
             <textarea rows="3" class="eval-output" placeholder="Ex: Identifica como spam. Sugere ignorar ou deletar."></textarea>
           </div>
         </div>
@@ -732,8 +732,8 @@ function addExample() {
   pair.className = 'eval-pair';
   pair.innerHTML = `
     <div class="eval-label">Exemplo ${count}</div>
-    <div class="field"><label>Input</label><textarea rows="2" class="eval-input" placeholder="Input real..."></textarea></div>
-    <div class="field"><label>Output esperado</label><textarea rows="3" class="eval-output" placeholder="Output esperado..."></textarea></div>
+    <div class="field"><label>O que o usuário digita ou cola</label><textarea rows="2" class="eval-input" placeholder="Input real..."></textarea></div>
+    <div class="field"><label>O que a skill deve fazer</label><textarea rows="3" class="eval-output" placeholder="O que a skill deve produzir..."></textarea></div>
   `;
   list.appendChild(pair);
 }
@@ -880,8 +880,8 @@ function reset() {
   // Reset examples list to default 2
   const el = document.getElementById('examplesList');
   el.innerHTML = `
-    <div class="eval-pair"><div class="eval-label">Exemplo 1 — happy path</div><div class="field"><label>Input</label><textarea rows="2" class="eval-input" placeholder="Input real..."></textarea></div><div class="field"><label>Output esperado</label><textarea rows="3" class="eval-output" placeholder="Output esperado..."></textarea></div></div>
-    <div class="eval-pair"><div class="eval-label">Exemplo 2 — edge case</div><div class="field"><label>Input</label><textarea rows="2" class="eval-input" placeholder="Input com problema..."></textarea></div><div class="field"><label>Output esperado</label><textarea rows="3" class="eval-output" placeholder="Como a skill deve reagir..."></textarea></div></div>
+    <div class="eval-pair"><div class="eval-label">Exemplo 1 — uso normal</div><div class="field"><label>O que o usuário digita ou cola</label><textarea rows="2" class="eval-input" placeholder="Input real..."></textarea></div><div class="field"><label>O que a skill deve fazer</label><textarea rows="3" class="eval-output" placeholder="O que a skill deve produzir..."></textarea></div></div>
+    <div class="eval-pair"><div class="eval-label">Exemplo 2 — situação problemática</div><div class="field"><label>O que o usuário digita ou cola</label><textarea rows="2" class="eval-input" placeholder="Input com problema..."></textarea></div><div class="field"><label>O que a skill deve fazer</label><textarea rows="3" class="eval-output" placeholder="Como a skill deve reagir..."></textarea></div></div>
   `;
   goTo(0);
 }
