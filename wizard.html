@@ -382,6 +382,24 @@
         <label>Qual e o output? <span class="hint">(o que a skill produz)</span></label>
         <input type="text" id="skillOutput" placeholder="3 sugestoes de resposta curtas no tom conversacional" />
       </div>
+
+      <div class="field">
+        <label>Passos do workflow <span class="hint">(o que a skill faz, passo a passo)</span></label>
+        <div class="list-field" id="workflowList">
+          <div class="list-row"><input type="text" placeholder="Ex: Receber o comentario colado pelo usuario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Identificar tipo (elogio, pergunta, critica, spam)" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: SE spam → sugerir ignorar ou deletar" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Gerar 3 opcoes de resposta com tons diferentes" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+          <div class="list-row"><input type="text" placeholder="Ex: Apresentar as opcoes numeradas para o usuario" /><button class="btn-remove" onclick="removeRow(this)">x</button></div>
+        </div>
+        <button class="btn-add" onclick="addRow('workflowList', 'Proximo passo...')">+ Adicionar passo</button>
+        <div class="helper">Cada passo = 1 acao. Use "SE [condicao] → [acao]" para condicionais.</div>
+        <div style="background:rgba(121,192,255,0.08); border:1px solid rgba(121,192,255,0.2); border-radius:10px; padding:14px 16px; margin-top:12px; font-size:12px; line-height:1.7; color:var(--text-body);">
+          <strong style="color:var(--blue);">Dica para workflows complexos</strong><br>
+          Se sua skill envolve passos detalhados — como acessar um site especifico, clicar em botoes na interface, preencher formularios, chamar rotas de API, ou navegar entre telas — escreva os passos de forma mais explicativa aqui (ex: "Acessar portal X, clicar no menu Y, preencher campo Z com o CNPJ"). Quanto mais detalhe, melhor o agente executa.<br><br>
+          Nao precisa ficar perfeito agora. O caminho real e: <strong style="color:var(--text);">gere a skill → rode no agente → ajuste o que nao funcionou</strong>. Cada vez que voce corrige um passo no SKILL.md, a skill fica mais precisa. Skills complexas geralmente precisam de 2-3 rodadas de refinamento ate ficarem solidas.
+        </div>
+      </div>
     </div>
     <div class="actions">
       <div></div>
@@ -542,9 +560,10 @@
 const TEMPLATES = {
   instagram: {
     name: 'responder-instagram',
-    purpose: 'Sugere respostas para comentarios do Instagram no tom conversacional do usuario. Recebe o comentario colado e gera 1-3 opcoes de resposta curtas e autenticass',
+    purpose: 'Sugere respostas para comentarios do Instagram no tom conversacional do usuario. Recebe o comentario colado e gera 1-3 opcoes de resposta curtas e autenticas',
     input: 'Texto do comentario colado pelo usuario',
     output: '3 sugestoes de resposta: 1 direta, 1 com pergunta de volta, 1 com toque pessoal',
+    workflow: ['Receber o texto do comentario colado pelo usuario', 'Identificar o tipo: elogio, pergunta, critica, spam ou hate', 'SE spam ou hate → informar e sugerir ignorar/deletar', 'SE outro idioma → perguntar em qual idioma responder', 'Gerar 3 opcoes de resposta com tons diferentes: direta, com pergunta, com humor', 'Apresentar as 3 opcoes numeradas para o usuario escolher'],
     triggers: ['responde esse comentario', 'sugere resposta pro Instagram', 'como respondo isso', 'me ajuda a responder no insta', 'resposta pra esse comentario'],
     negatives: ['NAO usar para DMs', 'NAO usar para criar posts ou reels', 'NAO usar para moderar ou deletar comentarios'],
     examples: [
@@ -555,9 +574,10 @@ const TEMPLATES = {
   },
   relatorio: {
     name: 'gerar-relatorio',
-    purpose: 'Gera relatorio semanal de metricas a partir de dados colados ou exportados. Formata em Markdown com graficos textuais, comparativos e insights',
+    purpose: 'Gera relatorio semanal de metricas a partir de dados colados ou exportados. Formata em Markdown com comparativos e insights',
     input: 'Dados brutos colados (CSV, tabela, ou texto com numeros)',
     output: 'Relatorio Markdown estruturado com resumo executivo, metricas principais, comparativo semanal e 3 insights',
+    workflow: ['Receber os dados brutos colados pelo usuario', 'Identificar formato dos dados (CSV, tabela, texto livre)', 'SE formato nao reconhecido → perguntar antes de processar', 'Extrair metricas principais: MRR, Churn, Novos, Ticket medio', 'Comparar com periodo anterior SE dados disponiveis', 'Gerar 3 insights acionaveis baseados nos dados', 'Formatar em Markdown com resumo executivo, tabela e conclusao'],
     triggers: ['gera relatorio', 'monta relatorio semanal', 'formata esses dados num relatorio', 'relatorio de metricas', 'analisa esses numeros'],
     negatives: ['NAO usar para criar dashboards visuais', 'NAO usar para importar dados de APIs', 'NAO usar para relatorios financeiros com compliance'],
     examples: [
@@ -571,6 +591,7 @@ const TEMPLATES = {
     purpose: 'Gera posts para LinkedIn a partir de um tema, insight ou experiencia. Segue estrutura de hook, contexto, desenvolvimento e CTA. Tom conversacional e direto',
     input: 'Tema, insight, experiencia ou dados que o usuario quer transformar em post',
     output: 'Post LinkedIn com 1000-1500 caracteres, estruturado com hook, desenvolvimento e CTA',
+    workflow: ['Receber o tema ou insight do usuario', 'SE tema vago → pedir contexto especifico antes de gerar', 'Definir angulo: numero impactante, provocacao, vulnerabilidade ou pergunta', 'Escrever hook (1-2 linhas que prendem atencao)', 'Desenvolver com contexto pessoal + lista com setas (->)', 'Fechar com insight + CTA (pergunta para engajamento)', 'Validar: 1000-1500 caracteres, sem emojis, sem cliches'],
     triggers: ['cria um post pro linkedin', 'escreve post linkedin', 'transforma isso num post', 'post sobre esse tema', 'linkedin post'],
     negatives: ['NAO usar para artigos longos', 'NAO usar para newsletter', 'NAO usar para outros formatos de rede social'],
     examples: [
@@ -584,6 +605,7 @@ const TEMPLATES = {
     purpose: 'Guia o processo de emissao de nota fiscal de servico (NFS-e) no portal da prefeitura. Preenche campos, valida dados e baixa o PDF gerado',
     input: 'Dados da nota: tomador (CNPJ/CPF), servico, valor, descricao',
     output: 'Nota fiscal emitida com PDF baixado e salvo localmente',
+    workflow: ['Receber dados: tomador (CNPJ/CPF), servico, valor', 'SE dados faltando → perguntar o que falta antes de prosseguir', 'Acessar portal da prefeitura', 'SE sessao expirada → fazer login com CPF + senha', 'Clicar em "Emitir NF"', 'Preencher campos: tomador, servico, valor, descricao', 'Confirmar emissao e aguardar processamento (5-10s)', 'Baixar PDF gerado e salvar localmente'],
     triggers: ['emitir nota fiscal', 'emitir NF', 'gerar nota de servico', 'emitir NFS-e', 'preciso emitir uma nota'],
     negatives: ['NAO usar para notas de produto (NF-e)', 'NAO usar para consultar notas ja emitidas', 'NAO usar para cancelar notas'],
     examples: [
@@ -600,6 +622,18 @@ function loadTemplate(key) {
   document.getElementById('skillPurpose').value = t.purpose;
   document.getElementById('skillInput').value = t.input;
   document.getElementById('skillOutput').value = t.output;
+
+  // Workflow
+  if (t.workflow && t.workflow.length) {
+    const wl = document.getElementById('workflowList');
+    wl.innerHTML = '';
+    t.workflow.forEach(w => {
+      const row = document.createElement('div');
+      row.className = 'list-row';
+      row.innerHTML = `<input type="text" value="${w}" /><button class="btn-remove" onclick="removeRow(this)">x</button>`;
+      wl.appendChild(row);
+    });
+  }
 
   // Triggers
   const tl = document.getElementById('triggersList');
@@ -718,6 +752,8 @@ function getData() {
   const purpose = document.getElementById('skillPurpose').value.trim();
   const input = document.getElementById('skillInput').value.trim();
   const output = document.getElementById('skillOutput').value.trim();
+  const workflow = [];
+  document.querySelectorAll('#workflowList .list-row input').forEach(el => { if (el.value.trim()) workflow.push(el.value.trim()); });
   const triggers = [];
   document.querySelectorAll('#triggersList .list-row input').forEach(el => { if (el.value.trim()) triggers.push(el.value.trim()); });
   const negatives = [];
@@ -730,7 +766,7 @@ function getData() {
   });
   const edgeCases = [];
   document.querySelectorAll('#edgeCasesList .list-row input').forEach(el => { if (el.value.trim()) edgeCases.push(el.value.trim()); });
-  return { name, purpose, input, output, triggers, negatives, examples, edgeCases };
+  return { name, purpose, input, output, workflow, triggers, negatives, examples, edgeCases };
 }
 
 function generate() {
@@ -743,6 +779,10 @@ function generate() {
 
   const triggerStr = d.triggers.map(t => '"' + t + '"').join(', ');
   const negStr = d.negatives.join('. ');
+
+  const workflowStr = d.workflow.length > 0
+    ? d.workflow.map((w, i) => `${i + 1}. ${w}`).join('\n')
+    : `1. Receber o input do usuario: ${d.input || '[definir input]'}.\n2. Processar e gerar o output: ${d.output || '[definir output]'}.\n3. Apresentar o resultado para o usuario.`;
 
   generatedSkill = `---
 name: ${d.name}
@@ -759,9 +799,7 @@ ${d.purpose}.
 
 ## Workflow
 
-1. Receber o input do usuario: ${d.input || '[definir input]'}.
-2. Processar e gerar o output: ${d.output || '[definir output]'}.
-3. Apresentar o resultado para o usuario.
+${workflowStr}
 
 ## Output Format
 
@@ -867,6 +905,16 @@ function showToast(msg) {
       document.getElementById('skillInput').value = s.input || '';
       document.getElementById('skillOutput').value = s.output || '';
 
+      if (s.workflow && s.workflow.length) {
+        const wl = document.getElementById('workflowList');
+        wl.innerHTML = '';
+        s.workflow.forEach(w => {
+          const row = document.createElement('div');
+          row.className = 'list-row';
+          row.innerHTML = '<input type="text" value="' + w + '" /><button class="btn-remove" onclick="removeRow(this)">x</button>';
+          wl.appendChild(row);
+        });
+      }
       if (s.triggers && s.triggers.length) {
         const tl = document.getElementById('triggersList');
         tl.innerHTML = '';
