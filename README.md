@@ -179,6 +179,6 @@ O wizard guia você por 4 passos e gera o SKILL.md + evals.json prontos para cop
 
 ## Feito por
 
-Bruno Okamoto — fundador do maior ecossistema de Micro-SaaS do Brasil.
+Bruno Okamoto · SaaS, IA & Empreendedorismo
 
-[LinkedIn](https://linkedin.com/in/brunookamoto) · [YouTube](https://youtube.com/@brunookamoto) · [Comunidade Micro-SaaS PRO](https://microsaas.com.br)
+[LinkedIn](https://linkedin.com/in/obrunookamoto) · [YouTube](https://youtube.com/@obrunookamoto) · [Instagram](https://instagram.com/obrunookamoto)
