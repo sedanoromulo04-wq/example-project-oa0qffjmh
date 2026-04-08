@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-commercial-diagnostic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Temos um professor de esporte com metodo validado, centros fisicos, casos reais e pouca presenca digital. Ele aceita aparecer e quer escalar com digital serio.",
+      "expected_output": "A skill deve aprovar o fit, classificar o cliente como Persona 2, indicar entrada por Fase 1 e recomendar handoff para torq-brand-foundation."
+    },
+    {
+      "id": 2,
+      "prompt": "Tenho um mentor novo, sem case, sem oferta clara e quero terceirizar todo meu Instagram para vender rapido.",
+      "expected_output": "A skill deve classificar o caso como nao-fit, apontar os eliminatorios e bloquear o avancar comercial."
+    }
+  ]
+}

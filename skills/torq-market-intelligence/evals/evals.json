@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-market-intelligence",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Preciso analisar o mercado de um medico premium com clinica consolidada, forte reputacao offline, pouca presenca digital e concorrentes muito parecidos no Instagram.",
+      "expected_output": "A skill deve produzir um research-dossier com categoria, mapa competitivo, voz do cliente, facts, inferences, hypotheses e recomendacao clara de proximo modulo do Torq."
+    },
+    {
+      "id": 2,
+      "prompt": "Quero ver concorrentes para copiar trends e fazer mais posts.",
+      "expected_output": "A skill deve bloquear a logica de trend-chasing, reposicionar o trabalho como inteligencia de mercado e evitar transformar a pesquisa em simples imitacao editorial."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "_schema": "torq-research-dossier-v1",
+  "meta": {
+    "client_name": "{Nome do cliente ou prospect}",
+    "project_slug": "{slug-do-projeto}",
+    "created_at": "{ISO-8601 timestamp}"
+  },
+  "market_snapshot": {
+    "category_now": "{Categoria percebida hoje}",
+    "category_target": "{Categoria desejada}",
+    "maturity": "{Baixa | media | alta}",
+    "demand_signals": [],
+    "saturation_signals": []
+  },
+  "competitive_map": {
+    "direct_competitors": [],
+    "indirect_competitors": [],
+    "repeated_patterns": [],
+    "openings": []
+  },
+  "voice_of_customer": {
+    "pain_points": [],
+    "desired_outcomes": [],
+    "language_clues": [],
+    "objections": []
+  },
+  "facts": [],
+  "inferences": [],
+  "hypotheses": [],
+  "strategic_readout": {
+    "core_opportunity": "{Melhor oportunidade identificada}",
+    "main_risk": "{Maior risco identificado}",
+    "recommended_next_step": "{brand-foundation | commercial-diagnostic | offer-engineering | c-level-strategy}"
+  }
+}

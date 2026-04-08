@@ -1,0 +1,60 @@
+{
+  "_schema": "torq-c-level-strategy-job-v1",
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "_description": "Contrato de referencia para requisicoes do orquestrador executivo Torq.",
+  "session": {
+    "job_id": "clevel-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "supabase": {
+    "table": "c_level_strategy_jobs",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "workspace_id": "{uuid}"
+  },
+  "company_context": {
+    "name": "{Nome da empresa}",
+    "stage": "pre-seed | seed | series-a | series-b | growth | mature",
+    "sector": "{Setor da empresa}",
+    "headcount": "{Numero aproximado de colaboradores}",
+    "annual_revenue": "{Faixa de receita anual}",
+    "key_context": "{Resumo do momento atual e do que esta em jogo}"
+  },
+  "strategic_challenge": {
+    "challenge_type": "vision | fundraising | culture | board | ma | pivot | operations | marketing | technology | information-systems | ai-strategy | cross-functional | client-operation",
+    "challenge_description": "{Descricao detalhada do desafio estrategico}",
+    "desired_outcome": "{O que precisa ser verdade ao final do trabalho}",
+    "constraints": "{Limites de prazo, orcamento, equipe ou mercado}",
+    "urgency": "high | medium | low"
+  },
+  "specialist_routing": {
+    "force_agent": null,
+    "_comment": "Deixe null para roteamento automatico ou especifique um agente do c-level-squad."
+  },
+  "command": {
+    "primary": "{vision | strategy | diagnose | synthesize | optimize | scale | position | architect | secure | ai-strategy | client-operation}",
+    "secondary": null
+  },
+  "brand_context": {
+    "brand_bible_ref": "{reference ou record id}",
+    "tone_override": null,
+    "forbidden_words": [],
+    "preferred_vocabulary": []
+  },
+  "output_preferences": {
+    "format": "structured-analysis | executive-brief | decision-framework | action-plan",
+    "horizon_focus": "h1-only | h1-h2 | all-horizons",
+    "include_tradeoffs": true,
+    "include_90day_plan": true,
+    "language": "pt-BR"
+  },
+  "synthesis": {
+    "request_cross_functional": false,
+    "additional_agents": []
+  }
+}

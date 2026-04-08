@@ -1,0 +1,23 @@
+{
+  "_schema": "torq-approval-job-v1",
+  "session": {
+    "job_id": "approval-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "asset": {
+    "asset_id": "{ID do ativo}",
+    "asset_type": "{post | carousel | script | email | landing-page | outro}",
+    "owner": "{Responsavel pelo ativo}",
+    "current_state": "draft | strategist_review | founder_review | approved | queued | published | measured | archived",
+    "channel": "{Canal de destino se houver}",
+    "core_claims": [],
+    "proof_references": []
+  },
+  "review_context": {
+    "required_approver": "{Founder, estrategista ou owner final}",
+    "tone_reference": "{Brand Bible ou voz de referencia}",
+    "cta": "{CTA principal}",
+    "risk_notes": []
+  }
+}

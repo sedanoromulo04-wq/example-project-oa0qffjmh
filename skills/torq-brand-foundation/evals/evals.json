@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-brand-foundation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Temos um especialista offline em nutrição esportiva com clínica consolidada, bons depoimentos, método validado, quase nenhuma presença digital e queremos estruturar posicionamento, identidade e um brand bible completo para preparar a entrada dele no digital.",
+      "expected_output": "A skill deve validar o fit com o Grupo Torq, classificar o cliente como Persona 2, executar pesquisa de mercado e concorrência, definir posicionamento, sistema verbal e direção visual, usar integrações Gemini na exploração visual quando disponíveis e entregar um Brand Bible premium com roadmap e handoff para oferta, VSL e funil."
+    },
+    {
+      "id": 2,
+      "prompt": "Quero só uma logo bonita e uns posts para Instagram de um mentor de negócios que ainda nem vendeu nada.",
+      "expected_output": "A skill deve interromper o fluxo principal, devolver diagnóstico de não-fit e explicar que o pedido não atende os critérios do Grupo Torq porque o cliente não tem prova real, está em estágio inicial e está pedindo branding fragmentado em vez de infraestrutura para conversão."
+    }
+  ]
+}

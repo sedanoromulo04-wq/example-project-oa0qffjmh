@@ -1,0 +1,30 @@
+{
+  "_schema": "torq-commercial-diagnostic-job-v1",
+  "session": {
+    "job_id": "commercial-diagnostic-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "prospect": {
+    "name": "{Nome do prospect ou cliente}",
+    "founder_name": "{Nome do founder}",
+    "niche": "{Nicho principal}",
+    "current_business_model": "{Como o negocio vende hoje}",
+    "product_or_service": "{Oferta atual}",
+    "proof_points": [],
+    "channels": [],
+    "willing_to_appear": true,
+    "estimated_budget": "{Faixa de investimento se conhecida}"
+  },
+  "context": {
+    "pain_statement": "{Dor principal relatada}",
+    "goal_statement": "{Objetivo declarado}",
+    "known_constraints": [],
+    "notes_from_call": []
+  },
+  "output_preferences": {
+    "language": "pt-BR",
+    "return_type": "markdown",
+    "include_scope_recommendation": true
+  }
+}

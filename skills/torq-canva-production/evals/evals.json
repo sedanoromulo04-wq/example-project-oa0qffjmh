@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-canva-production",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Temos um carrossel aprovado sobre um erro estrutural do nicho e preciso transformar isso em 8 slides para Canva.",
+      "expected_output": "A skill deve gerar um brief frame a frame, com hierarquia textual, direcao visual e checklist de producao."
+    },
+    {
+      "id": 2,
+      "prompt": "Nao temos estrategia ainda, mas faz um visual premium para ver se vende.",
+      "expected_output": "A skill deve bloquear a producao, explicar que Canva nao substitui estrategia e recomendar retorno para os modulos anteriores."
+    }
+  ]
+}

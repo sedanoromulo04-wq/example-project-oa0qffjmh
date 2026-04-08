@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-distribution-ops",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Este post ja esta aprovado. Quero preparar a fila para LinkedIn na proxima semana e registrar o que medir.",
+      "expected_output": "A skill deve validar a aprovacao, criar o distribution-job, mover o ativo para queued e definir metrica principal e loop de aprendizado."
+    },
+    {
+      "id": 2,
+      "prompt": "Publica isso agora mesmo, ainda nao passou por aprovacao.",
+      "expected_output": "A skill deve bloquear a fila, apontar a ausencia de aprovacao e impedir a transicao para queued ou published."
+    }
+  ]
+}

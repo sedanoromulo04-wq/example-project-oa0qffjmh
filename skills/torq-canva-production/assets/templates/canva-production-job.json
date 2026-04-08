@@ -1,0 +1,22 @@
+{
+  "_schema": "torq-canva-production-job-v1",
+  "session": {
+    "job_id": "canva-production-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "source_asset": {
+    "asset_id": "{ID do ativo}",
+    "asset_type": "{post | carousel | deck | outro}",
+    "current_state": "approved | queued",
+    "origin_thesis": "{Tese central}",
+    "cta": "{CTA principal}",
+    "proof_points": []
+  },
+  "design_constraints": {
+    "format": "{carousel | post | cover | deck-curto}",
+    "frame_count": 1,
+    "brand_references": [],
+    "hard_constraints": []
+  }
+}

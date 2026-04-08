@@ -1,0 +1,46 @@
+{
+  "_schema": "torq-client-operation-brief-v1",
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "_description": "Contrato de kickoff para iniciar ou reorganizar a operacao de um cliente no Torq OS.",
+  "supabase": {
+    "table": "client_operation_briefs",
+    "record_id": "{uuid}",
+    "client_id": "{uuid}",
+    "workspace_id": "{uuid}"
+  },
+  "client_profile": {
+    "client_name": "{Nome do cliente}",
+    "segment": "{Nicho ou segmento}",
+    "business_model": "{Consultoria | Educacao | Servico | SaaS | outro}",
+    "offer_scope": "{O que o cliente vende hoje}",
+    "current_stage": "{diagnostic | research | strategy | conversion | content | distribution | unknown}",
+    "commercial_goal_90d": "{Resultado desejado em 90 dias}"
+  },
+  "available_assets": {
+    "client_intake_id": "{uuid ou null}",
+    "commercial_diagnostic_id": "{uuid ou null}",
+    "research_dossier_id": "{uuid ou null}",
+    "behavioral_persona_dossier_id": "{uuid ou null}",
+    "brand_bundle_id": "{uuid ou null}",
+    "offer_job_id": "{uuid ou null}",
+    "story_job_id": "{uuid ou null}",
+    "copy_job_id": "{uuid ou null}",
+    "content_plan_id": "{uuid ou null}"
+  },
+  "operational_context": {
+    "main_blockers": [],
+    "known_constraints": [],
+    "channels_in_scope": [],
+    "decision_makers": [],
+    "approval_owner": "{Nome ou papel do aprovador principal}"
+  },
+  "kickoff_request": {
+    "primary_question": "{O que precisa ser decidido agora}",
+    "success_definition": "{Como saberemos que a operacao comecou certo}",
+    "requested_command": "client-operation"
+  }
+}

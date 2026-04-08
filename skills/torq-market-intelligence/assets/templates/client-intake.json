@@ -1,0 +1,32 @@
+{
+  "_schema": "torq-client-intake-v1",
+  "session": {
+    "job_id": "client-intake-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "client": {
+    "client_name": "{Nome do cliente ou prospect}",
+    "founder_name": "{Nome do founder ou autoridade central}",
+    "persona_type": "unknown | persona_1 | persona_2",
+    "market_type": "b2c | b2b | hybrid",
+    "niche": "{Nicho principal}",
+    "subniche": "{Recorte mais especifico}",
+    "current_stage": "{offline consolidado | digital sem conversao | em transicao | outro}",
+    "geography": "{Regiao principal}"
+  },
+  "commercial_context": {
+    "current_offers": [],
+    "proof_points": [],
+    "channels": [],
+    "known_competitors": [],
+    "main_goal": "{O que a Torq precisa descobrir para tomar a proxima decisao}",
+    "known_constraints": []
+  },
+  "research_scope": {
+    "primary_question": "{Pergunta principal da pesquisa}",
+    "secondary_questions": [],
+    "urgency": "high | medium | low",
+    "desired_depth": "light | standard | deep"
+  }
+}
