@@ -1,0 +1,62 @@
+{
+  "_schema": "torq-behavioral-persona-job-v1",
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "meta": {
+    "client_name": "{Nome do cliente ou unidade de negocio}",
+    "project_slug": "{slug-do-projeto}",
+    "requested_by": "{CEO | CMO | n8n-workflow | operator}",
+    "created_at": "{ISO-8601 timestamp}"
+  },
+  "directive": {
+    "business_goal": "{O que o negocio quer vender ou provar}",
+    "offer_scope": "{Produto, servico ou tese central}",
+    "macro_angle": "{Angulo estrategico definido pelo C-Level}",
+    "decision_required": "{Qual decisao a persona precisa suportar}"
+  },
+  "governance": {
+    "source_mode": "delegated_dataset",
+    "external_search_allowed": false,
+    "approval_owner": "{CEO ou CMO responsavel}",
+    "current_status": "draft"
+  },
+  "supabase": {
+    "table": "behavioral_persona_jobs",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "workspace_id": "{uuid}"
+  },
+  "research_packet": {
+    "sources": [
+      {
+        "type": "reddit",
+        "query_or_location": "{subreddit, URL ou criterio de coleta}",
+        "notes": "{observacoes de origem}"
+      },
+      {
+        "type": "amazon_reviews",
+        "query_or_location": "{livro, URL ou categoria}",
+        "notes": "{observacoes de origem}"
+      },
+      {
+        "type": "youtube_comments",
+        "query_or_location": "{canal, video ou consulta}",
+        "notes": "{observacoes de origem}"
+      }
+    ],
+    "raw_entries": [],
+    "dataset_summary": {
+      "sample_size": 0,
+      "date_range": "{Periodo coberto}",
+      "collection_notes": "{Como a coleta foi feita}"
+    }
+  },
+  "downstream_consumers": [
+    "torq-editorial-copy",
+    "torq-storytelling",
+    "torq-offer-engineering"
+  ]
+}

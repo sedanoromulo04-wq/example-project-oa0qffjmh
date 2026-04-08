@@ -1,0 +1,97 @@
+{
+  "version": "torq-central-v1",
+  "generated_at": "2026-04-06",
+  "description": "Top-level operational categories for Torq Central. These categories are organized by operating function, not by file type.",
+  "categories": [
+    {
+      "name": "Vision",
+      "slug": "vision",
+      "icon": "target",
+      "display_order": 10,
+      "parent_slug": null,
+      "module": "strategy-os",
+      "description": "Foundational strategy, positioning doctrine, company vision, ICP, values, and operating principles."
+    },
+    {
+      "name": "Voice",
+      "slug": "voice",
+      "icon": "megaphone",
+      "display_order": 20,
+      "parent_slug": null,
+      "module": "memory-os",
+      "description": "Tone calibration, founder transcripts, lexical rules, and voice examples."
+    },
+    {
+      "name": "Clients",
+      "slug": "clients",
+      "icon": "users",
+      "display_order": 30,
+      "parent_slug": null,
+      "module": "memory-os",
+      "description": "Client profiles, briefs, active project context, and delivery records."
+    },
+    {
+      "name": "Market Intelligence",
+      "slug": "market-intelligence",
+      "icon": "building",
+      "display_order": 40,
+      "parent_slug": null,
+      "module": "research-os",
+      "description": "Research dossiers, competitor maps, voice of customer, and category signals."
+    },
+    {
+      "name": "Offers",
+      "slug": "offers",
+      "icon": "scale",
+      "display_order": 50,
+      "parent_slug": null,
+      "module": "conversion-os",
+      "description": "Offer architecture, pricing logic, risk reversal, and commercial packages."
+    },
+    {
+      "name": "Storytelling",
+      "slug": "storytelling",
+      "icon": "book-open",
+      "display_order": 60,
+      "parent_slug": null,
+      "module": "strategy-os",
+      "description": "Narrative frameworks, pitch structures, presentations, and founder story assets."
+    },
+    {
+      "name": "Copy",
+      "slug": "copy",
+      "icon": "file-text",
+      "display_order": 70,
+      "parent_slug": null,
+      "module": "conversion-os",
+      "description": "Approved copy assets, VSL logic, scripts, headlines, and campaign copy."
+    },
+    {
+      "name": "Content Planning",
+      "slug": "content-planning",
+      "icon": "palette",
+      "display_order": 80,
+      "parent_slug": null,
+      "module": "content-os",
+      "description": "Editorial calendars, content series, CTA maps, repurposing plans, and Canva production briefs."
+    },
+    {
+      "name": "Publishing",
+      "slug": "publishing",
+      "icon": "rocket",
+      "display_order": 90,
+      "parent_slug": null,
+      "module": "distribution-os",
+      "description": "Approval logs, queue items, scheduling metadata, distribution jobs, and measurement loops."
+    },
+    {
+      "name": "Cases",
+      "slug": "cases",
+      "icon": "dna",
+      "display_order": 100,
+      "parent_slug": null,
+      "module": "memory-os",
+      "description": "Proof libraries, before-and-after narratives, measured outcomes, and reusable learnings."
+    }
+  ]
+}

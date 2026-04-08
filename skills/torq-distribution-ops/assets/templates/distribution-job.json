@@ -1,0 +1,29 @@
+{
+  "_schema": "torq-distribution-job-v1",
+  "session": {
+    "job_id": "distribution-{uuid}",
+    "requested_at": "{ISO-8601 timestamp}",
+    "requested_by": "{user_id ou session_id}"
+  },
+  "asset": {
+    "asset_id": "{ID do ativo aprovado}",
+    "asset_type": "{post | carousel | script | email | landing-page | outro}",
+    "approval_id": "{ID da aprovacao humana}",
+    "current_state": "approved | queued | published | measured",
+    "owner": "{Responsavel operacional}"
+  },
+  "distribution": {
+    "channel": "{linkedin | instagram | youtube | email | outro}",
+    "scheduled_for": "{ISO-8601 timestamp ou janela textual}",
+    "metadata": {
+      "campaign_id": "{ID da campanha}",
+      "utm": {},
+      "notes": []
+    }
+  },
+  "measurement": {
+    "primary_metric": "{Metrica principal}",
+    "secondary_metrics": [],
+    "observation_window": "{24h | 7d | 30d}"
+  }
+}

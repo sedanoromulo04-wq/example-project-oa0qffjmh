@@ -1,0 +1,80 @@
+{
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "client_id": "CL_9921",
+  "project_name": "Pitch institucional Torq Investor",
+  "supabase": {
+    "table": "story_jobs",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "behavioral_dossier_id": "{uuid}"
+  },
+  "behavioral_persona_dossier": {
+    "persona_source_of_truth": true,
+    "execution_readiness": "cleared",
+    "governance_verdict": {
+      "status": "approved",
+      "approval_owner": "CMO"
+    },
+    "triade_do_medo": {
+      "superficial": [],
+      "profundo": [],
+      "catastrofico": []
+    },
+    "desejo_secreto": {
+      "emotional_reward": [],
+      "hidden_fantasy": []
+    },
+    "dissonancia_cognitiva": {
+      "knows": [],
+      "does": []
+    }
+  },
+  "storytelling_core": {
+    "requested_expert": "oren-klaff",
+    "narrative_goal": "Apresentar a nova tese de investimentos para o mercado de luxo com frame control e sobriedade institucional",
+    "target_audience": [
+      "Investidores anjo",
+      "Fundos de venture capital focados em luxo e tecnologia",
+      "C-Levels buscando alocacao inteligente"
+    ]
+  },
+  "brand_bible_reference": {
+    "tone": [
+      "Elegante",
+      "Sobrio",
+      "Garantia intelectual",
+      "Incisivo sem ser ruidoso"
+    ],
+    "lexicon_allowed": [
+      "Alocacao exclusiva",
+      "Diferencial assincrono",
+      "Arquitetura robusta",
+      "Vanguarda analitica"
+    ],
+    "lexicon_forbidden": [
+      "Hackeando o sistema",
+      "Lucro garantido agora",
+      "Magica das vendas",
+      "Apenas hoje"
+    ]
+  },
+  "context_variables": {
+    "company_status_quo": "Os investidores estao cansados de pitches baseados em promessas vazias de tecnologia.",
+    "torq_thesis_shift": "A Torq reposiciona a conversa trazendo pragmatismo, rigor e luxo para a mesa.",
+    "character_if_applicable": {
+      "hero_role": "O investidor pragmatico",
+      "villain_role": "A histeria do mercado e projetos sem lastro",
+      "guide_role": "O Grupo Torq e sua arquitetura analitica"
+    }
+  },
+  "output_requirements": {
+    "format": "Roteiro de pitch em 5 fases adaptado ao padrao Torq",
+    "length": "8 a 10 slides ou 3 minutos de leitura discursiva",
+    "return_type": "markdown",
+    "include_tactical_breakdown": true
+  }
+}

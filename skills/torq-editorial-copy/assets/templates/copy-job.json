@@ -1,0 +1,61 @@
+{
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "project_name": "Campanha de Aquisicao B2B Senior",
+  "client_id": "torq-internal-01",
+  "supabase": {
+    "table": "copy_jobs",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "behavioral_dossier_id": "{uuid}"
+  },
+  "copy_objective": "Agendamento de diagnostico de processos",
+  "preferred_framework": "rmbc_georgi",
+  "market_awareness": "problem_aware",
+  "behavioral_persona_dossier": {
+    "persona_source_of_truth": true,
+    "execution_readiness": "cleared",
+    "governance_verdict": {
+      "status": "approved",
+      "approval_owner": "CMO"
+    },
+    "triade_do_medo": {
+      "superficial": [],
+      "profundo": [],
+      "catastrofico": []
+    },
+    "desejo_secreto": {
+      "emotional_reward": [],
+      "hidden_fantasy": []
+    },
+    "dissonancia_cognitiva": {
+      "knows": [],
+      "does": []
+    }
+  },
+  "founder_inputs": [
+    "Audio transcrito onde o founder explica como 80% das clinicas perdem 14% do equity por falha de caixa rotativo."
+  ],
+  "brand_bible_reference": {
+    "tone": "Elegante, Analitico, Sobrio, Firme",
+    "lexicon_allowed": [
+      "Sistema central",
+      "Processo deterministico",
+      "Gargalo estrutural",
+      "Fuga de equity"
+    ],
+    "lexicon_forbidden": [
+      "O segredo",
+      "O metodo oculto",
+      "Ultimas vagas",
+      "Lucro garantido amanha"
+    ]
+  },
+  "constraints": {
+    "max_length_words": 800,
+    "media_type": "email_sequence_2_days"
+  }
+}

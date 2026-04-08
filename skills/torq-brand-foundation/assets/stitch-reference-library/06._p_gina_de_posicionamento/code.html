@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE STRATEGIC PILLAR — VOL. I</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f6f3ee",
+                    "background": "#fcf9f4",
+                    "surface-dim": "#dcdad5",
+                    "tertiary-container": "#111c2c",
+                    "tertiary-fixed-dim": "#bcc7dd",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#d8e3fa",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0ede8",
+                    "on-tertiary-fixed-variant": "#3c4759",
+                    "on-background": "#1c1c19",
+                    "outline": "#747878",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface-variant": "#444748",
+                    "surface-container-highest": "#e5e2dd",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#111c2c",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#fdc796",
+                    "inverse-surface": "#31302d",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-variant": "#e5e2dd",
+                    "secondary": "#7e562e",
+                    "on-tertiary-container": "#798498",
+                    "surface-bright": "#fcf9f4",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "secondary-fixed": "#ffdcbf",
+                    "secondary-fixed-dim": "#f1bc8c",
+                    "surface": "#fcf9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#633f19",
+                    "on-secondary-container": "#79512a",
+                    "inverse-on-surface": "#f3f0eb",
+                    "error": "#ba1a1a",
+                    "primary-container": "#1c1b1b",
+                    "on-surface": "#1c1c19",
+                    "on-secondary-fixed": "#2d1600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.0rem",
+                    "lg": "0.0rem",
+                    "xl": "0.0rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "serif": ["Newsreader", "serif"],
+                    "sans": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .newsreader { font-family: 'Newsreader', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body class="bg-background text-on-background manrope selection:bg-secondary selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80">
+<div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white uppercase manrope">VOL. I: THE MANIFESTO</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1 transition-colors duration-500" href="#">CH. 01</a>
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 02</a>
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 03</a>
+</nav>
+<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white">XII</div>
+</header>
+<!-- SideNavBar (Context: Positioning Active) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20">
+<div class="flex flex-col space-y-16">
+<div class="flex items-center space-x-4 border-l-2 border-black dark:border-white pl-4 group cursor-pointer">
+<span class="material-symbols-outlined text-black dark:text-white" data-icon="architecture">architecture</span>
+<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black dark:text-white font-bold opacity-0 group-hover:opacity-100 transition-all duration-700">POSITIONING</span>
+</div>
+<div class="flex items-center space-x-4 pl-4 group cursor-pointer">
+<span class="material-symbols-outlined text-black/30 dark:text-white/30 group-hover:text-[#7e562e] transition-all" data-icon="menu_book">menu_book</span>
+<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30 dark:text-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700">NARRATIVE</span>
+</div>
+<div class="flex items-center space-x-4 pl-4 group cursor-pointer">
+<span class="material-symbols-outlined text-black/30 dark:text-white/30 group-hover:text-[#7e562e] transition-all" data-icon="collections">collections</span>
+<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30 dark:text-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700">AESTHETICS</span>
+</div>
+<div class="flex items-center space-x-4 pl-4 group cursor-pointer">
+<span class="material-symbols-outlined text-black/30 dark:text-white/30 group-hover:text-[#7e562e] transition-all" data-icon="diamond">diamond</span>
+<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30 dark:text-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700">DISTRIBUTION</span>
+</div>
+</div>
+</aside>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
+<div class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 pointer-events-auto">PAGE 06/10 — STRATEGIC MONUMENT</div>
+<div class="flex space-x-8 pointer-events-auto">
+<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
+<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
+</div>
+</footer>
+<!-- Main Canvas -->
+<main class="min-h-screen pt-32 pb-48 px-12 md:px-24 overflow-x-hidden">
+<!-- Hero Spread -->
+<section class="grid grid-cols-12 gap-0 relative items-start">
+<!-- Asymmetric Text Column -->
+<div class="col-span-12 lg:col-span-5 pt-12">
+<span class="manrope text-[10px] tracking-[0.4em] uppercase text-secondary font-bold mb-6 block">01 / ARCHITECTURAL FOUNDATION</span>
+<h1 class="newsreader text-[12vw] lg:text-[7.5rem] font-light leading-[0.85] tracking-tighter text-primary">
+                    The <br/>
+<span class="italic font-medium">Strategic</span><br/>
+                    Pillar.
+                </h1>
+<div class="mt-16 max-w-sm">
+<p class="manrope text-sm leading-relaxed text-on-surface/70 mb-8">
+                        Positioning is not a marketing tactic; it is the gravitational center of a monumental brand. It defines the unshakeable point from which all aesthetic and strategic decisions radiate.
+                    </p>
+<div class="flex items-center space-x-6">
+<div class="w-12 h-[1px] bg-primary"></div>
+<span class="manrope text-[9px] tracking-[0.2em] uppercase font-bold text-primary">Establish Authority</span>
+</div>
+</div>
+</div>
+<!-- Central Axis Visual -->
+<div class="col-span-12 lg:col-span-7 relative h-[716px] lg:h-[870px] mt-12 lg:mt-0 flex items-center justify-center">
+<!-- Geometric Framing -->
+<div class="absolute inset-0 bg-surface-container-low border-[0.5px] border-outline-variant/15 transform translate-x-12 translate-y-12 -z-10"></div>
+<div class="relative w-full h-full overflow-hidden group">
+<img class="w-full h-full object-cover filter grayscale brightness-90 hover:brightness-100 transition-all duration-1000" data-alt="Monolithic brutalist concrete tower against a stark grey sky, minimalist architectural photography, dramatic vertical perspective, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP4QCMeh0aODxbeXl7clhvHR7nG8X2gTNc9KY4I-GEbhHAEPdqaVv86FkXjBKokFiGUE-3ydh6_5Cu5O2Eau773gixfFQWgSerEkCTqsfxg1IbXmfy3oQmoCBmoVuOjKEgoIZ9TK0diwIvPhAY6ycaf2fi9MHfZ4xRGsj1VrWmKycM2IgtrwyMGZnENyMakiBxoff938VwpTw80hjc8-nR5cnpmBtLo9rdqi1oInMc2ywoQJjng54y4lFdkD4xVo210P-gB4lfKdo"/>
+<!-- Overlay Overlay Details -->
+<div class="absolute inset-0 bg-black/5 flex flex-col justify-between p-12">
+<div class="flex justify-end">
+<span class="manrope text-[10px] text-white tracking-widest bg-primary px-3 py-1">COORD. 45.23 / 09.12</span>
+</div>
+<div class="bg-white/90 backdrop-blur-md p-8 w-48 self-end">
+<span class="manrope text-[8px] tracking-widest text-primary block mb-2 font-black">SPECIFICATIONS</span>
+<div class="space-y-1">
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span class="text-[8px] text-on-surface/50">DENSITY</span>
+<span class="text-[8px] font-bold">MAX</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span class="text-[8px] text-on-surface/50">RESISTANCE</span>
+<span class="text-[8px] font-bold">ABS</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[8px] text-on-surface/50">TENSILE</span>
+<span class="text-[8px] font-bold">HIGH</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Editorial Tag -->
+<div class="absolute -left-12 bottom-24 hidden lg:block">
+<div class="rotate-90 origin-left">
+<span class="newsreader italic text-5xl text-outline-variant/40">Permanence</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Strategic Grid -->
+<section class="mt-32 lg:mt-64 grid grid-cols-1 md:grid-cols-3 gap-24 items-start">
+<div class="space-y-6">
+<span class="manrope text-[9px] tracking-widest text-secondary font-black uppercase">Phase I: The Void</span>
+<p class="newsreader text-2xl leading-tight font-medium">Reject the crowded center. Find the silence that others fear.</p>
+<p class="manrope text-[10px] leading-relaxed text-on-surface/60 uppercase tracking-wide">Strategic silence allows for maximum brand resonance. By removing noise, we amplify the signal.</p>
+</div>
+<div class="space-y-6 border-l border-outline-variant/20 pl-8">
+<span class="manrope text-[9px] tracking-widest text-secondary font-black uppercase">Phase II: The Monolith</span>
+<p class="newsreader text-2xl leading-tight font-medium">Construct a narrative so heavy it cannot be moved.</p>
+<p class="manrope text-[10px] leading-relaxed text-on-surface/60 uppercase tracking-wide">A monument is built from consistent repetition of values. It is the antithesis of the fleeting trend.</p>
+</div>
+<div class="space-y-6 border-l border-outline-variant/20 pl-8">
+<span class="manrope text-[9px] tracking-widest text-secondary font-black uppercase">Phase III: The Legacy</span>
+<p class="newsreader text-2xl leading-tight font-medium">Design for decades, not for fiscal quarters.</p>
+<p class="manrope text-[10px] leading-relaxed text-on-surface/60 uppercase tracking-wide">True authority is timeless. We build digital artifacts that preserve the ethos of the manifesto.</p>
+</div>
+</section>
+<!-- The Axis Focal Point -->
+<section class="mt-48 flex flex-col items-center justify-center text-center max-w-4xl mx-auto py-32 relative">
+<!-- Geometric Framing -->
+<div class="absolute w-[1px] h-full bg-outline-variant/20 left-1/2 -z-10"></div>
+<div class="absolute h-[1px] w-screen bg-outline-variant/20 top-1/2 -z-10"></div>
+<div class="bg-background px-12 py-16">
+<span class="material-symbols-outlined text-4xl text-primary mb-8 block" data-icon="architecture">architecture</span>
+<h2 class="newsreader text-5xl md:text-7xl font-light mb-12 leading-none">The Point of No <br/><span class="italic font-medium">Compromise.</span></h2>
+<button class="bg-primary text-on-primary manrope text-[10px] tracking-[0.5em] px-12 py-5 uppercase hover:bg-secondary transition-colors duration-700">
+                    EXAMINE THE ARCHIVE
+                </button>
+</div>
+</section>
+<!-- Final Asymmetric Gallery -->
+<section class="mt-48 grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-8 bg-surface-container-high aspect-video overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80 hover:opacity-100 transition-opacity duration-1000" data-alt="Ultra-modern glass and steel skyscraper reflecting a clear sky, symmetrical composition, sharp angles, architectural excellence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6-eyJ2k4-pyZAWppdp2_v60mUHaSH6x-n0bdHeKawc3OhLL9EXvQ8n4i_E1oBVFF_XLkHxj4HFNnhtOd6BzGBr6954czhK0O6UDD4strYCiXXDmsOUYipuIRWZ7SHtN1HJrhPTMZdWhebZTz9eoHHZbzGiweKqkREHws-BeDYE1OVpd67O18VB9bTxwNglUCg6FUe-SKYUExPd0Jj_ODxoaul6_FUUjxrNQitiGMXCjqc6BBUBmbolRWW5CTdg6Syc0hv51VcfQA"/>
+</div>
+<div class="col-span-12 lg:col-span-4 pb-12">
+<div class="border-t border-primary pt-8">
+<span class="manrope text-[9px] font-black tracking-widest uppercase text-secondary">NOTE 24-B</span>
+<p class="newsreader text-3xl font-light mt-4">"The strength of the brand is measured by the clarity of its boundaries."</p>
+<p class="manrope text-[10px] mt-6 text-on-surface/40 uppercase tracking-widest">— STRATEGIC LEAD ARCHIVE</p>
+</div>
+</div>
+</section>
+</main>
+</body></html>

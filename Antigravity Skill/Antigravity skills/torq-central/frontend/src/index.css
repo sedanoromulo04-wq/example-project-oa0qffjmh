@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #0e0e0e;
+    --bg-elevated: #090909;
+    --surface-base: #131313;
+    --surface-panel: rgba(25, 26, 26, 0.9);
+    --surface-raised: rgba(31, 32, 32, 0.96);
+    --surface-hover: #2c2c2c;
+    --surface-highlight: #252626;
+    --border-ghost: rgba(72, 72, 72, 0.45);
+    --border-strong: rgba(191, 197, 228, 0.2);
+    --accent-primary: #bfc5e4;
+    --accent-primary-strong: #3f465f;
+    --accent-primary-soft: rgba(191, 197, 228, 0.12);
+    --text-main: #e7e5e4;
+    --text-soft: #acabaa;
+    --text-dim: #767575;
+    --text-inverse: #0e0e0e;
+    --error: #ec7c8a;
+    --success: #7ebea4;
+    --warning: #e0b25d;
+
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Manrope', 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --radius-sm: 6px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --shadow-atmosphere: 0 24px 60px rgba(0, 0, 0, 0.42);
+    --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.24);
+    --easing-premium: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background:
+        radial-gradient(circle at top, rgba(63, 70, 95, 0.12), transparent 25%),
+        linear-gradient(180deg, #0a0a0a 0%, #0e0e0e 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: inherit;
+}
+
+input,
+textarea {
+    font-family: var(--font-body);
+    font-size: 14px;
+    background: rgba(37, 38, 38, 0.72);
+    border: 1px solid var(--border-ghost);
+    color: var(--text-main);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: border-color 0.2s var(--easing-premium), background 0.2s var(--easing-premium), transform 0.2s var(--easing-premium);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--border-strong);
+    background: rgba(37, 38, 38, 0.92);
+}
+
+::selection {
+    background: rgba(191, 197, 228, 0.24);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(72, 72, 72, 0.7);
+    border-radius: 999px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #939ab7 52%, var(--accent-primary-strong) 100%);
+    color: var(--text-inverse);
+    padding: 0.72rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 10px 30px rgba(63, 70, 95, 0.28);
+    transition: transform 0.2s var(--easing-premium), box-shadow 0.2s var(--easing-premium), filter 0.2s var(--easing-premium);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 16px 34px rgba(63, 70, 95, 0.34);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.58;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-ghost {
+    color: var(--text-soft);
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    transition: background 0.2s var(--easing-premium), color 0.2s var(--easing-premium);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-main);
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}

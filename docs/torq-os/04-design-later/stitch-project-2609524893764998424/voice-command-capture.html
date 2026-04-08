@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Torq Jarvis | Voice Command</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#536372",
+                    "on-primary-fixed-variant": "#545a75",
+                    "surface-container": "#191a1a",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "on-secondary-container": "#c1bfbe",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-fixed": "#374655",
+                    "surface-dim": "#0e0e0e",
+                    "on-surface-variant": "#acabaa",
+                    "surface-container-highest": "#252626",
+                    "tertiary-container": "#dcedff",
+                    "on-tertiary": "#516170",
+                    "inverse-on-surface": "#565554",
+                    "secondary-container": "#3c3b3b",
+                    "secondary": "#9f9d9d",
+                    "surface-variant": "#252626",
+                    "primary-container": "#3f465f",
+                    "outline-variant": "#484848",
+                    "on-background": "#e7e5e4",
+                    "inverse-surface": "#fcf8f8",
+                    "on-surface": "#e7e5e4",
+                    "surface-container-high": "#1f2020",
+                    "surface-container-low": "#131313",
+                    "surface-bright": "#2c2c2c",
+                    "primary-dim": "#b1b7d6",
+                    "background": "#0e0e0e",
+                    "tertiary-fixed-dim": "#cedff1",
+                    "on-primary": "#393f58",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "error-dim": "#b95463",
+                    "secondary-dim": "#9f9d9d",
+                    "on-tertiary-container": "#495867",
+                    "surface-tint": "#bfc5e4",
+                    "surface": "#0e0e0e",
+                    "tertiary-dim": "#cedff1",
+                    "tertiary": "#f7f9ff",
+                    "error": "#ec7c8a",
+                    "on-error-container": "#ff97a3",
+                    "on-primary-container": "#c9cfee",
+                    "inverse-primary": "#575e79",
+                    "error-container": "#7f2737",
+                    "on-error": "#490013",
+                    "tertiary-fixed": "#dcedff",
+                    "primary": "#bfc5e4",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-fixed-dim": "#cdd3f3",
+                    "outline": "#767575",
+                    "primary-fixed": "#dce1ff",
+                    "on-primary-fixed": "#383e57",
+                    "on-secondary-fixed": "#403f3f",
+                    "on-secondary": "#202020"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .waveform-bar {
+            background: linear-gradient(180deg, #bfc5e4 0%, #3f465f 100%);
+            width: 4px;
+            border-radius: 2px;
+        }
+        .glass-panel {
+            background: rgba(37, 38, 38, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-hidden selection:bg-primary/30">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-20 md:w-64 border-r-0 bg-neutral-950/80 backdrop-blur-3xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col h-full z-50 transition-all duration-300">
+<div class="p-6 flex items-center gap-4">
+<div class="w-10 h-10 rounded-sm bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<div class="hidden md:block">
+<h1 class="text-lg font-black tracking-tighter text-neutral-100 uppercase">TORQ JARVIS</h1>
+<p class="text-[10px] text-neutral-500 font-headline tracking-[0.2em]">OPERATIONAL ALPHA</p>
+</div>
+</div>
+<nav class="flex-1 px-4 mt-8 space-y-2">
+<div class="group flex items-center gap-4 px-4 py-3 text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="hidden md:block font-manrope tracking-tight font-light">Mission Control</span>
+</div>
+<div class="group flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="hidden md:block font-manrope tracking-tight font-light">Thread History</span>
+</div>
+<div class="group flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="hidden md:block font-manrope tracking-tight font-light">Neural Network</span>
+</div>
+<div class="group flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="hidden md:block font-manrope tracking-tight font-light">System Logs</span>
+</div>
+<div class="group flex items-center gap-4 px-4 py-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="hidden md:block font-manrope tracking-tight font-light">Operator Profile</span>
+</div>
+</nav>
+<div class="p-6">
+<button class="w-full py-3 bg-neutral-900 border-b border-indigo-500/30 text-indigo-200 text-xs font-bold uppercase tracking-widest hover:bg-indigo-500/10 transition-colors">
+                Initialize New Mission
+            </button>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16 bg-neutral-800/30">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-neutral-100 tracking-[0.2em]">TORQ JARVIS</span>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="font-manrope text-sm font-medium tracking-wide text-neutral-100 border-b-2 border-indigo-400" href="#">Missions</a>
+<a class="font-manrope text-sm font-medium tracking-wide text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Modules</a>
+<a class="font-manrope text-sm font-medium tracking-wide text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Network</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100" data-icon="notifications_active">notifications_active</span>
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100" data-icon="tune">tune</span>
+</div>
+<img alt="Operator Profile" class="w-8 h-8 rounded-full border border-primary/20" data-alt="Close-up portrait of a professional operator with sharp lighting and dark studio background, modern executive aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3jmaO3fIoTfVcIal7ufMKnWuWD2cB3J8lSj9MNsLzeWUfENUxQp74bAeY7a92MPIYx9xleTBAsOLtcP1HJ4z_yreIaIoQTU-XJ0OinA04yvj3ODYD9Q0Y4tRzITcYQy_09hDalPSPHwlZE79IHT_6gpIwGcuB-oz4W0Cps58tIREUsVI3v5nG3go5DZyERPK-PsR3WT-dwtiwUUkxqlt32986s1M21gXoFy6H4GT-LWNN7X0bh-XnjsmI09ZHegPJ7sf67_24gjY"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-20 md:ml-64 mt-16 p-8 min-h-[calc(100vh-4rem)] flex gap-8">
+<!-- Center Dashboard (Dimmed) -->
+<div class="flex-1 relative opacity-20 pointer-events-none transition-opacity duration-700">
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-8 space-y-6">
+<div class="h-64 bg-surface-container-low rounded-sm p-6 flex flex-col justify-end">
+<div class="text-xs text-on-surface-variant mb-2">OPERATIONAL FLOW</div>
+<div class="h-32 flex items-end gap-1">
+<div class="flex-1 bg-surface-container-highest h-[60%]"></div>
+<div class="flex-1 bg-surface-container-highest h-[40%]"></div>
+<div class="flex-1 bg-surface-container-highest h-[80%]"></div>
+<div class="flex-1 bg-surface-container-highest h-[30%]"></div>
+<div class="flex-1 bg-surface-container-highest h-[90%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="h-40 bg-surface-container-low rounded-sm"></div>
+<div class="h-40 bg-surface-container-low rounded-sm"></div>
+</div>
+</div>
+<div class="col-span-4 h-full bg-surface-container-low rounded-sm"></div>
+</div>
+</div>
+<!-- Right Intelligence Panel (Research OS Shift) -->
+<div class="w-80 h-full flex flex-col gap-6">
+<div class="glass-panel p-6 rounded-sm border-l-2 border-primary/40">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(191,197,228,0.8)]"></span>
+<span class="text-[10px] tracking-widest font-bold uppercase text-primary">Intelligence Node</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">ID: 882-J</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="text-[10px] uppercase text-on-surface-variant tracking-widest mb-2">Anticipating Switch</div>
+<div class="text-xl font-headline font-bold text-on-surface">Research OS</div>
+<div class="h-1 w-full bg-surface-container-high mt-4 relative overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary w-2/3"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="text-[10px] uppercase text-on-surface-variant tracking-widest">Active Dependencies</div>
+<div class="flex items-start gap-3 p-3 bg-surface-container-lowest/50 rounded-sm">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="search">search</span>
+<div>
+<div class="text-xs font-semibold">Strategy OS Protocol</div>
+<div class="text-[10px] text-on-surface-variant">L7 Handshake Pending</div>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface-container-lowest/50 rounded-sm">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="database">database</span>
+<div>
+<div class="text-xs font-semibold">Historical Assets</div>
+<div class="text-[10px] text-on-surface-variant">Mapping missing nodes...</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Voice Capture Overlay (Prominent) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+<div class="w-full max-w-4xl flex flex-col items-center pointer-events-auto">
+<!-- Real-time Transcript -->
+<div class="mb-16 text-center px-12">
+<div class="text-primary/60 text-[10px] tracking-[0.3em] uppercase mb-4 font-bold">Awaiting Execution</div>
+<h2 class="text-3xl md:text-4xl font-headline font-light text-on-surface leading-tight tracking-tight max-w-2xl">
+                        "Prepare the next safe handoff for <span class="text-primary font-medium">Strategy OS</span> and check for any missing <span class="text-primary font-medium">research dependencies</span>."
+                    </h2>
+</div>
+<!-- High-Fidelity Waveform -->
+<div class="h-48 flex items-center justify-center gap-1.5 mb-16">
+<div class="waveform-bar h-12"></div>
+<div class="waveform-bar h-24"></div>
+<div class="waveform-bar h-40"></div>
+<div class="waveform-bar h-32"></div>
+<div class="waveform-bar h-48 shadow-[0_0_20px_rgba(191,197,228,0.4)]"></div>
+<div class="waveform-bar h-44"></div>
+<div class="waveform-bar h-36"></div>
+<div class="waveform-bar h-20"></div>
+<div class="waveform-bar h-28"></div>
+<div class="waveform-bar h-16"></div>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-6">
+<button class="px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">
+                        Cancel
+                    </button>
+<button class="px-10 py-4 rounded-sm bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-xs uppercase tracking-[0.2em] shadow-2xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center gap-3">
+<span>Confirm &amp; Execute</span>
+<span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component - Command Composer Style) -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-2/3 rounded-sm bg-neutral-900/60 backdrop-blur-md shadow-2xl shadow-black/80 flex items-center justify-center gap-6 p-4 max-w-4xl z-50 border border-white/5">
+<div class="flex items-center gap-2 px-4 py-2 bg-indigo-500/20 text-indigo-100 rounded-sm transition-all">
+<span class="material-symbols-outlined text-indigo-300" data-icon="mic">mic</span>
+<span class="font-inter text-xs uppercase tracking-widest hidden md:inline">Voice Command</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 text-neutral-400 hover:bg-neutral-800/80 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+<span class="font-inter text-xs uppercase tracking-widest hidden md:inline">Upload Data</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 text-neutral-400 hover:bg-neutral-800/80 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-inter text-xs uppercase tracking-widest hidden md:inline">Deploy Module</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 text-neutral-400 hover:bg-neutral-800/80 transition-all cursor-pointer group">
+<span class="material-symbols-outlined group-hover:text-error transition-colors" data-icon="cancel">cancel</span>
+<span class="font-inter text-xs uppercase tracking-widest hidden md:inline group-hover:text-error transition-colors">Emergency Stop</span>
+</div>
+</nav>
+<!-- Ambient Grid & Gradient Overlays -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(63,70,95,0.15)_0%,transparent_70%)]"></div>
+<div class="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+</div>
+</body></html>

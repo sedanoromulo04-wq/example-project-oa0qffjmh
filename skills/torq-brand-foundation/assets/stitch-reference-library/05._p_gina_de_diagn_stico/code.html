@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOL. I: THE MANIFESTO — DIAGNOSTIC GRID</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f6f3ee",
+                    "background": "#fcf9f4",
+                    "surface-dim": "#dcdad5",
+                    "tertiary-container": "#111c2c",
+                    "tertiary-fixed-dim": "#bcc7dd",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#d8e3fa",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0ede8",
+                    "on-tertiary-fixed-variant": "#3c4759",
+                    "on-background": "#1c1c19",
+                    "outline": "#747878",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface-variant": "#444748",
+                    "surface-container-highest": "#e5e2dd",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-primary": "#c8c6c5",
+                    "on-tertiary-fixed": "#111c2c",
+                    "on-primary-fixed-variant": "#474646",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-container": "#fdc796",
+                    "inverse-surface": "#31302d",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary": "#000000",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-variant": "#e5e2dd",
+                    "secondary": "#7e562e",
+                    "on-tertiary-container": "#798498",
+                    "surface-bright": "#fcf9f4",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "secondary-fixed": "#ffdcbf",
+                    "secondary-fixed-dim": "#f1bc8c",
+                    "surface": "#fcf9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#633f19",
+                    "on-secondary-container": "#79512a",
+                    "inverse-on-surface": "#f3f0eb",
+                    "error": "#ba1a1a",
+                    "primary-container": "#1c1b1b",
+                    "on-surface": "#1c1c19",
+                    "on-secondary-fixed": "#2d1600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .newsreader { font-family: 'Newsreader', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 18px;
+        }
+        body { background-color: #fcf9f4; color: #1c1c19; }
+        .technical-line { border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .technical-line-v { border-left: 0.5px solid rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="manrope overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80">
+<div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white">VOL. I: THE MANIFESTO</div>
+<nav class="hidden md:flex space-x-12">
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 01</a>
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 02</a>
+<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1 transition-colors duration-500" href="#">CH. 03</a>
+</nav>
+<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white">XII</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20">
+<div class="flex flex-col gap-12 ml-4">
+<div class="group flex items-center gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-black/30">architecture</span>
+<span class="hidden group-hover:block absolute left-16 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">POSITIONING</span>
+</div>
+<div class="group flex items-center gap-4 cursor-pointer border-l-2 border-black pl-4">
+<span class="material-symbols-outlined text-black">menu_book</span>
+<span class="absolute left-16 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black font-bold">NARRATIVE</span>
+</div>
+<div class="group flex items-center gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-black/30">collections</span>
+<span class="hidden group-hover:block absolute left-16 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">AESTHETICS</span>
+</div>
+<div class="group flex items-center gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-black/30">diamond</span>
+<span class="hidden group-hover:block absolute left-16 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">DISTRIBUTION</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-40 px-12 md:ml-20">
+<!-- Hero Header -->
+<section class="mb-24 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7">
+<span class="text-[10px] uppercase tracking-[0.4em] text-secondary font-bold block mb-4">Diagnostic Report 05.A</span>
+<h1 class="newsreader text-7xl md:text-8xl italic font-light leading-tight tracking-tighter">The Architectural <br/> Anatomy of Silence.</h1>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col justify-end">
+<p class="text-sm leading-relaxed text-on-surface-variant max-w-sm mb-6">
+                    A clinical dissection of brand structural integrity. We examine the tension between negative space and typographic authority to measure long-term resonance.
+                </p>
+<div class="technical-line pt-4 flex justify-between items-center">
+<span class="text-[9px] uppercase tracking-widest opacity-50">Archive Ref: 2024-X-01</span>
+<span class="text-[9px] uppercase tracking-widest opacity-50">Status: Verified</span>
+</div>
+</div>
+</section>
+<!-- Sophisticated Diagnostic Grid -->
+<section class="grid grid-cols-12 gap-px bg-black/5 mb-24">
+<!-- Matrix Cell 01 -->
+<div class="col-span-12 md:col-span-4 bg-background p-8 min-h-[400px] flex flex-col justify-between">
+<div>
+<span class="text-[10px] text-secondary font-black block mb-8">01 — STRUCTURAL NODES</span>
+<div class="space-y-6">
+<div class="flex justify-between items-end pb-2 border-b border-black/5">
+<span class="text-xs uppercase tracking-widest">Equilibrium</span>
+<span class="newsreader italic text-xl">94.2%</span>
+</div>
+<div class="flex justify-between items-end pb-2 border-b border-black/5">
+<span class="text-xs uppercase tracking-widest">Density</span>
+<span class="newsreader italic text-xl">12.0 pt</span>
+</div>
+<div class="flex justify-between items-end pb-2 border-b border-black/5">
+<span class="text-xs uppercase tracking-widest">Chroma Shift</span>
+<span class="newsreader italic text-xl">Δ 0.04</span>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<div class="w-full h-[150px] bg-surface-container-low flex items-center justify-center relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-20" data-alt="abstract architectural blueprint with clean geometric lines and minimal soft shadows in ivory and stone tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CCmQ82uo5XIFfl7aB5qRilKCJItkET1jXKKbBaa3GmmBIN7quncEN6OhiXYVOAKqfsF_t_Zp7AQRMPCMikrFQyNYY954jEYCN6cGFxQu8kV7GJLXn6UUl4oq1tzhaU82HBMhWLi8i3lBTLc_yzf5j95KS55NSwSXYFazxGpFLZM6Pn4-4CUjC9dxFIQN5voXDC5yYZmvz8mVTxeeODPhh5Ek4rVbpSqwouWvqMcNz6sGkVFjjgTuJmtjM9pvvxHYzWy5qtXnkPA"/>
+<div class="relative z-10 text-[9px] uppercase tracking-[0.3em] font-bold text-black/40">Geometric Variance Map</div>
+</div>
+</div>
+</div>
+<!-- Matrix Cell 02: Comparison Table -->
+<div class="col-span-12 md:col-span-8 bg-background p-8">
+<span class="text-[10px] text-secondary font-black block mb-8">02 — COMPARATIVE MATRICES</span>
+<table class="w-full text-left">
+<thead>
+<tr class="technical-line border-b border-black/10">
+<th class="py-4 text-[10px] uppercase tracking-widest font-bold opacity-40">Variable</th>
+<th class="py-4 text-[10px] uppercase tracking-widest font-bold opacity-40">Baseline</th>
+<th class="py-4 text-[10px] uppercase tracking-widest font-bold opacity-40">Observed</th>
+<th class="py-4 text-[10px] uppercase tracking-widest font-bold opacity-40 text-right">Coefficient</th>
+</tr>
+</thead>
+<tbody class="text-xs uppercase tracking-[0.1em]">
+<tr class="border-b border-black/5">
+<td class="py-6 font-bold">Typographic Weight</td>
+<td class="py-6 opacity-60">Medium (500)</td>
+<td class="py-6">Thin (200)</td>
+<td class="py-6 text-right newsreader italic text-lg">+1.42</td>
+</tr>
+<tr class="border-b border-black/5">
+<td class="py-6 font-bold">Negative Space Ratio</td>
+<td class="py-6 opacity-60">1:1.2</td>
+<td class="py-6">1:4.8</td>
+<td class="py-6 text-right newsreader italic text-lg">+3.10</td>
+</tr>
+<tr class="border-b border-black/5">
+<td class="py-6 font-bold">Visual Noise Index</td>
+<td class="py-6 opacity-60">Low</td>
+<td class="py-6">Absolute</td>
+<td class="py-6 text-right newsreader italic text-lg">-0.88</td>
+</tr>
+<tr class="border-b border-black/5">
+<td class="py-6 font-bold">Tactile Perception</td>
+<td class="py-6 opacity-60">Paper</td>
+<td class="py-6">Stone / Ivory</td>
+<td class="py-6 text-right newsreader italic text-lg">Peak</td>
+</tr>
+</tbody>
+</table>
+<!-- Annotation Layer -->
+<div class="mt-8 flex gap-8">
+<div class="flex-1">
+<span class="text-[9px] text-secondary uppercase tracking-widest block mb-2">[Note 01]</span>
+<p class="text-[11px] leading-relaxed text-black/50 italic">The deviation in typographic weight suggests a pivot toward clinical permanence rather than temporary marketing signals.</p>
+</div>
+<div class="flex-1">
+<span class="text-[9px] text-secondary uppercase tracking-widest block mb-2">[Note 02]</span>
+<p class="text-[11px] leading-relaxed text-black/50 italic">Increased negative space creates a 'Vacuum of Authority,' forcing the eye to settle on the primary serif anchor.</p>
+</div>
+</div>
+</div>
+<!-- Matrix Cell 03: Visual Evidence -->
+<div class="col-span-12 md:col-span-12 bg-surface-container-low p-12 grid grid-cols-12 gap-12">
+<div class="col-span-12 md:col-span-4">
+<span class="text-[10px] text-secondary font-black block mb-4">03 — VISUAL LOAD</span>
+<h3 class="newsreader text-4xl mb-6">Restrained <br/> Artifacts.</h3>
+<p class="text-xs leading-relaxed opacity-70 mb-8">The archive requires objects that do not scream. They exist as silent witnesses to the strategy.</p>
+<button class="bg-primary text-on-primary px-8 py-4 text-[10px] uppercase tracking-[0.2em] hover:bg-secondary transition-all duration-500">
+                        Export Full Dataset
+                    </button>
+</div>
+<div class="col-span-12 md:col-span-8 flex gap-4 overflow-x-auto pb-4">
+<div class="min-w-[300px] h-[350px] bg-background p-2">
+<img class="w-full h-full object-cover grayscale brightness-110" data-alt="minimalist white porcelain sculpture on a sandstone pedestal with sharp harsh shadows and morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEw2_KQdlV_6Q1b5HivGApnAjaYCNWhRgq07HIPSP0ObK_nKUW9tyTK0Ap7ITjPvb7Kmhsc2nc8-zw0nCdO1HPCfheDLiKkexfpiagV8oV6AwBRGvQOREfvrrGRfAHLrCyMEHhfgoA6Nrw77oISrzkeMzYyZuw9adryiwV5PLu5Zz9ofTJrOfV3NO5bo3XuSBz2WcDiioy8FHzmfKoyP61LDXYfeIZr2csn2fNq3D1WoESRwedHHKB7-fB_98mKiAmz6PyFfFvGJQ"/>
+</div>
+<div class="min-w-[300px] h-[350px] bg-background p-2">
+<img class="w-full h-full object-cover grayscale" data-alt="macro close-up of fine luxury paper texture with deep debossed letterpress typography edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEYpPMColY8dYTYM25pu1sx4Bb0iwLLctWn2JPDsZBNFyjqSHqjHWK69XQV-h3RQEhT06ZZy_6JBqeaW7gvlSiMIBWLjed_U4KRDgwJHWDxQnH23qttXlrk2INiZ0dG7OYyi_KvkUhNDNJhkVzFL6ljkd9Qa3V6Ge-BVMDkIGpV4NLRJSyThBmjxPveYX8cLirHsRhWuVKxCfliZk8hwlO3RyDUansECcrB58rYSKwNtyNv_NH0MZ3MhROoMUbzFhe5KEnUkkOnbM"/>
+</div>
+<div class="min-w-[300px] h-[350px] bg-background p-2">
+<img class="w-full h-full object-cover grayscale brightness-90 contrast-125" data-alt="top-down shot of a minimalist black desk with a single brass tool and a blank heavy paper sheet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTHpoRrcJ5KrfBDZNhmzDv-eOZtNLGOeCiHvz-GlT9JOwtapyHlWQifInRTP1BMgNLR-AxV4HQ4s4fyeAJc13vXG7Q0TmM2u2u4_t_G0u2H2KFBwIMaI1vW7sx5kGiN7P80S-8o35p2raDNm5LJVNh57ZR0fR5yC_G97MBOrTmPyQvTO_RTLXJsFkA5L-94gG4WMFKbk_CaYMnmNWgFrIGCTqRlcBHmAqOx7DJZlZnPtjPbb1rDjKpR2OaKA_ys22Q7KQx-rSQwD4"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Footnote -->
+<section class="max-w-2xl">
+<div class="flex items-center gap-4 mb-6">
+<span class="w-12 h-px bg-black/20"></span>
+<span class="text-[10px] uppercase tracking-[0.5em] font-bold">Conclusion</span>
+</div>
+<p class="newsreader text-2xl italic leading-relaxed text-black/80">
+                "Strategy is not the presence of ideas, but the calculated absence of the unnecessary. To curate is to kill everything that does not echo."
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
+<div class="pointer-events-auto flex flex-col items-start gap-1">
+<span class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] font-black">PAGE 05/10 — STRATEGIC MONUMENT</span>
+<span class="font-sans text-[7px] uppercase tracking-widest manrope text-[#7e562e]/40">TS-DIAGNOSTIC-GRID-V1.0</span>
+</div>
+<div class="pointer-events-auto flex gap-8">
+<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
+<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
+</div>
+</footer>
+</body></html>

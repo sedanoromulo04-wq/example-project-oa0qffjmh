@@ -1,0 +1,75 @@
+{
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "client_id": "CL_1033",
+  "project_name": "Estruturacao de produto consultoria Torq B2B",
+  "supabase": {
+    "table": "offer_jobs",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "behavioral_dossier_id": "{uuid}"
+  },
+  "behavioral_persona_dossier": {
+    "persona_source_of_truth": true,
+    "execution_readiness": "cleared",
+    "governance_verdict": {
+      "status": "approved",
+      "approval_owner": "CMO"
+    },
+    "triade_do_medo": {
+      "superficial": [],
+      "profundo": [],
+      "catastrofico": []
+    },
+    "desejo_secreto": {
+      "emotional_reward": [],
+      "hidden_fantasy": []
+    },
+    "sistema_de_crencas": {
+      "inimigo_comum": [],
+      "crencas_limitantes": [],
+      "autossabotagem": []
+    },
+    "dissonancia_cognitiva": {
+      "knows": [],
+      "does": []
+    }
+  },
+  "offer_core": {
+    "requested_expert": "hormozi-pricing",
+    "primary_objective": "Migrar de custo-hora para value-based pricing com retencao premium",
+    "current_product": "Consultoria tatica empresarial avulsa, cobrando R$400 a hora e percebida como commodity.",
+    "ideal_value_proposition": "Transformacao estrutural da empresa do cliente ancorada em inteligencia nao replicavel"
+  },
+  "brand_bible_reference": {
+    "tone": [
+      "Intelectual",
+      "Elegante",
+      "Analitico",
+      "Exclusivo"
+    ],
+    "lexicon_allowed": [
+      "Infraestrutura dedicada",
+      "C-Level alignment",
+      "Ancoragem em metricas de sucesso"
+    ],
+    "lexicon_forbidden": [
+      "Mentoria",
+      "Desconto imperdivel",
+      "So pra quem agir rapido",
+      "Metodo definitivo"
+    ]
+  },
+  "context_variables": {
+    "buyer_status_quo": "Empresas com faturamento milionario paralisadas por gestoes lentas e buscando garantias em negocios dificeis",
+    "the_torq_edge": "A Torq executa a inteligencia que muitos apenas teorizam em diretorias vazias"
+  },
+  "output_requirements": {
+    "format": "Value equation breakdown com risk reversal e seletividade premium",
+    "return_type": "markdown",
+    "include_pricing_anchors": true
+  }
+}

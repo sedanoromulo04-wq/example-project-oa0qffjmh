@@ -1,0 +1,32 @@
+{
+  "_schema": "torq-content-plan-v1",
+  "meta": {
+    "client_name": "{Nome do cliente}",
+    "planning_window": "{30d | 60d | campanha}",
+    "created_at": "{ISO-8601 timestamp}"
+  },
+  "strategic_inputs": {
+    "north_star_thesis": "{Tese central aprovada}",
+    "primary_offer": "{Oferta principal ou CTA}",
+    "available_proof": [],
+    "narrative_assets": []
+  },
+  "channel_roles": [
+    {
+      "channel": "linkedin",
+      "role": "{Papel do canal no sistema}",
+      "dominant_formats": []
+    }
+  ],
+  "pillar_set": [],
+  "series": [],
+  "calendar": [],
+  "facts": [],
+  "inferences": [],
+  "hypotheses": [],
+  "handoff": {
+    "ready_for_canva": [],
+    "needs_approval": [],
+    "blocked_items": []
+  }
+}

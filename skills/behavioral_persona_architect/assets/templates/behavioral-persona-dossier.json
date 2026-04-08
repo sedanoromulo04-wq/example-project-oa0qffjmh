@@ -1,0 +1,71 @@
+{
+  "_schema": "torq-behavioral-persona-dossier-v1",
+  "_runtime": {
+    "backend": "supabase",
+    "source_of_truth": "supabase_record",
+    "template_role": "reference_only"
+  },
+  "persona_source_of_truth": true,
+  "execution_readiness": "blocked",
+  "supabase": {
+    "table": "behavioral_persona_dossiers",
+    "record_id": "{uuid}",
+    "project_id": "{uuid}",
+    "source_job_id": "{uuid}"
+  },
+  "governance_verdict": {
+    "status": "ready_for_c_level_review",
+    "approval_owner": "{CEO ou CMO responsavel}",
+    "approved_at": "{ISO-8601 timestamp ou null}"
+  },
+  "directive_snapshot": {
+    "business_goal": "{Objetivo de negocio}",
+    "decision_required": "{Decisao a suportar}",
+    "input_quality": "{alta | media | baixa}"
+  },
+  "evidence_base": {
+    "sources_used": [],
+    "sample_size": 0,
+    "key_verbatims": [],
+    "research_gaps": []
+  },
+  "status_quo": {
+    "daily_reality": [],
+    "frictions": [],
+    "emotional_costs": []
+  },
+  "triade_do_medo": {
+    "superficial": [],
+    "profundo": [],
+    "catastrofico": []
+  },
+  "desejo_secreto": {
+    "emotional_reward": [],
+    "hidden_fantasy": [],
+    "status_or_relief": []
+  },
+  "sistema_de_crencas": {
+    "inimigo_comum": [],
+    "crencas_limitantes": [],
+    "autossabotagem": []
+  },
+  "dissonancia_cognitiva": {
+    "knows": [],
+    "does": [],
+    "why_the_gap_persists": []
+  },
+  "handoff_mandatorio": {
+    "copy_implications": [],
+    "storytelling_implications": [],
+    "offer_implications": [],
+    "language_guardrails": []
+  },
+  "facts": [],
+  "inferences": [],
+  "hypotheses": [],
+  "downstream_dependencies": [
+    "torq-editorial-copy",
+    "torq-storytelling",
+    "torq-offer-engineering"
+  ]
+}

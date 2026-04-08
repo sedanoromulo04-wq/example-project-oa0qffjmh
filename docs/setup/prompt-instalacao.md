@@ -21,16 +21,16 @@ Quero instalar a skill-creator no meu Claude Code. Siga os passos abaixo:
 3. Baixar os arquivos do repositório okjpg/skill-creator
    - Opção A (com git): git clone https://github.com/okjpg/skill-creator /tmp/skill-creator-tmp
    - Opção B (com curl, arquivo por arquivo):
-     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/SKILL.md -o ~/.claude/skills/criar-skill/SKILL.md
-     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/references/skill-anatomy.md -o ~/.claude/skills/criar-skill/references/skill-anatomy.md
-     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/references/guia-refinamento.md -o ~/.claude/skills/criar-skill/references/guia-refinamento.md
-     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/evals/evals.json -o ~/.claude/skills/criar-skill/evals/evals.json
+     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/SKILL.md -o ~/.claude/skills/criar-skill/SKILL.md
+     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/references/skill-anatomy.md -o ~/.claude/skills/criar-skill/references/skill-anatomy.md
+     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/references/guia-refinamento.md -o ~/.claude/skills/criar-skill/references/guia-refinamento.md
+     curl -s https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/evals/evals.json -o ~/.claude/skills/criar-skill/evals/evals.json
 
 4. Se usou Opção A (git clone), copiar os arquivos para o lugar certo:
-   cp /tmp/skill-creator-tmp/SKILL.md ~/.claude/skills/criar-skill/SKILL.md
-   cp /tmp/skill-creator-tmp/references/skill-anatomy.md ~/.claude/skills/criar-skill/references/
-   cp /tmp/skill-creator-tmp/references/guia-refinamento.md ~/.claude/skills/criar-skill/references/
-   cp /tmp/skill-creator-tmp/evals/evals.json ~/.claude/skills/criar-skill/evals/
+   cp /tmp/skill-creator-tmp/skills/criar-skill/SKILL.md ~/.claude/skills/criar-skill/SKILL.md
+   cp /tmp/skill-creator-tmp/skills/criar-skill/references/skill-anatomy.md ~/.claude/skills/criar-skill/references/
+   cp /tmp/skill-creator-tmp/skills/criar-skill/references/guia-refinamento.md ~/.claude/skills/criar-skill/references/
+   cp /tmp/skill-creator-tmp/skills/criar-skill/evals/evals.json ~/.claude/skills/criar-skill/evals/
    rm -rf /tmp/skill-creator-tmp
 
 5. Verificar que os arquivos estão no lugar:
@@ -101,7 +101,7 @@ Se você usa um bot no Telegram conectado ao Claude, envie:
 ```
 Instala a skill skill-creator no meu Claude Code.
 Repositório: https://github.com/okjpg/skill-creator
-Segue as instruções do arquivo prompt-instalacao.md
+Segue as instruções do arquivo docs/setup/prompt-instalacao.md
 ```
 
 O agente vai executar os passos de instalação via terminal no seu computador (requer que o agente tenha acesso ao shell local ou via SSH).
@@ -123,7 +123,7 @@ chmod 755 ~/.claude/skills/criar-skill
 **"curl: command not found"**
 Usar wget como alternativa:
 ```bash
-wget -q https://raw.githubusercontent.com/okjpg/skill-creator/main/SKILL.md -O ~/.claude/skills/criar-skill/SKILL.md
+wget -q https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/SKILL.md -O ~/.claude/skills/criar-skill/SKILL.md
 ```
 
 **A skill não ativa quando digito /criar-skill**

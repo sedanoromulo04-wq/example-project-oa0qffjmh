@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-approval-governance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Revisa este carrossel que ja passou por conteudo e copy e me diz se pode entrar na fila de publicacao.",
+      "expected_output": "A skill deve checar claims, prova, tom e aprovacao humana, emitir decisao e permitir fila apenas se o estado estiver valido."
+    },
+    {
+      "id": 2,
+      "prompt": "Pode publicar isso direto, ainda esta em draft mas eu confio.",
+      "expected_output": "A skill deve bloquear a transicao, apontar a quebra de governanca e exigir revisoes obrigatorias antes de qualquer fila."
+    }
+  ]
+}

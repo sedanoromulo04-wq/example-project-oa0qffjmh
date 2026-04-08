@@ -1,0 +1,15 @@
+{
+  "skill_name": "torq-content-planning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Temos brand bundle aprovado, oferta definida e queremos um calendario de 30 dias para LinkedIn e Instagram sem seguir trends.",
+      "expected_output": "A skill deve gerar um content-plan com papeis por canal, pilares, series, backlog, CTA e dependencia de aprovacao."
+    },
+    {
+      "id": 2,
+      "prompt": "Quero um monte de post mesmo sem oferta, sem tese e sem prova.",
+      "expected_output": "A skill deve bloquear o planejamento, explicar os gaps estrategicos e recomendar retorno para estrategia ou diagnostico."
+    }
+  ]
+}

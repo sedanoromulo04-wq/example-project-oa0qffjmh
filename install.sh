@@ -37,10 +37,10 @@ download() {
 
 install_files() {
   local base_dir="$1"
-  download "$REPO/SKILL.md"                        "$base_dir/SKILL.md"
-  download "$REPO/references/skill-anatomy.md"     "$base_dir/references/skill-anatomy.md"
-  download "$REPO/references/guia-refinamento.md"  "$base_dir/references/guia-refinamento.md"
-  download "$REPO/evals/evals.json"                "$base_dir/evals/evals.json"
+  download "$REPO/skills/criar-skill/SKILL.md"                        "$base_dir/SKILL.md"
+  download "$REPO/skills/criar-skill/references/skill-anatomy.md"     "$base_dir/references/skill-anatomy.md"
+  download "$REPO/skills/criar-skill/references/guia-refinamento.md"  "$base_dir/references/guia-refinamento.md"
+  download "$REPO/skills/criar-skill/evals/evals.json"                "$base_dir/evals/evals.json"
 }
 
 # ── Claude Code ─────────────────────────────────────────────────────────────
@@ -111,7 +111,7 @@ install_openclaw() {
   mkdir -p "$skills_dir"
 
   # Baixa o SKILL.md como arquivo único (formato OpenClaw é o mesmo conteúdo)
-  download "$REPO/SKILL.md" "$dest"
+  download "$REPO/skills/criar-skill/SKILL.md" "$dest"
 
   # Atualiza _index.md se existir
   if [ -f "$index" ]; then
@@ -169,14 +169,17 @@ fi
 
 # ── Wizard ───────────────────────────────────────────────────────────────────
 
-WIZARD_URL="https://raw.githubusercontent.com/okjpg/skill-creator/main/wizard.html"
-EXAMPLES_URL="https://raw.githubusercontent.com/okjpg/skill-creator/main/examples.html"
+WIZARD_URL="https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/assets/wizard/wizard.html"
+EXAMPLES_URL="https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/assets/wizard/examples.html"
+PHOTO_URL="https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/assets/wizard/bruno-photo.jpeg"
 WIZARD_PATH="$HOME/.claude/skills/$SKILL_NAME/wizard.html"
 EXAMPLES_PATH="$HOME/.claude/skills/$SKILL_NAME/examples.html"
+PHOTO_PATH="$HOME/.claude/skills/$SKILL_NAME/bruno-photo.jpeg"
 
 echo "Baixando wizard visual..."
 download "$WIZARD_URL" "$WIZARD_PATH"
 download "$EXAMPLES_URL" "$EXAMPLES_PATH"
+download "$PHOTO_URL" "$PHOTO_PATH"
 
 # Try to open wizard in browser
 if command -v open &>/dev/null; then

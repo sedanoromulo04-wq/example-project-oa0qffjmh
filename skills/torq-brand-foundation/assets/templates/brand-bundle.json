@@ -1,0 +1,51 @@
+{
+  "_schema": "torq-brand-bundle-v1",
+  "meta": {
+    "client_name": "{Nome do especialista}",
+    "project_slug": "{slug-do-projeto}",
+    "created_at": "{ISO-8601 timestamp}"
+  },
+  "executive_summary": {
+    "stage": "{Estagio do especialista}",
+    "fit": "{fit aprovado | fit condicional | nao-fit}",
+    "gaps": []
+  },
+  "facts": [],
+  "inferences": [],
+  "hypotheses": [],
+  "market_map": {
+    "category": "{Categoria}",
+    "trends": [],
+    "opportunities": [],
+    "risks": []
+  },
+  "positioning": {
+    "territory": "{Territorio de marca}",
+    "promise": "{Promessa principal}",
+    "mechanism": "{Mecanismo ou metodo}",
+    "differentiation": "{Tese de diferenciacao}",
+    "message": "{Mensagem central}"
+  },
+  "verbal_identity": {
+    "voice": "{Descricao da voz}",
+    "tone": "{Descricao do tom}",
+    "headline": "{Headline principal}",
+    "bio": "{Bio curta}",
+    "pitch_short": "{Pitch curto}",
+    "manifesto": "{Manifesto curto}"
+  },
+  "visual_system": {
+    "north_star": "{Direcao visual central}",
+    "palette": [],
+    "typography": {
+      "display": "{Fonte display}",
+      "body": "{Fonte de texto}"
+    },
+    "image_assets": []
+  },
+  "content_readiness": {
+    "pillars": [],
+    "proof_assets": [],
+    "next_steps": []
+  }
+}

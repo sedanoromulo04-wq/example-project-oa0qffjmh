@@ -1,0 +1,109 @@
+.editor-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--bg);
+}
+
+.editor-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.editor-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.editor-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toolbar-btn {
+    padding: 0.3rem 0.55rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.toolbar-btn:hover {
+    background: var(--surface-2);
+    color: var(--text);
+}
+
+.toolbar-btn.italic {
+    font-style: italic;
+}
+
+.toolbar-btn.mono {
+    font-family: var(--font-mono);
+    font-weight: 400;
+}
+
+.editor-error {
+    color: var(--error);
+    font-size: 0.78rem;
+}
+
+.editor-title-input {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 1.25rem 2.5rem 0.5rem;
+    width: 100%;
+}
+
+.editor-title-input::placeholder {
+    color: var(--text-subtle);
+}
+
+.editor-title-input:focus {
+    border-color: transparent;
+}
+
+.editor-textarea {
+    flex: 1;
+    resize: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0.75rem 2.5rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-family: var(--font-mono);
+    color: #C8C8D8;
+    width: 100%;
+}
+
+.editor-textarea:focus {
+    border-color: transparent;
+}
+
+.editor-textarea::placeholder {
+    color: var(--text-subtle);
+}
+
+.editor-hint {
+    padding: 0.5rem 2.5rem;
+    font-size: 0.72rem;
+    color: var(--text-subtle);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    font-family: var(--font-mono);
+}

@@ -1,184 +1,105 @@
 # skill-creator
 
-Uma skill para Claude Code e agentes de IA que cria outras skills automaticamente.
+Repositorio organizado como monorepo de skills. Aqui ficam as skills em
+producao, seus assets, documentos de apoio e material-base para criar novas
+skills sem depender de caminhos soltos fora do projeto.
 
-Você descreve um processo. O agente transforma em uma skill estruturada, passa por QA automático, e faz o deploy em `~/.claude/skills/` — pronta para usar.
+## Estrutura
 
----
+```text
+skill-creator/
+|-- skills/
+|   |-- criar-skill/
+|   |   |-- SKILL.md
+|   |   |-- evals/
+|   |   |-- references/
+|   |   `-- assets/wizard/
+|   |-- torq-brand-foundation/
+|   |   |-- SKILL.md
+|   |   |-- assets/
+|   |   |-- evals/
+|   |   |-- references/
+|   |   |-- scripts/
+|   |   `-- tmp/
+|   `-- ...
+|-- docs/
+|   |-- setup/
+|   `-- clients/grupo-torq/
+|-- install.sh
+|-- README.md
+`-- LICENSE
+```
 
-## O que é uma skill?
+## Skills atuais
 
-Uma skill é um arquivo de instrução (SKILL.md) que você coloca no Claude Code para automatizar tarefas repetitivas. Em vez de explicar o que fazer toda vez, você escreve uma vez e o Claude executa sempre que você acionar.
+- `skills/criar-skill`: skill-base para transformar workflows e sessoes em novas skills.
+- `skills/torq-brand-foundation`: skill do Grupo Torq para Brand Foundation e Livrobrand.
+- `skills/torq-market-intelligence`: pesquisa de mercado, concorrencia, voz do cliente e tese de categoria.
+- `skills/torq-commercial-diagnostic`: qualificacao comercial, persona fit e escopo inicial.
+- `skills/torq-content-planning`: planejamento editorial subordinado a tese, prova e oferta.
+- `skills/torq-approval-governance`: checklist de claims, governanca de aprovacao e bloqueio de publicacao sem HITL.
+- `skills/torq-distribution-ops`: fila de distribuicao, medicao e reingestao de aprendizados.
+- `skills/torq-canva-production`: producao visual no Canva a partir de ativos aprovados.
 
-Exemplos de skills que você pode criar com esse repositório:
-- Skill de geração de posts LinkedIn a partir de vídeos
-- Skill de emissão de notas fiscais
-- Skill de análise de concorrentes
-- Skill de responder comentários com seu tom de voz
-- Qualquer processo que você repete toda semana
-
----
-
-## Como instalar
-
-### Uma linha
+## Como instalar `criar-skill`
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/okjpg/skill-creator/main/install.sh | bash
 ```
 
-O script detecta automaticamente se você tem Claude Code, OpenClaw, ou ambos — e instala em todos os ambientes encontrados.
+O instalador baixa os arquivos de `skills/criar-skill/` e instala em
+`~/.claude/skills/criar-skill/`.
 
-Depois da instalação, abra seu agente e digite:
-```
+Depois da instalacao:
+
+```text
 /criar-skill
 ```
 
-### Telegram (via agente de IA)
+## Wizard visual
 
-Copie o conteúdo de `prompt-instalacao.md` e envie para o seu agente no Telegram. O agente vai executar a instalação automaticamente.
+Os arquivos do wizard vivem em `skills/criar-skill/assets/wizard/`.
 
----
+Localmente:
 
-## Como usar
+```bash
+open skills/criar-skill/assets/wizard/wizard.html
+```
 
-### Wizard visual (recomendado para começar)
-
-Após instalar, o wizard abre automaticamente no browser. Se precisar abrir de novo:
+Depois de instalar a skill:
 
 ```bash
 open ~/.claude/skills/criar-skill/wizard.html
 ```
 
-O wizard guia você por 4 passos e gera o SKILL.md + evals.json prontos para copiar. Também tem uma [biblioteca com 24 exemplos de skills](examples.html) para usar como base.
+## Documentacao
 
-### 3 formas de criar uma skill (via agente)
+- Setup guiado: `docs/setup/prompt-instalacao.md`
+- Documentos-base do Grupo Torq: `docs/clients/grupo-torq/`
+- Operating model e contratos do Torq OS: `docs/knowledge-base/methodologies/`
+- Esboco operacional do Torq OS: `docs/torq-os/`
+- Referencias da skill `criar-skill`: `skills/criar-skill/references/`
+- Referencias da skill `torq-brand-foundation`: `skills/torq-brand-foundation/references/`
 
-**Modo 1 — Capturar o que você acabou de fazer**
+## Skills externas agregadas agora
 
-Você acabou de executar um processo no Claude. Digita:
-```
-/criar-skill
-```
-O agente lê o histórico da sessão, identifica os passos, e gera a skill automaticamente.
+- `agent-memory-systems`
+- `context-manager`
+- `rag-engineer`
+- `n8n-mcp-tools-expert`
 
-**Modo 2 — Colar um workflow existente**
+As proximas skills externas candidatas ficaram documentadas para adocao futura
+em `docs/knowledge-base/methodologies/2026-04-06_methodology_torq-os-external-skill-adoption.md`.
 
-Você tem um processo descrito em texto (notas, Notion, papel). Cola no chat:
-```
-/criar-skill
+## Convencoes do repositorio
 
-Todo dia eu: 1) acesso o painel, 2) exporto o relatório, 3) formato e mando por email
-```
-O agente extrai os passos e gera a skill.
-
-**Modo 3 — Descrever uma ideia**
-
-Você tem uma ideia vaga do que quer automatizar:
-```
-/criar-skill quero algo que me ajude a responder comentários no Instagram
-```
-O agente faz perguntas para entender o que entra, o que sai, e como é um resultado perfeito. Depois gera.
-
----
-
-## O que acontece depois que você digita /criar-skill
-
-```
-Você descreve →  Claude estrutura o workflow
-                    ↓
-              QA automático (10 checks)
-                    ↓
-              Você revisa e aprova
-                    ↓
-              Deploy em ~/.claude/skills/
-              (SKILL.md + evals/evals.json)
-                    ↓
-              Skill pronta para usar
-```
-
-O QA automático verifica:
-- Nome no formato correto (kebab-case)
-- Descrição com triggers suficientes para o Claude entender quando ativar
-- Cada passo do workflow é claro e imperativo
-- Exemplos reais de input e output
-- Edge cases cobertos
-- Sem credenciais expostas no arquivo
-- Evals preparados para teste (prompt + output esperado)
-
----
-
-## Estrutura de uma skill gerada
-
-Toda skill criada pelo `/criar-skill` gera no mínimo:
-
-```
-skill-name/
-├── SKILL.md              # Workflow, regras, edge cases
-└── evals/
-    └── evals.json        # Casos de teste (prompt + expected_output)
-```
-
-O `evals.json` permite testar se a skill está funcionando corretamente após refinamentos e serve como documentação de uso para quem instalar a skill.
-
-Opcionais (quando necessário):
-- `references/` — docs de apoio, specs, guias de estilo
-- `scripts/` — código executável (ex: geração de imagem, PDF)
-- `assets/` — fontes, templates, arquivos estáticos
-
----
-
-## Skills não saem perfeitas na primeira vez
-
-Isso é esperado e normal.
-
-Depois do deploy, rode a skill com um input real. Quando algo sair errado, identifique a causa e corrija a instrução no SKILL.md. Skills melhoram com uso — cada refinamento que você documenta torna a skill mais robusta para sempre.
-
-Guia completo: `references/guia-refinamento.md`
-
----
-
-## Estrutura do repositório
-
-```
-skill-creator/
-├── SKILL.md                        # A skill em si (instalar aqui)
-├── wizard.html                     # Wizard visual (abrir no browser)
-├── examples.html                   # Biblioteca com 24 exemplos de skills
-├── bruno-photo.jpeg                # Foto do autor
-├── README.md                       # Este arquivo
-├── LICENSE                         # MIT
-├── install.sh                      # Instalador automático
-├── prompt-instalacao.md            # Prompt para configurar via agente
-├── evals/
-│   └── evals.json                  # Casos de teste do próprio skill-creator
-└── references/
-    ├── skill-anatomy.md            # Template de anatomia de uma skill
-    └── guia-refinamento.md         # Guia de refinamento pós-deploy
-```
-
-### Wizard visual
-
-Se preferir uma interface visual, abra o `wizard.html` no browser:
-
-```bash
-open wizard.html
-```
-
-O wizard guia você por 4 passos e gera o SKILL.md + evals.json prontos para copiar ou baixar. Funciona 100% offline, sem servidor.
-
----
+- Toda nova skill deve nascer em `skills/<nome-da-skill>/`.
+- Material estatico e bibliotecas visuais devem ficar dentro de `assets/` da propria skill.
+- Documentacao transversal ou de cliente deve ficar em `docs/`.
+- Arquivos temporarios e saidas de execucao ficam em `tmp/` dentro da skill e sao ignorados pelo Git.
 
 ## Requisitos
 
-- [Claude Code](https://claude.ai/code) instalado
-- Opcional: [GitHub CLI](https://cli.github.com/) para backup das skills no GitHub
-- Opcional: [1Password CLI](https://developer.1password.com/docs/cli/) para proteger credenciais
-
----
-
-## Feito por
-
-Bruno Okamoto · SaaS, IA & Empreendedorismo
-
-[LinkedIn](https://linkedin.com/in/obrunookamoto) · [YouTube](https://youtube.com/@obrunookamoto) · [Instagram](https://instagram.com/obrunookamoto)
+- [Claude Code](https://claude.ai/code)
+- Opcional: [GitHub CLI](https://cli.github.com/)
+- Opcional: [1Password CLI](https://developer.1password.com/docs/cli/)

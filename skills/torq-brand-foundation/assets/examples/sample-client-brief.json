@@ -1,0 +1,59 @@
+{
+  "client_name": "Professor Atlas",
+  "project_slug": "professor-atlas",
+  "niche": "Performance esportiva",
+  "subniche": "Futevolei competitivo",
+  "persona_type": "persona_2",
+  "history": "Professor consolidado com múltiplos centros de treinamento, resultados consistentes com alunos e forte reputação local.",
+  "offers": [
+    {
+      "name": "Treinamento presencial premium",
+      "type": "servico",
+      "price": "R$ 750/mês"
+    },
+    {
+      "name": "Mentoria técnica online",
+      "type": "mentoria",
+      "price": "R$ 1.490"
+    }
+  ],
+  "proof_points": [
+    "Alunos com evolução técnica documentada",
+    "Vários centros de treinamento ativos",
+    "Indicação orgânica recorrente"
+  ],
+  "goals": [
+    "Organizar posicionamento",
+    "Criar Brand Bible premium",
+    "Preparar a futura entrada em funil e VSL"
+  ],
+  "constraints": [
+    "Não soar guru",
+    "Evitar estética infantilizada de esporte",
+    "Manter autoridade técnica e sobriedade"
+  ],
+  "values": [
+    "Disciplina",
+    "Família",
+    "Técnica",
+    "Respeito"
+  ],
+  "channels": [
+    "Instagram",
+    "WhatsApp"
+  ],
+  "competitors": [
+    "Treinadores que viralizam no Instagram sem sistema",
+    "Cursos genéricos de beach sports"
+  ],
+  "visual_references": [
+    {
+      "label": "Figma brand guidelines template",
+      "url": "https://www.figma.com/templates/brand-guidelines-template/"
+    },
+    {
+      "label": "Figma branding workshop template",
+      "url": "https://www.figma.com/templates/branding-workshop-template/"
+    }
+  ]
+}

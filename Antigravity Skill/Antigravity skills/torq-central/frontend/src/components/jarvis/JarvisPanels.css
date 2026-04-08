@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+.jarvis-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}
+
+.jarvis-hero-card,
+.jarvis-thinking-card,
+.jarvis-response-card {
+    border-radius: 24px;
+    background: var(--surface-panel);
+    border: 1px solid var(--border-ghost);
+    box-shadow: var(--shadow-atmosphere);
+}
+
+.jarvis-hero-card {
+    padding: 1.25rem;
+}
+
+.jarvis-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+    gap: 1rem;
+}
+
+.jarvis-hero-copy h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    max-width: 18ch;
+    margin: 0.45rem 0 0.75rem;
+}
+
+.jarvis-hero-text {
+    color: var(--text-soft);
+    max-width: 60ch;
+}
+
+.jarvis-hero-side {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.jarvis-mini-metric {
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+    background: var(--surface-raised);
+    border: 1px solid var(--border-ghost);
+}
+
+.jarvis-mini-metric label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.25rem;
+}
+
+.jarvis-mini-metric strong {
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.jarvis-prompt-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.jarvis-prompt-card {
+    text-align: left;
+    padding: 1rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(37, 38, 38, 0.8), rgba(25, 26, 26, 0.92));
+    border: 1px solid rgba(72, 72, 72, 0.45);
+    color: var(--text-main);
+    line-height: 1.55;
+    transition: transform 0.25s var(--easing-premium), border-color 0.25s var(--easing-premium), background 0.25s var(--easing-premium);
+}
+
+.jarvis-prompt-card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(191, 197, 228, 0.42);
+    background: linear-gradient(180deg, rgba(49, 52, 58, 0.9), rgba(31, 32, 32, 0.96));
+}
+
+.jarvis-thinking-card {
+    padding: 1rem 1.1rem;
+}
+
+.jarvis-thinking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.jarvis-thinking-flow {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.jarvis-thinking-step {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    padding: 0.8rem 0.9rem;
+    border-radius: 16px;
+    background: rgba(19, 19, 19, 0.9);
+    border: 1px solid var(--border-ghost);
+}
+
+.jarvis-thinking-step p {
+    color: var(--text-soft);
+    font-size: 0.86rem;
+    margin-top: 0.2rem;
+}
+
+.jarvis-thinking-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    margin-top: 0.35rem;
+    flex-shrink: 0;
+    background: rgba(172, 171, 170, 0.45);
+}
+
+.jarvis-thinking-step.active .jarvis-thinking-dot {
+    background: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(191, 197, 228, 0.5);
+}
+
+.jarvis-thinking-step.pending {
+    opacity: 0.72;
+}
+
+.jarvis-response-card {
+    padding: 1.15rem;
+}
+
+.jarvis-response-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jarvis-response-header h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 1.9vw, 1.8rem);
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    max-width: 28ch;
+    margin-top: 0.45rem;
+}
+
+.jarvis-risk-badge {
+    height: fit-content;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    border: 1px solid var(--border-ghost);
+    background: rgba(37, 38, 38, 0.9);
+    color: var(--text-main);
+}
+
+.jarvis-risk-badge.low {
+    background: rgba(65, 112, 94, 0.18);
+    border-color: rgba(126, 190, 164, 0.25);
+    color: #bfe8d4;
+}
+
+.jarvis-risk-badge.medium {
+    background: rgba(173, 115, 38, 0.16);
+    border-color: rgba(224, 178, 93, 0.26);
+    color: #f2d398;
+}
+
+.jarvis-risk-badge.high,
+.jarvis-risk-badge.blocked {
+    background: rgba(127, 39, 55, 0.28);
+    border-color: rgba(236, 124, 138, 0.32);
+    color: #ffb1bb;
+}
+
+.jarvis-response-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.jarvis-response-metric,
+.jarvis-detail-card,
+.jarvis-spotlight-panel {
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+    background: rgba(19, 19, 19, 0.92);
+    border: 1px solid var(--border-ghost);
+}
+
+.jarvis-response-metric label,
+.jarvis-detail-card label,
+.jarvis-spotlight-panel label {
+    display: block;
+    color: var(--text-dim);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.3rem;
+}
+
+.jarvis-spotlight-panel p {
+    font-size: 1.02rem;
+    color: var(--text-main);
+    line-height: 1.55;
+}
+
+.jarvis-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-top: 0.9rem;
+}
+
+.jarvis-detail-card.warning {
+    background: rgba(37, 27, 27, 0.68);
+}
+
+.jarvis-chip-row,
+.jarvis-inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.jarvis-inline-list.compact {
+    gap: 0.35rem;
+}
+
+.jarvis-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.42rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(191, 197, 228, 0.08);
+    border: 1px solid rgba(191, 197, 228, 0.18);
+    color: var(--text-main);
+    font-size: 0.76rem;
+    line-height: 1.2;
+}
+
+.jarvis-chip.subtle {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(72, 72, 72, 0.45);
+}
+
+.jarvis-chip.warning {
+    background: rgba(127, 39, 55, 0.16);
+    border-color: rgba(236, 124, 138, 0.22);
+    color: #ffb1bb;
+}
+
+.jarvis-list-empty {
+    color: var(--text-soft);
+    font-size: 0.84rem;
+}
+
+.jarvis-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.jarvis-action-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.jarvis-action-status {
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.jarvis-action-status.approval {
+    background: rgba(127, 39, 55, 0.22);
+    color: #ffb1bb;
+}
+
+.jarvis-action-status.safe {
+    background: rgba(65, 112, 94, 0.16);
+    color: #bfe8d4;
+}
+
+.jarvis-blocked-card,
+.jarvis-approval-card,
+.jarvis-voice-card {
+    border-radius: 24px;
+    padding: 1.1rem;
+    border: 1px solid var(--border-ghost);
+    box-shadow: var(--shadow-atmosphere);
+}
+
+.jarvis-blocked-card {
+    background: linear-gradient(180deg, rgba(50, 21, 28, 0.86), rgba(26, 13, 16, 0.96));
+}
+
+.jarvis-blocked-header,
+.jarvis-approval-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jarvis-blocked-header h3,
+.jarvis-approval-header h3,
+.jarvis-confirmation-head h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    max-width: 28ch;
+    margin-top: 0.38rem;
+}
+
+.jarvis-spotlight-panel.blocked {
+    margin-top: 0.9rem;
+    background: rgba(17, 9, 11, 0.92);
+}
+
+.jarvis-approval-card {
+    background: linear-gradient(180deg, rgba(23, 24, 30, 0.9), rgba(14, 14, 14, 0.96));
+}
+
+.jarvis-approval-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.jarvis-mutation-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.jarvis-mutation-item {
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: rgba(19, 19, 19, 0.92);
+    border: 1px solid var(--border-ghost);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.jarvis-mutation-item span {
+    color: var(--text-soft);
+    font-size: 0.82rem;
+}
+
+.jarvis-voice-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: linear-gradient(180deg, rgba(31, 32, 32, 0.92), rgba(16, 16, 16, 0.94));
+}
+
+.jarvis-voice-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.jarvis-voice-copy strong {
+    font-size: 0.95rem;
+}
+
+.jarvis-voice-copy span {
+    color: var(--text-soft);
+    font-size: 0.8rem;
+}
+
+.jarvis-voice-wave {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.32rem;
+    min-width: 96px;
+}
+
+.jarvis-voice-wave span {
+    width: 6px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--accent-primary), rgba(63, 70, 95, 0.6));
+    animation: jarvis-wave 1.6s ease-in-out infinite;
+}
+
+.jarvis-voice-wave span:nth-child(1) { height: 12px; animation-delay: 0s; }
+.jarvis-voice-wave span:nth-child(2) { height: 24px; animation-delay: 0.15s; }
+.jarvis-voice-wave span:nth-child(3) { height: 18px; animation-delay: 0.3s; }
+.jarvis-voice-wave span:nth-child(4) { height: 28px; animation-delay: 0.45s; }
+.jarvis-voice-wave span:nth-child(5) { height: 14px; animation-delay: 0.6s; }
+
+.jarvis-voice-button {
+    padding: 0.7rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-ghost);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-soft);
+}
+
+.jarvis-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    backdrop-filter: blur(14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 40;
+}
+
+.jarvis-confirmation-modal {
+    width: min(960px, 100%);
+    max-height: min(88vh, 900px);
+    overflow: auto;
+    border-radius: 28px;
+    border: 1px solid var(--border-ghost);
+    background: linear-gradient(180deg, rgba(37, 38, 38, 0.88), rgba(14, 14, 14, 0.96));
+    box-shadow: var(--shadow-atmosphere);
+    padding: 1.2rem;
+}
+
+.jarvis-confirmation-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jarvis-confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.jarvis-confirmation-panel,
+.jarvis-confirmation-item {
+    padding: 0.95rem 1rem;
+    border-radius: 18px;
+    background: rgba(19, 19, 19, 0.94);
+    border: 1px solid var(--border-ghost);
+}
+
+.jarvis-confirmation-panel label,
+.jarvis-confirmation-field label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.3rem;
+}
+
+.jarvis-confirmation-panel p,
+.jarvis-confirmation-field p {
+    color: var(--text-soft);
+    word-break: break-word;
+}
+
+.jarvis-confirmation-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.jarvis-confirmation-notes {
+    margin-top: 1rem;
+}
+
+.jarvis-confirmation-notes label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.35rem;
+}
+
+.jarvis-review-textarea {
+    width: 100%;
+    min-height: 108px;
+    padding: 0.9rem 1rem;
+    resize: vertical;
+    background: rgba(19, 19, 19, 0.94);
+}
+
+.jarvis-confirmation-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin-top: 0.75rem;
+}
+
+.jarvis-confirmation-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.jarvis-confirmation-foot p {
+    color: var(--text-soft);
+    max-width: 54ch;
+}
+
+.jarvis-confirmation-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+@keyframes jarvis-wave {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scaleY(0.86);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1.1);
+    }
+}
+
+@media (max-width: 1100px) {
+    .jarvis-hero-grid,
+    .jarvis-response-grid,
+    .jarvis-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jarvis-prompt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jarvis-approval-summary,
+    .jarvis-confirmation-grid,
+    .jarvis-confirmation-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .jarvis-blocked-header,
+    .jarvis-approval-header,
+    .jarvis-confirmation-head,
+    .jarvis-confirmation-foot,
+    .jarvis-voice-card,
+    .jarvis-confirmation-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

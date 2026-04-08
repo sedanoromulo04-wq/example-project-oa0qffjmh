@@ -1,0 +1,14 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg-elevated);
+}
+
+.dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    background:
+        radial-gradient(circle at top left, rgba(63, 70, 95, 0.12), transparent 22%),
+        linear-gradient(180deg, rgba(9, 9, 9, 0.98), rgba(14, 14, 14, 1));
+}

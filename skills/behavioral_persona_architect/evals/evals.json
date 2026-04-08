@@ -1,0 +1,15 @@
+{
+  "skill_name": "behavioral-persona-architect",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Temos um research packet com desabafos de Reddit, reviews de livros na Amazon e comentarios de YouTube sobre emagrecimento pos-parto. Preciso de um dossie psicologico para orientar copy, storytelling e oferta sob aprovacao do CMO.",
+      "expected_output": "A skill deve gerar um behavioral_persona_dossier com evidencia, triade do medo, desejo secreto, sistema de crencas, dissonancia cognitiva, handoff mandatorio, facts/inferences/hypotheses e status pronto para review do C-Level."
+    },
+    {
+      "id": 2,
+      "prompt": "Cria uma persona premium para o meu curso, mas ainda nao temos pesquisa nem dataset. Quero so uma intuicao do publico.",
+      "expected_output": "A skill deve bloquear a execucao, recusar avatar inventado, explicar o modelo Scraper -> Analista e devolver o contrato minimo de input para coleta ou ingestao de dados."
+    }
+  ]
+}
