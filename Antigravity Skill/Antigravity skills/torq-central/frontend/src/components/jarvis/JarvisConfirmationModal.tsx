@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import type { JarvisStructuredResponse } from '../../lib/jarvisApi'
+import type { JarvisAction, JarvisStructuredResponse } from '../../lib/jarvisApi'
 
 interface Props {
     response: JarvisStructuredResponse
+    actions: JarvisAction[]
+    pendingHistoricalActions: number
     pending?: boolean
     onClose: () => void
     onDecision: (decision: 'approve' | 'reject', notes: string) => void
@@ -20,7 +22,14 @@ function stringifyValue(value: unknown) {
     }
 }
 
-export default function JarvisConfirmationModal({ response, pending = false, onClose, onDecision }: Props) {
+export default function JarvisConfirmationModal({
+    response,
+    actions,
+    pendingHistoricalActions,
+    pending = false,
+    onClose,
+    onDecision,
+}: Props) {
     const [notes, setNotes] = useState('')
 
     return (
@@ -48,6 +57,10 @@ export default function JarvisConfirmationModal({ response, pending = false, onC
                         <p>{response.next_safe_action}</p>
                     </div>
                     <div className="jarvis-confirmation-panel">
+                        <label>Lote em revisao</label>
+                        <p>{actions.length} acao(oes) do turno atual</p>
+                    </div>
+                    <div className="jarvis-confirmation-panel">
                         <label>Required approvals</label>
                         <div className="jarvis-inline-list compact">
                             {response.required_approvals.length === 0 && (
@@ -59,6 +72,13 @@ export default function JarvisConfirmationModal({ response, pending = false, onC
                         </div>
                     </div>
                 </div>
+
+                {pendingHistoricalActions > 0 && (
+                    <div className="jarvis-confirmation-banner">
+                        Existem {pendingHistoricalActions} proposta(s) antiga(s) pendentes nesta sessao. Elas nao serao
+                        aprovadas por este modal.
+                    </div>
+                )}
 
                 <div className="jarvis-confirmation-list">
                     {response.requested_mutations.map((mutation, index) => (

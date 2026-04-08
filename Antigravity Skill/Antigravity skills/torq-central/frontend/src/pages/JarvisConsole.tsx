@@ -54,11 +54,22 @@ export default function JarvisConsole() {
         () => sessions.find(session => session.id === selectedSessionId) || null,
         [sessions, selectedSessionId]
     )
-    const proposedActionIds = actions.filter(action => action.status === 'proposed').map(action => action.id)
+    const proposedActions = useMemo(
+        () => actions.filter(action => action.status === 'proposed'),
+        [actions]
+    )
+    const activeReviewAgentRunId = proposedActions.find(action => action.agent_run_id)?.agent_run_id || null
+    const reviewableActions = useMemo(() => {
+        if (proposedActions.length === 0) return []
+        if (!activeReviewAgentRunId) return [proposedActions[0]]
+        return proposedActions.filter(action => action.agent_run_id === activeReviewAgentRunId)
+    }, [proposedActions, activeReviewAgentRunId])
+    const reviewableActionIds = reviewableActions.map(action => action.id)
+    const pendingHistoricalActions = Math.max(proposedActions.length - reviewableActions.length, 0)
     const hasBlockedState = Boolean(
         responseCard && (responseCard.blocked_actions.length > 0 || responseCard.missing_upstream_assets.length > 0)
     )
-    const hasApprovalState = Boolean(responseCard && proposedActionIds.length > 0)
+    const hasApprovalState = Boolean(responseCard && reviewableActionIds.length > 0)
 
     const refreshSessions = async (preferredSessionId?: string | null) => {
         if (!user) return
@@ -153,7 +164,7 @@ export default function JarvisConsole() {
     }
 
     const handleReviewDecision = async (decision: 'approve' | 'reject', notes: string) => {
-        if (!user || !selectedSessionId || proposedActionIds.length === 0 || reviewLoading) return
+        if (!user || !selectedSessionId || reviewableActionIds.length === 0 || reviewLoading) return
 
         setReviewLoading(true)
         setError(null)
@@ -163,7 +174,7 @@ export default function JarvisConsole() {
                 session_id: selectedSessionId,
                 user_id: user.id,
                 user_email: user.email,
-                action_ids: proposedActionIds,
+                action_ids: reviewableActionIds,
                 decision,
                 notes,
             })
@@ -253,7 +264,12 @@ export default function JarvisConsole() {
                         {responseCard && <JarvisResponseCard response={responseCard} />}
                         {responseCard && hasBlockedState && <JarvisBlockedCard response={responseCard} />}
                         {responseCard && hasApprovalState && (
-                            <JarvisApprovalCard response={responseCard} onReview={() => setApprovalOpen(true)} />
+                            <JarvisApprovalCard
+                                response={responseCard}
+                                reviewableActions={reviewableActions}
+                                pendingHistoricalActions={pendingHistoricalActions}
+                                onReview={() => setApprovalOpen(true)}
+                            />
                         )}
 
                         <section className="jarvis-transcript-shell">
@@ -329,13 +345,20 @@ export default function JarvisConsole() {
                 </section>
 
                 <aside className="jarvis-inspector">
-                    <JarvisInspector responseCard={responseCard} contextSummary={contextSummary} actions={actions} />
+                    <JarvisInspector
+                        responseCard={responseCard}
+                        contextSummary={contextSummary}
+                        actions={actions}
+                        activeActionIds={reviewableActionIds}
+                    />
                 </aside>
             </div>
 
             {approvalOpen && responseCard && (
                 <JarvisConfirmationModal
                     response={responseCard}
+                    actions={reviewableActions}
+                    pendingHistoricalActions={pendingHistoricalActions}
                     pending={reviewLoading}
                     onClose={() => setApprovalOpen(false)}
                     onDecision={handleReviewDecision}

@@ -10,6 +10,11 @@
     box-shadow: 18px 0 44px rgba(0, 0, 0, 0.22);
 }
 
+.sidebar.jarvis-mode {
+    width: 220px;
+    min-width: 220px;
+}
+
 .sidebar-header {
     display: flex;
     align-items: center;
@@ -80,6 +85,14 @@
     border-radius: 18px;
     border: 1px solid rgba(191, 197, 228, 0.18);
     background: rgba(191, 197, 228, 0.06);
+}
+
+.sidebar.jarvis-mode .sidebar-mode-note {
+    padding: 0.8rem;
+}
+
+.sidebar.jarvis-mode .sidebar-mode-note span {
+    font-size: 0.7rem;
 }
 
 .sidebar-mode-note p {

@@ -28,10 +28,10 @@
 
 .jarvis-hero-copy h3 {
     font-family: var(--font-display);
-    font-size: clamp(1.6rem, 2vw, 2.2rem);
+    font-size: clamp(1.35rem, 1.8vw, 2rem);
     line-height: 1.08;
     letter-spacing: -0.04em;
-    max-width: 18ch;
+    max-width: 24ch;
     margin: 0.45rem 0 0.75rem;
 }
 
@@ -347,6 +347,18 @@
     background: linear-gradient(180deg, rgba(23, 24, 30, 0.9), rgba(14, 14, 14, 0.96));
 }
 
+.jarvis-approval-note,
+.jarvis-confirmation-banner {
+    margin-bottom: 0.95rem;
+    padding: 0.8rem 0.95rem;
+    border-radius: 16px;
+    background: rgba(191, 197, 228, 0.07);
+    border: 1px solid rgba(191, 197, 228, 0.14);
+    color: var(--text-soft);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
 .jarvis-approval-summary {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -549,7 +561,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1500px) {
     .jarvis-hero-grid,
     .jarvis-response-grid,
     .jarvis-detail-grid {

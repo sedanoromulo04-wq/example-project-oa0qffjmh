@@ -23,6 +23,97 @@ function normalizeRequestedMutations(value) {
     : [];
 }
 
+function classifyIntent(message) {
+  const text = (message || '').toLowerCase();
+  if (/(aprova|aprovacao|approval|autoriza|rejeita)/.test(text)) return 'approval_query';
+  if (/(executa|cria|atualiza|muda|publica|gera)/.test(text)) return 'execution_query';
+  if (/(status|bloque|penden|risco|diagnost)/.test(text)) return 'diagnostic_query';
+  if (/(planej|estrateg|roteiro|proximo passo|roadmap)/.test(text)) return 'planning_query';
+  if (/(rascunho|copy|texto|escrev|conteudo)/.test(text)) return 'drafting_query';
+  return 'system_query';
+}
+
+function inferModule(envelope, contextPack) {
+  return (
+    contextPack.clientState?.current_module
+    || contextPack.clientState?.current_stage
+    || (envelope.active_doc_id ? 'torq-memory-os' : null)
+    || 'torq-orchestrator'
+  );
+}
+
+function buildHeuristicResponse({ envelope, contextPack, reason }) {
+  const intent = classifyIntent(envelope.message);
+  const clientState = contextPack.clientState || {};
+  const currentModule = typeof clientState.current_module === 'string' && clientState.current_module
+    ? clientState.current_module
+    : inferModule(envelope, contextPack);
+  const currentStage = typeof clientState.current_stage === 'string' && clientState.current_stage
+    ? clientState.current_stage
+    : 'context-required';
+  const missingAssets = [];
+
+  if (!contextPack.client) {
+    missingAssets.push('active_client');
+  }
+
+  if (contextPack.knowledgeSources.length === 0) {
+    missingAssets.push('knowledge_sources');
+  }
+
+  const blockedActions = missingAssets.length > 0
+    ? ['silent-mutation', 'publish-without-context']
+    : ['publish-without-human-approval'];
+
+  const route = missingAssets.length > 0
+    ? ['torq-memory-os', 'torq-orchestrator']
+    : [currentModule, 'torq-orchestrator'];
+
+  const nextSafeAction = missingAssets.length > 0
+    ? 'Reunir o contexto ausente no Supabase antes de tentar executar qualquer mutacao.'
+    : 'Revisar a resposta, validar as dependencias e somente depois aprovar a proxima acao controlada.';
+
+  const answer = missingAssets.length > 0
+    ? `O runtime entrou em modo de contingencia${reason ? ` porque ${reason}` : ''}. Ainda assim, o Jarvis preservou a governanca e identificou contexto ausente antes de seguir.`
+    : `O runtime entrou em modo de contingencia${reason ? ` porque ${reason}` : ''}. A sessao continua funcional, com foco em diagnostico, rota segura e nenhuma mutacao silenciosa.`;
+
+  return {
+    normalized: normalizeResponse(
+      {
+        intent_type: intent,
+        current_module: currentModule,
+        current_stage: currentStage,
+        recommended_route: route,
+        required_context: missingAssets,
+        missing_upstream_assets: missingAssets,
+        allowed_actions: ['diagnose', 'plan', 'prepare-controlled-mutation'],
+        blocked_actions: blockedActions,
+        approval_risk: missingAssets.length > 0 ? 'high' : 'medium',
+        next_safe_action: nextSafeAction,
+        answer,
+        confidence: 'medium',
+        requested_mutations: [],
+        required_approvals: ['founder-review'],
+        evidence_refs: [
+          `workspace:${contextPack.workspace?.id || 'unknown'}`,
+          `operator:${contextPack.operator?.id || envelope.user_id || 'unknown'}`,
+        ],
+      },
+      answer
+    ),
+    runtime: {
+      status: 'fallback',
+      agent: config.openClaudeAgent,
+      session_id: null,
+      duration_ms: null,
+      total_cost_usd: null,
+      raw_result: null,
+      raw_stdout: '',
+      raw_stderr: reason || '',
+    },
+  };
+}
+
 function buildPrompt({ envelope, contextPack }) {
   return [
     'You are the Torq Jarvis orchestration runtime.',
@@ -99,6 +190,14 @@ function normalizeResponse(parsed, fallbackAnswer) {
 }
 
 async function runOpenClaude({ envelope, contextPack }) {
+  if (config.runtimeMode === 'heuristic') {
+    return buildHeuristicResponse({
+      envelope,
+      contextPack,
+      reason: 'o ambiente atual nao executa o OpenClaude CLI diretamente',
+    });
+  }
+
   const prompt = buildPrompt({ envelope, contextPack });
   const args = [
     '-p',
@@ -151,7 +250,16 @@ async function runOpenClaude({ envelope, contextPack }) {
         return;
       }
       finished = true;
-      reject(error);
+      if (config.runtimeMode === 'cli') {
+        reject(error);
+        return;
+      }
+
+      resolve(buildHeuristicResponse({
+        envelope,
+        contextPack,
+        reason: error.message,
+      }));
     });
 
     child.on('close', (code) => {
@@ -168,18 +276,45 @@ async function runOpenClaude({ envelope, contextPack }) {
         .pop();
 
       if (!finalLine) {
-        reject(new Error(stderr.trim() || 'OpenClaude returned no output'));
+        if (config.runtimeMode === 'cli') {
+          reject(new Error(stderr.trim() || 'OpenClaude returned no output'));
+          return;
+        }
+
+        resolve(buildHeuristicResponse({
+          envelope,
+          contextPack,
+          reason: stderr.trim() || 'OpenClaude returned no output',
+        }));
         return;
       }
 
       const outer = safeJsonParse(finalLine);
       if (!outer) {
-        reject(new Error(`OpenClaude output was not valid JSON: ${finalLine}`));
+        if (config.runtimeMode === 'cli') {
+          reject(new Error(`OpenClaude output was not valid JSON: ${finalLine}`));
+          return;
+        }
+
+        resolve(buildHeuristicResponse({
+          envelope,
+          contextPack,
+          reason: 'o retorno do OpenClaude nao era JSON valido',
+        }));
         return;
       }
 
       if (code !== 0 || outer.is_error) {
-        reject(new Error(outer.result || stderr.trim() || `OpenClaude exited with code ${code}`));
+        if (config.runtimeMode === 'cli') {
+          reject(new Error(outer.result || stderr.trim() || `OpenClaude exited with code ${code}`));
+          return;
+        }
+
+        resolve(buildHeuristicResponse({
+          envelope,
+          contextPack,
+          reason: outer.result || stderr.trim() || `OpenClaude exited with code ${code}`,
+        }));
         return;
       }
 

@@ -20,6 +20,18 @@ No root do repositorio:
 .\start-torq-local.cmd
 ```
 
+Para modo FULL com `OpenClaude` local:
+
+```powershell
+.\start-torq-local-full.cmd
+```
+
+Para modo SAFE com fallback heuristico:
+
+```powershell
+.\start-torq-local-safe.cmd
+```
+
 Para encerrar:
 
 ```powershell
@@ -30,6 +42,8 @@ Para encerrar:
 
 - abre uma janela para o backend Jarvis
 - abre uma janela para o frontend Vite
+- no modo `full`, o backend roda com `JARVIS_RUNTIME_MODE=cli`
+- no modo `safe`, o backend roda com `JARVIS_RUNTIME_MODE=heuristic`
 
 ## Enderecos locais
 
@@ -47,3 +61,4 @@ Para encerrar:
 
 O backend usa `npm start`.
 O frontend usa `npm run dev -- --host 127.0.0.1`.
+Para detalhes do modo full local, veja `docs/setup/local-openclaude-runtime.md`.

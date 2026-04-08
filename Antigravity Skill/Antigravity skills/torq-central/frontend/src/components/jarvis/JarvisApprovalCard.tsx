@@ -1,7 +1,9 @@
-import type { JarvisStructuredResponse } from '../../lib/jarvisApi'
+import type { JarvisAction, JarvisStructuredResponse } from '../../lib/jarvisApi'
 
 interface Props {
     response: JarvisStructuredResponse
+    reviewableActions: JarvisAction[]
+    pendingHistoricalActions: number
     onReview: () => void
 }
 
@@ -19,7 +21,7 @@ function summarizeMutation(mutation: Record<string, unknown>, index: number) {
     return { action, target }
 }
 
-export default function JarvisApprovalCard({ response, onReview }: Props) {
+export default function JarvisApprovalCard({ response, reviewableActions, pendingHistoricalActions, onReview }: Props) {
     return (
         <section className="jarvis-approval-card">
             <div className="jarvis-approval-header">
@@ -34,18 +36,25 @@ export default function JarvisApprovalCard({ response, onReview }: Props) {
 
             <div className="jarvis-approval-summary">
                 <div className="jarvis-mini-metric">
-                    <label>Mutacoes propostas</label>
-                    <strong>{response.requested_mutations.length}</strong>
+                    <label>Lote atual</label>
+                    <strong>{reviewableActions.length}</strong>
                 </div>
                 <div className="jarvis-mini-metric">
-                    <label>Aprovacoes exigidas</label>
-                    <strong>{response.required_approvals.length}</strong>
+                    <label>Mutacoes do turno</label>
+                    <strong>{response.requested_mutations.length}</strong>
                 </div>
                 <div className="jarvis-mini-metric">
                     <label>Approval risk</label>
                     <strong>{response.approval_risk}</strong>
                 </div>
             </div>
+
+            {pendingHistoricalActions > 0 && (
+                <p className="jarvis-approval-note">
+                    Existem {pendingHistoricalActions} proposta(s) pendente(s) de turnos anteriores. Esta revisao atua
+                    apenas no lote atual.
+                </p>
+            )}
 
             <div className="jarvis-mutation-list">
                 {response.requested_mutations.map((mutation, index) => {

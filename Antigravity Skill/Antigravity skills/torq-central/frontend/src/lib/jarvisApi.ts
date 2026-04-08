@@ -1,6 +1,9 @@
+import { USE_BACKEND_AUTH } from './appConfig'
+import { supabase } from './supabase'
+
 const rawBaseUrl = import.meta.env.VITE_JARVIS_API_URL as string | undefined
 
-export const JARVIS_API_URL = (rawBaseUrl?.replace(/\/$/, '') || 'http://localhost:8787')
+export const JARVIS_API_URL = rawBaseUrl?.trim() ? rawBaseUrl.replace(/\/$/, '') : ''
 
 export interface JarvisSession {
     id: string
@@ -24,6 +27,7 @@ export interface JarvisMessage {
 
 export interface JarvisAction {
     id: string
+    agent_run_id: string | null
     action_type: string
     target_table: string | null
     target_record_id: string | null
@@ -72,11 +76,33 @@ export interface JarvisContextSummary {
     stats: { activeJobs: number; activeApprovals: number; memoryEntries: number; knowledgeSources: number }
 }
 
+function resolveRequestUrl(path: string) {
+    return JARVIS_API_URL ? `${JARVIS_API_URL}${path}` : path
+}
+
+async function buildAuthHeaders() {
+    if (USE_BACKEND_AUTH) {
+        return {} as Record<string, string>
+    }
+
+    const { data } = await supabase.auth.getSession()
+    const accessToken = data.session?.access_token
+
+    return accessToken
+        ? { Authorization: `Bearer ${accessToken}` }
+        : ({} as Record<string, string>)
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-    const response = await fetch(`${JARVIS_API_URL}${path}`, {
+    const authHeaders = await buildAuthHeaders()
+    const baseHeaders: Record<string, string> = {
+        'Content-Type': 'application/json',
+        ...authHeaders,
+    }
+    const response = await fetch(resolveRequestUrl(path), {
         headers: {
-            'Content-Type': 'application/json',
-            ...(init?.headers || {}),
+            ...baseHeaders,
+            ...(init?.headers as Record<string, string> | undefined),
         },
         ...init,
     })

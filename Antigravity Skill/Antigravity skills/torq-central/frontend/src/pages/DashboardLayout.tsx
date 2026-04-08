@@ -41,14 +41,14 @@ export default function DashboardLayout({ onOpenSearch }: Props) {
     }
 
     return (
-        <div className="dashboard">
+        <div className={`dashboard${IS_JARVIS_MODE ? ' jarvis-mode' : ''}`}>
             <Sidebar
                 categories={categories}
                 user={user}
                 onSignOut={handleSignOut}
                 onOpenSearch={onOpenSearch}
             />
-            <main className="dashboard-content">
+            <main className={`dashboard-content${IS_JARVIS_MODE ? ' jarvis-mode' : ''}`}>
                 <Outlet />
             </main>
         </div>

@@ -1,0 +1,14 @@
+{
+  "name": "skill-creator-root",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "scripts": {
+    "dev:frontend": "npm --prefix \"Antigravity Skill/Antigravity skills/torq-central/frontend\" run dev",
+    "dev:backend": "npm --prefix \"Antigravity Skill/Antigravity skills/torq-central/backend\" start",
+    "build": "npm --prefix \"Antigravity Skill/Antigravity skills/torq-central/frontend\" run build",
+    "vercel-build": "npm --prefix \"Antigravity Skill/Antigravity skills/torq-central/frontend\" install && npm --prefix \"Antigravity Skill/Antigravity skills/torq-central/frontend\" run build"
+  }
+}

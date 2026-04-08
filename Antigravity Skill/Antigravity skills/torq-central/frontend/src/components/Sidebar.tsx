@@ -60,7 +60,7 @@ export default function Sidebar({ categories, user, onSignOut, onOpenSearch }: P
     }, [currentCat, categories])
 
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar${IS_JARVIS_MODE ? ' jarvis-mode' : ''}`}>
             <div className="sidebar-header">
                 <HexagonIcon size={20} className="sidebar-logo-icon" />
                 <span className="sidebar-title">Torq Central</span>

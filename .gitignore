@@ -6,3 +6,6 @@ skills/*/tmp/
 **/.env.*.local
 **/node_modules/
 **/dist/
+tmp-backend.log
+tmp-frontend.log
+Antigravity Skill/Antigravity skills/antigravity-awesome-skills/

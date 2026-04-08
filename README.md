@@ -75,6 +75,9 @@ open ~/.claude/skills/criar-skill/wizard.html
 ## Documentacao
 
 - Setup guiado: `docs/setup/prompt-instalacao.md`
+- Deploy Vercel: `docs/setup/vercel-deploy.md`
+- Template de envs da Vercel: `docs/setup/vercel-env-template.md`
+- Runtime local full com OpenClaude: `docs/setup/local-openclaude-runtime.md`
 - Documentos-base do Grupo Torq: `docs/clients/grupo-torq/`
 - Operating model e contratos do Torq OS: `docs/knowledge-base/methodologies/`
 - Esboco operacional do Torq OS: `docs/torq-os/`

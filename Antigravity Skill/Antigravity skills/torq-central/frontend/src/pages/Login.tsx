@@ -35,7 +35,7 @@ export default function LoginPage() {
                     <p className="login-kicker">Authorized Access</p>
                     <HexagonIcon size={32} className="login-logo-svg" />
                     <h1>Torq Jarvis Console</h1>
-                    <p>Camada operacional do Torq OS para orquestrar agentes, contexto e governanca.</p>
+                    <p>Camada operacional do Torq OS para orquestrar agentes, contexto, governanca e mutacoes controladas.</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="login-form">
@@ -59,7 +59,7 @@ export default function LoginPage() {
                             type="password"
                             value={password}
                             onChange={e => setPassword(e.target.value)}
-                            placeholder="••••••••"
+                            placeholder="********"
                             required
                         />
                     </div>
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 <div className="login-footnote">
                     <span>Supabase Auth</span>
                     <span>Jarvis API</span>
-                    <span>OpenClaude Runtime</span>
+                    <span>Runtime governado</span>
                 </div>
             </div>
         </div>

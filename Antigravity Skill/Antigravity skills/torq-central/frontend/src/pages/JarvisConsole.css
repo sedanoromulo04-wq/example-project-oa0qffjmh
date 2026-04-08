@@ -4,6 +4,7 @@
     gap: 1.25rem;
     min-height: 100%;
     padding: 1.3rem 1.3rem 1.5rem;
+    max-width: 1720px;
 }
 
 .jarvis-header {
@@ -76,9 +77,10 @@
 
 .jarvis-layout {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr) 330px;
+    grid-template-columns: 260px minmax(0, 1fr) 320px;
     gap: 1rem;
     min-height: calc(100vh - 190px);
+    align-items: start;
 }
 
 .jarvis-sessions,
@@ -89,11 +91,19 @@
     border: 1px solid var(--border-ghost);
     border-radius: 24px;
     box-shadow: var(--shadow-soft);
+    overflow: hidden;
 }
 
 .jarvis-sessions,
 .jarvis-chat {
     min-height: 0;
+}
+
+.jarvis-sessions,
+.jarvis-inspector {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
 }
 
 .jarvis-inspector {
@@ -146,6 +156,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
+    max-height: min(62vh, 720px);
+    overflow: auto;
 }
 
 .jarvis-session-item {
@@ -199,6 +211,7 @@
     padding: 1rem;
     min-height: 0;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .jarvis-transcript-shell {
@@ -348,24 +361,30 @@
     gap: 0.25rem;
 }
 
+.jarvis-action-item.active-batch {
+    border-color: rgba(191, 197, 228, 0.28);
+    background: rgba(191, 197, 228, 0.08);
+}
+
 .jarvis-action-item span {
     color: var(--text-soft);
     font-size: 0.78rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1540px) {
     .jarvis-layout {
-        grid-template-columns: 260px minmax(0, 1fr);
+        grid-template-columns: 240px minmax(0, 1fr);
     }
 
     .jarvis-inspector {
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        position: static;
     }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1180px) {
     .jarvis-page {
         padding: 1rem;
     }
@@ -379,6 +398,10 @@
 
     .jarvis-layout {
         grid-template-columns: 1fr;
+    }
+
+    .jarvis-sessions {
+        position: static;
     }
 
     .jarvis-inspector {

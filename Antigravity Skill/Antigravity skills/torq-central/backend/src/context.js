@@ -227,7 +227,7 @@ async function listSessionsForUser(userId, userEmail = null) {
       order by js.updated_at desc, js.created_at desc
       limit 25
     `,
-    [profile.workspace_id, userId]
+    [profile.workspace_id, profile.id]
   );
 
   return result.rows;
@@ -245,7 +245,7 @@ async function getSessionDetails(sessionId, userId, userEmail = null) {
           and profile_id = $3
         limit 1
       `,
-      [sessionId, profile.workspace_id, userId]
+      [sessionId, profile.workspace_id, profile.id]
     ),
     query(
       `
@@ -258,7 +258,7 @@ async function getSessionDetails(sessionId, userId, userEmail = null) {
     ),
     query(
       `
-        select id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
+        select id, agent_run_id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
         from public.jarvis_actions
         where session_id = $1
         order by created_at desc
@@ -314,7 +314,7 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
 
     const actionsRes = await client.query(
       `
-        select id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
+        select id, agent_run_id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
         from public.jarvis_actions
         where session_id = $1
           and id = any($2::uuid[])
@@ -346,7 +346,10 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
       let resolvedStatus = nextStatus;
       let execution = null;
 
-      if (normalizedDecision === 'approve' && action.approval_required) {
+      const requiresApprovalGate = normalizedDecision === 'approve' && action.approval_required;
+      const shouldExecuteAfterApproval = normalizedDecision === 'approve' && !action.approval_required;
+
+      if (requiresApprovalGate) {
         const approvalItem = await client.query(
           `
             insert into public.approval_items (
@@ -357,7 +360,7 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
               risk_level,
               review_payload
             )
-            values ($1, $2, $3, 'approved', $4, $5)
+            values ($1, $2, $3, 'pending', $4, $5)
             returning id, status, risk_level, created_at, updated_at
           `,
           [
@@ -386,21 +389,33 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           [approvalItem.rows[0].id, profile.id, notes || null]
         );
 
-        createdApprovalItems.push(approvalItem.rows[0]);
+        const finalizedApprovalItem = await client.query(
+          `
+            update public.approval_items
+            set status = 'approved',
+                updated_at = now()
+            where id = $1
+            returning id, status, risk_level, created_at, updated_at
+          `,
+          [approvalItem.rows[0].id]
+        );
+
+        createdApprovalItems.push(finalizedApprovalItem.rows[0]);
+        resolvedStatus = 'approved_pending_execution';
       }
 
-      if (normalizedDecision === 'approve') {
+      if (shouldExecuteAfterApproval) {
         const executed = await executeApprovedAction(client, {
           action,
           profile,
           session,
         });
         resolvedStatus = executed.status;
-        execution = executed.execution;
-        executionResults.push({
-          action_id: action.id,
-          ...executed,
-        });
+          execution = executed.execution;
+          executionResults.push({
+            action_id: action.id,
+            ...executed,
+          });
       }
 
       const nextPayload = {
@@ -420,7 +435,7 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           set status = $2,
               payload = $3
           where id = $1
-          returning id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
+          returning id, agent_run_id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
         `,
         [action.id, resolvedStatus, nextPayload]
       );

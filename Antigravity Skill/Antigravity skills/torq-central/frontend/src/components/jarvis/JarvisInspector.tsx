@@ -4,6 +4,7 @@ interface Props {
     responseCard: JarvisStructuredResponse | null
     contextSummary: JarvisContextSummary | null
     actions: JarvisAction[]
+    activeActionIds: string[]
 }
 
 function renderSimpleList(items: string[], emptyText: string, className = 'jarvis-inline-list') {
@@ -22,7 +23,7 @@ function renderSimpleList(items: string[], emptyText: string, className = 'jarvi
     )
 }
 
-export default function JarvisInspector({ responseCard, contextSummary, actions }: Props) {
+export default function JarvisInspector({ responseCard, contextSummary, actions, activeActionIds }: Props) {
     return (
         <>
             <section className="jarvis-card">
@@ -91,7 +92,10 @@ export default function JarvisInspector({ responseCard, contextSummary, actions 
                 {actions.length === 0 && <p className="jarvis-empty">Nenhuma mutacao proposta ate agora.</p>}
                 <div className="jarvis-action-list">
                     {actions.map(action => (
-                        <div key={action.id} className="jarvis-action-item">
+                        <div
+                            key={action.id}
+                            className={`jarvis-action-item${activeActionIds.includes(action.id) ? ' active-batch' : ''}`}
+                        >
                             <div className="jarvis-action-topline">
                                 <strong>{action.action_type}</strong>
                                 <span className={`jarvis-action-status ${action.approval_required ? 'approval' : 'safe'}`}>
@@ -99,6 +103,7 @@ export default function JarvisInspector({ responseCard, contextSummary, actions 
                                 </span>
                             </div>
                             <span>{action.target_table || 'sem tabela alvo'}</span>
+                            <span>{action.agent_run_id ? `run ${action.agent_run_id.slice(0, 8)}` : 'run nao vinculado'}</span>
                             <span>{action.status}</span>
                         </div>
                     ))}

@@ -59,11 +59,15 @@ const config = {
   supabaseSecretKey: process.env.SUPABASE_SECRET_KEY || null,
   projectRoot: process.env.JARVIS_PROJECT_ROOT || DEFAULT_PROJECT_ROOT,
   allowedOrigins: parseOrigins(process.env.JARVIS_ALLOWED_ORIGINS || 'http://localhost:5173'),
+  allowInsecureDevAuth:
+    process.env.JARVIS_ALLOW_INSECURE_DEV_AUTH === 'true'
+    || (process.env.NODE_ENV !== 'production' && process.env.VERCEL !== '1'),
   openClaudeBin: process.env.OPENCLAUDE_BIN || (process.platform === 'win32' ? 'openclaude.cmd' : 'openclaude'),
   openClaudeProvider: process.env.OPENCLAUDE_PROVIDER || 'openai',
   openClaudeModel: process.env.OPENCLAUDE_MODEL || 'codexplan',
   openClaudeAgent: process.env.OPENCLAUDE_AGENT || 'torq-orchestrator',
   openClaudeTimeoutMs: Number(process.env.OPENCLAUDE_TIMEOUT_MS || 180000),
+  runtimeMode: process.env.JARVIS_RUNTIME_MODE || (process.env.VERCEL === '1' ? 'heuristic' : 'cli'),
 };
 
 module.exports = { config };

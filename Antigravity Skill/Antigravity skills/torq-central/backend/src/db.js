@@ -3,6 +3,8 @@ const { config } = require('./config');
 
 const pool = new Pool({
   connectionString: config.dbUrl,
+  family: Number(process.env.PG_FAMILY || 4),
+  connectionTimeoutMillis: Number(process.env.PG_CONNECTION_TIMEOUT_MS || 15000),
   ssl: { rejectUnauthorized: false },
 });
 
