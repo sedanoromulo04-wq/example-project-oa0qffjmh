@@ -1,242 +1,395 @@
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "surface-container-low": "#f6f3ee",
-            "background": "#fcf9f4",
-            "surface-dim": "#dcdad5",
-            "tertiary-container": "#111c2c",
-            "tertiary-fixed-dim": "#bcc7dd",
-            "on-primary": "#ffffff",
-            "tertiary-fixed": "#d8e3fa",
-            "error-container": "#ffdad6",
-            "surface-container": "#f0ede8",
-            "on-tertiary-fixed-variant": "#3c4759",
-            "on-background": "#1c1c19",
-            "outline": "#747878",
-            "primary-fixed-dim": "#c8c6c5",
-            "primary-fixed": "#e5e2e1",
-            "on-surface-variant": "#444748",
-            "surface-container-highest": "#e5e2dd",
-            "tertiary": "#000000",
-            "surface-container-high": "#ebe8e3",
-            "inverse-primary": "#c8c6c5",
-            "on-tertiary-fixed": "#111c2c",
-            "on-primary-fixed-variant": "#474646",
-            "on-error-container": "#93000a",
-            "outline-variant": "#c4c7c7",
-            "secondary-container": "#fdc796",
-            "inverse-surface": "#31302d",
-            "on-secondary": "#ffffff",
-            "on-error": "#ffffff",
-            "primary": "#000000",
-            "on-primary-fixed": "#1c1b1b",
-            "surface-variant": "#e5e2dd",
-            "secondary": "#7e562e",
-            "on-tertiary-container": "#798498",
-            "surface-bright": "#fcf9f4",
-            "surface-tint": "#5f5e5e",
-            "on-tertiary": "#ffffff",
-            "on-primary-container": "#858383",
-            "secondary-fixed": "#ffdcbf",
-            "secondary-fixed-dim": "#f1bc8c",
-            "surface": "#fcf9f4",
-            "surface-container-lowest": "#ffffff",
-            "on-secondary-fixed-variant": "#633f19",
-            "on-secondary-container": "#79512a",
-            "inverse-on-surface": "#f3f0eb",
-            "error": "#ba1a1a",
-            "primary-container": "#1c1b1b",
-            "on-surface": "#1c1c19",
-            "on-secondary-fixed": "#2d1600"
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'surface-container-low': '#f6f3ee',
+              background: '#fcf9f4',
+              'surface-dim': '#dcdad5',
+              'tertiary-container': '#111c2c',
+              'tertiary-fixed-dim': '#bcc7dd',
+              'on-primary': '#ffffff',
+              'tertiary-fixed': '#d8e3fa',
+              'error-container': '#ffdad6',
+              'surface-container': '#f0ede8',
+              'on-tertiary-fixed-variant': '#3c4759',
+              'on-background': '#1c1c19',
+              outline: '#747878',
+              'primary-fixed-dim': '#c8c6c5',
+              'primary-fixed': '#e5e2e1',
+              'on-surface-variant': '#444748',
+              'surface-container-highest': '#e5e2dd',
+              tertiary: '#000000',
+              'surface-container-high': '#ebe8e3',
+              'inverse-primary': '#c8c6c5',
+              'on-tertiary-fixed': '#111c2c',
+              'on-primary-fixed-variant': '#474646',
+              'on-error-container': '#93000a',
+              'outline-variant': '#c4c7c7',
+              'secondary-container': '#fdc796',
+              'inverse-surface': '#31302d',
+              'on-secondary': '#ffffff',
+              'on-error': '#ffffff',
+              primary: '#000000',
+              'on-primary-fixed': '#1c1b1b',
+              'surface-variant': '#e5e2dd',
+              secondary: '#7e562e',
+              'on-tertiary-container': '#798498',
+              'surface-bright': '#fcf9f4',
+              'surface-tint': '#5f5e5e',
+              'on-tertiary': '#ffffff',
+              'on-primary-container': '#858383',
+              'secondary-fixed': '#ffdcbf',
+              'secondary-fixed-dim': '#f1bc8c',
+              surface: '#fcf9f4',
+              'surface-container-lowest': '#ffffff',
+              'on-secondary-fixed-variant': '#633f19',
+              'on-secondary-container': '#79512a',
+              'inverse-on-surface': '#f3f0eb',
+              error: '#ba1a1a',
+              'primary-container': '#1c1b1b',
+              'on-surface': '#1c1c19',
+              'on-secondary-fixed': '#2d1600',
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+            fontFamily: {
+              headline: ['Newsreader'],
+              body: ['Manrope'],
+              label: ['Manrope'],
+            },
           },
-          "borderRadius": {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-          "fontFamily": {
-            "headline": ["Newsreader"],
-            "body": ["Manrope"],
-            "label": ["Manrope"]
-          }
         },
-      },
-    }
-  </script>
-<style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-    .newsreader { font-family: 'Newsreader', serif; }
-    .manrope { font-family: 'Manrope', sans-serif; }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .letterpress { text-shadow: 0px 1px 1px rgba(255,255,255,0.1); }
-  </style>
-</head>
-<body class="bg-primary text-surface-container-low font-body antialiased no-scrollbar selection:bg-secondary selection:text-white">
-<!-- Top Navigation (Shell Implementation) -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#121212]/80 backdrop-blur-xl">
-<div class="text-sm font-bold tracking-[0.3em] text-white">VOL. I: THE MANIFESTO</div>
-<div class="hidden md:flex space-x-12">
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-white/40 hover:text-white transition-colors duration-500" href="#">CH. 01</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-white/40 hover:text-white transition-colors duration-500" href="#">CH. 02</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-white border-b border-white pb-1 transition-colors duration-500" href="#">CH. 03</a>
-</div>
-<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-white">XII</div>
-</nav>
-<!-- Side Navigation (Shell Implementation) -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20">
-<div class="flex flex-col space-y-12 ml-8">
-<div class="group flex items-center">
-<span class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700" data-icon="architecture">architecture</span>
-<span class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700">POSITIONING</span>
-</div>
-<div class="group flex items-center">
-<span class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700" data-icon="menu_book">menu_book</span>
-<span class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700">NARRATIVE</span>
-</div>
-<div class="group flex items-center">
-<span class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700" data-icon="collections">collections</span>
-<span class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700">AESTHETICS</span>
-</div>
-<div class="group flex items-center border-l-2 border-white pl-4">
-<span class="material-symbols-outlined text-white" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
-<span class="absolute left-16 opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white font-black whitespace-nowrap">DISTRIBUTION</span>
-</div>
-</div>
-</aside>
-<main class="min-h-screen pt-32 pb-40 px-6 md:px-24 max-w-[1600px] mx-auto">
-<!-- Final Monument Header -->
-<header class="grid grid-cols-12 gap-8 mb-32">
-<div class="col-span-12 md:col-span-8">
-<span class="block manrope text-[10px] uppercase tracking-[0.5em] text-secondary mb-8">CONCLUDING DIRECTIVE</span>
-<h1 class="newsreader text-[12vw] md:text-[8rem] leading-[0.85] italic font-light tracking-tighter text-surface-container-lowest">
-          The <span class="block">Monumental</span> Execution.
-        </h1>
-</div>
-<div class="col-span-12 md:col-span-4 self-end">
-<p class="manrope text-sm leading-relaxed text-surface-dim opacity-70 border-l border-surface-dim/20 pl-8">
-          Strategy without artifact is mere philosophy. We conclude the manifesto not with words, but with the blueprint of permanence. This is the transition from abstract intent to structural reality.
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .newsreader {
+        font-family: 'Newsreader', serif;
+      }
+      .manrope {
+        font-family: 'Manrope', sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .letterpress {
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-primary text-surface-container-low font-body antialiased no-scrollbar selection:bg-secondary selection:text-white"
+  >
+    <!-- Top Navigation (Shell Implementation) -->
+    <nav
+      class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#121212]/80 backdrop-blur-xl"
+    >
+      <div class="text-sm font-bold tracking-[0.3em] text-white">VOL. I: THE MANIFESTO</div>
+      <div class="hidden md:flex space-x-12">
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-white/40 hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 01</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-white/40 hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 02</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-white border-b border-white pb-1 transition-colors duration-500"
+          href="#"
+          >CH. 03</a
+        >
+      </div>
+      <div class="font-serif italic text-lg tracking-widest uppercase newsreader text-white">
+        XII
+      </div>
+    </nav>
+    <!-- Side Navigation (Shell Implementation) -->
+    <aside
+      class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20"
+    >
+      <div class="flex flex-col space-y-12 ml-8">
+        <div class="group flex items-center">
+          <span
+            class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700"
+            data-icon="architecture"
+            >architecture</span
+          >
+          <span
+            class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700"
+            >POSITIONING</span
+          >
+        </div>
+        <div class="group flex items-center">
+          <span
+            class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700"
+            data-icon="menu_book"
+            >menu_book</span
+          >
+          <span
+            class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700"
+            >NARRATIVE</span
+          >
+        </div>
+        <div class="group flex items-center">
+          <span
+            class="material-symbols-outlined text-white/30 group-hover:text-secondary transition-all duration-700"
+            data-icon="collections"
+            >collections</span
+          >
+          <span
+            class="absolute left-16 opacity-0 group-hover:opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white whitespace-nowrap transition-all duration-700"
+            >AESTHETICS</span
+          >
+        </div>
+        <div class="group flex items-center border-l-2 border-white pl-4">
+          <span
+            class="material-symbols-outlined text-white"
+            data-icon="diamond"
+            style="font-variation-settings: 'FILL' 1"
+            >diamond</span
+          >
+          <span
+            class="absolute left-16 opacity-100 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-white font-black whitespace-nowrap"
+            >DISTRIBUTION</span
+          >
+        </div>
+      </div>
+    </aside>
+    <main class="min-h-screen pt-32 pb-40 px-6 md:px-24 max-w-[1600px] mx-auto">
+      <!-- Final Monument Header -->
+      <header class="grid grid-cols-12 gap-8 mb-32">
+        <div class="col-span-12 md:col-span-8">
+          <span class="block manrope text-[10px] uppercase tracking-[0.5em] text-secondary mb-8"
+            >CONCLUDING DIRECTIVE</span
+          >
+          <h1
+            class="newsreader text-[12vw] md:text-[8rem] leading-[0.85] italic font-light tracking-tighter text-surface-container-lowest"
+          >
+            The <span class="block">Monumental</span> Execution.
+          </h1>
+        </div>
+        <div class="col-span-12 md:col-span-4 self-end">
+          <p
+            class="manrope text-sm leading-relaxed text-surface-dim opacity-70 border-l border-surface-dim/20 pl-8"
+          >
+            Strategy without artifact is mere philosophy. We conclude the manifesto not with words,
+            but with the blueprint of permanence. This is the transition from abstract intent to
+            structural reality.
+          </p>
+        </div>
+      </header>
+      <!-- Roadmap / Technical Index -->
+      <section class="mb-48">
+        <div class="border-t border-surface-dim/10 pt-16 grid grid-cols-12 gap-y-16 md:gap-y-0">
+          <!-- Step 01 -->
+          <div class="col-span-12 md:col-span-4 pr-12 group">
+            <div class="flex justify-between items-baseline mb-12">
+              <span class="newsreader italic text-3xl text-secondary">01</span>
+              <span class="manrope text-[9px] tracking-widest text-white/40"
+                >PHASE: FOUNDATION</span
+              >
+            </div>
+            <h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">
+              Structural Audit
+            </h3>
+            <p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
+              Complete deconstruction of current brand assets. Evaluation of semantic resonance and
+              visual fatigue. Selection of the core monolithic anchor.
+            </p>
+            <div
+              class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"
+            ></div>
+          </div>
+          <!-- Step 02 -->
+          <div class="col-span-12 md:col-span-4 md:px-12 border-l border-surface-dim/10 group">
+            <div class="flex justify-between items-baseline mb-12">
+              <span class="newsreader italic text-3xl text-secondary">02</span>
+              <span class="manrope text-[9px] tracking-widest text-white/40"
+                >PHASE: CALIBRATION</span
+              >
+            </div>
+            <h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">
+              Tonal Synthesis
+            </h3>
+            <p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
+              Harmonizing the tension between heritage typography and modern technical precision.
+              Deployment of the "Silent" visual system across all touchpoints.
+            </p>
+            <div
+              class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"
+            ></div>
+          </div>
+          <!-- Step 03 -->
+          <div class="col-span-12 md:col-span-4 pl-12 border-l border-surface-dim/10 group">
+            <div class="flex justify-between items-baseline mb-12">
+              <span class="newsreader italic text-3xl text-secondary">03</span>
+              <span class="manrope text-[9px] tracking-widest text-white/40">PHASE: LEGACY</span>
+            </div>
+            <h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">
+              Artifact Release
+            </h3>
+            <p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
+              Final orchestration of the high-production brand experience. Ensuring every digital
+              and physical interaction commands authority and permanence.
+            </p>
+            <div
+              class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Technical Metadata & Verification -->
+      <section class="grid grid-cols-12 gap-12 pt-24 border-t border-surface-dim/10">
+        <div class="col-span-12 md:col-span-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <span class="manrope text-[10px] tracking-widest uppercase text-white/30"
+                >Archive No.</span
+              >
+              <span class="manrope text-[10px] tracking-[0.2em] text-surface-container-lowest"
+                >2024-STRAT-MON-010</span
+              >
+            </div>
+            <div class="flex items-center space-x-4">
+              <span class="manrope text-[10px] tracking-widest uppercase text-white/30"
+                >Classification:</span
+              >
+              <span class="manrope text-[10px] tracking-[0.2em] text-surface-container-lowest"
+                >CONFIDENTIAL / AUTHORITATIVE</span
+              >
+            </div>
+            <div class="flex items-center space-x-4">
+              <span class="manrope text-[10px] tracking-widest uppercase text-white/30"
+                >Status:</span
+              >
+              <span class="manrope text-[10px] tracking-[0.2em] text-secondary"
+                >FINALIZED &amp; CERTIFIED</span
+              >
+            </div>
+          </div>
+          <div class="mt-24">
+            <div class="w-64 h-[1px] bg-white/20 mb-4"></div>
+            <p class="manrope text-[10px] tracking-widest uppercase text-white/40">
+              Authorized Signature
+            </p>
+            <p class="newsreader italic text-xl mt-2 text-surface-container-lowest">The Curator</p>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 flex justify-end items-center">
+          <!-- Visual Seal -->
+          <div
+            class="relative w-64 h-64 border border-white/5 rounded-full flex items-center justify-center p-12"
+          >
+            <div
+              class="absolute inset-0 border border-secondary/10 rounded-full animate-pulse-slow"
+            ></div>
+            <div class="text-center">
+              <span
+                class="material-symbols-outlined text-secondary text-5xl mb-4"
+                data-icon="verified_user"
+                >verified_user</span
+              >
+              <p
+                class="manrope text-[8px] tracking-[0.4em] uppercase text-white/60 leading-relaxed"
+              >
+                STRATEGIC<br />AUTHORITY<br />EST. 2024
+              </p>
+            </div>
+            <!-- Decorative Orbiting Text Sim (SVG) -->
+            <svg class="absolute inset-0 w-full h-full -rotate-90" viewbox="0 0 100 100">
+              <path
+                d="M 50, 50 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"
+                fill="transparent"
+                id="circlePath"
+              ></path>
+              <text class="manrope text-[3px] uppercase tracking-[0.5em] fill-white/20">
+                <textpath xlink:href="#circlePath">
+                  * PERMANENCE * AUTHORITY * RESTRAINT * SILENCE * ARCHIVE *
+                </textpath>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <!-- Closing Call to Action -->
+      <div class="mt-48 flex flex-col items-center text-center">
+        <button
+          class="bg-surface-container-lowest text-primary px-16 py-6 manrope uppercase tracking-[0.4em] text-xs font-bold hover:bg-secondary hover:text-white transition-all duration-700"
+        >
+          Initiate Sequence
+        </button>
+        <p class="manrope text-[9px] uppercase tracking-widest text-white/20 mt-8">
+          Begin the Transition to Digital Weight
         </p>
-</div>
-</header>
-<!-- Roadmap / Technical Index -->
-<section class="mb-48">
-<div class="border-t border-surface-dim/10 pt-16 grid grid-cols-12 gap-y-16 md:gap-y-0">
-<!-- Step 01 -->
-<div class="col-span-12 md:col-span-4 pr-12 group">
-<div class="flex justify-between items-baseline mb-12">
-<span class="newsreader italic text-3xl text-secondary">01</span>
-<span class="manrope text-[9px] tracking-widest text-white/40">PHASE: FOUNDATION</span>
-</div>
-<h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">Structural Audit</h3>
-<p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
-            Complete deconstruction of current brand assets. Evaluation of semantic resonance and visual fatigue. Selection of the core monolithic anchor.
-          </p>
-<div class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"></div>
-</div>
-<!-- Step 02 -->
-<div class="col-span-12 md:col-span-4 md:px-12 border-l border-surface-dim/10 group">
-<div class="flex justify-between items-baseline mb-12">
-<span class="newsreader italic text-3xl text-secondary">02</span>
-<span class="manrope text-[9px] tracking-widest text-white/40">PHASE: CALIBRATION</span>
-</div>
-<h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">Tonal Synthesis</h3>
-<p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
-            Harmonizing the tension between heritage typography and modern technical precision. Deployment of the "Silent" visual system across all touchpoints.
-          </p>
-<div class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"></div>
-</div>
-<!-- Step 03 -->
-<div class="col-span-12 md:col-span-4 pl-12 border-l border-surface-dim/10 group">
-<div class="flex justify-between items-baseline mb-12">
-<span class="newsreader italic text-3xl text-secondary">03</span>
-<span class="manrope text-[9px] tracking-widest text-white/40">PHASE: LEGACY</span>
-</div>
-<h3 class="manrope font-bold text-lg tracking-[0.1em] mb-6 uppercase">Artifact Release</h3>
-<p class="manrope text-[13px] text-surface-dim/60 leading-loose mb-8">
-            Final orchestration of the high-production brand experience. Ensuring every digital and physical interaction commands authority and permanence.
-          </p>
-<div class="h-[1px] w-0 group-hover:w-full bg-secondary transition-all duration-1000"></div>
-</div>
-</div>
-</section>
-<!-- Technical Metadata & Verification -->
-<section class="grid grid-cols-12 gap-12 pt-24 border-t border-surface-dim/10">
-<div class="col-span-12 md:col-span-6 flex flex-col justify-between">
-<div class="space-y-4">
-<div class="flex items-center space-x-4">
-<span class="manrope text-[10px] tracking-widest uppercase text-white/30">Archive No.</span>
-<span class="manrope text-[10px] tracking-[0.2em] text-surface-container-lowest">2024-STRAT-MON-010</span>
-</div>
-<div class="flex items-center space-x-4">
-<span class="manrope text-[10px] tracking-widest uppercase text-white/30">Classification:</span>
-<span class="manrope text-[10px] tracking-[0.2em] text-surface-container-lowest">CONFIDENTIAL / AUTHORITATIVE</span>
-</div>
-<div class="flex items-center space-x-4">
-<span class="manrope text-[10px] tracking-widest uppercase text-white/30">Status:</span>
-<span class="manrope text-[10px] tracking-[0.2em] text-secondary">FINALIZED &amp; CERTIFIED</span>
-</div>
-</div>
-<div class="mt-24">
-<div class="w-64 h-[1px] bg-white/20 mb-4"></div>
-<p class="manrope text-[10px] tracking-widest uppercase text-white/40">Authorized Signature</p>
-<p class="newsreader italic text-xl mt-2 text-surface-container-lowest">The Curator</p>
-</div>
-</div>
-<div class="col-span-12 md:col-span-6 flex justify-end items-center">
-<!-- Visual Seal -->
-<div class="relative w-64 h-64 border border-white/5 rounded-full flex items-center justify-center p-12">
-<div class="absolute inset-0 border border-secondary/10 rounded-full animate-pulse-slow"></div>
-<div class="text-center">
-<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="verified_user">verified_user</span>
-<p class="manrope text-[8px] tracking-[0.4em] uppercase text-white/60 leading-relaxed">STRATEGIC<br/>AUTHORITY<br/>EST. 2024</p>
-</div>
-<!-- Decorative Orbiting Text Sim (SVG) -->
-<svg class="absolute inset-0 w-full h-full -rotate-90" viewbox="0 0 100 100">
-<path d="M 50, 50 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="transparent" id="circlePath"></path>
-<text class="manrope text-[3px] uppercase tracking-[0.5em] fill-white/20">
-<textpath xlink:href="#circlePath">
-                        * PERMANENCE * AUTHORITY * RESTRAINT * SILENCE * ARCHIVE *
-                    </textpath>
-</text>
-</svg>
-</div>
-</div>
-</section>
-<!-- Closing Call to Action -->
-<div class="mt-48 flex flex-col items-center text-center">
-<button class="bg-surface-container-lowest text-primary px-16 py-6 manrope uppercase tracking-[0.4em] text-xs font-bold hover:bg-secondary hover:text-white transition-all duration-700">
-        Initiate Sequence
-      </button>
-<p class="manrope text-[9px] uppercase tracking-widest text-white/20 mt-8">Begin the Transition to Digital Weight</p>
-</div>
-</main>
-<!-- Footer (Shell Implementation) -->
-<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
-<div class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 pointer-events-auto">
-      PAGE 10/10 — STRATEGIC MONUMENT
+      </div>
+    </main>
+    <!-- Footer (Shell Implementation) -->
+    <footer
+      class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none"
+    >
+      <div
+        class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 pointer-events-auto"
+      >
+        PAGE 10/10 — STRATEGIC MONUMENT
+      </div>
+      <div class="flex space-x-8 pointer-events-auto">
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >ANNOTATIONS</a
+        >
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >LEGAL ARCHIVE</a
+        >
+      </div>
+    </footer>
+    <!-- Background Texture Overlay -->
+    <div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay">
+      <img
+        class="w-full h-full object-cover"
+        data-alt="extreme close-up of dark charcoal textured paper with subtle fiber details and organic grain"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuArN4PEHhVpittDX0KrO_Xdmc65oP4ltfO6THxHpry61sGw29n7VVAk1wMUpWW5ESu3e5F-xacmIgGHOzN6NtHzpFGP6l8OIZRgTS3x-vvDjVaeciBZrhwomqtN6PJLrwW3d_NA2aHJ-9Is73wooAXSWWWiGKTSTYZWKfRIgd7U06OP9t_tU2MeQSEQbal8YDJtvgCNdsdBVbnxMaPHtYdB4HNKAxwnWOpEXI_GqS8wJ3FbF69Qiu8av8jt5Qdx5P1j4xtVG0b55w4"
+      />
     </div>
-<div class="flex space-x-8 pointer-events-auto">
-<a class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
-<a class="manrope text-[9px] uppercase tracking-tighter text-secondary opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
-</div>
-</footer>
-<!-- Background Texture Overlay -->
-<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay">
-<img class="w-full h-full object-cover" data-alt="extreme close-up of dark charcoal textured paper with subtle fiber details and organic grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArN4PEHhVpittDX0KrO_Xdmc65oP4ltfO6THxHpry61sGw29n7VVAk1wMUpWW5ESu3e5F-xacmIgGHOzN6NtHzpFGP6l8OIZRgTS3x-vvDjVaeciBZrhwomqtN6PJLrwW3d_NA2aHJ-9Is73wooAXSWWWiGKTSTYZWKfRIgd7U06OP9t_tU2MeQSEQbal8YDJtvgCNdsdBVbnxMaPHtYdB4HNKAxwnWOpEXI_GqS8wJ3FbF69Qiu8av8jt5Qdx5P1j4xtVG0b55w4"/>
-</div>
 
-```</body></html>
+    ```
+  </body>
+</html>

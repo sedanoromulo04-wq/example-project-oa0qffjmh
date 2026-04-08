@@ -1,6 +1,6 @@
 ---
 type: integration-plan
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [stitch, figma, mcp, torq, frontend]
 relevance: high

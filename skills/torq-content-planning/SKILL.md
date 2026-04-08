@@ -23,6 +23,7 @@ oferta. Conteudo aqui e derivacao, nao improviso.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler o `brand-bundle`, `offer-job`, `story-job`, `copy-job` ou qualquer ativo estrategico ja aprovado vindo do Supabase, da API ou do front-end.
 2. Confirmar que existe tese central, prova minima e CTA coerente antes de planejar.
 3. Mapear os ativos aprovados que podem virar conteudo: tese, mecanismo, prova, objecoes, historias e casos.
@@ -38,32 +39,38 @@ oferta. Conteudo aqui e derivacao, nao improviso.
 Entregar em portugues com estas secoes:
 
 ### 1. Base Estrategica Usada
+
 - tese central
 - oferta ou CTA principal
 - provas disponiveis
 
 ### 2. Papeis de Canal
+
 - canal
 - objetivo
 - formato dominante
 - risco de desalinhamento
 
 ### 3. Pilares e Series
+
 - pilares
 - series
 - backlog inicial
 
 ### 4. Calendario Recomendado
+
 - janela de planejamento
 - cadencia por canal
 - prioridades da semana
 
 ### 5. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 6. Handoff Operacional
+
 - o que pode ir para Canva
 - o que precisa de aprovacao
 - o que ainda nao deve ser produzido
@@ -85,11 +92,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Temos brand bundle aprovado, oferta definida e queremos um calendario de 30 dias para LinkedIn e Instagram sem cair em trend."
 
 Output: "A skill deve construir um content-plan com papeis por canal, pilares, series, backlog, CTA e cadencia derivada da tese e da prova."
 
 ### Exemplo 2
+
 Input: "Quero um monte de post mesmo sem oferta, sem tese e sem prova."
 
 Output: "A skill deve bloquear o planejamento, explicar que faltam ativos estrategicos minimos e recomendar retorno para estrategia ou diagnostico."

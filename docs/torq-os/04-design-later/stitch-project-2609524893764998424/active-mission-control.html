@@ -1,357 +1,533 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TORQ JARVIS | Operational Alpha</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TORQ JARVIS | Operational Alpha</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
-            "colors": {
-                    "on-tertiary-fixed-variant": "#536372",
-                    "on-primary-fixed-variant": "#545a75",
-                    "surface-container": "#191a1a",
-                    "secondary-fixed-dim": "#d6d4d3",
-                    "on-secondary-container": "#c1bfbe",
-                    "surface-container-lowest": "#000000",
-                    "on-tertiary-fixed": "#374655",
-                    "surface-dim": "#0e0e0e",
-                    "on-surface-variant": "#acabaa",
-                    "surface-container-highest": "#252626",
-                    "tertiary-container": "#dcedff",
-                    "on-tertiary": "#516170",
-                    "inverse-on-surface": "#565554",
-                    "secondary-container": "#3c3b3b",
-                    "secondary": "#9f9d9d",
-                    "surface-variant": "#252626",
-                    "primary-container": "#3f465f",
-                    "outline-variant": "#484848",
-                    "on-background": "#e7e5e4",
-                    "inverse-surface": "#fcf8f8",
-                    "on-surface": "#e7e5e4",
-                    "surface-container-high": "#1f2020",
-                    "surface-container-low": "#131313",
-                    "surface-bright": "#2c2c2c",
-                    "primary-dim": "#b1b7d6",
-                    "background": "#0e0e0e",
-                    "tertiary-fixed-dim": "#cedff1",
-                    "on-primary": "#393f58",
-                    "on-secondary-fixed-variant": "#5c5b5b",
-                    "error-dim": "#b95463",
-                    "secondary-dim": "#9f9d9d",
-                    "on-tertiary-container": "#495867",
-                    "surface-tint": "#bfc5e4",
-                    "surface": "#0e0e0e",
-                    "tertiary-dim": "#cedff1",
-                    "tertiary": "#f7f9ff",
-                    "error": "#ec7c8a",
-                    "on-error-container": "#ff97a3",
-                    "on-primary-container": "#c9cfee",
-                    "inverse-primary": "#575e79",
-                    "error-container": "#7f2737",
-                    "on-error": "#490013",
-                    "tertiary-fixed": "#dcedff",
-                    "primary": "#bfc5e4",
-                    "secondary-fixed": "#e5e2e1",
-                    "primary-fixed-dim": "#cdd3f3",
-                    "outline": "#767575",
-                    "primary-fixed": "#dce1ff",
-                    "on-primary-fixed": "#383e57",
-                    "on-secondary-fixed": "#403f3f",
-                    "on-secondary": "#202020"
+            colors: {
+              'on-tertiary-fixed-variant': '#536372',
+              'on-primary-fixed-variant': '#545a75',
+              'surface-container': '#191a1a',
+              'secondary-fixed-dim': '#d6d4d3',
+              'on-secondary-container': '#c1bfbe',
+              'surface-container-lowest': '#000000',
+              'on-tertiary-fixed': '#374655',
+              'surface-dim': '#0e0e0e',
+              'on-surface-variant': '#acabaa',
+              'surface-container-highest': '#252626',
+              'tertiary-container': '#dcedff',
+              'on-tertiary': '#516170',
+              'inverse-on-surface': '#565554',
+              'secondary-container': '#3c3b3b',
+              secondary: '#9f9d9d',
+              'surface-variant': '#252626',
+              'primary-container': '#3f465f',
+              'outline-variant': '#484848',
+              'on-background': '#e7e5e4',
+              'inverse-surface': '#fcf8f8',
+              'on-surface': '#e7e5e4',
+              'surface-container-high': '#1f2020',
+              'surface-container-low': '#131313',
+              'surface-bright': '#2c2c2c',
+              'primary-dim': '#b1b7d6',
+              background: '#0e0e0e',
+              'tertiary-fixed-dim': '#cedff1',
+              'on-primary': '#393f58',
+              'on-secondary-fixed-variant': '#5c5b5b',
+              'error-dim': '#b95463',
+              'secondary-dim': '#9f9d9d',
+              'on-tertiary-container': '#495867',
+              'surface-tint': '#bfc5e4',
+              surface: '#0e0e0e',
+              'tertiary-dim': '#cedff1',
+              tertiary: '#f7f9ff',
+              error: '#ec7c8a',
+              'on-error-container': '#ff97a3',
+              'on-primary-container': '#c9cfee',
+              'inverse-primary': '#575e79',
+              'error-container': '#7f2737',
+              'on-error': '#490013',
+              'tertiary-fixed': '#dcedff',
+              primary: '#bfc5e4',
+              'secondary-fixed': '#e5e2e1',
+              'primary-fixed-dim': '#cdd3f3',
+              outline: '#767575',
+              'primary-fixed': '#dce1ff',
+              'on-primary-fixed': '#383e57',
+              'on-secondary-fixed': '#403f3f',
+              'on-secondary': '#202020',
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
             },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
+            fontFamily: {
+              headline: ['Manrope'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
           },
         },
       }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #0e0e0e; }
-        ::-webkit-scrollbar-thumb { background: #484848; border-radius: 2px; }
-        .glass-panel {
-            background: rgba(37, 38, 38, 0.7);
-            backdrop-filter: blur(24px);
-        }
-        .text-gradient {
-            background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .btn-gradient {
-            background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
-        }
-        .bottom-trace {
-            border-bottom: 1px solid #48484826;
-            transition: border-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .bottom-trace:focus-within {
-            border-color: #bfc5e4;
-        }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0e0e0e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #484848;
+        border-radius: 2px;
+      }
+      .glass-panel {
+        background: rgba(37, 38, 38, 0.7);
+        backdrop-filter: blur(24px);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn-gradient {
+        background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
+      }
+      .bottom-trace {
+        border-bottom: 1px solid #48484826;
+        transition: border-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .bottom-trace:focus-within {
+        border-color: #bfc5e4;
+      }
     </style>
-</head>
-<body class="bg-background text-on-surface font-body overflow-hidden h-screen flex">
-<!-- SideNavBar (Authority Source: JSON) -->
-<nav class="fixed left-0 top-0 h-full w-20 md:w-64 bg-neutral-950/80 backdrop-blur-3xl flex flex-col z-50 shadow-[20px_0_40px_rgba(0,0,0,0.4)] font-headline tracking-tight font-light border-r-0">
-<div class="p-6 flex items-center gap-3">
-<div class="w-10 h-10 rounded-sm bg-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-on-primary">terminal</span>
-</div>
-<div class="hidden md:block">
-<h1 class="text-lg font-black tracking-tighter text-neutral-100 uppercase">TORQ JARVIS</h1>
-<p class="text-[10px] text-indigo-200/60 font-medium tracking-widest uppercase">Operational Alpha</p>
-</div>
-</div>
-<div class="flex-1 px-4 mt-8 space-y-2">
-<a class="flex items-center gap-4 p-3 text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
-<span class="hidden md:block text-sm">Mission Control</span>
-</a>
-<a class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="history">history</span>
-<span class="hidden md:block text-sm">Thread History</span>
-</a>
-<a class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="hub">hub</span>
-<span class="hidden md:block text-sm">Neural Network</span>
-</a>
-<a class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
-<span class="hidden md:block text-sm">System Logs</span>
-</a>
-</div>
-<div class="p-6 mt-auto">
-<button class="w-full btn-gradient py-3 rounded-sm text-on-primary text-[10px] font-black uppercase tracking-widest shadow-lg">
-                Initialize New Mission
-            </button>
-<div class="mt-6 flex items-center gap-3 pt-6 border-t border-outline-variant/10 text-neutral-500 hover:text-neutral-200 cursor-pointer">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-<span class="hidden md:block text-xs font-medium">Operator Profile</span>
-</div>
-</div>
-</nav>
-<!-- Main Content Shell -->
-<main class="flex-1 ml-20 md:ml-64 flex flex-col relative h-screen">
-<!-- TopAppBar (Authority Source: JSON) -->
-<header class="fixed top-0 right-0 w-[calc(100%-5rem)] md:w-[calc(100%-16rem)] bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16 z-40 font-headline text-sm font-medium tracking-wide">
-<div class="flex items-center gap-8">
-<span class="text-xl font-black text-neutral-100 tracking-[0.2em]">MISSION CONTROL</span>
-<nav class="hidden lg:flex gap-6">
-<a class="text-neutral-100 border-b-2 border-indigo-400 pb-1" href="#">Missions</a>
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Modules</a>
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Network</a>
-</nav>
-</div>
-<div class="flex items-center gap-6">
-<div class="flex items-center gap-4 text-indigo-200">
-<span class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors" data-icon="notifications_active">notifications_active</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors" data-icon="settings">settings</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors" data-icon="tune">tune</span>
-</div>
-<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/20">
-<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional operator with a focused expression in a dimly lit technology environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN5r9ve7I1Yzb-X_Y3nAF8pltcTwKT4I_QLgK4GDGtsAbQ4k3PcKutPzWz_xuHnMvIX1ZZI6Fj5Oieipg4RMAoL38sBEGUdLKsdsTU7TTPmrZb9J-h57jYlif3LDKTwDpGkjrt1UifhX0bU5a59n1mz01DP5Z6Dekkxbku5bolBUW7jG3zYqjnq45653upFG0Z8g9ONRmbgZNJVUjzI0TjZWUjFd0ztvaJlyrsGYt7x_FFphc4XtUjxj8ktJxfMUtMILKJabJMnwM"/>
-</div>
-</div>
-</header>
-<!-- 3-Column Cockpit Layout -->
-<section class="flex flex-1 mt-16 overflow-hidden">
-<!-- Column 1: Mission Threads -->
-<aside class="w-80 bg-surface-container-low flex flex-col overflow-y-auto">
-<div class="p-6 border-b border-outline-variant/10">
-<span class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] font-bold">Active Threads</span>
-</div>
-<div class="flex-1">
-<!-- Thread Active -->
-<div class="p-6 bg-surface-container-high border-l-2 border-primary">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-sm font-bold text-on-surface leading-tight">Neural Sync: Project Alpha</h3>
-<span class="text-[9px] text-indigo-300 font-bold bg-indigo-500/10 px-1.5 py-0.5">PRIORITY 1</span>
-</div>
-<p class="text-xs text-on-surface-variant line-clamp-2 leading-relaxed">Synthesis of architectural metadata complete. Awaiting operator confirmation for Phase 2 deployment.</p>
-<div class="mt-4 flex items-center gap-2 text-[9px] text-on-tertiary-fixed-variant uppercase tracking-widest font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                            3m ago
-                        </div>
-</div>
-<!-- Other Threads -->
-<div class="p-6 hover:bg-surface-bright/20 cursor-pointer transition-all duration-300">
-<h3 class="text-sm font-medium text-on-surface/80">Market Trend Analysis</h3>
-<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Aggregating global telemetry for Q4 reports...</p>
-<div class="mt-3 flex items-center gap-2 text-[9px] text-on-surface-variant/50 uppercase tracking-widest">
-<span class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></span>
-                            2h ago
-                        </div>
-</div>
-<div class="p-6 hover:bg-surface-bright/20 cursor-pointer transition-all duration-300">
-<h3 class="text-sm font-medium text-on-surface/80">Vector Field Mapping</h3>
-<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Stochastic analysis of encrypted traffic nodes...</p>
-<div class="mt-3 flex items-center gap-2 text-[9px] text-on-surface-variant/50 uppercase tracking-widest">
-<span class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></span>
-                            Yesterday
-                        </div>
-</div>
-</div>
-</aside>
-<!-- Column 2: JARVIS Briefing (Center) -->
-<div class="flex-1 bg-surface flex flex-col relative overflow-hidden">
-<div class="flex-1 overflow-y-auto p-12 scroll-smooth">
-<div class="max-w-3xl mx-auto">
-<!-- Timeline Transcript Header -->
-<div class="flex items-center gap-4 mb-12 opacity-40">
-<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
-<span class="text-[10px] font-bold tracking-[0.3em] uppercase">14:22:04 EST | Session Start</span>
-<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
-</div>
-<!-- User Input -->
-<div class="flex gap-6 mb-12 items-start justify-end ml-12">
-<div class="text-right">
-<p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold mb-1">Operator</p>
-<div class="bg-surface-container-high p-4 rounded-sm">
-<p class="text-sm text-on-surface leading-relaxed italic">"Jarvis, provide a deep synthesis of Strategy OS module performance. Focus on route Alpha-4 and identify any pending bottlenecks."</p>
-</div>
-</div>
-<div class="w-8 h-8 rounded-sm bg-neutral-800 flex-shrink-0 flex items-center justify-center">
-<span class="material-symbols-outlined text-sm text-neutral-400">person</span>
-</div>
-</div>
-<!-- JARVIS Briefing Response -->
-<div class="flex gap-6 mb-16 items-start">
-<div class="w-10 h-10 rounded-sm bg-primary-container flex-shrink-0 flex items-center justify-center shadow-lg shadow-indigo-500/10">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
-</div>
-<div class="flex-1 space-y-8">
-<div>
-<p class="text-[10px] text-primary uppercase tracking-[0.3em] font-black mb-4">Neural Feedback // JARVIS</p>
-<h2 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface leading-tight">Contextual Synthesis Report: <span class="text-indigo-200">Alpha-4</span></h2>
-<p class="mt-4 text-on-surface-variant text-base leading-relaxed">Synthesis complete. The Strategy OS module is currently operating at <span class="text-on-surface font-bold">98.4% efficiency</span>. I have identified the optimal execution path with zero detected blockers in the current vector.</p>
-</div>
-<!-- Bento Briefing Cards -->
-<div class="grid grid-cols-2 gap-4">
-<div class="p-6 bg-surface-container-low border-l border-primary/20">
-<p class="text-[10px] font-bold text-on-tertiary-fixed-variant uppercase tracking-widest mb-2">Primary Node</p>
-<p class="text-lg font-headline font-bold">Operational</p>
-<div class="mt-3 w-full bg-neutral-900 h-1 rounded-full overflow-hidden">
-<div class="bg-primary h-full w-[92%]"></div>
-</div>
-</div>
-<div class="p-6 bg-surface-container-low border-l border-on-tertiary-fixed-variant/20">
-<p class="text-[10px] font-bold text-on-tertiary-fixed-variant uppercase tracking-widest mb-2">Blocker Scan</p>
-<p class="text-lg font-headline font-bold text-emerald-400/80">NULL</p>
-<p class="text-[10px] mt-2 text-on-surface-variant">Zero latency spikes detected</p>
-</div>
-</div>
-<div class="p-6 bg-surface-container-low border-l-2 border-indigo-300">
-<p class="text-sm leading-relaxed text-on-surface">Route <span class="font-bold text-primary">Alpha-4</span> is confirmed as the most viable path for neural expansion. Strategic alignment is within <span class="underline underline-offset-4 decoration-indigo-500/30">0.2% variance</span> of predicted outcome.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Command Composer (Authority Source: JSON) -->
-<div class="p-8 bg-neutral-900/40 backdrop-blur-md">
-<div class="max-w-4xl mx-auto flex items-center gap-4 bg-surface-container-highest p-2 rounded-sm ring-1 ring-white/5 shadow-2xl">
-<button class="w-12 h-12 flex items-center justify-center text-indigo-300 hover:bg-indigo-500/10 transition-colors">
-<span class="material-symbols-outlined" data-icon="mic">mic</span>
-</button>
-<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-neutral-500 font-body" placeholder="Enter system command..." type="text"/>
-<div class="flex gap-2">
-<button class="w-10 h-10 flex items-center justify-center text-neutral-400 hover:text-on-surface">
-<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
-</button>
-<button class="px-6 btn-gradient text-on-primary text-[10px] font-black uppercase tracking-widest h-10 rounded-sm">
-                                Deploy Module
-                            </button>
-</div>
-</div>
-</div>
-</div>
-<!-- Column 3: Live Intelligence Panel -->
-<aside class="w-80 bg-surface-container-high flex flex-col overflow-y-auto">
-<div class="p-6 space-y-8">
-<!-- Status Header -->
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-<span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">System Safe</span>
-</div>
-<span class="material-symbols-outlined text-sm text-neutral-500">more_horiz</span>
-</div>
-<!-- Strategy OS Module -->
-<div class="space-y-6">
-<div>
-<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Active Module</p>
-<h4 class="text-xl font-headline font-extrabold text-on-surface">Strategy OS</h4>
-</div>
-<div class="space-y-4">
-<div class="p-4 bg-surface-container-low rounded-sm">
-<p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">Stage</p>
-<p class="text-sm font-medium text-indigo-200">Contextual Synthesis</p>
-</div>
-<div class="p-4 bg-surface-container-low rounded-sm">
-<p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">Active Route</p>
-<p class="text-sm font-medium text-on-surface">Alpha-4 / Cluster B</p>
-</div>
-<div class="p-4 bg-surface-container-low rounded-sm">
-<p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">Blockers</p>
-<p class="text-sm font-medium text-emerald-400/80">None Detected</p>
-</div>
-</div>
-<div class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-sm text-center">
-<p class="text-[9px] font-bold text-indigo-300 uppercase tracking-widest mb-2">Awaiting State</p>
-<p class="text-xs font-bold text-on-surface">Approval: Human Review Required</p>
-<button class="mt-4 w-full py-2 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-100 text-[10px] font-black uppercase transition-all">Authorize Phase 2</button>
-</div>
-</div>
-<!-- Intelligence Visualization -->
-<div class="pt-8 border-t border-outline-variant/10">
-<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-6">Neural Density Map</p>
-<div class="aspect-square w-full rounded-sm bg-surface-container-low overflow-hidden relative">
-<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700" data-alt="abstract architectural visualization of neural network pathways with glowing lines and geometric structures in a dark void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCus5fvCAnMGcOtjBc5qbXXpjS2KMr7kAu29C0MJPzBUeZ3vyoxq5xaMqqeuhF5igOebRS1lBHYjj1PoA8O8e1RCAv8UiBLZ8n2v9q5-FV3puNnG2AHeZEws_kobQtF7w_kVDXVUy0HhKROtd9LSJcMuqtb03jNCZKMuyzoRuKgqyUzRYX7boq4gnKJgQf36JsH2N7WDN1ldYbLBNL2DU0bkMioGUH272cIAbY5_va7W2ViO3tmcRZEOggxxC6wLVqyoMRy9IFS82A"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"></div>
-</div>
-</div>
-</div>
-</aside>
-</section>
-</main>
-<!-- BottomNavBar (Hidden on desktop as per JSON Pivot) -->
-<div class="md:hidden">
-<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-sm bg-neutral-900/60 backdrop-blur-md flex items-center justify-center gap-6 p-4 shadow-2xl shadow-black/80 z-50">
-<button class="flex flex-col items-center gap-1 text-indigo-300">
-<span class="material-symbols-outlined" data-icon="mic">mic</span>
-<span class="text-[8px] font-bold tracking-widest uppercase">Voice</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-neutral-400">
-<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
-<span class="text-[8px] font-bold tracking-widest uppercase">Upload</span>
-</button>
-<button class="flex flex-col items-center gap-1 bg-indigo-500/20 text-indigo-100 p-2 rounded-sm">
-<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
-<span class="text-[8px] font-bold tracking-widest uppercase">Deploy</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-neutral-400">
-<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
-<span class="text-[8px] font-bold tracking-widest uppercase">Stop</span>
-</button>
-</nav>
-</div>
-</body></html>
+  </head>
+  <body class="bg-background text-on-surface font-body overflow-hidden h-screen flex">
+    <!-- SideNavBar (Authority Source: JSON) -->
+    <nav
+      class="fixed left-0 top-0 h-full w-20 md:w-64 bg-neutral-950/80 backdrop-blur-3xl flex flex-col z-50 shadow-[20px_0_40px_rgba(0,0,0,0.4)] font-headline tracking-tight font-light border-r-0"
+    >
+      <div class="p-6 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-sm bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary">terminal</span>
+        </div>
+        <div class="hidden md:block">
+          <h1 class="text-lg font-black tracking-tighter text-neutral-100 uppercase">
+            TORQ JARVIS
+          </h1>
+          <p class="text-[10px] text-indigo-200/60 font-medium tracking-widest uppercase">
+            Operational Alpha
+          </p>
+        </div>
+      </div>
+      <div class="flex-1 px-4 mt-8 space-y-2">
+        <a
+          class="flex items-center gap-4 p-3 text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 transition-all duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+          <span class="hidden md:block text-sm">Mission Control</span>
+        </a>
+        <a
+          class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined" data-icon="history">history</span>
+          <span class="hidden md:block text-sm">Thread History</span>
+        </a>
+        <a
+          class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined" data-icon="hub">hub</span>
+          <span class="hidden md:block text-sm">Neural Network</span>
+        </a>
+        <a
+          class="flex items-center gap-4 p-3 text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 transition-all duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+          <span class="hidden md:block text-sm">System Logs</span>
+        </a>
+      </div>
+      <div class="p-6 mt-auto">
+        <button
+          class="w-full btn-gradient py-3 rounded-sm text-on-primary text-[10px] font-black uppercase tracking-widest shadow-lg"
+        >
+          Initialize New Mission
+        </button>
+        <div
+          class="mt-6 flex items-center gap-3 pt-6 border-t border-outline-variant/10 text-neutral-500 hover:text-neutral-200 cursor-pointer"
+        >
+          <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+          <span class="hidden md:block text-xs font-medium">Operator Profile</span>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Shell -->
+    <main class="flex-1 ml-20 md:ml-64 flex flex-col relative h-screen">
+      <!-- TopAppBar (Authority Source: JSON) -->
+      <header
+        class="fixed top-0 right-0 w-[calc(100%-5rem)] md:w-[calc(100%-16rem)] bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16 z-40 font-headline text-sm font-medium tracking-wide"
+      >
+        <div class="flex items-center gap-8">
+          <span class="text-xl font-black text-neutral-100 tracking-[0.2em]">MISSION CONTROL</span>
+          <nav class="hidden lg:flex gap-6">
+            <a class="text-neutral-100 border-b-2 border-indigo-400 pb-1" href="#">Missions</a>
+            <a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Modules</a>
+            <a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Network</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-4 text-indigo-200">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors"
+              data-icon="notifications_active"
+              >notifications_active</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors"
+              data-icon="settings"
+              >settings</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-indigo-100 transition-colors"
+              data-icon="tune"
+              >tune</span
+            >
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/20"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="close-up portrait of a professional operator with a focused expression in a dimly lit technology environment"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN5r9ve7I1Yzb-X_Y3nAF8pltcTwKT4I_QLgK4GDGtsAbQ4k3PcKutPzWz_xuHnMvIX1ZZI6Fj5Oieipg4RMAoL38sBEGUdLKsdsTU7TTPmrZb9J-h57jYlif3LDKTwDpGkjrt1UifhX0bU5a59n1mz01DP5Z6Dekkxbku5bolBUW7jG3zYqjnq45653upFG0Z8g9ONRmbgZNJVUjzI0TjZWUjFd0ztvaJlyrsGYt7x_FFphc4XtUjxj8ktJxfMUtMILKJabJMnwM"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- 3-Column Cockpit Layout -->
+      <section class="flex flex-1 mt-16 overflow-hidden">
+        <!-- Column 1: Mission Threads -->
+        <aside class="w-80 bg-surface-container-low flex flex-col overflow-y-auto">
+          <div class="p-6 border-b border-outline-variant/10">
+            <span class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] font-bold"
+              >Active Threads</span
+            >
+          </div>
+          <div class="flex-1">
+            <!-- Thread Active -->
+            <div class="p-6 bg-surface-container-high border-l-2 border-primary">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-sm font-bold text-on-surface leading-tight">
+                  Neural Sync: Project Alpha
+                </h3>
+                <span class="text-[9px] text-indigo-300 font-bold bg-indigo-500/10 px-1.5 py-0.5"
+                  >PRIORITY 1</span
+                >
+              </div>
+              <p class="text-xs text-on-surface-variant line-clamp-2 leading-relaxed">
+                Synthesis of architectural metadata complete. Awaiting operator confirmation for
+                Phase 2 deployment.
+              </p>
+              <div
+                class="mt-4 flex items-center gap-2 text-[9px] text-on-tertiary-fixed-variant uppercase tracking-widest font-bold"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                3m ago
+              </div>
+            </div>
+            <!-- Other Threads -->
+            <div class="p-6 hover:bg-surface-bright/20 cursor-pointer transition-all duration-300">
+              <h3 class="text-sm font-medium text-on-surface/80">Market Trend Analysis</h3>
+              <p class="text-xs text-on-surface-variant mt-1 line-clamp-1">
+                Aggregating global telemetry for Q4 reports...
+              </p>
+              <div
+                class="mt-3 flex items-center gap-2 text-[9px] text-on-surface-variant/50 uppercase tracking-widest"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></span>
+                2h ago
+              </div>
+            </div>
+            <div class="p-6 hover:bg-surface-bright/20 cursor-pointer transition-all duration-300">
+              <h3 class="text-sm font-medium text-on-surface/80">Vector Field Mapping</h3>
+              <p class="text-xs text-on-surface-variant mt-1 line-clamp-1">
+                Stochastic analysis of encrypted traffic nodes...
+              </p>
+              <div
+                class="mt-3 flex items-center gap-2 text-[9px] text-on-surface-variant/50 uppercase tracking-widest"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></span>
+                Yesterday
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Column 2: JARVIS Briefing (Center) -->
+        <div class="flex-1 bg-surface flex flex-col relative overflow-hidden">
+          <div class="flex-1 overflow-y-auto p-12 scroll-smooth">
+            <div class="max-w-3xl mx-auto">
+              <!-- Timeline Transcript Header -->
+              <div class="flex items-center gap-4 mb-12 opacity-40">
+                <div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase"
+                  >14:22:04 EST | Session Start</span
+                >
+                <div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+              </div>
+              <!-- User Input -->
+              <div class="flex gap-6 mb-12 items-start justify-end ml-12">
+                <div class="text-right">
+                  <p
+                    class="text-xs text-on-surface-variant uppercase tracking-widest font-bold mb-1"
+                  >
+                    Operator
+                  </p>
+                  <div class="bg-surface-container-high p-4 rounded-sm">
+                    <p class="text-sm text-on-surface leading-relaxed italic">
+                      "Jarvis, provide a deep synthesis of Strategy OS module performance. Focus on
+                      route Alpha-4 and identify any pending bottlenecks."
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="w-8 h-8 rounded-sm bg-neutral-800 flex-shrink-0 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-sm text-neutral-400">person</span>
+                </div>
+              </div>
+              <!-- JARVIS Briefing Response -->
+              <div class="flex gap-6 mb-16 items-start">
+                <div
+                  class="w-10 h-10 rounded-sm bg-primary-container flex-shrink-0 flex items-center justify-center shadow-lg shadow-indigo-500/10"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary"
+                    style="font-variation-settings: 'FILL' 1"
+                    >terminal</span
+                  >
+                </div>
+                <div class="flex-1 space-y-8">
+                  <div>
+                    <p class="text-[10px] text-primary uppercase tracking-[0.3em] font-black mb-4">
+                      Neural Feedback // JARVIS
+                    </p>
+                    <h2
+                      class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface leading-tight"
+                    >
+                      Contextual Synthesis Report: <span class="text-indigo-200">Alpha-4</span>
+                    </h2>
+                    <p class="mt-4 text-on-surface-variant text-base leading-relaxed">
+                      Synthesis complete. The Strategy OS module is currently operating at
+                      <span class="text-on-surface font-bold">98.4% efficiency</span>. I have
+                      identified the optimal execution path with zero detected blockers in the
+                      current vector.
+                    </p>
+                  </div>
+                  <!-- Bento Briefing Cards -->
+                  <div class="grid grid-cols-2 gap-4">
+                    <div class="p-6 bg-surface-container-low border-l border-primary/20">
+                      <p
+                        class="text-[10px] font-bold text-on-tertiary-fixed-variant uppercase tracking-widest mb-2"
+                      >
+                        Primary Node
+                      </p>
+                      <p class="text-lg font-headline font-bold">Operational</p>
+                      <div class="mt-3 w-full bg-neutral-900 h-1 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full w-[92%]"></div>
+                      </div>
+                    </div>
+                    <div
+                      class="p-6 bg-surface-container-low border-l border-on-tertiary-fixed-variant/20"
+                    >
+                      <p
+                        class="text-[10px] font-bold text-on-tertiary-fixed-variant uppercase tracking-widest mb-2"
+                      >
+                        Blocker Scan
+                      </p>
+                      <p class="text-lg font-headline font-bold text-emerald-400/80">NULL</p>
+                      <p class="text-[10px] mt-2 text-on-surface-variant">
+                        Zero latency spikes detected
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-6 bg-surface-container-low border-l-2 border-indigo-300">
+                    <p class="text-sm leading-relaxed text-on-surface">
+                      Route <span class="font-bold text-primary">Alpha-4</span> is confirmed as the
+                      most viable path for neural expansion. Strategic alignment is within
+                      <span class="underline underline-offset-4 decoration-indigo-500/30"
+                        >0.2% variance</span
+                      >
+                      of predicted outcome.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Command Composer (Authority Source: JSON) -->
+          <div class="p-8 bg-neutral-900/40 backdrop-blur-md">
+            <div
+              class="max-w-4xl mx-auto flex items-center gap-4 bg-surface-container-highest p-2 rounded-sm ring-1 ring-white/5 shadow-2xl"
+            >
+              <button
+                class="w-12 h-12 flex items-center justify-center text-indigo-300 hover:bg-indigo-500/10 transition-colors"
+              >
+                <span class="material-symbols-outlined" data-icon="mic">mic</span>
+              </button>
+              <input
+                class="flex-1 bg-transparent border-none focus:ring-0 text-sm text-on-surface placeholder:text-neutral-500 font-body"
+                placeholder="Enter system command..."
+                type="text"
+              />
+              <div class="flex gap-2">
+                <button
+                  class="w-10 h-10 flex items-center justify-center text-neutral-400 hover:text-on-surface"
+                >
+                  <span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+                </button>
+                <button
+                  class="px-6 btn-gradient text-on-primary text-[10px] font-black uppercase tracking-widest h-10 rounded-sm"
+                >
+                  Deploy Module
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column 3: Live Intelligence Panel -->
+        <aside class="w-80 bg-surface-container-high flex flex-col overflow-y-auto">
+          <div class="p-6 space-y-8">
+            <!-- Status Header -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest"
+                  >System Safe</span
+                >
+              </div>
+              <span class="material-symbols-outlined text-sm text-neutral-500">more_horiz</span>
+            </div>
+            <!-- Strategy OS Module -->
+            <div class="space-y-6">
+              <div>
+                <p
+                  class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1"
+                >
+                  Active Module
+                </p>
+                <h4 class="text-xl font-headline font-extrabold text-on-surface">Strategy OS</h4>
+              </div>
+              <div class="space-y-4">
+                <div class="p-4 bg-surface-container-low rounded-sm">
+                  <p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">
+                    Stage
+                  </p>
+                  <p class="text-sm font-medium text-indigo-200">Contextual Synthesis</p>
+                </div>
+                <div class="p-4 bg-surface-container-low rounded-sm">
+                  <p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">
+                    Active Route
+                  </p>
+                  <p class="text-sm font-medium text-on-surface">Alpha-4 / Cluster B</p>
+                </div>
+                <div class="p-4 bg-surface-container-low rounded-sm">
+                  <p class="text-[9px] font-bold text-on-tertiary-fixed-variant uppercase mb-1">
+                    Blockers
+                  </p>
+                  <p class="text-sm font-medium text-emerald-400/80">None Detected</p>
+                </div>
+              </div>
+              <div class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-sm text-center">
+                <p class="text-[9px] font-bold text-indigo-300 uppercase tracking-widest mb-2">
+                  Awaiting State
+                </p>
+                <p class="text-xs font-bold text-on-surface">Approval: Human Review Required</p>
+                <button
+                  class="mt-4 w-full py-2 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-100 text-[10px] font-black uppercase transition-all"
+                >
+                  Authorize Phase 2
+                </button>
+              </div>
+            </div>
+            <!-- Intelligence Visualization -->
+            <div class="pt-8 border-t border-outline-variant/10">
+              <p
+                class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-6"
+              >
+                Neural Density Map
+              </p>
+              <div
+                class="aspect-square w-full rounded-sm bg-surface-container-low overflow-hidden relative"
+              >
+                <img
+                  class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
+                  data-alt="abstract architectural visualization of neural network pathways with glowing lines and geometric structures in a dark void"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCus5fvCAnMGcOtjBc5qbXXpjS2KMr7kAu29C0MJPzBUeZ3vyoxq5xaMqqeuhF5igOebRS1lBHYjj1PoA8O8e1RCAv8UiBLZ8n2v9q5-FV3puNnG2AHeZEws_kobQtF7w_kVDXVUy0HhKROtd9LSJcMuqtb03jNCZKMuyzoRuKgqyUzRYX7boq4gnKJgQf36JsH2N7WDN1ldYbLBNL2DU0bkMioGUH272cIAbY5_va7W2ViO3tmcRZEOggxxC6wLVqyoMRy9IFS82A"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <!-- BottomNavBar (Hidden on desktop as per JSON Pivot) -->
+    <div class="md:hidden">
+      <nav
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-sm bg-neutral-900/60 backdrop-blur-md flex items-center justify-center gap-6 p-4 shadow-2xl shadow-black/80 z-50"
+      >
+        <button class="flex flex-col items-center gap-1 text-indigo-300">
+          <span class="material-symbols-outlined" data-icon="mic">mic</span>
+          <span class="text-[8px] font-bold tracking-widest uppercase">Voice</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-neutral-400">
+          <span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+          <span class="text-[8px] font-bold tracking-widest uppercase">Upload</span>
+        </button>
+        <button
+          class="flex flex-col items-center gap-1 bg-indigo-500/20 text-indigo-100 p-2 rounded-sm"
+        >
+          <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+          <span class="text-[8px] font-bold tracking-widest uppercase">Deploy</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-neutral-400">
+          <span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+          <span class="text-[8px] font-bold tracking-widest uppercase">Stop</span>
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

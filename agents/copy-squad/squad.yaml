@@ -1,13 +1,13 @@
 name: copy-squad
-version: "1.0.0"
-short-title: "Copy Squad"
-description: "Squad de elite com 23 agentes de copywriting — 22 copywriters lendários + 1 orquestrador. Cobre direct response, email, funis, VSLs, cartas de vendas, ofertas e copywriting de marca."
-author: "Synkra AIOS"
+version: '1.0.0'
+short-title: 'Copy Squad'
+description: 'Squad de elite com 23 agentes de copywriting — 22 copywriters lendários + 1 orquestrador. Cobre direct response, email, funis, VSLs, cartas de vendas, ofertas e copywriting de marca.'
+author: 'Synkra AIOS'
 license: MIT
-slashPrefix: "copy-squad"
+slashPrefix: 'copy-squad'
 
 aios:
-  minVersion: "4.0.0"
+  minVersion: '4.0.0'
   type: squad
 
 tags:

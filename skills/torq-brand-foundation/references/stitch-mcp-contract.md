@@ -7,12 +7,14 @@ Usar este arquivo quando a etapa visual do Torq Brand Foundation precisar aconte
 Para esta skill, o Stitch via MCP é a ferramenta oficial de design final.
 
 Gemini:
+
 - pensa
 - estrutura
 - sintetiza
 - gera bundle
 
 Stitch:
+
 - compõe
 - explora layout
 - transforma a direção em design
@@ -23,6 +25,7 @@ Stitch:
 Sem Stitch via MCP disponível, o resultado visual não deve ser tratado como designer final premium.
 
 Pode existir:
+
 - estratégia pronta
 - bundle pronto
 - prompts prontos

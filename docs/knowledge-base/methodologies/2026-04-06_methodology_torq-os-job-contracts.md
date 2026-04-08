@@ -1,6 +1,6 @@
 ---
 type: methodology
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-06
 tags: [torq-os, contracts, job-schemas, handoff]
 relevance: high
@@ -23,18 +23,18 @@ that agents run locally on the operator machine.
 
 ## Canonical Contracts
 
-| Contract | Primary Module | Primary Owner | Canonical Template |
-|---|---|---|---|
-| `client-operation-brief` | Executive OS | `torq-c-level-strategy` | `skills/torq-c-level-strategy/assets/templates/client-operation-brief.json` |
-| `client-intake` | Research OS | `torq-market-intelligence` | `skills/torq-market-intelligence/assets/templates/client-intake.json` |
-| `research-dossier` | Research OS | `torq-market-intelligence` | `skills/torq-market-intelligence/assets/templates/research-dossier.json` |
-| `brand-bundle` | Strategy OS | `torq-brand-foundation` | `skills/torq-brand-foundation/assets/templates/brand-bundle.json` |
-| `offer-job` | Conversion OS | `torq-offer-engineering` | `skills/torq-offer-engineering/assets/templates/offer-job.json` |
-| `story-job` | Strategy OS | `torq-storytelling` | `skills/torq-storytelling/assets/templates/story-job.json` |
-| `copy-job` | Conversion OS | `torq-editorial-copy` | `skills/torq-editorial-copy/assets/templates/copy-job.json` |
-| `content-plan` | Content OS | `torq-content-planning` | `skills/torq-content-planning/assets/templates/content-plan.json` |
-| `approval-job` | Distribution OS | `torq-approval-governance` | `skills/torq-approval-governance/assets/templates/approval-job.json` |
-| `distribution-job` | Distribution OS | `torq-distribution-ops` | `skills/torq-distribution-ops/assets/templates/distribution-job.json` |
+| Contract                 | Primary Module  | Primary Owner              | Canonical Template                                                          |
+| ------------------------ | --------------- | -------------------------- | --------------------------------------------------------------------------- |
+| `client-operation-brief` | Executive OS    | `torq-c-level-strategy`    | `skills/torq-c-level-strategy/assets/templates/client-operation-brief.json` |
+| `client-intake`          | Research OS     | `torq-market-intelligence` | `skills/torq-market-intelligence/assets/templates/client-intake.json`       |
+| `research-dossier`       | Research OS     | `torq-market-intelligence` | `skills/torq-market-intelligence/assets/templates/research-dossier.json`    |
+| `brand-bundle`           | Strategy OS     | `torq-brand-foundation`    | `skills/torq-brand-foundation/assets/templates/brand-bundle.json`           |
+| `offer-job`              | Conversion OS   | `torq-offer-engineering`   | `skills/torq-offer-engineering/assets/templates/offer-job.json`             |
+| `story-job`              | Strategy OS     | `torq-storytelling`        | `skills/torq-storytelling/assets/templates/story-job.json`                  |
+| `copy-job`               | Conversion OS   | `torq-editorial-copy`      | `skills/torq-editorial-copy/assets/templates/copy-job.json`                 |
+| `content-plan`           | Content OS      | `torq-content-planning`    | `skills/torq-content-planning/assets/templates/content-plan.json`           |
+| `approval-job`           | Distribution OS | `torq-approval-governance` | `skills/torq-approval-governance/assets/templates/approval-job.json`        |
+| `distribution-job`       | Distribution OS | `torq-distribution-ops`    | `skills/torq-distribution-ops/assets/templates/distribution-job.json`       |
 
 ## Global Contract Rules
 

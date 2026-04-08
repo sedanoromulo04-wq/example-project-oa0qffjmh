@@ -1,287 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Torq Jarvis | Mission Control</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed": "#dcedff",
-                        "on-tertiary-fixed-variant": "#536372",
-                        "on-primary-fixed": "#383e57",
-                        "surface-container-high": "#1f2020",
-                        "surface-tint": "#bfc5e4",
-                        "surface-bright": "#2c2c2c",
-                        "on-secondary": "#202020",
-                        "error-dim": "#b95463",
-                        "error": "#ec7c8a",
-                        "on-surface-variant": "#acabaa",
-                        "surface-container-lowest": "#000000",
-                        "secondary": "#9f9d9d",
-                        "error-container": "#7f2737",
-                        "surface-container-highest": "#252626",
-                        "tertiary": "#f7f9ff",
-                        "surface-variant": "#252626",
-                        "surface-dim": "#0e0e0e",
-                        "on-error": "#490013",
-                        "primary-container": "#3f465f",
-                        "on-primary-fixed-variant": "#545a75",
-                        "on-tertiary-container": "#495867",
-                        "outline": "#767575",
-                        "on-secondary-fixed-variant": "#5c5b5b",
-                        "on-primary-container": "#c9cfee",
-                        "on-background": "#e7e5e4",
-                        "on-secondary-container": "#c1bfbe",
-                        "surface-container-low": "#131313",
-                        "on-primary": "#393f58",
-                        "secondary-fixed": "#e5e2e1",
-                        "tertiary-container": "#dcedff",
-                        "secondary-container": "#3c3b3b",
-                        "outline-variant": "#484848",
-                        "on-tertiary": "#516170",
-                        "tertiary-fixed-dim": "#cedff1",
-                        "secondary-dim": "#9f9d9d",
-                        "background": "#0e0e0e",
-                        "inverse-surface": "#fcf8f8",
-                        "surface-container": "#191a1a",
-                        "primary-fixed": "#dce1ff",
-                        "inverse-on-surface": "#565554",
-                        "primary": "#bfc5e4",
-                        "primary-fixed-dim": "#cdd3f3",
-                        "surface": "#0e0e0e",
-                        "on-secondary-fixed": "#403f3f",
-                        "on-error-container": "#ff97a3",
-                        "inverse-primary": "#575e79",
-                        "secondary-fixed-dim": "#d6d4d3"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Torq Jarvis | Mission Control</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'tertiary-fixed': '#dcedff',
+              'on-tertiary-fixed-variant': '#536372',
+              'on-primary-fixed': '#383e57',
+              'surface-container-high': '#1f2020',
+              'surface-tint': '#bfc5e4',
+              'surface-bright': '#2c2c2c',
+              'on-secondary': '#202020',
+              'error-dim': '#b95463',
+              error: '#ec7c8a',
+              'on-surface-variant': '#acabaa',
+              'surface-container-lowest': '#000000',
+              secondary: '#9f9d9d',
+              'error-container': '#7f2737',
+              'surface-container-highest': '#252626',
+              tertiary: '#f7f9ff',
+              'surface-variant': '#252626',
+              'surface-dim': '#0e0e0e',
+              'on-error': '#490013',
+              'primary-container': '#3f465f',
+              'on-primary-fixed-variant': '#545a75',
+              'on-tertiary-container': '#495867',
+              outline: '#767575',
+              'on-secondary-fixed-variant': '#5c5b5b',
+              'on-primary-container': '#c9cfee',
+              'on-background': '#e7e5e4',
+              'on-secondary-container': '#c1bfbe',
+              'surface-container-low': '#131313',
+              'on-primary': '#393f58',
+              'secondary-fixed': '#e5e2e1',
+              'tertiary-container': '#dcedff',
+              'secondary-container': '#3c3b3b',
+              'outline-variant': '#484848',
+              'on-tertiary': '#516170',
+              'tertiary-fixed-dim': '#cedff1',
+              'secondary-dim': '#9f9d9d',
+              background: '#0e0e0e',
+              'inverse-surface': '#fcf8f8',
+              'surface-container': '#191a1a',
+              'primary-fixed': '#dce1ff',
+              'inverse-on-surface': '#565554',
+              primary: '#bfc5e4',
+              'primary-fixed-dim': '#cdd3f3',
+              surface: '#0e0e0e',
+              'on-secondary-fixed': '#403f3f',
+              'on-error-container': '#ff97a3',
+              'inverse-primary': '#575e79',
+              'secondary-fixed-dim': '#d6d4d3',
             },
-        }
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Manrope'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-            font-size: 20px;
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+        font-size: 20px;
+      }
+      .thinking-pulse {
+        animation: softPulse 3s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+      }
+      @keyframes softPulse {
+        0%,
+        100% {
+          opacity: 0.4;
+          filter: blur(4px);
         }
-        .thinking-pulse {
-            animation: softPulse 3s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+        50% {
+          opacity: 0.8;
+          filter: blur(2px);
         }
-        @keyframes softPulse {
-            0%, 100% { opacity: 0.4; filter: blur(4px); }
-            50% { opacity: 0.8; filter: blur(2px); }
-        }
-        .gradient-primary {
-            background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
-        }
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #0e0e0e; }
-        ::-webkit-scrollbar-thumb { background: #484848; border-radius: 2px; }
+      }
+      .gradient-primary {
+        background: linear-gradient(135deg, #bfc5e4 0%, #3f465f 100%);
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0e0e0e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #484848;
+        border-radius: 2px;
+      }
     </style>
-</head>
-<body class="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
-<!-- SideNavBar (Rail) -->
-<aside class="fixed left-0 top-0 h-full z-50 bg-neutral-950 h-screen w-20 flex flex-col border-r border-transparent">
-<div class="flex flex-col items-center py-6 gap-8 h-full">
-<div class="font-manrope font-bold text-slate-200 tracking-tighter text-xl">TJ</div>
-<nav class="flex flex-col gap-4 w-full items-center">
-<div class="text-slate-100 border-l-2 border-slate-400 bg-neutral-800/50 w-full flex justify-center py-3 transition-colors duration-300">
-<span class="material-symbols-outlined" data-icon="memory">memory</span>
-</div>
-<div class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3">
-<span class="material-symbols-outlined" data-icon="troubleshoot">troubleshoot</span>
-</div>
-<div class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3">
-<span class="material-symbols-outlined" data-icon="insights">insights</span>
-</div>
-<div class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3">
-<span class="material-symbols-outlined" data-icon="track_changes">track_changes</span>
-</div>
-<div class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3">
-<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
-</div>
-<div class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3">
-<span class="material-symbols-outlined" data-icon="auto_awesome_motion">auto_awesome_motion</span>
-</div>
-</nav>
-<div class="mt-auto flex flex-col gap-4 items-center pb-6">
-<div class="text-slate-500 hover:text-slate-300 transition-opacity">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-</div>
-<img alt="Executive Founder Profile" class="w-8 h-8 rounded-sm grayscale brightness-75 hover:brightness-100 transition-all" data-alt="close-up portrait of a professional male executive with sharp features, dark studio background, high-contrast monochrome lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRK546AXBUj4g_pssOqCWAtZ-VU53qWqQkX2SWRhsIJJw4afo1bwsGDrzYXnIgU-dHCflSBY47hDhZSd8aP-ZpDBrUUGJjxPNTGnB0iyCT5onX6rZJ00EZ81t98qQcQKNdtdAxcmIRcoDqbJXaVTtoTip-WDtVA5cllVw4xSMgbcYxH1HOpMQ3KV_4R8jd0czQrDIWQdzx8IQt5NMvP_kovuw87Tg9o6511cfaL7StHa_gloipRV1aSOMBbuaX04rlViQfaZ6ElUY"/>
-</div>
-</div>
-</aside>
-<!-- TopAppBar -->
-<header class="sticky top-0 right-0 w-full flex items-center justify-between px-6 z-40 bg-neutral-950/80 backdrop-blur-xl h-14 pl-24">
-<div class="flex items-center gap-4">
-<span class="text-slate-100 font-bold tracking-tighter font-headline text-lg">Torq Jarvis</span>
-<span class="h-4 w-px bg-outline-variant/30"></span>
-<span class="font-manrope uppercase tracking-widest text-[10px] font-semibold text-slate-500">System Active</span>
-</div>
-<div class="flex items-center gap-6">
-<div class="flex items-center gap-4 text-slate-500">
-<span class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity" data-icon="notifications_paused">notifications_paused</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity" data-icon="account_tree">account_tree</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity" data-icon="tune">tune</span>
-</div>
-<div class="relative">
-<input class="bg-surface-container-low border-none focus:ring-0 text-[10px] font-manrope tracking-widest px-4 py-1.5 w-64 rounded-sm placeholder:text-outline/50 uppercase" placeholder="QUERY SYSTEM..." type="text"/>
-<span class="material-symbols-outlined absolute right-3 top-1.5 text-slate-500 text-sm" data-icon="search">search</span>
-</div>
-</div>
-</header>
-<main class="pl-20 flex min-h-[calc(100vh-3.5rem)]">
-<!-- Center Panel: Orchestration Logic -->
-<section class="flex-1 p-12 flex flex-col justify-center max-w-4xl mx-auto">
-<div class="mb-12">
-<h1 class="font-headline text-4xl font-extrabold text-on-surface tracking-tighter mb-2">Architecting Response</h1>
-<p class="text-on-surface-variant font-body text-sm tracking-wide">Orchestrating intelligence modules to formulate executive strategy.</p>
-</div>
-<!-- Bento Grid Orchestration Phases -->
-<div class="grid grid-cols-12 gap-1 relative">
-<!-- Connection Line (Visual Only) -->
-<div class="absolute left-6 top-12 bottom-12 w-px bg-gradient-to-b from-primary/40 via-primary/5 to-transparent z-0"></div>
-<!-- Phase 1: Completed -->
-<div class="col-span-12 flex items-start gap-8 py-6 group z-10">
-<div class="w-12 h-12 flex items-center justify-center bg-surface-container-high rounded-sm border border-outline-variant/20 transition-all">
-<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-</div>
-<div>
-<h3 class="font-headline text-lg font-bold text-on-surface/90">Memory OS Scanned</h3>
-<p class="text-on-surface-variant text-sm mt-1">Retrieved 14 relevant historical context points and founder preferences.</p>
-</div>
-</div>
-<!-- Phase 2: Active Thinking -->
-<div class="col-span-12 flex items-start gap-8 py-10 bg-surface-container-low/50 rounded-lg -mx-6 px-6 border border-primary/10 transition-all group z-10">
-<div class="relative">
-<div class="w-12 h-12 flex items-center justify-center bg-primary-container rounded-sm transition-all overflow-hidden">
-<span class="material-symbols-outlined text-primary" data-icon="troubleshoot">troubleshoot</span>
-<div class="absolute inset-0 bg-primary/20 thinking-pulse"></div>
-</div>
-<div class="absolute -right-1 -bottom-1 w-3 h-3 bg-primary rounded-full border-2 border-background shadow-[0_0_8px_rgba(191,197,228,0.6)]"></div>
-</div>
-<div class="flex-1">
-<div class="flex items-center justify-between">
-<h3 class="font-headline text-lg font-bold text-on-surface">Consulting Research OS</h3>
-<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">In Progress</span>
-</div>
-<p class="text-on-surface-variant text-sm mt-2 max-w-lg leading-relaxed">
-                            Synthesizing market intelligence from 1,200+ data sources. Cross-referencing competitive landscape with core Mission Parameters.
-                        </p>
-<!-- Focus Glow indicator -->
-<div class="mt-6 h-1 w-48 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-primary w-2/3 shadow-[0_0_8px_rgba(191,197,228,0.4)]"></div>
-</div>
-</div>
-</div>
-<!-- Phase 3: Pending -->
-<div class="col-span-12 flex items-start gap-8 py-6 opacity-40 z-10">
-<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low rounded-sm border border-outline-variant/10">
-<span class="material-symbols-outlined text-outline" data-icon="insights">insights</span>
-</div>
-<div>
-<h3 class="font-headline text-lg font-bold text-on-surface">Formulating Strategy</h3>
-<p class="text-on-surface-variant text-sm mt-1">Pending input from Research module.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Right Panel: System Status & Thinking State -->
-<aside class="w-96 bg-surface-container-high p-8 flex flex-col gap-10 border-l border-transparent">
-<!-- Cognitive Load Card -->
-<div class="p-6 bg-surface-container-lowest rounded-sm">
-<div class="flex items-center justify-between mb-6">
-<span class="font-manrope uppercase text-[10px] tracking-widest font-bold text-on-surface-variant">Cognitive Load</span>
-<span class="text-primary text-xs font-bold font-manrope">84%</span>
-</div>
-<div class="space-y-4">
-<div class="flex flex-col gap-1.5">
-<div class="flex justify-between text-[10px] text-outline uppercase tracking-wider">
-<span>Processing Threads</span>
-<span>Active</span>
-</div>
-<div class="h-1 bg-surface-container-highest w-full rounded-full overflow-hidden">
-<div class="h-full bg-primary w-4/5"></div>
-</div>
-</div>
-<div class="flex flex-col gap-1.5">
-<div class="flex justify-between text-[10px] text-outline uppercase tracking-wider">
-<span>Inference Depth</span>
-<span>Optimizing</span>
-</div>
-<div class="h-1 bg-surface-container-highest w-full rounded-full overflow-hidden">
-<div class="h-full bg-primary-container w-1/2"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Live Status Feed -->
-<div class="flex-1">
-<h4 class="font-manrope uppercase text-[10px] tracking-widest font-bold text-on-surface-variant mb-6">System Log</h4>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></div>
-<div>
-<p class="text-xs font-medium text-on-surface leading-tight">Extracting intent from 'Project Apollo' brief...</p>
-<span class="text-[9px] text-outline font-manrope uppercase mt-1 block">0.4s ago</span>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-1.5"></div>
-<div>
-<p class="text-xs font-medium text-on-surface leading-tight">Mapping dependencies in Content OS...</p>
-<span class="text-[9px] text-outline font-manrope uppercase mt-1 block">1.2s ago</span>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant mt-1.5"></div>
-<div>
-<p class="text-xs font-medium text-on-surface-variant leading-tight">Authenticating API Handshake: OpenAI-01...</p>
-<span class="text-[9px] text-outline font-manrope uppercase mt-1 block">2.8s ago</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Action Area -->
-<div class="mt-auto pt-6 border-t border-outline-variant/10">
-<button class="w-full py-4 px-6 gradient-primary text-on-primary font-manrope font-bold text-[11px] uppercase tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group">
-<span>New Command</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="keyboard_return">keyboard_return</span>
-</button>
-<p class="text-center text-[9px] text-outline font-manrope uppercase tracking-widest mt-4">Command ID: TJ-992-ALPHA</p>
-</div>
-</aside>
-</main>
-<!-- Contextual Status Footer -->
-<footer class="fixed bottom-0 right-0 w-full pl-20 pointer-events-none">
-<div class="max-w-screen-2xl mx-auto px-12 py-6 flex justify-end">
-<div class="bg-surface-variant/70 backdrop-blur-3xl p-4 rounded-sm border border-outline-variant/10 flex items-center gap-6 pointer-events-auto shadow-2xl">
-<div class="flex items-center gap-3">
-<div class="w-2 h-2 rounded-full bg-primary thinking-pulse"></div>
-<span class="text-[10px] font-manrope font-bold tracking-widest uppercase text-slate-300">Torq is thinking...</span>
-</div>
-<div class="h-4 w-px bg-outline-variant/30"></div>
-<button class="text-[10px] font-manrope font-bold tracking-widest uppercase text-error-dim hover:text-error transition-colors">Abort Sequence</button>
-</div>
-</div>
-</footer>
-</body></html>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- SideNavBar (Rail) -->
+    <aside
+      class="fixed left-0 top-0 h-full z-50 bg-neutral-950 h-screen w-20 flex flex-col border-r border-transparent"
+    >
+      <div class="flex flex-col items-center py-6 gap-8 h-full">
+        <div class="font-manrope font-bold text-slate-200 tracking-tighter text-xl">TJ</div>
+        <nav class="flex flex-col gap-4 w-full items-center">
+          <div
+            class="text-slate-100 border-l-2 border-slate-400 bg-neutral-800/50 w-full flex justify-center py-3 transition-colors duration-300"
+          >
+            <span class="material-symbols-outlined" data-icon="memory">memory</span>
+          </div>
+          <div
+            class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3"
+          >
+            <span class="material-symbols-outlined" data-icon="troubleshoot">troubleshoot</span>
+          </div>
+          <div
+            class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3"
+          >
+            <span class="material-symbols-outlined" data-icon="insights">insights</span>
+          </div>
+          <div
+            class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3"
+          >
+            <span class="material-symbols-outlined" data-icon="track_changes">track_changes</span>
+          </div>
+          <div
+            class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3"
+          >
+            <span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+          </div>
+          <div
+            class="text-slate-500 hover:text-slate-300 hover:bg-neutral-800 transition-colors duration-300 w-full flex justify-center py-3"
+          >
+            <span class="material-symbols-outlined" data-icon="auto_awesome_motion"
+              >auto_awesome_motion</span
+            >
+          </div>
+        </nav>
+        <div class="mt-auto flex flex-col gap-4 items-center pb-6">
+          <div class="text-slate-500 hover:text-slate-300 transition-opacity">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+          </div>
+          <img
+            alt="Executive Founder Profile"
+            class="w-8 h-8 rounded-sm grayscale brightness-75 hover:brightness-100 transition-all"
+            data-alt="close-up portrait of a professional male executive with sharp features, dark studio background, high-contrast monochrome lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRK546AXBUj4g_pssOqCWAtZ-VU53qWqQkX2SWRhsIJJw4afo1bwsGDrzYXnIgU-dHCflSBY47hDhZSd8aP-ZpDBrUUGJjxPNTGnB0iyCT5onX6rZJ00EZ81t98qQcQKNdtdAxcmIRcoDqbJXaVTtoTip-WDtVA5cllVw4xSMgbcYxH1HOpMQ3KV_4R8jd0czQrDIWQdzx8IQt5NMvP_kovuw87Tg9o6511cfaL7StHa_gloipRV1aSOMBbuaX04rlViQfaZ6ElUY"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- TopAppBar -->
+    <header
+      class="sticky top-0 right-0 w-full flex items-center justify-between px-6 z-40 bg-neutral-950/80 backdrop-blur-xl h-14 pl-24"
+    >
+      <div class="flex items-center gap-4">
+        <span class="text-slate-100 font-bold tracking-tighter font-headline text-lg"
+          >Torq Jarvis</span
+        >
+        <span class="h-4 w-px bg-outline-variant/30"></span>
+        <span
+          class="font-manrope uppercase tracking-widest text-[10px] font-semibold text-slate-500"
+          >System Active</span
+        >
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-4 text-slate-500">
+          <span
+            class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity"
+            data-icon="notifications_paused"
+            >notifications_paused</span
+          >
+          <span
+            class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity"
+            data-icon="account_tree"
+            >account_tree</span
+          >
+          <span
+            class="material-symbols-outlined cursor-pointer hover:text-slate-200 transition-opacity"
+            data-icon="tune"
+            >tune</span
+          >
+        </div>
+        <div class="relative">
+          <input
+            class="bg-surface-container-low border-none focus:ring-0 text-[10px] font-manrope tracking-widest px-4 py-1.5 w-64 rounded-sm placeholder:text-outline/50 uppercase"
+            placeholder="QUERY SYSTEM..."
+            type="text"
+          />
+          <span
+            class="material-symbols-outlined absolute right-3 top-1.5 text-slate-500 text-sm"
+            data-icon="search"
+            >search</span
+          >
+        </div>
+      </div>
+    </header>
+    <main class="pl-20 flex min-h-[calc(100vh-3.5rem)]">
+      <!-- Center Panel: Orchestration Logic -->
+      <section class="flex-1 p-12 flex flex-col justify-center max-w-4xl mx-auto">
+        <div class="mb-12">
+          <h1 class="font-headline text-4xl font-extrabold text-on-surface tracking-tighter mb-2">
+            Architecting Response
+          </h1>
+          <p class="text-on-surface-variant font-body text-sm tracking-wide">
+            Orchestrating intelligence modules to formulate executive strategy.
+          </p>
+        </div>
+        <!-- Bento Grid Orchestration Phases -->
+        <div class="grid grid-cols-12 gap-1 relative">
+          <!-- Connection Line (Visual Only) -->
+          <div
+            class="absolute left-6 top-12 bottom-12 w-px bg-gradient-to-b from-primary/40 via-primary/5 to-transparent z-0"
+          ></div>
+          <!-- Phase 1: Completed -->
+          <div class="col-span-12 flex items-start gap-8 py-6 group z-10">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-surface-container-high rounded-sm border border-outline-variant/20 transition-all"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="check_circle"
+                data-weight="fill"
+                style="font-variation-settings: 'FILL' 1"
+                >check_circle</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-on-surface/90">Memory OS Scanned</h3>
+              <p class="text-on-surface-variant text-sm mt-1">
+                Retrieved 14 relevant historical context points and founder preferences.
+              </p>
+            </div>
+          </div>
+          <!-- Phase 2: Active Thinking -->
+          <div
+            class="col-span-12 flex items-start gap-8 py-10 bg-surface-container-low/50 rounded-lg -mx-6 px-6 border border-primary/10 transition-all group z-10"
+          >
+            <div class="relative">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-primary-container rounded-sm transition-all overflow-hidden"
+              >
+                <span class="material-symbols-outlined text-primary" data-icon="troubleshoot"
+                  >troubleshoot</span
+                >
+                <div class="absolute inset-0 bg-primary/20 thinking-pulse"></div>
+              </div>
+              <div
+                class="absolute -right-1 -bottom-1 w-3 h-3 bg-primary rounded-full border-2 border-background shadow-[0_0_8px_rgba(191,197,228,0.6)]"
+              ></div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <h3 class="font-headline text-lg font-bold text-on-surface">
+                  Consulting Research OS
+                </h3>
+                <span
+                  class="font-label text-[10px] uppercase tracking-widest text-primary font-bold"
+                  >In Progress</span
+                >
+              </div>
+              <p class="text-on-surface-variant text-sm mt-2 max-w-lg leading-relaxed">
+                Synthesizing market intelligence from 1,200+ data sources. Cross-referencing
+                competitive landscape with core Mission Parameters.
+              </p>
+              <!-- Focus Glow indicator -->
+              <div class="mt-6 h-1 w-48 bg-surface-container-highest rounded-full overflow-hidden">
+                <div class="h-full bg-primary w-2/3 shadow-[0_0_8px_rgba(191,197,228,0.4)]"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Phase 3: Pending -->
+          <div class="col-span-12 flex items-start gap-8 py-6 opacity-40 z-10">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-surface-container-low rounded-sm border border-outline-variant/10"
+            >
+              <span class="material-symbols-outlined text-outline" data-icon="insights"
+                >insights</span
+              >
+            </div>
+            <div>
+              <h3 class="font-headline text-lg font-bold text-on-surface">Formulating Strategy</h3>
+              <p class="text-on-surface-variant text-sm mt-1">
+                Pending input from Research module.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Right Panel: System Status & Thinking State -->
+      <aside
+        class="w-96 bg-surface-container-high p-8 flex flex-col gap-10 border-l border-transparent"
+      >
+        <!-- Cognitive Load Card -->
+        <div class="p-6 bg-surface-container-lowest rounded-sm">
+          <div class="flex items-center justify-between mb-6">
+            <span
+              class="font-manrope uppercase text-[10px] tracking-widest font-bold text-on-surface-variant"
+              >Cognitive Load</span
+            >
+            <span class="text-primary text-xs font-bold font-manrope">84%</span>
+          </div>
+          <div class="space-y-4">
+            <div class="flex flex-col gap-1.5">
+              <div class="flex justify-between text-[10px] text-outline uppercase tracking-wider">
+                <span>Processing Threads</span>
+                <span>Active</span>
+              </div>
+              <div class="h-1 bg-surface-container-highest w-full rounded-full overflow-hidden">
+                <div class="h-full bg-primary w-4/5"></div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex justify-between text-[10px] text-outline uppercase tracking-wider">
+                <span>Inference Depth</span>
+                <span>Optimizing</span>
+              </div>
+              <div class="h-1 bg-surface-container-highest w-full rounded-full overflow-hidden">
+                <div class="h-full bg-primary-container w-1/2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Live Status Feed -->
+        <div class="flex-1">
+          <h4
+            class="font-manrope uppercase text-[10px] tracking-widest font-bold text-on-surface-variant mb-6"
+          >
+            System Log
+          </h4>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></div>
+              <div>
+                <p class="text-xs font-medium text-on-surface leading-tight">
+                  Extracting intent from 'Project Apollo' brief...
+                </p>
+                <span class="text-[9px] text-outline font-manrope uppercase mt-1 block"
+                  >0.4s ago</span
+                >
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-primary-container mt-1.5"></div>
+              <div>
+                <p class="text-xs font-medium text-on-surface leading-tight">
+                  Mapping dependencies in Content OS...
+                </p>
+                <span class="text-[9px] text-outline font-manrope uppercase mt-1 block"
+                  >1.2s ago</span
+                >
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-outline-variant mt-1.5"></div>
+              <div>
+                <p class="text-xs font-medium text-on-surface-variant leading-tight">
+                  Authenticating API Handshake: OpenAI-01...
+                </p>
+                <span class="text-[9px] text-outline font-manrope uppercase mt-1 block"
+                  >2.8s ago</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Action Area -->
+        <div class="mt-auto pt-6 border-t border-outline-variant/10">
+          <button
+            class="w-full py-4 px-6 gradient-primary text-on-primary font-manrope font-bold text-[11px] uppercase tracking-[0.2em] rounded-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group"
+          >
+            <span>New Command</span>
+            <span
+              class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+              data-icon="keyboard_return"
+              >keyboard_return</span
+            >
+          </button>
+          <p
+            class="text-center text-[9px] text-outline font-manrope uppercase tracking-widest mt-4"
+          >
+            Command ID: TJ-992-ALPHA
+          </p>
+        </div>
+      </aside>
+    </main>
+    <!-- Contextual Status Footer -->
+    <footer class="fixed bottom-0 right-0 w-full pl-20 pointer-events-none">
+      <div class="max-w-screen-2xl mx-auto px-12 py-6 flex justify-end">
+        <div
+          class="bg-surface-variant/70 backdrop-blur-3xl p-4 rounded-sm border border-outline-variant/10 flex items-center gap-6 pointer-events-auto shadow-2xl"
+        >
+          <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-primary thinking-pulse"></div>
+            <span
+              class="text-[10px] font-manrope font-bold tracking-widest uppercase text-slate-300"
+              >Torq is thinking...</span
+            >
+          </div>
+          <div class="h-4 w-px bg-outline-variant/30"></div>
+          <button
+            class="text-[10px] font-manrope font-bold tracking-widest uppercase text-error-dim hover:text-error transition-colors"
+          >
+            Abort Sequence
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

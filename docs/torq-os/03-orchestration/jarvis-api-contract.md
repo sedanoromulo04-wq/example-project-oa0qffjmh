@@ -1,6 +1,6 @@
 ---
 type: contract
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [torq-os, jarvis, api, supabase, openclaude]
 relevance: high

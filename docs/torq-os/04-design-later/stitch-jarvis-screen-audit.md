@@ -1,6 +1,6 @@
 ---
 type: audit
-source: "Torq Internal + Stitch MCP"
+source: 'Torq Internal + Stitch MCP'
 date: 2026-04-08
 tags: [stitch, jarvis, frontend, figma, audit]
 relevance: high

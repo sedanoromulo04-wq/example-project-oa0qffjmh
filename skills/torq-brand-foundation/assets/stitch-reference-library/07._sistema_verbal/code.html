@@ -1,263 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Manrope:wght@200;400;600;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Manrope:wght@200;400;600;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
-            "colors": {
-                    "surface-container-low": "#f6f3ee",
-                    "background": "#fcf9f4",
-                    "surface-dim": "#dcdad5",
-                    "tertiary-container": "#111c2c",
-                    "tertiary-fixed-dim": "#bcc7dd",
-                    "on-primary": "#ffffff",
-                    "tertiary-fixed": "#d8e3fa",
-                    "error-container": "#ffdad6",
-                    "surface-container": "#f0ede8",
-                    "on-tertiary-fixed-variant": "#3c4759",
-                    "on-background": "#1c1c19",
-                    "outline": "#747878",
-                    "primary-fixed-dim": "#c8c6c5",
-                    "primary-fixed": "#e5e2e1",
-                    "on-surface-variant": "#444748",
-                    "surface-container-highest": "#e5e2dd",
-                    "tertiary": "#000000",
-                    "surface-container-high": "#ebe8e3",
-                    "inverse-primary": "#c8c6c5",
-                    "on-tertiary-fixed": "#111c2c",
-                    "on-primary-fixed-variant": "#474646",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#c4c7c7",
-                    "secondary-container": "#fdc796",
-                    "inverse-surface": "#31302d",
-                    "on-secondary": "#ffffff",
-                    "on-error": "#ffffff",
-                    "primary": "#000000",
-                    "on-primary-fixed": "#1c1b1b",
-                    "surface-variant": "#e5e2dd",
-                    "secondary": "#7e562e",
-                    "on-tertiary-container": "#798498",
-                    "surface-bright": "#fcf9f4",
-                    "surface-tint": "#5f5e5e",
-                    "on-tertiary": "#ffffff",
-                    "on-primary-container": "#858383",
-                    "secondary-fixed": "#ffdcbf",
-                    "secondary-fixed-dim": "#f1bc8c",
-                    "surface": "#fcf9f4",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary-fixed-variant": "#633f19",
-                    "on-secondary-container": "#79512a",
-                    "inverse-on-surface": "#f3f0eb",
-                    "error": "#ba1a1a",
-                    "primary-container": "#1c1b1b",
-                    "on-surface": "#1c1c19",
-                    "on-secondary-fixed": "#2d1600"
+            colors: {
+              'surface-container-low': '#f6f3ee',
+              background: '#fcf9f4',
+              'surface-dim': '#dcdad5',
+              'tertiary-container': '#111c2c',
+              'tertiary-fixed-dim': '#bcc7dd',
+              'on-primary': '#ffffff',
+              'tertiary-fixed': '#d8e3fa',
+              'error-container': '#ffdad6',
+              'surface-container': '#f0ede8',
+              'on-tertiary-fixed-variant': '#3c4759',
+              'on-background': '#1c1c19',
+              outline: '#747878',
+              'primary-fixed-dim': '#c8c6c5',
+              'primary-fixed': '#e5e2e1',
+              'on-surface-variant': '#444748',
+              'surface-container-highest': '#e5e2dd',
+              tertiary: '#000000',
+              'surface-container-high': '#ebe8e3',
+              'inverse-primary': '#c8c6c5',
+              'on-tertiary-fixed': '#111c2c',
+              'on-primary-fixed-variant': '#474646',
+              'on-error-container': '#93000a',
+              'outline-variant': '#c4c7c7',
+              'secondary-container': '#fdc796',
+              'inverse-surface': '#31302d',
+              'on-secondary': '#ffffff',
+              'on-error': '#ffffff',
+              primary: '#000000',
+              'on-primary-fixed': '#1c1b1b',
+              'surface-variant': '#e5e2dd',
+              secondary: '#7e562e',
+              'on-tertiary-container': '#798498',
+              'surface-bright': '#fcf9f4',
+              'surface-tint': '#5f5e5e',
+              'on-tertiary': '#ffffff',
+              'on-primary-container': '#858383',
+              'secondary-fixed': '#ffdcbf',
+              'secondary-fixed-dim': '#f1bc8c',
+              surface: '#fcf9f4',
+              'surface-container-lowest': '#ffffff',
+              'on-secondary-fixed-variant': '#633f19',
+              'on-secondary-container': '#79512a',
+              'inverse-on-surface': '#f3f0eb',
+              error: '#ba1a1a',
+              'primary-container': '#1c1b1b',
+              'on-surface': '#1c1c19',
+              'on-secondary-fixed': '#2d1600',
             },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '9999px',
             },
-            "fontFamily": {
-                    "headline": ["Newsreader", "serif"],
-                    "body": ["Manrope", "sans-serif"],
-                    "label": ["Manrope", "sans-serif"]
-            }
+            fontFamily: {
+              headline: ['Newsreader', 'serif'],
+              body: ['Manrope', 'sans-serif'],
+              label: ['Manrope', 'sans-serif'],
+            },
           },
         },
       }
     </script>
-<style>
-        .newsreader { font-family: 'Newsreader', serif; }
-        .manrope { font-family: 'Manrope', sans-serif; }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        }
-        body { background-color: #fcf9f4; color: #1c1c19; }
-        .glass-nav { backdrop-filter: blur(20px); }
+    <style>
+      .newsreader {
+        font-family: 'Newsreader', serif;
+      }
+      .manrope {
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 200,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        background-color: #fcf9f4;
+        color: #1c1c19;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+      }
     </style>
-</head>
-<body class="bg-background text-on-background manrope overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl">
-<div class="text-sm font-bold tracking-[0.3em] text-black uppercase">VOL. I: THE MANIFESTO</div>
-<nav class="hidden md:flex gap-12 items-center">
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 hover:text-black transition-colors duration-500" href="#">CH. 01</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black border-b border-black pb-1" href="#">CH. 02</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 hover:text-black transition-colors duration-500" href="#">CH. 03</a>
-</nav>
-<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black">XII</div>
-</header>
-<!-- SideNavBar (Context: Positioning/Narrative) -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent px-6">
-<div class="mb-12 rotate-[-90deg] origin-left translate-x-4">
-<span class="font-serif text-3xl newsreader leading-none">ARCHIVE</span>
-<span class="block font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/40 mt-1">INDEX 2024</span>
-</div>
-<div class="flex flex-col gap-8">
-<button class="flex items-center group">
-<span class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700">architecture</span>
-<span class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">POSITIONING</span>
-</button>
-<button class="flex items-center border-l-2 border-black pl-4">
-<span class="material-symbols-outlined text-black">menu_book</span>
-<span class="ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black font-bold">NARRATIVE</span>
-</button>
-<button class="flex items-center group">
-<span class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700">collections</span>
-<span class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">AESTHETICS</span>
-</button>
-<button class="flex items-center group">
-<span class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700">diamond</span>
-<span class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30">DISTRIBUTION</span>
-</button>
-</div>
-</aside>
-<main class="pt-32 pb-48 px-12 md:pl-32 md:pr-24 max-w-screen-2xl mx-auto">
-<!-- Hero Section: The Tone -->
-<section class="mb-48 grid grid-cols-12 gap-8">
-<div class="col-span-12 lg:col-span-8">
-<span class="block font-sans uppercase tracking-[0.3em] text-[10px] text-secondary mb-6">ANNOTATION NO. 01 / VERBAL IDENTITY</span>
-<h1 class="newsreader text-[12vw] lg:text-[7rem] leading-[0.9] font-light italic tracking-tight mb-12">
-                    A voz que ecoa no <span class="text-secondary">silêncio</span> das grandes salas.
-                </h1>
-<p class="manrope text-xl font-extralight leading-relaxed max-w-xl text-on-surface-variant">
-                    Nossa linguagem não solicita atenção; ela a comanda através da precisão técnica e da contenção emocional. Cada palavra é um monumento à clareza estratégica.
-                </p>
-</div>
-<div class="col-span-12 lg:col-span-4 flex flex-col justify-end items-end space-y-4">
-<div class="w-full aspect-[3/4] bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000" data-alt="Close-up of high-quality cream textured paper with a single minimalist ink stroke, soft side lighting creating depth and texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAUOwXE5lNtQ5HeXmyr79-NVyC5j5vMEgURjMV_FzH38EHJv_n_lF_47dvr4Dsm_6DH34cMVv1hPdSMLzOhP2pWP7Io-z6Fbx9GHZ1XKZWiUGCAQNqH3hvg0GrSB9tIWL4wkBuUndw_uu-3FMCyvnJtponcMwQ6FocBZ8CsSepSfaNb4ByFjfKI7nPRgBl5QzTHrwsfIK-TZ4IWEGt-1jTQ9oPK63rhXSY0REAjTBb7cglBN9FkTZkO3NTdRnAqynAONjJ7bs7QHg"/>
-</div>
-<div class="text-right">
-<span class="block font-sans uppercase tracking-[0.1em] text-[9px] text-black/40">REF. 07-B / TEXTURAL ARCHIVE</span>
-</div>
-</div>
-</section>
-<!-- Core Philosophy: Deep Midnight Accent -->
-<section class="mb-48 bg-tertiary-container text-surface px-12 py-24 -mx-12 lg:mx-0 flex flex-col md:flex-row gap-24 items-center">
-<div class="md:w-1/2">
-<h2 class="newsreader text-5xl italic leading-tight mb-8">
-                    "O rigor é a forma mais elevada de elegância."
-                </h2>
-<div class="h-[1px] w-24 bg-tertiary-fixed-dim/30 mb-8"></div>
-<p class="manrope text-sm uppercase tracking-[0.2em] opacity-60">Princípio Verbal Primário</p>
-</div>
-<div class="md:w-1/2 space-y-12">
-<div>
-<h3 class="manrope font-bold text-xs uppercase tracking-[0.3em] text-tertiary-fixed mb-4">DEFINIÇÃO ESTRATÉGICA</h3>
-<p class="newsreader text-2xl font-light leading-relaxed">
-                        Rejeitamos o adjetivo fácil e a exclamação gratuita. Nossa autoridade nasce da capacidade de dizer mais com menos, utilizando o vocabulário como uma ferramenta de precisão cirúrgica.
-                    </p>
-</div>
-</div>
-</section>
-<!-- Modular Analysis Grid -->
-<section class="mb-48">
-<div class="flex justify-between items-end mb-16 border-b border-outline-variant/20 pb-8">
-<h2 class="newsreader text-4xl">Arquitetura do Vocabulário</h2>
-<span class="manrope text-[10px] uppercase tracking-[0.2em] text-black/40">ANÁLISE SEMÂNTICA 001-004</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20">
-<!-- Word 01 -->
-<div class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500">
-<span class="block manrope text-[10px] font-bold text-secondary mb-12">01 / PERMANÊNCIA</span>
-<h4 class="newsreader text-3xl italic mb-6">Monolítico</h4>
-<p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
-                        Palavra-chave para descrever estruturas, ideias e designs que desafiam a efemeridade das tendências digitais.
-                    </p>
-<div class="flex gap-2">
-<span class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40">USO: ALTO</span>
-</div>
-</div>
-<!-- Word 02 -->
-<div class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500">
-<span class="block manrope text-[10px] font-bold text-secondary mb-12">02 / SILÊNCIO</span>
-<h4 class="newsreader text-3xl italic mb-6">Contenção</h4>
-<p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
-                        O ato deliberado de não preencher todos os espaços. Aplicado tanto ao layout visual quanto à densidade do texto.
-                    </p>
-<div class="flex gap-2">
-<span class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40">USO: CRÍTICO</span>
-</div>
-</div>
-<!-- Word 03 -->
-<div class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500">
-<span class="block manrope text-[10px] font-bold text-secondary mb-12">03 / VALOR</span>
-<h4 class="newsreader text-3xl italic mb-6">Curadoria</h4>
-<p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
-                        Substitui 'seleção' ou 'escolha'. Implica um processo intelectual profundo de refino e autoridade editorial.
-                    </p>
-<div class="flex gap-2">
-<span class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40">USO: MÉDIO</span>
-</div>
-</div>
-<!-- Word 04 -->
-<div class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500">
-<span class="block manrope text-[10px] font-bold text-secondary mb-12">04 / ORIGEM</span>
-<h4 class="newsreader text-3xl italic mb-6">Linhagem</h4>
-<p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
-                        Utilizada para evocar a história e a herança de uma marca ou conceito, sem recorrer ao clichê 'tradição'.
-                    </p>
-<div class="flex gap-2">
-<span class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40">USO: ALTO</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Poetic Strategy spread -->
-<section class="grid grid-cols-12 gap-12 items-start mb-48">
-<div class="col-span-12 lg:col-span-5 space-y-8">
-<span class="manrope text-[10px] uppercase tracking-[0.4em] text-secondary">ANNOTATION NO. 02</span>
-<h2 class="newsreader text-5xl leading-tight">O Tom de Voz: <br/>Uma Partitura Invisível.</h2>
-<div class="space-y-6 manrope text-sm font-light leading-loose text-on-surface-variant">
-<p>Nossa escrita é rítmica. Alternamos frases curtas e autoritárias com explanações técnicas densas, criando uma cadência que mimetiza a leitura de um documento histórico.</p>
-<p>Evitamos o 'nós'. Preferimos a terceira pessoa ou construções passivas que colocam o objeto — o design, a estratégia, o produto — no centro do palco.</p>
-</div>
-<button class="mt-8 px-12 py-4 bg-primary text-on-primary manrope text-[10px] uppercase tracking-[0.3em] hover:bg-secondary transition-colors duration-700">Explorar Diretrizes</button>
-</div>
-<div class="col-span-12 lg:col-span-7 relative">
-<div class="bg-surface-container-high p-16 relative z-10">
-<div class="newsreader text-3xl italic leading-relaxed text-on-background/80">
-                        "Não vendemos benefícios. <br/>
-                        Descrevemos <span class="text-secondary font-bold not-italic">verdades</span> imutáveis."
-                    </div>
-<div class="mt-12 flex justify-between items-center">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-sm">edit_note</span>
-<span class="manrope text-[9px] uppercase tracking-widest text-black/40">Manuscrito Original / 2024</span>
-</div>
-<span class="manrope text-[9px] uppercase tracking-widest font-bold">ESTRATEGIA 07.A</span>
-</div>
-</div>
-<!-- Visual offset element -->
-<div class="absolute -bottom-8 -right-8 w-64 h-64 border border-secondary/10 -z-0"></div>
-</div>
-</section>
-<!-- Final Manifesto Statement -->
-<section class="text-center py-48 border-t border-outline-variant/20">
-<span class="manrope text-[10px] uppercase tracking-[0.5em] text-black/30 mb-8 block">CONCLUSÃO VERBAL</span>
-<h2 class="newsreader text-7xl font-light italic mb-12">Falar para <br/> ser lembrado.</h2>
-<div class="max-w-xs mx-auto h-[1px] bg-secondary/30"></div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
-<div class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] pointer-events-auto">
-            PAGE 07/10 — STRATEGIC MONUMENT
+  </head>
+  <body class="bg-background text-on-background manrope overflow-x-hidden">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl"
+    >
+      <div class="text-sm font-bold tracking-[0.3em] text-black uppercase">
+        VOL. I: THE MANIFESTO
+      </div>
+      <nav class="hidden md:flex gap-12 items-center">
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 hover:text-black transition-colors duration-500"
+          href="#"
+          >CH. 01</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black border-b border-black pb-1"
+          href="#"
+          >CH. 02</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 hover:text-black transition-colors duration-500"
+          href="#"
+          >CH. 03</a
+        >
+      </nav>
+      <div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black">
+        XII
+      </div>
+    </header>
+    <!-- SideNavBar (Context: Positioning/Narrative) -->
+    <aside
+      class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent px-6"
+    >
+      <div class="mb-12 rotate-[-90deg] origin-left translate-x-4">
+        <span class="font-serif text-3xl newsreader leading-none">ARCHIVE</span>
+        <span
+          class="block font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/40 mt-1"
+          >INDEX 2024</span
+        >
+      </div>
+      <div class="flex flex-col gap-8">
+        <button class="flex items-center group">
+          <span
+            class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700"
+            >architecture</span
+          >
+          <span
+            class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30"
+            >POSITIONING</span
+          >
+        </button>
+        <button class="flex items-center border-l-2 border-black pl-4">
+          <span class="material-symbols-outlined text-black">menu_book</span>
+          <span
+            class="ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black font-bold"
+            >NARRATIVE</span
+          >
+        </button>
+        <button class="flex items-center group">
+          <span
+            class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700"
+            >collections</span
+          >
+          <span
+            class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30"
+            >AESTHETICS</span
+          >
+        </button>
+        <button class="flex items-center group">
+          <span
+            class="material-symbols-outlined text-black/30 group-hover:text-black transition-all duration-700"
+            >diamond</span
+          >
+          <span
+            class="hidden group-hover:block ml-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope text-black/30"
+            >DISTRIBUTION</span
+          >
+        </button>
+      </div>
+    </aside>
+    <main class="pt-32 pb-48 px-12 md:pl-32 md:pr-24 max-w-screen-2xl mx-auto">
+      <!-- Hero Section: The Tone -->
+      <section class="mb-48 grid grid-cols-12 gap-8">
+        <div class="col-span-12 lg:col-span-8">
+          <span class="block font-sans uppercase tracking-[0.3em] text-[10px] text-secondary mb-6"
+            >ANNOTATION NO. 01 / VERBAL IDENTITY</span
+          >
+          <h1
+            class="newsreader text-[12vw] lg:text-[7rem] leading-[0.9] font-light italic tracking-tight mb-12"
+          >
+            A voz que ecoa no <span class="text-secondary">silêncio</span> das grandes salas.
+          </h1>
+          <p
+            class="manrope text-xl font-extralight leading-relaxed max-w-xl text-on-surface-variant"
+          >
+            Nossa linguagem não solicita atenção; ela a comanda através da precisão técnica e da
+            contenção emocional. Cada palavra é um monumento à clareza estratégica.
+          </p>
         </div>
-<div class="flex gap-8 pointer-events-auto">
-<a class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
-<a class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
-</div>
-</footer>
-</body></html>
+        <div class="col-span-12 lg:col-span-4 flex flex-col justify-end items-end space-y-4">
+          <div class="w-full aspect-[3/4] bg-surface-container overflow-hidden">
+            <img
+              class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-1000"
+              data-alt="Close-up of high-quality cream textured paper with a single minimalist ink stroke, soft side lighting creating depth and texture"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAUOwXE5lNtQ5HeXmyr79-NVyC5j5vMEgURjMV_FzH38EHJv_n_lF_47dvr4Dsm_6DH34cMVv1hPdSMLzOhP2pWP7Io-z6Fbx9GHZ1XKZWiUGCAQNqH3hvg0GrSB9tIWL4wkBuUndw_uu-3FMCyvnJtponcMwQ6FocBZ8CsSepSfaNb4ByFjfKI7nPRgBl5QzTHrwsfIK-TZ4IWEGt-1jTQ9oPK63rhXSY0REAjTBb7cglBN9FkTZkO3NTdRnAqynAONjJ7bs7QHg"
+            />
+          </div>
+          <div class="text-right">
+            <span class="block font-sans uppercase tracking-[0.1em] text-[9px] text-black/40"
+              >REF. 07-B / TEXTURAL ARCHIVE</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Core Philosophy: Deep Midnight Accent -->
+      <section
+        class="mb-48 bg-tertiary-container text-surface px-12 py-24 -mx-12 lg:mx-0 flex flex-col md:flex-row gap-24 items-center"
+      >
+        <div class="md:w-1/2">
+          <h2 class="newsreader text-5xl italic leading-tight mb-8">
+            "O rigor é a forma mais elevada de elegância."
+          </h2>
+          <div class="h-[1px] w-24 bg-tertiary-fixed-dim/30 mb-8"></div>
+          <p class="manrope text-sm uppercase tracking-[0.2em] opacity-60">
+            Princípio Verbal Primário
+          </p>
+        </div>
+        <div class="md:w-1/2 space-y-12">
+          <div>
+            <h3
+              class="manrope font-bold text-xs uppercase tracking-[0.3em] text-tertiary-fixed mb-4"
+            >
+              DEFINIÇÃO ESTRATÉGICA
+            </h3>
+            <p class="newsreader text-2xl font-light leading-relaxed">
+              Rejeitamos o adjetivo fácil e a exclamação gratuita. Nossa autoridade nasce da
+              capacidade de dizer mais com menos, utilizando o vocabulário como uma ferramenta de
+              precisão cirúrgica.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Modular Analysis Grid -->
+      <section class="mb-48">
+        <div class="flex justify-between items-end mb-16 border-b border-outline-variant/20 pb-8">
+          <h2 class="newsreader text-4xl">Arquitetura do Vocabulário</h2>
+          <span class="manrope text-[10px] uppercase tracking-[0.2em] text-black/40"
+            >ANÁLISE SEMÂNTICA 001-004</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20">
+          <!-- Word 01 -->
+          <div
+            class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500"
+          >
+            <span class="block manrope text-[10px] font-bold text-secondary mb-12"
+              >01 / PERMANÊNCIA</span
+            >
+            <h4 class="newsreader text-3xl italic mb-6">Monolítico</h4>
+            <p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
+              Palavra-chave para descrever estruturas, ideias e designs que desafiam a efemeridade
+              das tendências digitais.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40"
+                >USO: ALTO</span
+              >
+            </div>
+          </div>
+          <!-- Word 02 -->
+          <div
+            class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500"
+          >
+            <span class="block manrope text-[10px] font-bold text-secondary mb-12"
+              >02 / SILÊNCIO</span
+            >
+            <h4 class="newsreader text-3xl italic mb-6">Contenção</h4>
+            <p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
+              O ato deliberado de não preencher todos os espaços. Aplicado tanto ao layout visual
+              quanto à densidade do texto.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40"
+                >USO: CRÍTICO</span
+              >
+            </div>
+          </div>
+          <!-- Word 03 -->
+          <div
+            class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500"
+          >
+            <span class="block manrope text-[10px] font-bold text-secondary mb-12">03 / VALOR</span>
+            <h4 class="newsreader text-3xl italic mb-6">Curadoria</h4>
+            <p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
+              Substitui 'seleção' ou 'escolha'. Implica um processo intelectual profundo de refino e
+              autoridade editorial.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40"
+                >USO: MÉDIO</span
+              >
+            </div>
+          </div>
+          <!-- Word 04 -->
+          <div
+            class="bg-background p-10 hover:bg-surface-container-low transition-colors duration-500"
+          >
+            <span class="block manrope text-[10px] font-bold text-secondary mb-12"
+              >04 / ORIGEM</span
+            >
+            <h4 class="newsreader text-3xl italic mb-6">Linhagem</h4>
+            <p class="manrope text-xs leading-relaxed text-on-surface-variant mb-8">
+              Utilizada para evocar a história e a herança de uma marca ou conceito, sem recorrer ao
+              clichê 'tradição'.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="px-2 py-1 text-[8px] uppercase tracking-widest bg-surface-container text-black/40"
+                >USO: ALTO</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Poetic Strategy spread -->
+      <section class="grid grid-cols-12 gap-12 items-start mb-48">
+        <div class="col-span-12 lg:col-span-5 space-y-8">
+          <span class="manrope text-[10px] uppercase tracking-[0.4em] text-secondary"
+            >ANNOTATION NO. 02</span
+          >
+          <h2 class="newsreader text-5xl leading-tight">
+            O Tom de Voz: <br />Uma Partitura Invisível.
+          </h2>
+          <div class="space-y-6 manrope text-sm font-light leading-loose text-on-surface-variant">
+            <p>
+              Nossa escrita é rítmica. Alternamos frases curtas e autoritárias com explanações
+              técnicas densas, criando uma cadência que mimetiza a leitura de um documento
+              histórico.
+            </p>
+            <p>
+              Evitamos o 'nós'. Preferimos a terceira pessoa ou construções passivas que colocam o
+              objeto — o design, a estratégia, o produto — no centro do palco.
+            </p>
+          </div>
+          <button
+            class="mt-8 px-12 py-4 bg-primary text-on-primary manrope text-[10px] uppercase tracking-[0.3em] hover:bg-secondary transition-colors duration-700"
+          >
+            Explorar Diretrizes
+          </button>
+        </div>
+        <div class="col-span-12 lg:col-span-7 relative">
+          <div class="bg-surface-container-high p-16 relative z-10">
+            <div class="newsreader text-3xl italic leading-relaxed text-on-background/80">
+              "Não vendemos benefícios. <br />
+              Descrevemos
+              <span class="text-secondary font-bold not-italic">verdades</span> imutáveis."
+            </div>
+            <div class="mt-12 flex justify-between items-center">
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-sm">edit_note</span>
+                <span class="manrope text-[9px] uppercase tracking-widest text-black/40"
+                  >Manuscrito Original / 2024</span
+                >
+              </div>
+              <span class="manrope text-[9px] uppercase tracking-widest font-bold"
+                >ESTRATEGIA 07.A</span
+              >
+            </div>
+          </div>
+          <!-- Visual offset element -->
+          <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-secondary/10 -z-0"></div>
+        </div>
+      </section>
+      <!-- Final Manifesto Statement -->
+      <section class="text-center py-48 border-t border-outline-variant/20">
+        <span class="manrope text-[10px] uppercase tracking-[0.5em] text-black/30 mb-8 block"
+          >CONCLUSÃO VERBAL</span
+        >
+        <h2 class="newsreader text-7xl font-light italic mb-12">
+          Falar para <br />
+          ser lembrado.
+        </h2>
+        <div class="max-w-xs mx-auto h-[1px] bg-secondary/30"></div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none"
+    >
+      <div class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] pointer-events-auto">
+        PAGE 07/10 — STRATEGIC MONUMENT
+      </div>
+      <div class="flex gap-8 pointer-events-auto">
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >ANNOTATIONS</a
+        >
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >LEGAL ARCHIVE</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

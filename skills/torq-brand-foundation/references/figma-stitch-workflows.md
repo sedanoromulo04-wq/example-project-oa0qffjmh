@@ -25,9 +25,11 @@ A documentação oficial informa que a API REST permite:
 - usar webhooks
 
 Referência:
+
 - `https://developers.figma.com/docs/rest-api/`
 
 Trechos úteis:
+
 - base URL: `https://api.figma.com`
 - leitura estruturada de arquivos e nodes
 - inspeção JSON do arquivo
@@ -42,6 +44,7 @@ O help oficial do Figma Make mostra um fluxo muito útil para o Torq:
 - permitir experimentação sem perder consistência de estilo
 
 Referência:
+
 - `https://help.figma.com/hc/en-us/articles/34716344138519-Create-and-update-a-template-in-Figma-Make`
 
 Ideia prática para o Torq:
@@ -59,6 +62,7 @@ Usar a Figma como biblioteca viva de referências para:
 - estruturas editoriais
 
 Referências:
+
 - `https://www.figma.com/templates/brand-guidelines-template/`
 - `https://www.figma.com/templates/branding-workshop-template/`
 - `https://www.figma.com/solutions/ai-brand-guideline-generator/`
@@ -73,6 +77,7 @@ Segundo o anúncio oficial de I/O 2025:
 - exporta para CSS/HTML ou Figma
 
 Referência:
+
 - `https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-developer-updates-io-2025/`
 
 Segundo o anúncio do Google Labs:
@@ -81,6 +86,7 @@ Segundo o anúncio do Google Labs:
 - ganhou Prototypes para conectar telas e fluxos
 
 Referência:
+
 - `https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-gemini-3/`
 
 Uso prático no Torq:

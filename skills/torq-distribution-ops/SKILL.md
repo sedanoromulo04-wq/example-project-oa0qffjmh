@@ -23,6 +23,7 @@ metadados, acompanhar status e transformar resultado em aprendizado.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler o distribution job vindo do Supabase, da API ou do front-end e verificar se o ativo alvo esta em estado `approved`.
 2. Confirmar canal, janela de publicacao, owner, metadata e criterio de medicao.
 3. Preparar a fila com status inicial, payload de canal e dependencia de automacao externa quando existir.
@@ -38,29 +39,34 @@ metadados, acompanhar status e transformar resultado em aprendizado.
 Entregar em portugues com estas secoes:
 
 ### 1. Resumo Operacional
+
 - asset id
 - canal
 - owner
 - estado atual
 
 ### 2. Queue Readiness
+
 - aprovacao encontrada
 - metadata pronta
 - janela sugerida
 - bloqueios operacionais
 
 ### 3. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 4. Resultado do Job
+
 - novo estado
 - payload de handoff
 - metrica principal observada
 - aprendizado registrado
 
 ### 5. Proxima Acao
+
 - manter
 - iterar
 - pausar
@@ -84,11 +90,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Este post ja esta aprovado. Quero preparar a fila para LinkedIn na proxima semana e registrar o que medir."
 
 Output: "A skill deve validar a aprovacao, montar o distribution-job, mover para queued e definir a metrica e o loop de aprendizado."
 
 ### Exemplo 2
+
 Input: "Publica isso agora mesmo, ainda nao passou por aprovacao."
 
 Output: "A skill deve bloquear o fluxo, manter o ativo fora da fila e apontar a quebra de governanca."

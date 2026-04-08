@@ -55,14 +55,14 @@ Supabase baseado no contrato de `c-level-strategy-job` ou
 O Vision Chief e sempre o ponto de entrada. Ele diagnostica e roteia para o
 especialista correto:
 
-| Desafio | Especialista | Arquivo |
-|---|---|---|
-| visao, fundraising, cultura, board, M&A | Vision Chief | `vision-chief.md` |
-| escala operacional, OKRs, processos | COO Orchestrator | `coo-orchestrator.md` |
-| posicionamento, GTM, demanda, marca | CMO Architect | `cmo-architect.md` |
-| arquitetura de tech, stack, divida tecnica | CTO Architect | `cto-architect.md` |
-| seguranca, compliance, sistemas, vendors | CIO Engineer | `cio-engineer.md` |
-| estrategia de IA, LLMs, automacao responsavel | CAIO Architect | `caio-architect.md` |
+| Desafio                                       | Especialista     | Arquivo               |
+| --------------------------------------------- | ---------------- | --------------------- |
+| visao, fundraising, cultura, board, M&A       | Vision Chief     | `vision-chief.md`     |
+| escala operacional, OKRs, processos           | COO Orchestrator | `coo-orchestrator.md` |
+| posicionamento, GTM, demanda, marca           | CMO Architect    | `cmo-architect.md`    |
+| arquitetura de tech, stack, divida tecnica    | CTO Architect    | `cto-architect.md`    |
+| seguranca, compliance, sistemas, vendors      | CIO Engineer     | `cio-engineer.md`     |
+| estrategia de IA, LLMs, automacao responsavel | CAIO Architect   | `caio-architect.md`   |
 
 ### 2. Leitura Profunda do Especialista
 
@@ -130,27 +130,32 @@ O campo `command.primary` do payload pode disparar:
 Quando o comando for `client-operation`, entregar:
 
 ### 1. Situacao Atual do Cliente
+
 - etapa atual no Torq OS
 - ativos existentes
 - gaps criticos
 
 ### 2. Sequencia Recomendada
+
 - fase 1
 - fase 2
 - fase 3
 - bloqueios entre fases
 
 ### 3. Ownership
+
 - agente primario por fase
 - skill primaria por fase
 - aprovador humano por fase
 
 ### 4. Jobs Iniciais no Supabase
+
 - jobs que precisam ser criados agora
 - ordem de criacao
 - dependencias entre registros
 
 ### 5. Plano 30 Dias
+
 - semana 1
 - semana 2
 - semana 3

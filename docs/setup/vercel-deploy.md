@@ -1,6 +1,6 @@
 ---
 type: setup
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-08
 tags: [vercel, deployment, jarvis, frontend, backend]
 relevance: high

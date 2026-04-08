@@ -1,9 +1,9 @@
 ---
 type: voice-transcript
-source: "Conversa interna Torq"
+source: 'Conversa interna Torq'
 participants: [yan, romulo]
 date: YYYY-MM-DD
-topic: "[Tema da conversa]"
+topic: '[Tema da conversa]'
 tags: [transcricao, tom-de-voz]
 status: bruto
 ---
@@ -32,12 +32,15 @@ status: bruto
 Após ler a transcrição, identifique:
 
 ### Frases ou Estruturas Características
+
 - [ ] "[frase]" → Padrão: [o que ela revela sobre o tom]
 - [ ] "[frase]" → Padrão: [o que ela revela sobre o tom]
 
 ### Vocabulário Notável
+
 - Palavras usadas com frequência:
 - Palavras deliberadamente evitadas:
 
 ### Observações de Tom
+
 - [Notas sobre ritmo, densidade, nível de formalidade, etc.]

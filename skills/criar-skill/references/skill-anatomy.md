@@ -44,23 +44,27 @@ Output: [como Claude deve reagir]
 ## Regras de qualidade
 
 **YAML description:**
+
 - Terceira pessoa obrigatória
 - Mínimo 5 trigger phrases explícitas
 - Negative boundaries sempre presentes
 - "Pushy": quanto mais específico, maior a chance de ativar corretamente
 
 **Workflow:**
+
 - Cada passo = uma única ação
 - Voz imperativa: "Ler", "Extrair", "Perguntar" — não "Deve ser lido", "É necessário extrair"
 - Condicionais explícitas: "SE [condição] → [ação]"
 - Sem linguagem vaga: banido "handle appropriately", "format nicely", "as needed", "quando relevante"
 
 **Exemplos:**
+
 - Input e output REAIS, não descrições abstratas
 - Pelo menos 1 edge case
 - Quanto mais concretos, melhor o comportamento
 
 ## Tamanho ideal
+
 - 100 a 300 linhas
 - Acima de 300: considerar dividir em múltiplas skills ou mover conteúdo para references/
 
@@ -93,6 +97,7 @@ O `evals/evals.json` segue este formato:
 Mínimo 2 evals por skill: 1 happy path + 1 edge case.
 
 Opcionais (só quando necessário):
+
 - `references/` — docs de apoio, specs, guias de estilo
 - `scripts/` — código executável (ex: geração de imagem, PDF)
 - `assets/` — fontes, templates, arquivos estáticos

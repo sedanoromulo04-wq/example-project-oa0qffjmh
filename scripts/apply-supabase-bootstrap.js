@@ -1,11 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const { Client } = require('pg');
+const fs = require('fs')
+const path = require('path')
+const { Client } = require('pg')
 
 async function main() {
-  const connectionString = process.env.SUPABASE_DB_URL;
+  const connectionString = process.env.SUPABASE_DB_URL
   if (!connectionString) {
-    throw new Error('SUPABASE_DB_URL is not set');
+    throw new Error('SUPABASE_DB_URL is not set')
   }
 
   const migrationPath = path.resolve(
@@ -13,30 +13,30 @@ async function main() {
     '..',
     'supabase',
     'migrations',
-    '20260407_175500_torq_bootstrap.sql'
-  );
+    '20260407_175500_torq_bootstrap.sql',
+  )
 
-  const sql = fs.readFileSync(migrationPath, 'utf8');
+  const sql = fs.readFileSync(migrationPath, 'utf8')
   const client = new Client({
     connectionString,
     ssl: { rejectUnauthorized: false },
-  });
+  })
 
-  await client.connect();
+  await client.connect()
   try {
-    await client.query('begin');
-    await client.query(sql);
-    await client.query('commit');
-    console.log('Bootstrap migration applied successfully.');
+    await client.query('begin')
+    await client.query(sql)
+    await client.query('commit')
+    console.log('Bootstrap migration applied successfully.')
   } catch (error) {
-    await client.query('rollback');
-    throw error;
+    await client.query('rollback')
+    throw error
   } finally {
-    await client.end();
+    await client.end()
   }
 }
 
 main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+  console.error(error.message)
+  process.exit(1)
+})

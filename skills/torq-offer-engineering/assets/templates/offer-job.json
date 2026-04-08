@@ -45,12 +45,7 @@
     "ideal_value_proposition": "Transformacao estrutural da empresa do cliente ancorada em inteligencia nao replicavel"
   },
   "brand_bible_reference": {
-    "tone": [
-      "Intelectual",
-      "Elegante",
-      "Analitico",
-      "Exclusivo"
-    ],
+    "tone": ["Intelectual", "Elegante", "Analitico", "Exclusivo"],
     "lexicon_allowed": [
       "Infraestrutura dedicada",
       "C-Level alignment",

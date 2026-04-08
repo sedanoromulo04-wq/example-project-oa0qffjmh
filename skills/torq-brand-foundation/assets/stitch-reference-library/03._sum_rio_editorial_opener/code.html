@@ -1,245 +1,361 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
-            "colors": {
-                    "surface-container-low": "#f6f3ee",
-                    "background": "#fcf9f4",
-                    "surface-dim": "#dcdad5",
-                    "tertiary-container": "#111c2c",
-                    "tertiary-fixed-dim": "#bcc7dd",
-                    "on-primary": "#ffffff",
-                    "tertiary-fixed": "#d8e3fa",
-                    "error-container": "#ffdad6",
-                    "surface-container": "#f0ede8",
-                    "on-tertiary-fixed-variant": "#3c4759",
-                    "on-background": "#1c1c19",
-                    "outline": "#747878",
-                    "primary-fixed-dim": "#c8c6c5",
-                    "primary-fixed": "#e5e2e1",
-                    "on-surface-variant": "#444748",
-                    "surface-container-highest": "#e5e2dd",
-                    "tertiary": "#000000",
-                    "surface-container-high": "#ebe8e3",
-                    "inverse-primary": "#c8c6c5",
-                    "on-tertiary-fixed": "#111c2c",
-                    "on-primary-fixed-variant": "#474646",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#c4c7c7",
-                    "secondary-container": "#fdc796",
-                    "inverse-surface": "#31302d",
-                    "on-secondary": "#ffffff",
-                    "on-error": "#ffffff",
-                    "primary": "#000000",
-                    "on-primary-fixed": "#1c1b1b",
-                    "surface-variant": "#e5e2dd",
-                    "secondary": "#7e562e",
-                    "on-tertiary-container": "#798498",
-                    "surface-bright": "#fcf9f4",
-                    "surface-tint": "#5f5e5e",
-                    "on-tertiary": "#ffffff",
-                    "on-primary-container": "#858383",
-                    "secondary-fixed": "#ffdcbf",
-                    "secondary-fixed-dim": "#f1bc8c",
-                    "surface": "#fcf9f4",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary-fixed-variant": "#633f19",
-                    "on-secondary-container": "#79512a",
-                    "inverse-on-surface": "#f3f0eb",
-                    "error": "#ba1a1a",
-                    "primary-container": "#1c1b1b",
-                    "on-surface": "#1c1c19",
-                    "on-secondary-fixed": "#2d1600"
+            colors: {
+              'surface-container-low': '#f6f3ee',
+              background: '#fcf9f4',
+              'surface-dim': '#dcdad5',
+              'tertiary-container': '#111c2c',
+              'tertiary-fixed-dim': '#bcc7dd',
+              'on-primary': '#ffffff',
+              'tertiary-fixed': '#d8e3fa',
+              'error-container': '#ffdad6',
+              'surface-container': '#f0ede8',
+              'on-tertiary-fixed-variant': '#3c4759',
+              'on-background': '#1c1c19',
+              outline: '#747878',
+              'primary-fixed-dim': '#c8c6c5',
+              'primary-fixed': '#e5e2e1',
+              'on-surface-variant': '#444748',
+              'surface-container-highest': '#e5e2dd',
+              tertiary: '#000000',
+              'surface-container-high': '#ebe8e3',
+              'inverse-primary': '#c8c6c5',
+              'on-tertiary-fixed': '#111c2c',
+              'on-primary-fixed-variant': '#474646',
+              'on-error-container': '#93000a',
+              'outline-variant': '#c4c7c7',
+              'secondary-container': '#fdc796',
+              'inverse-surface': '#31302d',
+              'on-secondary': '#ffffff',
+              'on-error': '#ffffff',
+              primary: '#000000',
+              'on-primary-fixed': '#1c1b1b',
+              'surface-variant': '#e5e2dd',
+              secondary: '#7e562e',
+              'on-tertiary-container': '#798498',
+              'surface-bright': '#fcf9f4',
+              'surface-tint': '#5f5e5e',
+              'on-tertiary': '#ffffff',
+              'on-primary-container': '#858383',
+              'secondary-fixed': '#ffdcbf',
+              'secondary-fixed-dim': '#f1bc8c',
+              surface: '#fcf9f4',
+              'surface-container-lowest': '#ffffff',
+              'on-secondary-fixed-variant': '#633f19',
+              'on-secondary-container': '#79512a',
+              'inverse-on-surface': '#f3f0eb',
+              error: '#ba1a1a',
+              'primary-container': '#1c1b1b',
+              'on-surface': '#1c1c19',
+              'on-secondary-fixed': '#2d1600',
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
             },
-            "fontFamily": {
-                    "headline": ["Newsreader", "serif"],
-                    "body": ["Manrope", "sans-serif"],
-                    "label": ["Manrope", "sans-serif"]
-            }
+            fontFamily: {
+              headline: ['Newsreader', 'serif'],
+              body: ['Manrope', 'sans-serif'],
+              label: ['Manrope', 'sans-serif'],
+            },
           },
         },
       }
     </script>
-<style>
-        body { background-color: #fcf9f4; font-family: 'Manrope', sans-serif; }
-        .newsreader { font-family: 'Newsreader', serif; }
-        .manrope { font-family: 'Manrope', sans-serif; }
+    <style>
+      body {
+        background-color: #fcf9f4;
+        font-family: 'Manrope', sans-serif;
+      }
+      .newsreader {
+        font-family: 'Newsreader', serif;
+      }
+      .manrope {
+        font-family: 'Manrope', sans-serif;
+      }
     </style>
-</head>
-<body class="bg-background text-on-background selection:bg-secondary selection:text-white">
-<!-- TopAppBar Shell -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80">
-<div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white manrope">VOL. I: THE MANIFESTO</div>
-<nav class="hidden md:flex items-center space-x-12">
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 01</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 02</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1" href="#">CH. 03</a>
-</nav>
-<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white">XII</div>
-</header>
-<!-- SideNavBar Shell -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20">
-<div class="flex flex-col space-y-16 ml-8">
-<div class="group flex flex-col items-start space-y-2">
-<span class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]">
-<span class="material-symbols-outlined block mb-1" data-icon="architecture">architecture</span>
-                    POSITIONING
-                </span>
-</div>
-<div class="group flex flex-col items-start space-y-2">
-<span class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]">
-<span class="material-symbols-outlined block mb-1" data-icon="menu_book">menu_book</span>
-                    NARRATIVE
-                </span>
-</div>
-<div class="group flex flex-col items-start space-y-2">
-<span class="border-l-2 border-black dark:border-white pl-4 text-black dark:text-white font-bold font-sans uppercase tracking-[0.2em] text-[10px] manrope">
-<span class="material-symbols-outlined block mb-1" data-icon="collections">collections</span>
-                    AESTHETICS
-                </span>
-</div>
-<div class="group flex flex-col items-start space-y-2">
-<span class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]">
-<span class="material-symbols-outlined block mb-1" data-icon="diamond">diamond</span>
-                    DISTRIBUTION
-                </span>
-</div>
-</div>
-</aside>
-<!-- Main Content Canvas -->
-<main class="min-h-screen pt-40 pb-32 px-12 md:pl-48 md:pr-24">
-<!-- Hero Editorial Spread -->
-<div class="grid grid-cols-12 gap-8 items-end mb-32">
-<div class="col-span-12 lg:col-span-7">
-<h1 class="newsreader text-[12vw] leading-[0.85] font-light italic tracking-tighter text-primary">
-                    Sumário <span class="block ml-[4vw] not-italic font-medium">Editorial.</span>
-</h1>
-</div>
-<div class="col-span-12 lg:col-span-4 lg:col-start-9 pb-4">
-<p class="manrope text-[10px] uppercase tracking-[0.4em] text-secondary font-bold mb-4">Volume One / Issue 03</p>
-<p class="manrope text-sm leading-relaxed text-on-surface-variant max-w-xs">
-                    An architectural exploration of intent and execution. This index serves as a blueprint for the chapters that follow, detailing the structural integrity of our creative manifesto.
-                </p>
-</div>
-</div>
-<!-- Non-Linear Table of Contents -->
-<div class="relative grid grid-cols-12 gap-y-24 gap-x-12">
-<!-- Geometric Trace Line Decor (Absolute Background) -->
-<div class="absolute inset-0 pointer-events-none opacity-20 hidden lg:block">
-<svg class="w-full h-full" fill="none" viewbox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
-<path d="M100 50V300H400V600H900" stroke="currentColor" stroke-width="0.5"></path>
-<circle cx="100" cy="50" fill="currentColor" r="2"></circle>
-<circle cx="400" cy="300" fill="currentColor" r="2"></circle>
-<circle cx="900" cy="600" fill="currentColor" r="2"></circle>
-</svg>
-</div>
-<!-- Item 01 -->
-<div class="col-span-12 md:col-span-5 lg:col-span-4 group">
-<div class="flex items-baseline space-x-4 mb-4">
-<span class="newsreader text-4xl italic font-light text-secondary">I.</span>
-<div class="h-[1px] flex-grow bg-outline-variant/30 self-center"></div>
-</div>
-<h2 class="newsreader text-4xl font-semibold mb-3 group-hover:italic transition-all duration-500">The Foundational Pillar</h2>
-<p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
-                    DECONSTRUCTING MINIMALISM / THE ARCHIVE AS A LIVING ENTITY / TEMPORAL SHIFTS
-                </p>
-<div class="mt-8 overflow-hidden aspect-[4/5] bg-surface-container">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="Minimalist architectural detail of a concrete ceiling with sharp shadows and a single beam of light hitting a stark wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkFsAz_KV3u4Q3Yd5IVOg0UANlvjBk4XVa3JWibWmVO5-439n730itF-wzH_5JowgEge0-FyOEollHyLeWKUpYnFCloh6_5QQxYGqCCBxC9cGMGjZgLAcWJNQFJcTDui2wu-szk9Ey3SJZlkJZoWzhKWwsiEqIyK9VlHEh2dBJdOadYVMCbDSgViIqyQSXgxMBv-sH8TCzA1SVXsUc0_HBjG2nX-HimAczP9iGTMGCEP2cRRb0OP8Re_Py9MWbxedAzZVonJ0WfNE"/>
-</div>
-</div>
-<!-- Item 02 (Asymmetric Shift) -->
-<div class="col-span-12 md:col-span-6 md:col-start-7 lg:col-span-3 lg:col-start-9 self-start mt-12 group">
-<div class="flex items-baseline space-x-4 mb-4">
-<span class="newsreader text-4xl italic font-light text-secondary">II.</span>
-<div class="w-8 h-[1px] bg-outline-variant/30 self-center"></div>
-</div>
-<h2 class="newsreader text-3xl font-semibold mb-3 group-hover:italic transition-all duration-500">Materiality &amp; Form</h2>
-<p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
-                    TACTILE LUXURY / ORGANIC INTERFACES / THE WEIGHT OF PIXELS
-                </p>
-<div class="mt-40 border-l border-outline-variant/20 pl-8">
-<span class="manrope text-[10px] text-secondary font-bold">P. 042 — 068</span>
-</div>
-</div>
-<!-- Item 03 (Lower Row) -->
-<div class="col-span-12 md:col-span-4 lg:col-span-3 lg:col-start-2 group">
-<div class="flex items-baseline space-x-4 mb-4">
-<span class="newsreader text-4xl italic font-light text-secondary">III.</span>
-</div>
-<div class="w-full h-[1px] bg-outline-variant/30 mb-6"></div>
-<h2 class="newsreader text-3xl font-semibold mb-3 group-hover:italic transition-all duration-500">The Silent Authority</h2>
-<p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
-                    RESTRICTED PALETTES / STRATEGIC VOIDS / MONOLITHIC NAVIGATION
-                </p>
-</div>
-<!-- Item 04 (Visual Centerpiece) -->
-<div class="col-span-12 md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-6 group">
-<div class="grid grid-cols-6 gap-4">
-<div class="col-span-2 pt-12">
-<div class="flex items-baseline space-x-2 mb-4">
-<span class="newsreader text-4xl italic font-light text-secondary">IV.</span>
-</div>
-<h2 class="newsreader text-2xl font-semibold mb-2 group-hover:italic transition-all duration-500">Distribution</h2>
-<span class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 block">SCARCITY AS CURRENCY</span>
-</div>
-<div class="col-span-4 relative">
-<div class="absolute -top-4 -left-4 w-8 h-8 flex items-center justify-center">
-<div class="w-1 h-1 bg-primary rounded-full"></div>
-</div>
-<div class="aspect-video bg-surface-container-low overflow-hidden">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" data-alt="High-end editorial fashion photography of a draped fabric in neutral tones with dramatic shadows against a marble pillar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCouRfvPdntIDlNQmfn6pjHA2Rt_isTDrHZqZhWljBKPenkQoLZIFJtGJ9lmcEGjYbqoRVOmFEELBbXrva_FfhXBinAfkaUz-Ijz-9nyNFH8sygsmwccXPjZKTog_alRgoBrv43HvMgdaL1o0QxJjejlAep1dcA8R8Z-mEH0kei1-yFH1Z1phADPYYeOY_UUuMAmKM_G9r2IqZiWuqSEHv2QUE7qZbvQKFmfi9lKtkhFs5qFHVU_5NYNdXuUUmiHuACiIwF6uzFtGk"/>
-</div>
-<div class="mt-4 flex justify-between items-end">
-<p class="manrope text-[8px] text-on-surface/40 leading-relaxed max-w-[120px]">SECTION 04 / CH 03 — GLOBAL ACCESS AND LIMITATION PROTOCOLS.</p>
-<span class="newsreader italic text-xl">P. 112</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Technical Specification Footer / Annotation -->
-<div class="mt-48 grid grid-cols-12 border-t border-outline-variant/10 pt-12">
-<div class="col-span-6 md:col-span-3">
-<h4 class="manrope text-[10px] font-bold tracking-[0.2em] mb-4">TYPOGRAPHIC SPEC</h4>
-<p class="manrope text-[9px] text-on-surface/60 leading-tight uppercase">Newsreader Display 40pt<br/>Manrope Medium 08pt<br/>Tracking 0.4em</p>
-</div>
-<div class="col-span-6 md:col-span-3">
-<h4 class="manrope text-[10px] font-bold tracking-[0.2em] mb-4">CHRONOLOGY</h4>
-<p class="manrope text-[9px] text-on-surface/60 leading-tight uppercase">Autumn Winter Edition<br/>Sequence No. 003<br/>Release 12.24</p>
-</div>
-<div class="col-span-12 md:col-span-6 mt-12 md:mt-0 flex md:justify-end items-end">
-<div class="text-right">
-<span class="newsreader text-6xl italic font-extralight text-primary/10 select-none">Manifesto.</span>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer Shell -->
-<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
-<div class="pointer-events-auto manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300">
-            PAGE 03/12 — STRATEGIC MONUMENT
+  </head>
+  <body class="bg-background text-on-background selection:bg-secondary selection:text-white">
+    <!-- TopAppBar Shell -->
+    <header
+      class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80"
+    >
+      <div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white manrope">
+        VOL. I: THE MANIFESTO
+      </div>
+      <nav class="hidden md:flex items-center space-x-12">
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 01</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 02</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1"
+          href="#"
+          >CH. 03</a
+        >
+      </nav>
+      <div
+        class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white"
+      >
+        XII
+      </div>
+    </header>
+    <!-- SideNavBar Shell -->
+    <aside
+      class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20"
+    >
+      <div class="flex flex-col space-y-16 ml-8">
+        <div class="group flex flex-col items-start space-y-2">
+          <span
+            class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]"
+          >
+            <span class="material-symbols-outlined block mb-1" data-icon="architecture"
+              >architecture</span
+            >
+            POSITIONING
+          </span>
         </div>
-<div class="flex space-x-8 pointer-events-auto">
-<a class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
-<a class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
-</div>
-</footer>
-<!-- Aesthetic Dot Matrix Layer (Subtle Overlay) -->
-<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[60]" style="background-image: radial-gradient(#000 1px, transparent 0); background-size: 40px 40px;"></div>
-</body></html>
+        <div class="group flex flex-col items-start space-y-2">
+          <span
+            class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]"
+          >
+            <span class="material-symbols-outlined block mb-1" data-icon="menu_book"
+              >menu_book</span
+            >
+            NARRATIVE
+          </span>
+        </div>
+        <div class="group flex flex-col items-start space-y-2">
+          <span
+            class="border-l-2 border-black dark:border-white pl-4 text-black dark:text-white font-bold font-sans uppercase tracking-[0.2em] text-[10px] manrope"
+          >
+            <span class="material-symbols-outlined block mb-1" data-icon="collections"
+              >collections</span
+            >
+            AESTHETICS
+          </span>
+        </div>
+        <div class="group flex flex-col items-start space-y-2">
+          <span
+            class="text-black/30 dark:text-white/30 pl-4 font-sans uppercase tracking-[0.2em] text-[10px] manrope transition-all duration-700 hover:text-[#7e562e]"
+          >
+            <span class="material-symbols-outlined block mb-1" data-icon="diamond">diamond</span>
+            DISTRIBUTION
+          </span>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content Canvas -->
+    <main class="min-h-screen pt-40 pb-32 px-12 md:pl-48 md:pr-24">
+      <!-- Hero Editorial Spread -->
+      <div class="grid grid-cols-12 gap-8 items-end mb-32">
+        <div class="col-span-12 lg:col-span-7">
+          <h1
+            class="newsreader text-[12vw] leading-[0.85] font-light italic tracking-tighter text-primary"
+          >
+            Sumário <span class="block ml-[4vw] not-italic font-medium">Editorial.</span>
+          </h1>
+        </div>
+        <div class="col-span-12 lg:col-span-4 lg:col-start-9 pb-4">
+          <p class="manrope text-[10px] uppercase tracking-[0.4em] text-secondary font-bold mb-4">
+            Volume One / Issue 03
+          </p>
+          <p class="manrope text-sm leading-relaxed text-on-surface-variant max-w-xs">
+            An architectural exploration of intent and execution. This index serves as a blueprint
+            for the chapters that follow, detailing the structural integrity of our creative
+            manifesto.
+          </p>
+        </div>
+      </div>
+      <!-- Non-Linear Table of Contents -->
+      <div class="relative grid grid-cols-12 gap-y-24 gap-x-12">
+        <!-- Geometric Trace Line Decor (Absolute Background) -->
+        <div class="absolute inset-0 pointer-events-none opacity-20 hidden lg:block">
+          <svg
+            class="w-full h-full"
+            fill="none"
+            viewbox="0 0 1000 800"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M100 50V300H400V600H900" stroke="currentColor" stroke-width="0.5"></path>
+            <circle cx="100" cy="50" fill="currentColor" r="2"></circle>
+            <circle cx="400" cy="300" fill="currentColor" r="2"></circle>
+            <circle cx="900" cy="600" fill="currentColor" r="2"></circle>
+          </svg>
+        </div>
+        <!-- Item 01 -->
+        <div class="col-span-12 md:col-span-5 lg:col-span-4 group">
+          <div class="flex items-baseline space-x-4 mb-4">
+            <span class="newsreader text-4xl italic font-light text-secondary">I.</span>
+            <div class="h-[1px] flex-grow bg-outline-variant/30 self-center"></div>
+          </div>
+          <h2
+            class="newsreader text-4xl font-semibold mb-3 group-hover:italic transition-all duration-500"
+          >
+            The Foundational Pillar
+          </h2>
+          <p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
+            DECONSTRUCTING MINIMALISM / THE ARCHIVE AS A LIVING ENTITY / TEMPORAL SHIFTS
+          </p>
+          <div class="mt-8 overflow-hidden aspect-[4/5] bg-surface-container">
+            <img
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+              data-alt="Minimalist architectural detail of a concrete ceiling with sharp shadows and a single beam of light hitting a stark wall"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkFsAz_KV3u4Q3Yd5IVOg0UANlvjBk4XVa3JWibWmVO5-439n730itF-wzH_5JowgEge0-FyOEollHyLeWKUpYnFCloh6_5QQxYGqCCBxC9cGMGjZgLAcWJNQFJcTDui2wu-szk9Ey3SJZlkJZoWzhKWwsiEqIyK9VlHEh2dBJdOadYVMCbDSgViIqyQSXgxMBv-sH8TCzA1SVXsUc0_HBjG2nX-HimAczP9iGTMGCEP2cRRb0OP8Re_Py9MWbxedAzZVonJ0WfNE"
+            />
+          </div>
+        </div>
+        <!-- Item 02 (Asymmetric Shift) -->
+        <div
+          class="col-span-12 md:col-span-6 md:col-start-7 lg:col-span-3 lg:col-start-9 self-start mt-12 group"
+        >
+          <div class="flex items-baseline space-x-4 mb-4">
+            <span class="newsreader text-4xl italic font-light text-secondary">II.</span>
+            <div class="w-8 h-[1px] bg-outline-variant/30 self-center"></div>
+          </div>
+          <h2
+            class="newsreader text-3xl font-semibold mb-3 group-hover:italic transition-all duration-500"
+          >
+            Materiality &amp; Form
+          </h2>
+          <p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
+            TACTILE LUXURY / ORGANIC INTERFACES / THE WEIGHT OF PIXELS
+          </p>
+          <div class="mt-40 border-l border-outline-variant/20 pl-8">
+            <span class="manrope text-[10px] text-secondary font-bold">P. 042 — 068</span>
+          </div>
+        </div>
+        <!-- Item 03 (Lower Row) -->
+        <div class="col-span-12 md:col-span-4 lg:col-span-3 lg:col-start-2 group">
+          <div class="flex items-baseline space-x-4 mb-4">
+            <span class="newsreader text-4xl italic font-light text-secondary">III.</span>
+          </div>
+          <div class="w-full h-[1px] bg-outline-variant/30 mb-6"></div>
+          <h2
+            class="newsreader text-3xl font-semibold mb-3 group-hover:italic transition-all duration-500"
+          >
+            The Silent Authority
+          </h2>
+          <p class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 leading-tight">
+            RESTRICTED PALETTES / STRATEGIC VOIDS / MONOLITHIC NAVIGATION
+          </p>
+        </div>
+        <!-- Item 04 (Visual Centerpiece) -->
+        <div class="col-span-12 md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-6 group">
+          <div class="grid grid-cols-6 gap-4">
+            <div class="col-span-2 pt-12">
+              <div class="flex items-baseline space-x-2 mb-4">
+                <span class="newsreader text-4xl italic font-light text-secondary">IV.</span>
+              </div>
+              <h2
+                class="newsreader text-2xl font-semibold mb-2 group-hover:italic transition-all duration-500"
+              >
+                Distribution
+              </h2>
+              <span class="manrope text-[9px] uppercase tracking-[0.2em] text-on-surface/60 block"
+                >SCARCITY AS CURRENCY</span
+              >
+            </div>
+            <div class="col-span-4 relative">
+              <div class="absolute -top-4 -left-4 w-8 h-8 flex items-center justify-center">
+                <div class="w-1 h-1 bg-primary rounded-full"></div>
+              </div>
+              <div class="aspect-video bg-surface-container-low overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
+                  data-alt="High-end editorial fashion photography of a draped fabric in neutral tones with dramatic shadows against a marble pillar"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCouRfvPdntIDlNQmfn6pjHA2Rt_isTDrHZqZhWljBKPenkQoLZIFJtGJ9lmcEGjYbqoRVOmFEELBbXrva_FfhXBinAfkaUz-Ijz-9nyNFH8sygsmwccXPjZKTog_alRgoBrv43HvMgdaL1o0QxJjejlAep1dcA8R8Z-mEH0kei1-yFH1Z1phADPYYeOY_UUuMAmKM_G9r2IqZiWuqSEHv2QUE7qZbvQKFmfi9lKtkhFs5qFHVU_5NYNdXuUUmiHuACiIwF6uzFtGk"
+                />
+              </div>
+              <div class="mt-4 flex justify-between items-end">
+                <p class="manrope text-[8px] text-on-surface/40 leading-relaxed max-w-[120px]">
+                  SECTION 04 / CH 03 — GLOBAL ACCESS AND LIMITATION PROTOCOLS.
+                </p>
+                <span class="newsreader italic text-xl">P. 112</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Technical Specification Footer / Annotation -->
+      <div class="mt-48 grid grid-cols-12 border-t border-outline-variant/10 pt-12">
+        <div class="col-span-6 md:col-span-3">
+          <h4 class="manrope text-[10px] font-bold tracking-[0.2em] mb-4">TYPOGRAPHIC SPEC</h4>
+          <p class="manrope text-[9px] text-on-surface/60 leading-tight uppercase">
+            Newsreader Display 40pt<br />Manrope Medium 08pt<br />Tracking 0.4em
+          </p>
+        </div>
+        <div class="col-span-6 md:col-span-3">
+          <h4 class="manrope text-[10px] font-bold tracking-[0.2em] mb-4">CHRONOLOGY</h4>
+          <p class="manrope text-[9px] text-on-surface/60 leading-tight uppercase">
+            Autumn Winter Edition<br />Sequence No. 003<br />Release 12.24
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-6 mt-12 md:mt-0 flex md:justify-end items-end">
+          <div class="text-right">
+            <span class="newsreader text-6xl italic font-extralight text-primary/10 select-none"
+              >Manifesto.</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer Shell -->
+    <footer
+      class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none"
+    >
+      <div
+        class="pointer-events-auto manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+      >
+        PAGE 03/12 — STRATEGIC MONUMENT
+      </div>
+      <div class="flex space-x-8 pointer-events-auto">
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >ANNOTATIONS</a
+        >
+        <a
+          class="manrope text-[9px] uppercase tracking-tighter text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >LEGAL ARCHIVE</a
+        >
+      </div>
+    </footer>
+    <!-- Aesthetic Dot Matrix Layer (Subtle Overlay) -->
+    <div
+      class="fixed inset-0 pointer-events-none opacity-[0.03] z-[60]"
+      style="background-image: radial-gradient(#000 1px, transparent 0); background-size: 40px 40px"
+    ></div>
+  </body>
+</html>

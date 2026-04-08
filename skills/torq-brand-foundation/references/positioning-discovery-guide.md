@@ -21,16 +21,19 @@ O objetivo e:
 Posicionamento forte nasce da intersecao de 3 elementos:
 
 ### Identidade
+
 - quem esta pessoa e no mercado
 - que tipo de profissional ela representa
 - que visao de mundo organiza sua marca
 
 ### Utilidade
+
 - qual problema ela resolve
 - para quem esse problema importa
 - por que esse problema merece atencao agora
 
 ### Diferenca
+
 - por que escolher essa pessoa e nao outra
 - que recorte, metodo, experiencia ou leitura ela traz
 - qual contraste real existe em relacao ao mercado
@@ -186,14 +189,17 @@ A marca pode combinar de 1 a 3 tipos.
 ### 1. Autoridade tecnica
 
 Base:
+
 - formacao
 - certificacoes
 - repertorio
 
 Frase-base:
+
 - eu sei fazer ou analisar isso muito bem
 
 Melhor para:
+
 - mercados tradicionais
 - B2B
 - servicos complexos
@@ -201,14 +207,17 @@ Melhor para:
 ### 2. Experiencia propria
 
 Base:
+
 - cases
 - projetos
 - resultados reais
 
 Frase-base:
+
 - eu sei porque vivi isso na pratica
 
 Melhor para:
+
 - consultoria
 - mentoria
 - servicos
@@ -216,14 +225,17 @@ Melhor para:
 ### 3. Estilo proprio
 
 Base:
+
 - visao de mundo
 - tom
 - linguagem
 
 Frase-base:
+
 - eu penso diferente sobre isso
 
 Melhor para:
+
 - criadores
 - educadores
 - marcas pessoais
@@ -231,48 +243,60 @@ Melhor para:
 ### 4. Hipernicho
 
 Base:
+
 - recorte especifico de mercado
 
 Frase-base:
+
 - eu faco isso so para esse publico
 
 Melhor para:
+
 - crescer rapido em mercado segmentado
 
 ### 5. Problema especifico ou metodo proprio
 
 Base:
+
 - dor clara
 - framework
 - metodo nomeavel
 
 Frase-base:
+
 - eu tenho um jeito especifico de fazer
 
 Melhor para:
+
 - diferenciacao imediata
 
 ### 6. Visao distinta
 
 Base:
+
 - leitura estrategica do futuro
 - interpretacao diferente das forcas de mercado
 
 Frase-base:
+
 - eu interpreto diferente o que esta por vir
 
 Melhor para:
+
 - marcas com tese forte
 
 ### 7. Contraponto ou anti-heroi
 
 Base:
+
 - oposicao clara ao senso comum
 
 Frase-base:
+
 - eu nao acredito no que todo mundo acredita
 
 Melhor para:
+
 - gerar atencao
 - marcar identidade
 
@@ -312,6 +336,7 @@ Usar este checklist durante entrevistas, briefings, pesquisas e leitura de
 materiais do cliente.
 
 ### Fundacao
+
 - Quem e a pessoa no mercado?
 - O que ela acredita?
 - Qual futuro quer construir?
@@ -320,6 +345,7 @@ materiais do cliente.
 - Para quem e realmente relevante?
 
 ### Caixa mental
+
 - Que termos ela quer ocupar?
 - Que estilo de comunicacao ja e natural?
 - Que elementos caracteristicos podem virar assinatura?
@@ -327,16 +353,19 @@ materiais do cliente.
 - Que caixa mental o publico deve formar?
 
 ### Autoridade
+
 - Que provas reais existem hoje?
 - O que ainda e fragil?
 - O mercado ja percebe autoridade ou isso ainda esta em construcao?
 
 ### Tipo de posicionamento
+
 - Quais dos 7 tipos ja aparecem naturalmente?
 - Quais tipos podem ser combinados sem confundir?
 - Que tipo parece forte no papel, mas nao se sustenta na biografia?
 
 ### Clareza radical
+
 - Onde a marca esta ampla demais?
 - Onde falta recorte?
 - O que precisa ser rejeitado com mais clareza?

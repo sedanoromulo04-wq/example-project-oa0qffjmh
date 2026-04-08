@@ -27,12 +27,14 @@ Trabalhar dentro de uma orquestracao de 3 camadas:
 3. Camada Executiva: copy, storytelling e oferta so podem operar a partir do dossie aprovado.
 
 Assumir como modo padrao o modelo `Scraper -> Analista`:
+
 - Um agente ou workflow externo minera dados reais e entrega o dataset consolidado.
 - Esta skill nao deve gastar energia raspando quando o material ja foi coletado.
 - Busca autonoma so entra como fallback quando o sistema declarar explicitamente que tools externas estao habilitadas e nao ha dataset disponivel.
 
 Assumir como governanca padrao a orquestracao externa via `n8n`, interface do
 Cerebro Torq e backend Supabase:
+
 - O C-Level dispara a pesquisa.
 - O dataset bruto chega como registro, relacao ou payload recuperado do Supabase.
 - O dossie final deve ser persistido no Supabase como ativo oficial do projeto.
@@ -87,53 +89,63 @@ Se faltarem diretriz, contexto de negocio ou dataset minimo, bloquear a execucao
 Entregar em portugues com estas secoes e nomes:
 
 ### 1. Directive Snapshot
+
 - objetivo de negocio
 - decisao que o dossie precisa suportar
 - qualidade do input
 
 ### 2. Evidence Base
+
 - fontes usadas
 - volume e qualidade da amostra
 - verbatims-chave
 - lacunas da pesquisa
 
 ### 3. Status Quo
+
 - rotina real
 - friccoes diarias
 - custo emocional acumulado
 
 ### 4. Triade do Medo
+
 - medo superficial
 - medo profundo
 - pior cenario imaginavel
 
 ### 5. Desejo Secreto
+
 - premio emocional
 - fantasia silenciosa
 - status ou alivio realmente buscado
 
 ### 6. Sistema de Crencas
+
 - inimigo comum
 - crencas limitantes
 - mecanismos de autossabotagem
 
 ### 7. Dissonancia Cognitiva
+
 - o que a pessoa sabe
 - o que ela faz
 - por que repete o padrao
 
 ### 8. Handoff Mandatorio
+
 - implicacoes para copy
 - implicacoes para storytelling
 - implicacoes para oferta
 - guardrails de linguagem
 
 ### 9. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 10. Governance Verdict
+
 - status do dossie: `draft`, `ready_for_c_level_review` ou `approved`
 - quem precisa aprovar
 - se a camada executiva esta liberada ou bloqueada
@@ -167,11 +179,13 @@ Se o status nao for `approved`, orientar explicitamente que copy, storytelling e
 ## Examples
 
 ### Exemplo 1
+
 Input: "Temos dataset bruto de Reddit, Amazon e YouTube sobre emagrecimento pos-parto. O CMO quer entender medos, desejos e objecoes antes de liberar copy e oferta."
 
 Output: "A skill deve transformar o dataset em um `behavioral_persona_dossier` com triade do medo, desejo secreto, sistema de crencas, dissonancia cognitiva, evidencias, facts/inferences/hypotheses e verdict de governanca pronto para review do C-Level."
 
 ### Exemplo 2
+
 Input: "Cria uma persona premium para o meu curso, mas ainda nao temos pesquisa."
 
 Output: "A skill deve bloquear a execucao, explicar que nao inventa avatar sem evidencia e devolver o contrato minimo de input para coleta ou ingestao de dados."

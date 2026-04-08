@@ -1,8 +1,8 @@
-const { query, withTransaction } = require('./db');
-const { executeApprovedAction } = require('./actionExecutor');
+const { query, withTransaction } = require('./db')
+const { executeApprovedAction } = require('./actionExecutor')
 
 function toSessionTitle(message) {
-  return message.trim().replace(/\s+/g, ' ').slice(0, 72) || 'Nova sessao Jarvis';
+  return message.trim().replace(/\s+/g, ' ').slice(0, 72) || 'Nova sessao Jarvis'
 }
 
 async function getProfile(userId, userEmail = null) {
@@ -26,21 +26,21 @@ async function getProfile(userId, userEmail = null) {
       order by case when $1::uuid is not null and p.id = $1 then 0 else 1 end
       limit 1
     `,
-    [userId || null, userEmail || null]
-  );
+    [userId || null, userEmail || null],
+  )
 
   if (!result.rows[0]) {
-    const error = new Error('Perfil nao encontrado no Torq runtime');
-    error.statusCode = 404;
-    throw error;
+    const error = new Error('Perfil nao encontrado no Torq runtime')
+    error.statusCode = 404
+    throw error
   }
 
-  return result.rows[0];
+  return result.rows[0]
 }
 
 async function getClientState(workspaceId, clientId) {
   if (!clientId) {
-    return null;
+    return null
   }
 
   const result = await query(
@@ -64,15 +64,15 @@ async function getClientState(workspaceId, clientId) {
         and c.workspace_id = $2
       limit 1
     `,
-    [clientId, workspaceId]
-  );
+    [clientId, workspaceId],
+  )
 
-  return result.rows[0] || null;
+  return result.rows[0] || null
 }
 
 async function getDocContext(workspaceId, docId) {
   if (!docId) {
-    return null;
+    return null
   }
 
   const result = await query(
@@ -92,14 +92,14 @@ async function getDocContext(workspaceId, docId) {
         and d.workspace_id = $2
       limit 1
     `,
-    [docId, workspaceId]
-  );
+    [docId, workspaceId],
+  )
 
-  return result.rows[0] || null;
+  return result.rows[0] || null
 }
 
 async function buildContextPack({ user_id, user_email, active_client_id, active_doc_id }) {
-  const profile = await getProfile(user_id, user_email);
+  const profile = await getProfile(user_id, user_email)
 
   const [clientState, activeDoc, jobs, approvals, memories, knowledgeSources] = await Promise.all([
     getClientState(profile.workspace_id, active_client_id),
@@ -113,7 +113,7 @@ async function buildContextPack({ user_id, user_email, active_client_id, active_
         order by updated_at desc nulls last, created_at desc
         limit 8
       `,
-      [profile.workspace_id, active_client_id || null]
+      [profile.workspace_id, active_client_id || null],
     ),
     query(
       `
@@ -130,7 +130,7 @@ async function buildContextPack({ user_id, user_email, active_client_id, active_
         order by ai.updated_at desc, ai.created_at desc
         limit 5
       `,
-      [profile.workspace_id, active_client_id || null]
+      [profile.workspace_id, active_client_id || null],
     ),
     query(
       `
@@ -142,7 +142,7 @@ async function buildContextPack({ user_id, user_email, active_client_id, active_
         order by updated_at desc
         limit 5
       `,
-      [profile.workspace_id, active_client_id || null]
+      [profile.workspace_id, active_client_id || null],
     ),
     query(
       `
@@ -153,9 +153,9 @@ async function buildContextPack({ user_id, user_email, active_client_id, active_
         order by created_at desc
         limit 5
       `,
-      [profile.workspace_id, active_client_id || null]
+      [profile.workspace_id, active_client_id || null],
     ),
-  ]);
+  ])
 
   return {
     profile,
@@ -176,7 +176,7 @@ async function buildContextPack({ user_id, user_email, active_client_id, active_
       mutationPolicy: 'No mutation without explicit operator confirmation.',
       publicationPolicy: 'External publication is never automatic.',
     },
-  };
+  }
 }
 
 function summarizeContext(contextPack) {
@@ -200,11 +200,11 @@ function summarizeContext(contextPack) {
       memoryEntries: contextPack.memoryEntries.length,
       knowledgeSources: contextPack.knowledgeSources.length,
     },
-  };
+  }
 }
 
 async function listSessionsForUser(userId, userEmail = null) {
-  const profile = await getProfile(userId, userEmail);
+  const profile = await getProfile(userId, userEmail)
   const result = await query(
     `
       select
@@ -227,14 +227,14 @@ async function listSessionsForUser(userId, userEmail = null) {
       order by js.updated_at desc, js.created_at desc
       limit 25
     `,
-    [profile.workspace_id, profile.id]
-  );
+    [profile.workspace_id, profile.id],
+  )
 
-  return result.rows;
+  return result.rows
 }
 
 async function getSessionDetails(sessionId, userId, userEmail = null) {
-  const profile = await getProfile(userId, userEmail);
+  const profile = await getProfile(userId, userEmail)
   const [sessionRes, messagesRes, actionsRes] = await Promise.all([
     query(
       `
@@ -245,7 +245,7 @@ async function getSessionDetails(sessionId, userId, userEmail = null) {
           and profile_id = $3
         limit 1
       `,
-      [sessionId, profile.workspace_id, profile.id]
+      [sessionId, profile.workspace_id, profile.id],
     ),
     query(
       `
@@ -254,7 +254,7 @@ async function getSessionDetails(sessionId, userId, userEmail = null) {
         where session_id = $1
         order by created_at asc
       `,
-      [sessionId]
+      [sessionId],
     ),
     query(
       `
@@ -264,32 +264,39 @@ async function getSessionDetails(sessionId, userId, userEmail = null) {
         order by created_at desc
         limit 20
       `,
-      [sessionId]
+      [sessionId],
     ),
-  ]);
+  ])
 
   if (!sessionRes.rows[0]) {
-    const error = new Error('Sessao Jarvis nao encontrada');
-    error.statusCode = 404;
-    throw error;
+    const error = new Error('Sessao Jarvis nao encontrada')
+    error.statusCode = 404
+    throw error
   }
 
   return {
     session: sessionRes.rows[0],
     messages: messagesRes.rows,
     actions: actionsRes.rows,
-  };
+  }
 }
 
-async function reviewJarvisActions({ sessionId, actionIds, decision, notes, userId, userEmail = null }) {
-  const profile = await getProfile(userId, userEmail);
-  const normalizedDecision = decision === 'reject' ? 'reject' : 'approve';
-  const nextStatus = normalizedDecision === 'approve' ? 'approved' : 'rejected';
+async function reviewJarvisActions({
+  sessionId,
+  actionIds,
+  decision,
+  notes,
+  userId,
+  userEmail = null,
+}) {
+  const profile = await getProfile(userId, userEmail)
+  const normalizedDecision = decision === 'reject' ? 'reject' : 'approve'
+  const nextStatus = normalizedDecision === 'approve' ? 'approved' : 'rejected'
 
   if (!Array.isArray(actionIds) || actionIds.length === 0) {
-    const error = new Error('action_ids is required');
-    error.statusCode = 400;
-    throw error;
+    const error = new Error('action_ids is required')
+    error.statusCode = 400
+    throw error
   }
 
   return withTransaction(async (client) => {
@@ -302,14 +309,14 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           and profile_id = $3
         limit 1
       `,
-      [sessionId, profile.workspace_id, profile.id]
-    );
+      [sessionId, profile.workspace_id, profile.id],
+    )
 
-    const session = sessionRes.rows[0];
+    const session = sessionRes.rows[0]
     if (!session) {
-      const error = new Error('Sessao Jarvis nao encontrada para revisao');
-      error.statusCode = 404;
-      throw error;
+      const error = new Error('Sessao Jarvis nao encontrada para revisao')
+      error.statusCode = 404
+      throw error
     }
 
     const actionsRes = await client.query(
@@ -320,34 +327,35 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           and id = any($2::uuid[])
         order by created_at asc
       `,
-      [sessionId, actionIds]
-    );
+      [sessionId, actionIds],
+    )
 
     if (actionsRes.rows.length !== actionIds.length) {
-      const error = new Error('Uma ou mais acoes nao foram encontradas nesta sessao');
-      error.statusCode = 404;
-      throw error;
+      const error = new Error('Uma ou mais acoes nao foram encontradas nesta sessao')
+      error.statusCode = 404
+      throw error
     }
 
     for (const action of actionsRes.rows) {
       if (action.status !== 'proposed') {
-        const error = new Error(`A acao ${action.id} nao esta mais em estado proposed`);
-        error.statusCode = 409;
-        throw error;
+        const error = new Error(`A acao ${action.id} nao esta mais em estado proposed`)
+        error.statusCode = 409
+        throw error
       }
     }
 
-    const reviewedActions = [];
-    const createdApprovalItems = [];
-    const executionResults = [];
+    const reviewedActions = []
+    const createdApprovalItems = []
+    const executionResults = []
 
     for (const action of actionsRes.rows) {
-      const payload = action.payload && typeof action.payload === 'object' ? action.payload : {};
-      let resolvedStatus = nextStatus;
-      let execution = null;
+      const payload = action.payload && typeof action.payload === 'object' ? action.payload : {}
+      let resolvedStatus = nextStatus
+      let execution = null
 
-      const requiresApprovalGate = normalizedDecision === 'approve' && action.approval_required;
-      const shouldExecuteAfterApproval = normalizedDecision === 'approve' && !action.approval_required;
+      const requiresApprovalGate = normalizedDecision === 'approve' && action.approval_required
+      const shouldExecuteAfterApproval =
+        normalizedDecision === 'approve' && !action.approval_required
 
       if (requiresApprovalGate) {
         const approvalItem = await client.query(
@@ -378,16 +386,16 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
               notes: notes || null,
               payload,
             },
-          ]
-        );
+          ],
+        )
 
         await client.query(
           `
             insert into public.approval_decisions (approval_item_id, decided_by, decision, notes)
             values ($1, $2, 'approved', $3)
           `,
-          [approvalItem.rows[0].id, profile.id, notes || null]
-        );
+          [approvalItem.rows[0].id, profile.id, notes || null],
+        )
 
         const finalizedApprovalItem = await client.query(
           `
@@ -397,11 +405,11 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
             where id = $1
             returning id, status, risk_level, created_at, updated_at
           `,
-          [approvalItem.rows[0].id]
-        );
+          [approvalItem.rows[0].id],
+        )
 
-        createdApprovalItems.push(finalizedApprovalItem.rows[0]);
-        resolvedStatus = 'approved_pending_execution';
+        createdApprovalItems.push(finalizedApprovalItem.rows[0])
+        resolvedStatus = 'approved_pending_execution'
       }
 
       if (shouldExecuteAfterApproval) {
@@ -409,13 +417,13 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           action,
           profile,
           session,
-        });
-        resolvedStatus = executed.status;
-          execution = executed.execution;
-          executionResults.push({
-            action_id: action.id,
-            ...executed,
-          });
+        })
+        resolvedStatus = executed.status
+        execution = executed.execution
+        executionResults.push({
+          action_id: action.id,
+          ...executed,
+        })
       }
 
       const nextPayload = {
@@ -427,7 +435,7 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           reviewed_at: new Date().toISOString(),
         },
         execution,
-      };
+      }
 
       const updatedAction = await client.query(
         `
@@ -437,10 +445,10 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           where id = $1
           returning id, agent_run_id, action_type, target_table, target_record_id, status, approval_required, payload, created_at
         `,
-        [action.id, resolvedStatus, nextPayload]
-      );
+        [action.id, resolvedStatus, nextPayload],
+      )
 
-      reviewedActions.push(updatedAction.rows[0]);
+      reviewedActions.push(updatedAction.rows[0])
     }
 
     await client.query(
@@ -461,8 +469,8 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           approval_items: createdApprovalItems,
           execution_results: executionResults,
         },
-      ]
-    );
+      ],
+    )
 
     await client.query(
       `
@@ -481,8 +489,8 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
           created_approval_items: createdApprovalItems.map((item) => item.id),
           execution_results: executionResults,
         },
-      ]
-    );
+      ],
+    )
 
     return {
       sessionId,
@@ -490,13 +498,13 @@ async function reviewJarvisActions({ sessionId, actionIds, decision, notes, user
       reviewedActions,
       createdApprovalItems,
       executionResults,
-    };
-  });
+    }
+  })
 }
 
 async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, contextPack }) {
-  const profile = await getProfile(envelope.user_id, envelope.user_email || null);
-  const sessionTitle = envelope.session_title || toSessionTitle(envelope.message);
+  const profile = await getProfile(envelope.user_id, envelope.user_email || null)
+  const sessionTitle = envelope.session_title || toSessionTitle(envelope.message)
 
   return withTransaction(async (client) => {
     const sessionRes = await client.query(
@@ -516,14 +524,14 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
           `,
       envelope.session_id
         ? [envelope.session_id, profile.workspace_id, profile.id]
-        : [profile.workspace_id, profile.id, envelope.active_client_id || null, sessionTitle]
-    );
+        : [profile.workspace_id, profile.id, envelope.active_client_id || null, sessionTitle],
+    )
 
-    const session = sessionRes.rows[0];
+    const session = sessionRes.rows[0]
     if (!session) {
-      const error = new Error('Sessao Jarvis nao encontrada para escrita');
-      error.statusCode = 404;
-      throw error;
+      const error = new Error('Sessao Jarvis nao encontrada para escrita')
+      error.statusCode = 404
+      throw error
     }
 
     await client.query(
@@ -534,8 +542,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
             updated_at = now()
         where id = $1
       `,
-      [session.id, envelope.active_client_id || null, sessionTitle]
-    );
+      [session.id, envelope.active_client_id || null, sessionTitle],
+    )
 
     const userMessage = await client.query(
       `
@@ -543,8 +551,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
         values ($1, 'user', $2, $3, $4)
         returning id, session_id, role, input_mode, content, structured_payload, created_at
       `,
-      [session.id, envelope.input_mode || 'text', envelope.message, envelope]
-    );
+      [session.id, envelope.input_mode || 'text', envelope.message, envelope],
+    )
 
     await client.query(
       `
@@ -557,8 +565,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
         contextPack.clientState?.current_module || normalizedResponse.current_module || null,
         contextPack.clientState?.current_stage || normalizedResponse.current_stage || null,
         contextPack,
-      ]
-    );
+      ],
+    )
 
     const agentRun = await client.query(
       `
@@ -573,8 +581,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
         runtimeMeta.status,
         contextPack,
         { runtime: runtimeMeta, response: normalizedResponse },
-      ]
-    );
+      ],
+    )
 
     const assistantMessage = await client.query(
       `
@@ -582,8 +590,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
         values ($1, 'assistant', 'text', $2, $3)
         returning id, session_id, role, input_mode, content, structured_payload, created_at
       `,
-      [session.id, normalizedResponse.answer, normalizedResponse]
-    );
+      [session.id, normalizedResponse.answer, normalizedResponse],
+    )
 
     for (const mutation of normalizedResponse.requested_mutations || []) {
       await client.query(
@@ -608,8 +616,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
           mutation.target_record_id || null,
           mutation.approval_required !== false,
           mutation,
-        ]
-      );
+        ],
+      )
     }
 
     await client.query(
@@ -629,8 +637,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
           current_stage: normalizedResponse.current_stage,
           approval_risk: normalizedResponse.approval_risk,
         },
-      ]
-    );
+      ],
+    )
 
     return {
       session: {
@@ -640,8 +648,8 @@ async function processJarvisTurn({ envelope, normalizedResponse, runtimeMeta, co
       messages: [userMessage.rows[0], assistantMessage.rows[0]],
       agentRun: agentRun.rows[0],
       contextSummary: summarizeContext(contextPack),
-    };
-  });
+    }
+  })
 }
 
 module.exports = {
@@ -653,4 +661,4 @@ module.exports = {
   reviewJarvisActions,
   summarizeContext,
   toSessionTitle,
-};
+}

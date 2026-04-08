@@ -63,9 +63,5 @@
   "facts": [],
   "inferences": [],
   "hypotheses": [],
-  "downstream_dependencies": [
-    "torq-editorial-copy",
-    "torq-storytelling",
-    "torq-offer-engineering"
-  ]
+  "downstream_dependencies": ["torq-editorial-copy", "torq-storytelling", "torq-offer-engineering"]
 }

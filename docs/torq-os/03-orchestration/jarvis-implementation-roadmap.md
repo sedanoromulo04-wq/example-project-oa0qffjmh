@@ -1,6 +1,6 @@
 ---
 type: roadmap
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [torq-os, jarvis, roadmap, frontend, implementation]
 relevance: high

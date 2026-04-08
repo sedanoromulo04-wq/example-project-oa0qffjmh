@@ -23,6 +23,7 @@ operacao invista energia em branding, oferta ou conteudo.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler `docs/clients/grupo-torq/nicho/nicho-publico-alvo-grupo-torq-v2.md` como fonte primaria de qualificacao.
 2. Ler `docs/vision_and_strategy/` para preservar o filtro de voz, valores e posicionamento.
 3. Receber o briefing do prospect, call notes ou um `client-intake` vindo do Supabase, da API ou do front-end.
@@ -38,32 +39,38 @@ operacao invista energia em branding, oferta ou conteudo.
 Entregar em portugues com estas secoes:
 
 ### 1. Veredito
+
 - `fit aprovado`
 - `fit condicional`
 - `nao-fit`
 
 ### 2. Classificacao
+
 - persona do Torq
 - estagio do cliente
 - ponto de entrada
 
 ### 3. Validacao de Criterios
+
 - obrigatorios atendidos
 - obrigatorios ausentes
 - eliminatorios encontrados
 
 ### 4. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 5. Escopo Recomendado
+
 - fase inicial indicada
 - entrega recomendada
 - ativos minimos necessarios
 - riscos comerciais
 
 ### 6. Handoff
+
 - skill ou modulo seguinte
 - perguntas que ainda precisam resposta
 
@@ -84,11 +91,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Temos um professor de esporte com metodo validado, centros fisicos, casos reais e quase nenhum digital. Ele aceita aparecer e quer escalar."
 
 Output: "A skill deve aprovar o fit, classificar como Persona 2, indicar entrada por Fase 1 e recomendar handoff para torq-brand-foundation."
 
 ### Exemplo 2
+
 Input: "Tenho um mentor novo, sem case, sem oferta clara e quero terceirizar todo meu Instagram para vender rapido."
 
 Output: "A skill deve classificar como nao-fit, explicar os eliminatorios encontrados e impedir que a operacao trate o caso como cliente pronto para a esteira Torq."

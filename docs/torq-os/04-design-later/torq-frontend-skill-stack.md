@@ -1,6 +1,6 @@
 ---
 type: skill-stack
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [torq-os, frontend, skills, jarvis, stitch, figma]
 relevance: high

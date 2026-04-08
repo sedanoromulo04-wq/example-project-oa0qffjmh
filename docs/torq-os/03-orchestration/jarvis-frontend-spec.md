@@ -1,6 +1,6 @@
 ---
 type: spec
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [torq-os, jarvis, frontend, orchestration, openclaude, voice]
 relevance: high

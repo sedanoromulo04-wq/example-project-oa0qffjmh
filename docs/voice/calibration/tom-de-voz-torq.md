@@ -1,6 +1,6 @@
 ---
 type: voice-calibration
-source: "Transcrições e definição interna Torq"
+source: 'Transcrições e definição interna Torq'
 date: 2026-04-06
 tags: [tom-de-voz, brand-voice, calibracao, yan, romulo]
 relevance: high
@@ -16,9 +16,9 @@ relevance: high
 
 O tom de voz Torq é o resultado de uma tensão intencional entre dois opostos:
 
-| Polo | Descrição |
-|---|---|
-| **Intelectual e denso** | Referências reais, frameworks nomeados, dados |
+| Polo                    | Descrição                                            |
+| ----------------------- | ---------------------------------------------------- |
+| **Intelectual e denso** | Referências reais, frameworks nomeados, dados        |
 | **Direto e sem adorno** | Sem rodeios, sem jargão de guru, sem motivação vazia |
 
 O resultado é uma voz que soa como **um sócio muito inteligente que não tem tempo para impressionar, mas respeita demais a inteligência do interlocutor para simplificar demais**.
@@ -38,6 +38,7 @@ O resultado é uma voz que soa como **um sócio muito inteligente que não tem t
 ## Padrões Linguísticos Identificados
 
 ### Frases Estruturais Características
+
 - "O que a maioria {não vê / não percebe} é..."
 - "A questão não é X, é Y."
 - "Antes de {ação}, é preciso entender {premissa}."
@@ -45,11 +46,13 @@ O resultado é uma voz que soa como **um sócio muito inteligente que não tem t
 - "O risco real aqui não é {o óbvio}, é {o não-óbvio}."
 
 ### Densidade da Informação
+
 - Cada parágrafo carrega **uma ideia completa**, não fragmentos.
 - Quando há lista, cada item é **autoexplicativo** — sem precisar de contexto externo.
 - Números e referências aparecem **naturalmente no texto**, não em notas de rodapé.
 
 ### Ritmo
+
 - Frases curtas para afirmações fortes.
 - Frases mais longas para raciocínio encadeado.
 - Alternância deliberada — evita monotonia sem virar jogo de palavras.
@@ -58,16 +61,16 @@ O resultado é uma voz que soa como **um sócio muito inteligente que não tem t
 
 ## Vocabulário Aprovado
 
-| Usar | Evitar |
-|---|---|
-| "arquitetura" | "estrutura" (quando genérico) |
-| "mecânica" | "processo" (quando se refere a lógica interna) |
-| "premissa" | "pressuposto" |
-| "ancoragem" | "referência base" |
-| "diagnóstico" | "análise" (quando há julgamento de valor) |
-| "ecossistema" | "conjunto" |
-| "monetização do conhecimento" | "venda de serviços intelectuais" |
-| "Productization of Mind" | (termo proprietário — manter em inglês) |
+| Usar                          | Evitar                                         |
+| ----------------------------- | ---------------------------------------------- |
+| "arquitetura"                 | "estrutura" (quando genérico)                  |
+| "mecânica"                    | "processo" (quando se refere a lógica interna) |
+| "premissa"                    | "pressuposto"                                  |
+| "ancoragem"                   | "referência base"                              |
+| "diagnóstico"                 | "análise" (quando há julgamento de valor)      |
+| "ecossistema"                 | "conjunto"                                     |
+| "monetização do conhecimento" | "venda de serviços intelectuais"               |
+| "Productization of Mind"      | (termo proprietário — manter em inglês)        |
 
 ---
 
@@ -89,6 +92,7 @@ O resultado é uma voz que soa como **um sócio muito inteligente que não tem t
 ### [Adicionar exemplos aqui à medida que as transcrições forem indexadas]
 
 **Formato:**
+
 ```
 TRANSCRIÇÃO ORIGINAL:
 "[trecho da fala bruta]"

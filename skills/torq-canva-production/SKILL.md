@@ -23,6 +23,7 @@ disciplinada. Canva aqui e camada de producao, nunca camada de pensamento.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler o ativo aprovado, o `content-plan` correspondente e o `BrandBible` vindos do Supabase, da API ou do front-end.
 2. Confirmar que o pedido ja tem tese, CTA e estado de aprovacao adequados.
 3. Definir o formato da peca: carrossel, post estatico, capa, apoio visual ou deck curto.
@@ -38,29 +39,34 @@ disciplinada. Canva aqui e camada de producao, nunca camada de pensamento.
 Entregar em portugues com estas secoes:
 
 ### 1. Base Aprovada
+
 - ativo de origem
 - CTA
 - tese
 - prova usada
 
 ### 2. Especificacao da Peca
+
 - formato
 - numero de frames
 - objetivo por frame
 - texto por frame
 
 ### 3. Direcao Visual
+
 - template indicado
 - paleta
 - tipografia
 - imagem ou asset necessario
 
 ### 4. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 5. Checklist de Producao
+
 - o que precisa ser montado
 - o que precisa de revisao
 - o que bloqueia exportacao
@@ -82,11 +88,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Temos um carrossel aprovado sobre um erro estrutural do nicho e preciso transformar isso em 8 slides para Canva."
 
 Output: "A skill deve produzir um brief frame a frame, com hierarquia textual, direcao visual e checklist de producao."
 
 ### Exemplo 2
+
 Input: "Nao temos estrategia ainda, mas faz um visual premium para ver se vende."
 
 Output: "A skill deve bloquear a producao, explicar que Canva nao substitui tese nem oferta e recomendar retorno para estrategia."

@@ -46,21 +46,25 @@ Antes da pesquisa profunda, responder:
 Responder em linguagem objetiva:
 
 ### Identidade profissional
+
 - Quem é esta pessoa?
 - Qual história dá legitimidade a ela?
 - Que valores e visões de mundo organizam sua marca?
 
 ### Autoridade e prova
+
 - Onde a autoridade já existe?
 - Quais provas são fortes?
 - O que ainda é frágil ou não documentado?
 
 ### Oferta e método
+
 - O que ela vende hoje?
 - Como o método funciona?
 - O que torna esse método memorável ou nomeável?
 
 ### Maturidade de marca
+
 - O problema principal é posicionamento?
 - O problema principal é identidade visual?
 - O problema principal é mensagem?
@@ -71,21 +75,25 @@ Responder em linguagem objetiva:
 Mapear o mercado em 4 camadas:
 
 ### Camada A — Mercado amplo
+
 - setor
 - dinâmica de crescimento
 - sazonalidade
 - tensões estruturais
 
 ### Camada B — Categoria percebida
+
 - como o mercado nomeia esse tipo de especialista
 - quais categorias estão saturadas
 - quais categorias estão mal definidas
 
 ### Camada C — Subnicho
+
 - qual recorte de público ou problema é mais estratégico
 - onde há espaço para diferenciação com menos ruído
 
 ### Camada D — Oportunidade de reposicionamento
+
 - ocupar categoria existente
 - redefinir categoria
 - criar framing próprio
@@ -95,15 +103,19 @@ Mapear o mercado em 4 camadas:
 Separar concorrência em:
 
 ### Concorrente direto
+
 - vende solução parecida para público parecido
 
 ### Concorrente indireto
+
 - resolve a mesma dor por outro formato, ticket ou narrativa
 
 ### Benchmark de comunicação
+
 - talvez não concorra diretamente, mas comunica muito bem
 
 Para cada um, registrar:
+
 - proposta principal
 - estilo visual
 - tom de voz
@@ -126,6 +138,7 @@ Responder:
 ### Captura de linguagem
 
 Sempre priorizar:
+
 - palavras reais do nicho
 - perguntas recorrentes
 - padrões de objeção
@@ -148,6 +161,7 @@ Fechar o posicionamento com 7 peças:
 ### Teste de força do posicionamento
 
 O posicionamento está forte quando:
+
 - pode ser repetido sem soar genérico
 - cria contraste com o mercado
 - parece verdadeiro para a biografia do especialista
@@ -170,6 +184,7 @@ Produzir:
 ### Regra de ouro
 
 Se o sistema verbal não puder ser usado em:
+
 - bio
 - página
 - conteúdo
@@ -194,6 +209,7 @@ Traduzir a estratégia em:
 ### Regra de ouro
 
 Toda decisão visual deve responder a uma pergunta estratégica:
+
 - isso aumenta autoridade?
 - isso melhora clareza?
 - isso diferencia?

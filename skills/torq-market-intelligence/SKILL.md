@@ -23,6 +23,7 @@ mercado usavel pelo sistema Torq. Priorizar decisao, nao volume de pesquisa.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler `docs/vision_and_strategy/` e `docs/clients/grupo-torq/nicho/nicho-publico-alvo-grupo-torq-v2.md` antes de interpretar o caso.
 2. Ler o payload vindo do Supabase, da API ou do front-end.
 3. Identificar o objeto de pesquisa: prospect, cliente ativo, categoria, subnicho ou concorrencia.
@@ -40,34 +41,40 @@ mercado usavel pelo sistema Torq. Priorizar decisao, nao volume de pesquisa.
 Entregar em portugues com estas secoes:
 
 ### 1. Contexto de Entrada
+
 - objeto analisado
 - objetivo da pesquisa
 - qualidade do input
 
 ### 2. Diagnostico de Mercado
+
 - categoria atual
 - maturidade do nicho
 - sinais de demanda
 - sinais de saturacao
 
 ### 3. Mapa Competitivo
+
 - concorrentes diretos
 - concorrentes indiretos
 - padroes repetidos
 - lacunas exploraveis
 
 ### 4. Voz do Cliente
+
 - dores
 - desejos
 - linguagem recorrente
 - objecoes
 
 ### 5. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 6. Tese Estrategica Inicial
+
 - oportunidade central
 - risco principal
 - angulo de categoria
@@ -90,11 +97,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Preciso entender o mercado de um cirurgiao plastico premium com boa reputacao offline, pouco digital e concorrentes muito parecidos no Instagram."
 
 Output: "A skill deve mapear a categoria, identificar concorrentes diretos e indiretos, separar fatos, inferencias e hipoteses, apontar janelas reais de diferenciacao e recomendar handoff para torq-brand-foundation."
 
 ### Exemplo 2
+
 Input: "Quero uma lista de concorrentes para copiar trends e postar mais."
 
 Output: "A skill deve recusar a logica de trend-chasing, devolver inteligencia de mercado em vez de imitacao taticista e explicar que o objetivo do modulo e orientar posicionamento e conversao."

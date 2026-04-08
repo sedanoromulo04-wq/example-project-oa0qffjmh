@@ -71,11 +71,13 @@ Se o dossie estiver ausente ou nao aprovado, retornar:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Preciso reposicionar uma consultoria premium com pricing baseado em valor, mantendo o dossie comportamental aprovado no centro."
 
 Output: "A skill deve usar a logica estrutural do especialista escolhido, responder aos medos e desejos do dossie e entregar a nova oferta em formato boardroom."
 
 ### Exemplo 2
+
 Input: "Monta uma oferta irresistivel no improviso para vender mais rapido."
 
 Output: "A skill deve bloquear a execucao e exigir o behavioral_persona_dossier aprovado antes da engenharia da oferta."

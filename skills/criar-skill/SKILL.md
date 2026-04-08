@@ -23,6 +23,7 @@ backup opcional no GitHub.
 ## Antes de Começar
 
 Esta skill requer:
+
 - **Claude Code** instalado e rodando (`claude` no terminal)
 - Pasta `~/.claude/skills/` existindo (criada automaticamente pelo Claude Code)
 - **Opcional:** GitHub CLI (`gh`) autenticado, para backup no GitHub
@@ -36,12 +37,12 @@ Se você não tem `~/.claude/skills/`, rode `claude` uma vez — ele cria a past
 
 Antes de qualquer ação, identificar o modo com base no contexto:
 
-| Condição | Modo |
-|----------|------|
-| Invocada sem input E há histórico de tarefa executada na sessão | Modo 1: Captura de Sessão |
-| Input contém etapas numeradas, bullets de ação, ou palavras como "primeiro/depois/se/quando" | Modo 2: Análise de Workflow |
-| Input é descrição vaga, ideia ou intenção sem etapas definidas | Modo 3: Entrevista |
-| Ambíguo | Perguntar: "Você quer capturar o que fizemos nessa sessão, analisar um workflow que vai colar, ou criar algo novo do zero?" |
+| Condição                                                                                     | Modo                                                                                                                        |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Invocada sem input E há histórico de tarefa executada na sessão                              | Modo 1: Captura de Sessão                                                                                                   |
+| Input contém etapas numeradas, bullets de ação, ou palavras como "primeiro/depois/se/quando" | Modo 2: Análise de Workflow                                                                                                 |
+| Input é descrição vaga, ideia ou intenção sem etapas definidas                               | Modo 3: Entrevista                                                                                                          |
+| Ambíguo                                                                                      | Perguntar: "Você quer capturar o que fizemos nessa sessão, analisar um workflow que vai colar, ou criar algo novo do zero?" |
 
 ---
 
@@ -81,23 +82,28 @@ Antes de qualquer ação, identificar o modo com base no contexto:
 **Quando:** O usuário descreve uma ideia sem estrutura de processo definida.
 
 ### Fase 1 — Definição da tarefa
+
 - Perguntar: "O que essa skill faz? Descreva o input e o output específico."
 - Se a resposta for vaga (ex: "ajuda com emails"), pedir: "Pode descrever um exemplo concreto? O que entra exatamente, o que sai?"
 - Confirmar em 1 frase: "Então essa skill recebe [X] e produz [Y]. Correto?"
 - Não avançar até ter confirmação explícita.
 
 ### Fase 2 — Triggers
+
 - Perguntar: "Quais são as 5 formas diferentes que você digitaria para ativar essa skill?"
 - Sugerir 3-5 frases adicionais que o usuário provavelmente não mencionou.
 - Perguntar: "O que NÃO deve ativar essa skill? Quais pedidos parecidos mas diferentes ela deve ignorar?"
 
 ### Fase 3 — Padrão de qualidade
+
 - Perguntar: "Como é um output perfeito? Se puder, mostre um exemplo real."
 - Perguntar: "Como é um output que falhou? O que você não quer ver?"
 - Perguntar: "Qual o input mais quebrado ou incompleto que essa skill poderia receber? Como deve reagir?"
 
 ### Fase 4 — Confirmar brief
+
 Compilar e apresentar:
+
 ```
 Nome sugerido: [kebab-case]
 Propósito: [1 frase]
@@ -107,6 +113,7 @@ Input: [descrição]
 Output: [descrição]
 Edge cases: [lista]
 ```
+
 Perguntar: "Está correto? Posso ajustar qualquer campo antes de gerar."
 Após confirmação, gerar SKILL.md com `references/skill-anatomy.md` e ir para **QA Automático**.
 
@@ -194,6 +201,7 @@ Após aprovação do SKILL.md:
 Perguntar: "Quer salvar no GitHub como backup?"
 
 Se sim:
+
 1. Verificar autenticação: `gh auth status`
    - Se não autenticado: "Execute `gh auth login` e tente novamente."
 2. Perguntar: "Qual o nome do seu repositório? (ex: {SEU_USUARIO}/skills)"
@@ -204,7 +212,7 @@ Se sim:
    - Referências a vaults ou credentials específicos
    - Lógica de deploy específica de ambiente
    - Qualquer menção a contexto pessoal (nomes de pessoas, equipe interna)
-   E mantendo intactos: workflow, edge cases, QA checklist, exemplos, lógica da skill.
+     E mantendo intactos: workflow, edge cases, QA checklist, exemplos, lógica da skill.
 5. Subir SKILL-publico.md (não o SKILL.md interno) + evals/evals.json.
 6. Commit e push com mensagem: `feat: add {nome} skill`
 7. Confirmar com URL do arquivo no GitHub.
@@ -240,6 +248,7 @@ Guia completo de refinamento com exemplo real: `references/guia-refinamento.md`
 **Input:** `/criar-skill` (sem texto adicional)
 
 **Output esperado:**
+
 ```
 Identifiquei esses passos na sessão:
 
@@ -263,6 +272,7 @@ Está correto? Posso ajustar qualquer etapa antes de prosseguir.
 **Input:** "quero criar uma skill que me ajuda a responder comentários no Instagram"
 
 **Output esperado (Fase 1):**
+
 ```
 Entendi que você quer automatizar respostas no Instagram.
 
@@ -277,6 +287,7 @@ Ou você quer que eu acesse o Instagram diretamente e responda?
 **Input:** "toda semana eu: 1) acesso o notion, 2) pego os cards marcados como 'publicar', 3) exporto o texto, 4) formato pra linkedin, 5) agende no buffer"
 
 **Output esperado:**
+
 ```
 Identifiquei um workflow de publicação semanal com 5 etapas.
 

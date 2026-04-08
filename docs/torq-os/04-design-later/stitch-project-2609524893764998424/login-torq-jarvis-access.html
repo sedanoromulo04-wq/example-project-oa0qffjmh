@@ -1,204 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Torq Jarvis | Mission Control Access</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0e0e0e;
-        }
-        .font-headline {
-            font-family: 'Manrope', sans-serif;
-        }
-        .glass-panel {
-            background: rgba(37, 38, 38, 0.7);
-            backdrop-filter: blur(24px);
-        }
-        .bottom-trace {
-            border: none;
-            border-bottom: 1px solid #484848;
-            background: transparent !important;
-            border-radius: 0 !important;
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .bottom-trace:focus {
-            outline: none;
-            border-bottom-color: #bfc5e4;
-            box-shadow: none;
-        }
-        .glow-subtle {
-            background: radial-gradient(circle at 50% 50%, rgba(63, 70, 95, 0.15) 0%, rgba(14, 14, 14, 0) 70%);
-        }
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Torq Jarvis | Mission Control Access</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@200;400;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0e0e0e;
+      }
+      .font-headline {
+        font-family: 'Manrope', sans-serif;
+      }
+      .glass-panel {
+        background: rgba(37, 38, 38, 0.7);
+        backdrop-filter: blur(24px);
+      }
+      .bottom-trace {
+        border: none;
+        border-bottom: 1px solid #484848;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .bottom-trace:focus {
+        outline: none;
+        border-bottom-color: #bfc5e4;
+        box-shadow: none;
+      }
+      .glow-subtle {
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(63, 70, 95, 0.15) 0%,
+          rgba(14, 14, 14, 0) 70%
+        );
+      }
     </style>
-<script id="tailwind-config">
+    <script id="tailwind-config">
       tailwind.config = {
-        darkMode: "class",
+        darkMode: 'class',
         theme: {
           extend: {
-            "colors": {
-                "tertiary-fixed": "#dcedff",
-                "on-tertiary-fixed-variant": "#536372",
-                "on-primary-fixed": "#383e57",
-                "surface-container-high": "#1f2020",
-                "surface-tint": "#bfc5e4",
-                "surface-bright": "#2c2c2c",
-                "on-secondary": "#202020",
-                "error-dim": "#b95463",
-                "error": "#ec7c8a",
-                "on-surface-variant": "#acabaa",
-                "surface-container-lowest": "#000000",
-                "secondary": "#9f9d9d",
-                "error-container": "#7f2737",
-                "surface-container-highest": "#252626",
-                "tertiary": "#f7f9ff",
-                "surface-variant": "#252626",
-                "surface-dim": "#0e0e0e",
-                "on-error": "#490013",
-                "primary-container": "#3f465f",
-                "on-primary-fixed-variant": "#545a75",
-                "on-tertiary-container": "#495867",
-                "outline": "#767575",
-                "on-secondary-fixed-variant": "#5c5b5b",
-                "on-primary-container": "#c9cfee",
-                "on-background": "#e7e5e4",
-                "on-secondary-container": "#c1bfbe",
-                "surface-container-low": "#131313",
-                "on-primary": "#393f58",
-                "secondary-fixed": "#e5e2e1",
-                "tertiary-container": "#dcedff",
-                "secondary-container": "#3c3b3b",
-                "outline-variant": "#484848",
-                "on-tertiary": "#516170",
-                "tertiary-fixed-dim": "#cedff1",
-                "secondary-dim": "#9f9d9d",
-                "background": "#0e0e0e",
-                "inverse-surface": "#fcf8f8",
-                "surface-container": "#191a1a",
-                "primary-fixed": "#dce1ff",
-                "inverse-on-surface": "#565554",
-                "primary": "#bfc5e4",
-                "primary-dim": "#b1b7d6",
-                "on-surface": "#e7e5e4",
-                "tertiary-dim": "#cedff1",
-                "on-tertiary-fixed": "#374655",
-                "primary-fixed-dim": "#cdd3f3",
-                "surface": "#0e0e0e",
-                "on-secondary-fixed": "#403f3f",
-                "on-error-container": "#ff97a3",
-                "inverse-primary": "#575e79",
-                "secondary-fixed-dim": "#d6d4d3"
+            colors: {
+              'tertiary-fixed': '#dcedff',
+              'on-tertiary-fixed-variant': '#536372',
+              'on-primary-fixed': '#383e57',
+              'surface-container-high': '#1f2020',
+              'surface-tint': '#bfc5e4',
+              'surface-bright': '#2c2c2c',
+              'on-secondary': '#202020',
+              'error-dim': '#b95463',
+              error: '#ec7c8a',
+              'on-surface-variant': '#acabaa',
+              'surface-container-lowest': '#000000',
+              secondary: '#9f9d9d',
+              'error-container': '#7f2737',
+              'surface-container-highest': '#252626',
+              tertiary: '#f7f9ff',
+              'surface-variant': '#252626',
+              'surface-dim': '#0e0e0e',
+              'on-error': '#490013',
+              'primary-container': '#3f465f',
+              'on-primary-fixed-variant': '#545a75',
+              'on-tertiary-container': '#495867',
+              outline: '#767575',
+              'on-secondary-fixed-variant': '#5c5b5b',
+              'on-primary-container': '#c9cfee',
+              'on-background': '#e7e5e4',
+              'on-secondary-container': '#c1bfbe',
+              'surface-container-low': '#131313',
+              'on-primary': '#393f58',
+              'secondary-fixed': '#e5e2e1',
+              'tertiary-container': '#dcedff',
+              'secondary-container': '#3c3b3b',
+              'outline-variant': '#484848',
+              'on-tertiary': '#516170',
+              'tertiary-fixed-dim': '#cedff1',
+              'secondary-dim': '#9f9d9d',
+              background: '#0e0e0e',
+              'inverse-surface': '#fcf8f8',
+              'surface-container': '#191a1a',
+              'primary-fixed': '#dce1ff',
+              'inverse-on-surface': '#565554',
+              primary: '#bfc5e4',
+              'primary-dim': '#b1b7d6',
+              'on-surface': '#e7e5e4',
+              'tertiary-dim': '#cedff1',
+              'on-tertiary-fixed': '#374655',
+              'primary-fixed-dim': '#cdd3f3',
+              surface: '#0e0e0e',
+              'on-secondary-fixed': '#403f3f',
+              'on-error-container': '#ff97a3',
+              'inverse-primary': '#575e79',
+              'secondary-fixed-dim': '#d6d4d3',
             },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
             },
-            "fontFamily": {
-                "headline": ["Manrope"],
-                "body": ["Inter"],
-                "label": ["Inter"]
-            }
+            fontFamily: {
+              headline: ['Manrope'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
           },
         },
       }
     </script>
-</head>
-<body class="bg-surface text-on-surface min-h-screen flex items-center justify-center overflow-hidden selection:bg-primary/30 selection:text-primary">
-<!-- Atmospheric Background -->
-<div class="fixed inset-0 z-0">
-<div class="absolute inset-0 glow-subtle"></div>
-<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,_rgba(191,197,228,0.03)_0%,_transparent_50%)]"></div>
-<div class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,_rgba(63,70,95,0.05)_0%,_transparent_50%)]"></div>
-</div>
-<!-- Main Content Canvas -->
-<main class="relative z-10 w-full max-w-lg px-8 py-12 md:px-0">
-<!-- Header / Identity -->
-<header class="mb-16 text-center">
-<div class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-sm bg-surface-container-high border border-outline-variant/20 shadow-xl">
-<span class="material-symbols-outlined text-primary text-2xl" data-icon="shield_person">shield_person</span>
-</div>
-<h1 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-2">Torq Jarvis</h1>
-<p class="text-xs uppercase tracking-[0.3em] font-headline font-semibold text-on-surface-variant/60">Executive Mission Control</p>
-</header>
-<!-- Access Terminal -->
-<div class="glass-panel p-1 border border-outline-variant/10 rounded-sm shadow-2xl">
-<div class="bg-surface-container-low p-10 rounded-sm">
-<!-- Feedback Display -->
-<div class="mb-10 flex items-center gap-4 border-l-2 border-primary/40 pl-6 py-2">
-<div class="space-y-1">
-<span class="block text-[10px] font-bold uppercase tracking-widest text-primary/70">System Status</span>
-<p class="text-sm font-medium text-on-surface">Secure Protocol Active. Awaiting Authentication.</p>
-</div>
-</div>
-<!-- Form -->
-<form class="space-y-12">
-<div class="space-y-8">
-<!-- User ID Input -->
-<div class="relative group">
-<label class="block text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest mb-1">Executive Identifier</label>
-<input class="w-full bottom-trace py-3 text-lg font-headline tracking-tight text-on-surface placeholder:text-outline/40" placeholder="Enter ID" type="text"/>
-<span class="absolute right-0 bottom-3 material-symbols-outlined text-on-surface-variant/40 text-sm" data-icon="id_card">id_card</span>
-</div>
-<!-- Verification Input -->
-<div class="relative group">
-<label class="block text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest mb-1">Passkey Bundle</label>
-<input class="w-full bottom-trace py-3 text-lg font-headline tracking-tight text-on-surface placeholder:text-outline/40" placeholder="••••••••" type="password"/>
-<span class="absolute right-0 bottom-3 material-symbols-outlined text-on-surface-variant/40 text-sm" data-icon="key">key</span>
-</div>
-</div>
-<!-- Secure Entry / Biometric -->
-<div class="flex flex-col gap-6">
-<button class="group relative overflow-hidden w-full h-14 rounded-sm bg-gradient-to-br from-primary to-primary-container flex items-center justify-center transition-all duration-300 hover:brightness-110 active:scale-[0.98]" type="submit">
-<span class="relative z-10 font-headline font-bold text-on-primary-fixed tracking-tight">Initiate Sequence</span>
-<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</button>
-<div class="flex items-center justify-between gap-4">
-<div class="h-px flex-1 bg-outline-variant/20"></div>
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Or Biometric</span>
-<div class="h-px flex-1 bg-outline-variant/20"></div>
-</div>
-<button class="w-full h-14 rounded-sm border border-outline-variant/30 flex items-center justify-center gap-3 hover:bg-surface-bright transition-colors duration-300" type="button">
-<span class="material-symbols-outlined text-primary/80" data-icon="fingerprint">fingerprint</span>
-<span class="text-xs font-semibold uppercase tracking-widest text-on-surface">Scan Identity</span>
-</button>
-</div>
-</form>
-</div>
-</div>
-<!-- System Footer -->
-<footer class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
-<div class="flex items-center gap-4">
-<div class="w-2 h-2 rounded-full bg-primary/40 animate-pulse"></div>
-<span class="text-[10px] font-medium text-on-surface-variant/60 tracking-wider">Terminal V.4.0.2 // Encrypted Node</span>
-</div>
-<nav class="flex gap-8">
-<a class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Emergency Overide</a>
-<a class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Support Registry</a>
-</nav>
-</footer>
-</main>
-<!-- Side Graphic Ornament (Asymmetric balance) -->
-<div class="hidden xl:block fixed right-12 bottom-12 z-10 opacity-20">
-<div class="flex flex-col items-end gap-2">
-<div class="w-48 h-px bg-gradient-to-l from-primary to-transparent"></div>
-<div class="w-32 h-px bg-gradient-to-l from-primary/50 to-transparent"></div>
-<div class="w-16 h-px bg-gradient-to-l from-primary/20 to-transparent"></div>
-<span class="mt-4 font-headline text-[8px] uppercase tracking-[0.4em] text-on-surface-variant leading-none">Institutional Intelligence Core</span>
-</div>
-</div>
-<!-- Background Elements -->
-<div class="fixed top-0 right-0 p-12 pointer-events-none opacity-5">
-<img alt="" class="w-[600px] h-[600px] object-cover rounded-full" data-alt="Abstract glowing network of neural pathways on a dark background with deep blue and graphite tones, cinematic lighting, tech luxury" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzjoQjNa2u9gW3zEqM8YAN-zSx0YG2L-swbRxgWTsi9fjQE5Mys7JurkbVXDZDXNGzIB_Y0uA_z02Tp8wAhVsFXlRjQHY-vTPldsmCnEhzChRR6z7njFldlAPm7glw9aoEi7eMYgKH1Uyqw-NGNy9WNz_GEaXLp4IPNJY47vpTNW2FFFQtVrhF2zo2YRy5imHV01mpJpXBEcSttc8wR-XtDvJdlG3759G6K1fFVOBSYyiGZE3U_b5SCMrnNni565PWp6BM24UsHE"/>
-</div>
-</body></html>
+  </head>
+  <body
+    class="bg-surface text-on-surface min-h-screen flex items-center justify-center overflow-hidden selection:bg-primary/30 selection:text-primary"
+  >
+    <!-- Atmospheric Background -->
+    <div class="fixed inset-0 z-0">
+      <div class="absolute inset-0 glow-subtle"></div>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,_rgba(191,197,228,0.03)_0%,_transparent_50%)]"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,_rgba(63,70,95,0.05)_0%,_transparent_50%)]"
+      ></div>
+    </div>
+    <!-- Main Content Canvas -->
+    <main class="relative z-10 w-full max-w-lg px-8 py-12 md:px-0">
+      <!-- Header / Identity -->
+      <header class="mb-16 text-center">
+        <div
+          class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-sm bg-surface-container-high border border-outline-variant/20 shadow-xl"
+        >
+          <span class="material-symbols-outlined text-primary text-2xl" data-icon="shield_person"
+            >shield_person</span
+          >
+        </div>
+        <h1 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface mb-2">
+          Torq Jarvis
+        </h1>
+        <p
+          class="text-xs uppercase tracking-[0.3em] font-headline font-semibold text-on-surface-variant/60"
+        >
+          Executive Mission Control
+        </p>
+      </header>
+      <!-- Access Terminal -->
+      <div class="glass-panel p-1 border border-outline-variant/10 rounded-sm shadow-2xl">
+        <div class="bg-surface-container-low p-10 rounded-sm">
+          <!-- Feedback Display -->
+          <div class="mb-10 flex items-center gap-4 border-l-2 border-primary/40 pl-6 py-2">
+            <div class="space-y-1">
+              <span class="block text-[10px] font-bold uppercase tracking-widest text-primary/70"
+                >System Status</span
+              >
+              <p class="text-sm font-medium text-on-surface">
+                Secure Protocol Active. Awaiting Authentication.
+              </p>
+            </div>
+          </div>
+          <!-- Form -->
+          <form class="space-y-12">
+            <div class="space-y-8">
+              <!-- User ID Input -->
+              <div class="relative group">
+                <label
+                  class="block text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest mb-1"
+                  >Executive Identifier</label
+                >
+                <input
+                  class="w-full bottom-trace py-3 text-lg font-headline tracking-tight text-on-surface placeholder:text-outline/40"
+                  placeholder="Enter ID"
+                  type="text"
+                />
+                <span
+                  class="absolute right-0 bottom-3 material-symbols-outlined text-on-surface-variant/40 text-sm"
+                  data-icon="id_card"
+                  >id_card</span
+                >
+              </div>
+              <!-- Verification Input -->
+              <div class="relative group">
+                <label
+                  class="block text-[11px] font-semibold text-on-surface-variant uppercase tracking-widest mb-1"
+                  >Passkey Bundle</label
+                >
+                <input
+                  class="w-full bottom-trace py-3 text-lg font-headline tracking-tight text-on-surface placeholder:text-outline/40"
+                  placeholder="••••••••"
+                  type="password"
+                />
+                <span
+                  class="absolute right-0 bottom-3 material-symbols-outlined text-on-surface-variant/40 text-sm"
+                  data-icon="key"
+                  >key</span
+                >
+              </div>
+            </div>
+            <!-- Secure Entry / Biometric -->
+            <div class="flex flex-col gap-6">
+              <button
+                class="group relative overflow-hidden w-full h-14 rounded-sm bg-gradient-to-br from-primary to-primary-container flex items-center justify-center transition-all duration-300 hover:brightness-110 active:scale-[0.98]"
+                type="submit"
+              >
+                <span
+                  class="relative z-10 font-headline font-bold text-on-primary-fixed tracking-tight"
+                  >Initiate Sequence</span
+                >
+                <div
+                  class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+              </button>
+              <div class="flex items-center justify-between gap-4">
+                <div class="h-px flex-1 bg-outline-variant/20"></div>
+                <span
+                  class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest"
+                  >Or Biometric</span
+                >
+                <div class="h-px flex-1 bg-outline-variant/20"></div>
+              </div>
+              <button
+                class="w-full h-14 rounded-sm border border-outline-variant/30 flex items-center justify-center gap-3 hover:bg-surface-bright transition-colors duration-300"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-primary/80" data-icon="fingerprint"
+                  >fingerprint</span
+                >
+                <span class="text-xs font-semibold uppercase tracking-widest text-on-surface"
+                  >Scan Identity</span
+                >
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- System Footer -->
+      <footer class="mt-12 flex flex-col md:flex-row items-center justify-between gap-6 px-4">
+        <div class="flex items-center gap-4">
+          <div class="w-2 h-2 rounded-full bg-primary/40 animate-pulse"></div>
+          <span class="text-[10px] font-medium text-on-surface-variant/60 tracking-wider"
+            >Terminal V.4.0.2 // Encrypted Node</span
+          >
+        </div>
+        <nav class="flex gap-8">
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >Emergency Overide</a
+          >
+          <a
+            class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >Support Registry</a
+          >
+        </nav>
+      </footer>
+    </main>
+    <!-- Side Graphic Ornament (Asymmetric balance) -->
+    <div class="hidden xl:block fixed right-12 bottom-12 z-10 opacity-20">
+      <div class="flex flex-col items-end gap-2">
+        <div class="w-48 h-px bg-gradient-to-l from-primary to-transparent"></div>
+        <div class="w-32 h-px bg-gradient-to-l from-primary/50 to-transparent"></div>
+        <div class="w-16 h-px bg-gradient-to-l from-primary/20 to-transparent"></div>
+        <span
+          class="mt-4 font-headline text-[8px] uppercase tracking-[0.4em] text-on-surface-variant leading-none"
+          >Institutional Intelligence Core</span
+        >
+      </div>
+    </div>
+    <!-- Background Elements -->
+    <div class="fixed top-0 right-0 p-12 pointer-events-none opacity-5">
+      <img
+        alt=""
+        class="w-[600px] h-[600px] object-cover rounded-full"
+        data-alt="Abstract glowing network of neural pathways on a dark background with deep blue and graphite tones, cinematic lighting, tech luxury"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzjoQjNa2u9gW3zEqM8YAN-zSx0YG2L-swbRxgWTsi9fjQE5Mys7JurkbVXDZDXNGzIB_Y0uA_z02Tp8wAhVsFXlRjQHY-vTPldsmCnEhzChRR6z7njFldlAPm7glw9aoEi7eMYgKH1Uyqw-NGNy9WNz_GEaXLp4IPNJY47vpTNW2FFFQtVrhF2zo2YRy5imHV01mpJpXBEcSttc8wR-XtDvJdlG3759G6K1fFVOBSYyiGZE3U_b5SCMrnNni565PWp6BM24UsHE"
+      />
+    </div>
+  </body>
+</html>

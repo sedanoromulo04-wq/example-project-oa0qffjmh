@@ -36,6 +36,7 @@ Segundo a documentação oficial do Gemini, o fluxo recomendado é configurar:
 - `responseJsonSchema: {...}`
 
 Referência oficial:
+
 - Gemini structured output: `https://ai.google.dev/gemini-api/docs/structured-output`
 
 ## 4. Image generation
@@ -47,6 +48,7 @@ Segundo a documentação oficial:
 - `responseModalities: ["TEXT", "IMAGE"]` é a configuração certa quando se quer racional + asset
 
 Referência oficial:
+
 - Gemini image generation: `https://ai.google.dev/gemini-api/docs/image-generation`
 
 Pontos úteis do fluxo:
@@ -60,6 +62,7 @@ Pontos úteis do fluxo:
 Gemini já suporta function calling e o SDK oficial tem suporte embutido a MCP.
 
 Referência oficial:
+
 - Gemini function calling e MCP: `https://ai.google.dev/gemini-api/docs/function-calling`
 
 Pontos importantes:
@@ -84,6 +87,7 @@ Ou seja, o pipeline já nasce `MCP-ready`, mesmo sem depender de MCP hoje.
 ### Fase A — Estratégia visual estruturada
 
 Usar modelo textual para gerar JSON com:
+
 - tese visual
 - paleta conceitual
 - sistema tipográfico
@@ -95,6 +99,7 @@ Usar modelo textual para gerar JSON com:
 ### Fase B — Geração de assets
 
 Usar modelo de imagem para gerar:
+
 - hero cover
 - chapter opener
 - textura ou arte de apoio
@@ -103,6 +108,7 @@ Usar modelo de imagem para gerar:
 ### Fase C — Curadoria
 
 Avaliar cada asset por:
+
 - aderência ao posicionamento
 - clareza
 - sofisticação

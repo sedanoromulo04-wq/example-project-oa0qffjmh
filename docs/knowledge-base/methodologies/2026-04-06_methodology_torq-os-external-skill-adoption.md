@@ -1,6 +1,6 @@
 ---
 type: methodology
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-06
 tags: [torq-os, external-skills, adoption, antigravity]
 relevance: high

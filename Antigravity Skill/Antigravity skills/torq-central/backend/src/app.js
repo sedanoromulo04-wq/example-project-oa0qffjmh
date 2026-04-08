@@ -1,61 +1,71 @@
-const { URL } = require('url');
-const { config } = require('./config');
-const { query } = require('./db');
-const { resolveRequestActor } = require('./auth');
-const { buildContextPack, getSessionDetails, listSessionsForUser, processJarvisTurn, reviewJarvisActions } = require('./context');
-const { runOpenClaude } = require('./openclaudeAdapter');
+const { URL } = require('url')
+const { config } = require('./config')
+const { query } = require('./db')
+const { resolveRequestActor } = require('./auth')
+const {
+  buildContextPack,
+  getSessionDetails,
+  listSessionsForUser,
+  processJarvisTurn,
+  reviewJarvisActions,
+} = require('./context')
+const { runOpenClaude } = require('./openclaudeAdapter')
 
 function corsHeaders(origin) {
-  const allowAll = config.allowedOrigins.includes('*');
-  const resolvedOrigin = allowAll ? '*' : origin && config.allowedOrigins.includes(origin) ? origin : config.allowedOrigins[0] || '*';
+  const allowAll = config.allowedOrigins.includes('*')
+  const resolvedOrigin = allowAll
+    ? '*'
+    : origin && config.allowedOrigins.includes(origin)
+      ? origin
+      : config.allowedOrigins[0] || '*'
 
   return {
     'Access-Control-Allow-Origin': resolvedOrigin,
     'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-  };
+  }
 }
 
 function sendJson(res, statusCode, payload, origin) {
-  const body = JSON.stringify(payload);
+  const body = JSON.stringify(payload)
   res.writeHead(statusCode, {
     'Content-Type': 'application/json; charset=utf-8',
     'Content-Length': Buffer.byteLength(body),
     ...corsHeaders(origin),
-  });
-  res.end(body);
+  })
+  res.end(body)
 }
 
 function readJson(req) {
   return new Promise((resolve, reject) => {
-    let body = '';
+    let body = ''
 
     req.on('data', (chunk) => {
-      body += chunk.toString();
-    });
+      body += chunk.toString()
+    })
 
     req.on('end', () => {
       if (!body) {
-        resolve({});
-        return;
+        resolve({})
+        return
       }
 
       try {
-        resolve(JSON.parse(body));
+        resolve(JSON.parse(body))
       } catch (error) {
-        reject(new Error('Invalid JSON body'));
+        reject(new Error('Invalid JSON body'))
       }
-    });
+    })
 
-    req.on('error', reject);
-  });
+    req.on('error', reject)
+  })
 }
 
 function validateEnvelope(body, actor) {
   if (!body.message || typeof body.message !== 'string' || !body.message.trim()) {
-    const error = new Error('message is required');
-    error.statusCode = 400;
-    throw error;
+    const error = new Error('message is required')
+    error.statusCode = 400
+    throw error
   }
 
   return {
@@ -68,31 +78,31 @@ function validateEnvelope(body, actor) {
     active_client_id: typeof body.active_client_id === 'string' ? body.active_client_id : null,
     active_doc_id: typeof body.active_doc_id === 'string' ? body.active_doc_id : null,
     ui_context: body.ui_context && typeof body.ui_context === 'object' ? body.ui_context : {},
-  };
+  }
 }
 
 function validateActionReview(body) {
   if (!Array.isArray(body.action_ids) || body.action_ids.length === 0) {
-    const error = new Error('action_ids is required');
-    error.statusCode = 400;
-    throw error;
+    const error = new Error('action_ids is required')
+    error.statusCode = 400
+    throw error
   }
 
   return {
     action_ids: body.action_ids.filter((item) => typeof item === 'string'),
     decision: body.decision === 'reject' ? 'reject' : 'approve',
     notes: typeof body.notes === 'string' ? body.notes.trim() : '',
-  };
+  }
 }
 
 async function handleAuthLogin(req, res, origin) {
-  const body = await readJson(req);
-  const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
-  const password = typeof body.password === 'string' ? body.password : '';
+  const body = await readJson(req)
+  const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : ''
+  const password = typeof body.password === 'string' ? body.password : ''
 
   if (!email || !password) {
-    sendJson(res, 400, { ok: false, error: 'email and password are required' }, origin);
-    return;
+    sendJson(res, 400, { ok: false, error: 'email and password are required' }, origin)
+    return
   }
 
   const result = await query(
@@ -111,13 +121,13 @@ async function handleAuthLogin(req, res, origin) {
       where lower(u.email) = lower($1)
       limit 1
     `,
-    [email, password]
-  );
+    [email, password],
+  )
 
-  const row = result.rows[0];
+  const row = result.rows[0]
   if (!row || !row.password_matches) {
-    sendJson(res, 401, { ok: false, error: 'Invalid credentials' }, origin);
-    return;
+    sendJson(res, 401, { ok: false, error: 'Invalid credentials' }, origin)
+    return
   }
 
   sendJson(
@@ -134,23 +144,23 @@ async function handleAuthLogin(req, res, origin) {
         workspace_name: row.workspace_name,
       },
     },
-    origin
-  );
+    origin,
+  )
 }
 
 async function handleHttpRequest(req, res) {
-  const origin = req.headers.origin || '';
-  const reqUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const origin = req.headers.origin || ''
+  const reqUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`)
 
   if (req.method === 'OPTIONS') {
-    res.writeHead(204, corsHeaders(origin));
-    res.end();
-    return;
+    res.writeHead(204, corsHeaders(origin))
+    res.end()
+    return
   }
 
   try {
     if (req.method === 'GET' && reqUrl.pathname === '/api/health') {
-      const ping = await query('select now() as now');
+      const ping = await query('select now() as now')
       sendJson(
         res,
         200,
@@ -167,45 +177,45 @@ async function handleHttpRequest(req, res) {
             bin: config.openClaudeBin,
           },
         },
-        origin
-      );
-      return;
+        origin,
+      )
+      return
     }
 
     if (req.method === 'POST' && reqUrl.pathname === '/api/auth/login') {
-      await handleAuthLogin(req, res, origin);
-      return;
+      await handleAuthLogin(req, res, origin)
+      return
     }
 
     if (req.method === 'GET' && reqUrl.pathname === '/api/jarvis/sessions') {
       const actor = await resolveRequestActor(req, {
         userId: reqUrl.searchParams.get('user_id'),
         userEmail: reqUrl.searchParams.get('user_email'),
-      });
-      const sessions = await listSessionsForUser(actor.id, actor.email);
-      sendJson(res, 200, { ok: true, sessions }, origin);
-      return;
+      })
+      const sessions = await listSessionsForUser(actor.id, actor.email)
+      sendJson(res, 200, { ok: true, sessions }, origin)
+      return
     }
 
-    const sessionMatch = reqUrl.pathname.match(/^\/api\/jarvis\/sessions\/([^/]+)$/);
+    const sessionMatch = reqUrl.pathname.match(/^\/api\/jarvis\/sessions\/([^/]+)$/)
     if (req.method === 'GET' && sessionMatch) {
       const actor = await resolveRequestActor(req, {
         userId: reqUrl.searchParams.get('user_id'),
         userEmail: reqUrl.searchParams.get('user_email'),
-      });
-      const details = await getSessionDetails(sessionMatch[1], actor.id, actor.email);
-      sendJson(res, 200, { ok: true, ...details }, origin);
-      return;
+      })
+      const details = await getSessionDetails(sessionMatch[1], actor.id, actor.email)
+      sendJson(res, 200, { ok: true, ...details }, origin)
+      return
     }
 
-    const reviewMatch = reqUrl.pathname.match(/^\/api\/jarvis\/sessions\/([^/]+)\/actions\/review$/);
+    const reviewMatch = reqUrl.pathname.match(/^\/api\/jarvis\/sessions\/([^/]+)\/actions\/review$/)
     if (req.method === 'POST' && reviewMatch) {
-      const body = await readJson(req);
+      const body = await readJson(req)
       const actor = await resolveRequestActor(req, {
         userId: body.user_id,
         userEmail: body.user_email,
-      });
-      const review = validateActionReview(body);
+      })
+      const review = validateActionReview(body)
       const result = await reviewJarvisActions({
         sessionId: reviewMatch[1],
         actionIds: review.action_ids,
@@ -213,27 +223,27 @@ async function handleHttpRequest(req, res) {
         notes: review.notes,
         userId: actor.id,
         userEmail: actor.email,
-      });
+      })
 
-      sendJson(res, 200, { ok: true, ...result }, origin);
-      return;
+      sendJson(res, 200, { ok: true, ...result }, origin)
+      return
     }
 
     if (req.method === 'POST' && reqUrl.pathname === '/api/jarvis/message') {
-      const body = await readJson(req);
+      const body = await readJson(req)
       const actor = await resolveRequestActor(req, {
         userId: body.user_id,
         userEmail: body.user_email,
-      });
-      const envelope = validateEnvelope(body, actor);
-      const contextPack = await buildContextPack(envelope);
-      const runtimeResult = await runOpenClaude({ envelope, contextPack });
+      })
+      const envelope = validateEnvelope(body, actor)
+      const contextPack = await buildContextPack(envelope)
+      const runtimeResult = await runOpenClaude({ envelope, contextPack })
       const persisted = await processJarvisTurn({
         envelope,
         normalizedResponse: runtimeResult.normalized,
         runtimeMeta: runtimeResult.runtime,
         contextPack,
-      });
+      })
 
       sendJson(
         res,
@@ -246,12 +256,12 @@ async function handleHttpRequest(req, res) {
           response: runtimeResult.normalized,
           runtime: runtimeResult.runtime,
         },
-        origin
-      );
-      return;
+        origin,
+      )
+      return
     }
 
-    sendJson(res, 404, { ok: false, error: 'Not found' }, origin);
+    sendJson(res, 404, { ok: false, error: 'Not found' }, origin)
   } catch (error) {
     sendJson(
       res,
@@ -260,11 +270,11 @@ async function handleHttpRequest(req, res) {
         ok: false,
         error: error.message || 'Unexpected server error',
       },
-      origin
-    );
+      origin,
+    )
   }
 }
 
 module.exports = {
   handleHttpRequest,
-};
+}

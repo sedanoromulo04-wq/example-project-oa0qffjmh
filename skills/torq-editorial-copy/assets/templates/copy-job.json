@@ -47,12 +47,7 @@
       "Gargalo estrutural",
       "Fuga de equity"
     ],
-    "lexicon_forbidden": [
-      "O segredo",
-      "O metodo oculto",
-      "Ultimas vagas",
-      "Lucro garantido amanha"
-    ]
+    "lexicon_forbidden": ["O segredo", "O metodo oculto", "Ultimas vagas", "Lucro garantido amanha"]
   },
   "constraints": {
     "max_length_words": 800,

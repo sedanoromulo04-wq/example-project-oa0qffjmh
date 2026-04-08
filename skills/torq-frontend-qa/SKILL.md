@@ -17,6 +17,7 @@ bug, mas detectar onde a experiencia perdeu clareza, poder visual, governanca
 ou consistencia.
 
 ## Workflow
+
 1. Ler o blueprint de frontend, o prompt do Stitch, as referencias visuais e o codigo implementado.
 2. Comparar a tela implementada contra a fonte de verdade visual e contra o papel operacional da interface.
 3. Avaliar hierarquia visual, leitura, contraste, ritmo, espacamento, densidade e uso de superficie.
@@ -32,16 +33,19 @@ ou consistencia.
 Entregar findings primeiro, ordenados por severidade:
 
 ### Findings
+
 - severidade
 - problema
 - impacto
 - referencia de arquivo quando houver
 
 ### Riscos Residuais
+
 - gaps nao criticos
 - pontos ainda dependentes de asset ou design
 
 ### Veredito
+
 - pronto para iterar
 - pronto para polir
 - pronto para aprovar
@@ -68,11 +72,13 @@ Entregar findings primeiro, ordenados por severidade:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Revise essa implementacao do Jarvis contra o Stitch."
 
 Output: "A skill deve listar findings de fidelidade, hierarquia, estados e responsividade."
 
 ### Exemplo 2
+
 Input: "Quero saber se esse frontend ja parece um cockpit premium ou ainda esta genérico."
 
 Output: "A skill deve avaliar identidade visual e apontar exatamente onde caiu para um padrao comum."

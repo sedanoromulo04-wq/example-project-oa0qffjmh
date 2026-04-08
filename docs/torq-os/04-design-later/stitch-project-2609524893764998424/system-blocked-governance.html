@@ -1,338 +1,507 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TORQ JARVIS | Governance Restricted</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-tertiary-fixed-variant": "#536372",
-                        "on-primary-fixed-variant": "#545a75",
-                        "surface-container": "#191a1a",
-                        "secondary-fixed-dim": "#d6d4d3",
-                        "on-secondary-container": "#c1bfbe",
-                        "surface-container-lowest": "#000000",
-                        "on-tertiary-fixed": "#374655",
-                        "surface-dim": "#0e0e0e",
-                        "on-surface-variant": "#acabaa",
-                        "surface-container-highest": "#252626",
-                        "tertiary-container": "#dcedff",
-                        "on-tertiary": "#516170",
-                        "inverse-on-surface": "#565554",
-                        "secondary-container": "#3c3b3b",
-                        "secondary": "#9f9d9d",
-                        "surface-variant": "#252626",
-                        "primary-container": "#3f465f",
-                        "outline-variant": "#484848",
-                        "on-background": "#e7e5e4",
-                        "inverse-surface": "#fcf8f8",
-                        "on-surface": "#e7e5e4",
-                        "surface-container-high": "#1f2020",
-                        "surface-container-low": "#131313",
-                        "surface-bright": "#2c2c2c",
-                        "primary-dim": "#b1b7d6",
-                        "background": "#0e0e0e",
-                        "tertiary-fixed-dim": "#cedff1",
-                        "on-primary": "#393f58",
-                        "on-secondary-fixed-variant": "#5c5b5b",
-                        "error-dim": "#b95463",
-                        "secondary-dim": "#9f9d9d",
-                        "on-tertiary-container": "#495867",
-                        "surface-tint": "#bfc5e4",
-                        "surface": "#0e0e0e",
-                        "tertiary-dim": "#cedff1",
-                        "tertiary": "#f7f9ff",
-                        "error": "#ec7c8a",
-                        "on-error-container": "#ff97a3",
-                        "on-primary-container": "#c9cfee",
-                        "inverse-primary": "#575e79",
-                        "error-container": "#7f2737",
-                        "on-error": "#490013",
-                        "tertiary-fixed": "#dcedff",
-                        "primary": "#bfc5e4",
-                        "secondary-fixed": "#e5e2e1",
-                        "primary-fixed-dim": "#cdd3f3",
-                        "outline": "#767575",
-                        "primary-fixed": "#dce1ff",
-                        "on-primary-fixed": "#383e57",
-                        "on-secondary-fixed": "#403f3f",
-                        "on-secondary": "#202020"
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TORQ JARVIS | Governance Restricted</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'on-tertiary-fixed-variant': '#536372',
+              'on-primary-fixed-variant': '#545a75',
+              'surface-container': '#191a1a',
+              'secondary-fixed-dim': '#d6d4d3',
+              'on-secondary-container': '#c1bfbe',
+              'surface-container-lowest': '#000000',
+              'on-tertiary-fixed': '#374655',
+              'surface-dim': '#0e0e0e',
+              'on-surface-variant': '#acabaa',
+              'surface-container-highest': '#252626',
+              'tertiary-container': '#dcedff',
+              'on-tertiary': '#516170',
+              'inverse-on-surface': '#565554',
+              'secondary-container': '#3c3b3b',
+              secondary: '#9f9d9d',
+              'surface-variant': '#252626',
+              'primary-container': '#3f465f',
+              'outline-variant': '#484848',
+              'on-background': '#e7e5e4',
+              'inverse-surface': '#fcf8f8',
+              'on-surface': '#e7e5e4',
+              'surface-container-high': '#1f2020',
+              'surface-container-low': '#131313',
+              'surface-bright': '#2c2c2c',
+              'primary-dim': '#b1b7d6',
+              background: '#0e0e0e',
+              'tertiary-fixed-dim': '#cedff1',
+              'on-primary': '#393f58',
+              'on-secondary-fixed-variant': '#5c5b5b',
+              'error-dim': '#b95463',
+              'secondary-dim': '#9f9d9d',
+              'on-tertiary-container': '#495867',
+              'surface-tint': '#bfc5e4',
+              surface: '#0e0e0e',
+              'tertiary-dim': '#cedff1',
+              tertiary: '#f7f9ff',
+              error: '#ec7c8a',
+              'on-error-container': '#ff97a3',
+              'on-primary-container': '#c9cfee',
+              'inverse-primary': '#575e79',
+              'error-container': '#7f2737',
+              'on-error': '#490013',
+              'tertiary-fixed': '#dcedff',
+              primary: '#bfc5e4',
+              'secondary-fixed': '#e5e2e1',
+              'primary-fixed-dim': '#cdd3f3',
+              outline: '#767575',
+              'primary-fixed': '#dce1ff',
+              'on-primary-fixed': '#383e57',
+              'on-secondary-fixed': '#403f3f',
+              'on-secondary': '#202020',
             },
-        }
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Manrope'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .broken-link-line {
-            background-image: linear-gradient(to right, #484848 50%, transparent 50%);
-            background-size: 8px 1px;
-            background-repeat: repeat-x;
-        }
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0e0e0e;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #252626;
-            border-radius: 10px;
-        }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .broken-link-line {
+        background-image: linear-gradient(to right, #484848 50%, transparent 50%);
+        background-size: 8px 1px;
+        background-repeat: repeat-x;
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0e0e0e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #252626;
+        border-radius: 10px;
+      }
     </style>
-</head>
-<body class="bg-background text-on-surface font-body antialiased overflow-hidden">
-<!-- SideNavBar (Authority: Shared Components JSON) -->
-<nav class="fixed left-0 top-0 h-full w-20 md:w-64 border-r-0 bg-neutral-950/80 backdrop-blur-3xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col h-full z-50">
-<div class="p-8">
-<span class="text-lg font-black tracking-tighter text-neutral-100 uppercase font-headline">TORQ JARVIS</span>
-<div class="mt-1 text-[10px] text-neutral-500 tracking-[0.3em] font-light">Operational Alpha</div>
-</div>
-<div class="flex-1 px-4 space-y-2">
-<!-- Mission Control (Active) -->
-<div class="text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300">
-<span class="material-symbols-outlined">terminal</span>
-<span class="font-manrope tracking-tight font-light hidden md:block">Mission Control</span>
-</div>
-<div class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300">
-<span class="material-symbols-outlined">history</span>
-<span class="font-manrope tracking-tight font-light hidden md:block">Thread History</span>
-</div>
-<div class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300">
-<span class="material-symbols-outlined">hub</span>
-<span class="font-manrope tracking-tight font-light hidden md:block">Neural Network</span>
-</div>
-<div class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300">
-<span class="material-symbols-outlined">analytics</span>
-<span class="font-manrope tracking-tight font-light hidden md:block">System Logs</span>
-</div>
-<div class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300">
-<span class="material-symbols-outlined">account_circle</span>
-<span class="font-manrope tracking-tight font-light hidden md:block">Operator Profile</span>
-</div>
-</div>
-<div class="p-4 mb-4">
-<button class="w-full py-3 bg-neutral-800/40 border border-neutral-700/50 text-indigo-200 font-headline text-xs tracking-widest hover:bg-indigo-900/20 transition-all rounded-sm">
-                Initialize New Mission
-            </button>
-</div>
-</nav>
-<!-- TopAppBar (Authority: Shared Components JSON) -->
-<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16">
-<div class="flex items-center gap-8">
-<div class="text-xl font-black text-neutral-100 tracking-[0.2em] font-headline">TORQ JARVIS</div>
-<nav class="hidden lg:flex gap-6 font-manrope text-sm font-medium tracking-wide">
-<a class="text-neutral-100 border-b-2 border-indigo-400 pb-1" href="#">Missions</a>
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Modules</a>
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Network</a>
-</nav>
-</div>
-<div class="flex items-center gap-6">
-<div class="relative hidden sm:block">
-<span class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 material-symbols-outlined text-sm">search</span>
-<input class="bg-surface-container-low border-b border-outline-variant text-xs tracking-widest px-10 py-2 focus:outline-none focus:border-primary w-64 uppercase" placeholder="QUERY SYSTEM..." type="text"/>
-</div>
-<div class="flex items-center gap-4 text-indigo-200">
-<span class="material-symbols-outlined cursor-pointer hover:text-neutral-100">notifications_active</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-neutral-100">settings</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-neutral-100">tune</span>
-</div>
-<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30">
-<img alt="Operator Profile" class="w-full h-full object-cover grayscale" data-alt="professional portrait of a tech executive with sharp lighting and dark studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcborU7rAIA1fQ9EAL5GoZyBw1FmV_nny2vjXI8Nrklv19FiTJ6bazomOB7m6gFvlr8vB3BIqWeYT1IzezX4gOalpez9l3cfMoOy-NPtc1ixFr84x-h59ZsbZA9VL1Hg7eLgTd9rqWVcjFkSWQYjHYZ2v3W0p2URd-xsNeUWmV0DPJDNDel7IJ6kLSmh9vDeuNSGKobnoob16bJCEwdk4HGj_D6wFnGbpniRg9Ft1S2s9qw1_9n7oM0zfaWOxURTvcRqH-pipuc8"/>
-</div>
-</div>
-</header>
-<!-- Main Content Canvas -->
-<main class="ml-20 md:ml-64 pt-16 h-screen flex">
-<!-- Center Column: Dependency Map -->
-<section class="flex-1 bg-surface-container-low p-10 overflow-y-auto">
-<div class="max-w-4xl mx-auto space-y-12">
-<div class="space-y-2">
-<h1 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">Mission: Synthesis Architecture</h1>
-<p class="text-on-surface-variant font-light max-w-xl">Autonomous intelligence pipeline currently suspended due to upstream dependency failure. Review the link topology below.</p>
-</div>
-<!-- Dependency Flow Visual -->
-<div class="relative">
-<div class="space-y-16 relative z-10">
-<!-- Node 1 -->
-<div class="flex items-center gap-8">
-<div class="w-16 h-16 rounded-sm bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">database</span>
-</div>
-<div class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-primary">
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Source Node Alpha</div>
-<div class="font-headline font-semibold text-lg">Market Intelligence Repository</div>
-</div>
-</div>
-<!-- Node 2 (Broken Connection) -->
-<div class="flex items-center gap-8 relative">
-<div class="absolute -top-10 left-8 w-px h-10 bg-gradient-to-b from-primary to-transparent"></div>
-<div class="w-16 h-16 rounded-sm bg-error-container/20 border border-error/30 flex items-center justify-center text-error">
-<span class="material-symbols-outlined text-3xl">link_off</span>
-</div>
-<div class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-error shadow-[0_0_30px_rgba(236,124,138,0.1)] relative">
-<div class="absolute -top-3 right-4 bg-error text-on-error text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">Asset Missing</div>
-<div class="text-[10px] uppercase tracking-widest text-error-dim mb-1">Critical Dependency Required</div>
-<div class="font-headline font-semibold text-lg text-on-surface">Research Module - Q3 Competitor Data</div>
-<div class="text-xs text-on-surface-variant mt-2">Required for: Global Strategy Synthesis (Project TORQ-IX)</div>
-</div>
-<div class="absolute -bottom-10 left-8 w-px h-10 broken-link-line opacity-30"></div>
-</div>
-<!-- Node 3 (Blocked Outcome) -->
-<div class="flex items-center gap-8 opacity-40 grayscale">
-<div class="w-16 h-16 rounded-sm bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">psychology</span>
-</div>
-<div class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-outline-variant">
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Processing Node</div>
-<div class="font-headline font-semibold text-lg">Autonomous Strategy Synthesis</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Bento Grid: Secondary Context -->
-<div class="grid grid-cols-2 gap-4 pt-10">
-<div class="bg-surface-container p-6 rounded-sm">
-<div class="text-xs font-headline font-bold tracking-[0.2em] mb-4 text-on-surface-variant">GOVERNANCE LOG</div>
-<div class="space-y-3">
-<div class="flex justify-between items-center text-xs py-2 border-b border-outline-variant/10">
-<span class="text-on-surface-variant">Policy Check</span>
-<span class="text-primary font-mono">PASSED</span>
-</div>
-<div class="flex justify-between items-center text-xs py-2 border-b border-outline-variant/10">
-<span class="text-on-surface-variant">Asset Availability</span>
-<span class="text-error font-mono">FAILED</span>
-</div>
-<div class="flex justify-between items-center text-xs py-2">
-<span class="text-on-surface-variant">Risk Assessment</span>
-<span class="text-secondary font-mono">CRITICAL</span>
-</div>
-</div>
-</div>
-<div class="bg-surface-container p-6 rounded-sm flex flex-col justify-center items-center text-center">
-<span class="material-symbols-outlined text-4xl text-on-tertiary-fixed-variant mb-3">lock</span>
-<div class="text-[10px] uppercase tracking-widest text-on-surface-variant">Status</div>
-<div class="font-headline font-bold text-xl uppercase tracking-tighter">Executive Hold</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Right Intelligence Panel: Governance State -->
-<aside class="w-96 bg-surface-container-high border-l-0 shadow-[-10px_0_40px_rgba(0,0,0,0.5)] overflow-y-auto">
-<div class="h-full flex flex-col">
-<!-- Header Banner -->
-<div class="bg-error-container/10 p-8 border-b border-error/10">
-<div class="flex items-center gap-3 text-error mb-4">
-<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
-<span class="text-xs font-headline font-black tracking-[0.3em] uppercase">Governance Protocol</span>
-</div>
-<div class="text-4xl font-headline font-black tracking-tighter text-on-surface">SYSTEM BLOCKED</div>
-<div class="mt-4 flex items-center gap-2">
-<div class="h-1 flex-1 bg-error rounded-full"></div>
-<div class="h-1 flex-1 bg-error/20 rounded-full"></div>
-<div class="h-1 flex-1 bg-error/20 rounded-full"></div>
-</div>
-</div>
-<div class="flex-1 p-8 space-y-8">
-<!-- Reason Section -->
-<div>
-<div class="text-[10px] font-headline font-bold text-error-dim uppercase tracking-widest mb-3">Primary Reason</div>
-<div class="p-5 bg-error-container/5 rounded-sm border border-error/10">
-<p class="text-on-surface text-sm font-medium leading-relaxed italic">
-                                "Mandatory intelligence vector 'Research Module - Q3 Competitor Data' is currently unavailable. Synthesis logic cannot proceed without verified baseline parameters."
-                            </p>
-</div>
-</div>
-<!-- Allowed Actions -->
-<div>
-<div class="text-[10px] font-headline font-bold text-primary-dim uppercase tracking-widest mb-4">Permitted Resolutions</div>
-<div class="space-y-3">
-<button class="w-full flex items-center justify-between p-4 bg-surface-bright/50 hover:bg-surface-bright transition-all group rounded-sm border border-outline-variant/10">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary">warning</span>
-<span class="text-xs font-semibold text-on-surface">Manual Override (High Risk)</span>
-</div>
-<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all">chevron_right</span>
-</button>
-<button class="w-full flex items-center justify-between p-4 bg-primary-container text-on-primary-container hover:bg-primary-container/80 transition-all group rounded-sm">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined">send</span>
-<span class="text-xs font-semibold">Notify Research Team</span>
-</div>
-<span class="material-symbols-outlined text-sm">mail</span>
-</button>
-</div>
-</div>
-<!-- Blocked Actions -->
-<div>
-<div class="text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-4">Restricted Functions</div>
-<div class="space-y-2">
-<div class="flex items-center gap-3 p-3 bg-surface-container-lowest opacity-40 cursor-not-allowed">
-<span class="material-symbols-outlined text-sm">block</span>
-<span class="text-xs text-on-surface-variant">Strategy Synthesis</span>
-</div>
-<div class="flex items-center gap-3 p-3 bg-surface-container-lowest opacity-40 cursor-not-allowed">
-<span class="material-symbols-outlined text-sm">block</span>
-<span class="text-xs text-on-surface-variant">Content Planning</span>
-</div>
-</div>
-</div>
-<!-- Visual Accent Image -->
-<div class="pt-4">
-<div class="aspect-video w-full rounded-sm overflow-hidden grayscale contrast-125 brightness-75 relative group">
-<img alt="System Core Visualization" class="w-full h-full object-cover" data-alt="abstract server room with blinking red indicator lights and complex cabling in a high-security facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzgtLK0s9GlyzM5JbctEHHTYJGx1AIWah0cfXiRcWe30zFtD-Q2W8s2oUQZtyEV4uS7AkfZO3LaafSfaweV8h8-51MpqQwi4D0Jgi7M3dA8SksWY0yro4SnHPJVizq_Pb1j4qE9TdNJz7Zimilv1AAYiW_u6HEzJwCKTV6RqNWo-9cx2ZbjTkyXJQ3UrJGzPhJCcgdLmFtyzhMtQlAEv5pO2EBokOFdzkjTmEUfs0QJC_lKcl8HL6dob-Ov5PUXx1uqjcGeVsozK4"/>
-<div class="absolute inset-0 bg-error/10 mix-blend-overlay"></div>
-</div>
-</div>
-</div>
-<!-- Footer Status -->
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant/10 text-center">
-<div class="flex items-center justify-center gap-2 text-[10px] font-mono text-on-surface-variant uppercase tracking-widest">
-<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
-                        Governance Lockdown Active
-                    </div>
-</div>
-</div>
-</aside>
-</main>
-<!-- BottomNavBar (Authority: Shared Components JSON) -->
-<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-2/3 rounded-sm bg-neutral-900/60 backdrop-blur-md shadow-2xl shadow-black/80 flex items-center justify-center gap-6 p-4 max-w-4xl z-50">
-<button class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm">
-<span class="material-symbols-outlined">mic</span>
-<span class="font-inter text-xs uppercase tracking-widest">Voice Command</span>
-</button>
-<button class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm">
-<span class="material-symbols-outlined">upload_file</span>
-<span class="font-inter text-xs uppercase tracking-widest">Upload Data</span>
-</button>
-<button class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm">
-<span class="material-symbols-outlined">rocket_launch</span>
-<span class="font-inter text-xs uppercase tracking-widest">Deploy Module</span>
-</button>
-<button class="flex flex-col items-center gap-1 px-6 py-2 bg-indigo-500/20 text-indigo-100 rounded-sm ring-1 ring-indigo-500/50 transition-all">
-<span class="material-symbols-outlined">cancel</span>
-<span class="font-inter text-xs uppercase tracking-widest">Emergency Stop</span>
-</button>
-</nav>
-</body></html>
+  </head>
+  <body class="bg-background text-on-surface font-body antialiased overflow-hidden">
+    <!-- SideNavBar (Authority: Shared Components JSON) -->
+    <nav
+      class="fixed left-0 top-0 h-full w-20 md:w-64 border-r-0 bg-neutral-950/80 backdrop-blur-3xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col h-full z-50"
+    >
+      <div class="p-8">
+        <span class="text-lg font-black tracking-tighter text-neutral-100 uppercase font-headline"
+          >TORQ JARVIS</span
+        >
+        <div class="mt-1 text-[10px] text-neutral-500 tracking-[0.3em] font-light">
+          Operational Alpha
+        </div>
+      </div>
+      <div class="flex-1 px-4 space-y-2">
+        <!-- Mission Control (Active) -->
+        <div
+          class="text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300"
+        >
+          <span class="material-symbols-outlined">terminal</span>
+          <span class="font-manrope tracking-tight font-light hidden md:block"
+            >Mission Control</span
+          >
+        </div>
+        <div
+          class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300"
+        >
+          <span class="material-symbols-outlined">history</span>
+          <span class="font-manrope tracking-tight font-light hidden md:block">Thread History</span>
+        </div>
+        <div
+          class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300"
+        >
+          <span class="material-symbols-outlined">hub</span>
+          <span class="font-manrope tracking-tight font-light hidden md:block">Neural Network</span>
+        </div>
+        <div
+          class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300"
+        >
+          <span class="material-symbols-outlined">analytics</span>
+          <span class="font-manrope tracking-tight font-light hidden md:block">System Logs</span>
+        </div>
+        <div
+          class="text-neutral-500 hover:text-neutral-200 hover:bg-neutral-800/20 flex items-center gap-4 px-4 py-3 cursor-pointer transition-all duration-300"
+        >
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="font-manrope tracking-tight font-light hidden md:block"
+            >Operator Profile</span
+          >
+        </div>
+      </div>
+      <div class="p-4 mb-4">
+        <button
+          class="w-full py-3 bg-neutral-800/40 border border-neutral-700/50 text-indigo-200 font-headline text-xs tracking-widest hover:bg-indigo-900/20 transition-all rounded-sm"
+        >
+          Initialize New Mission
+        </button>
+      </div>
+    </nav>
+    <!-- TopAppBar (Authority: Shared Components JSON) -->
+    <header
+      class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16"
+    >
+      <div class="flex items-center gap-8">
+        <div class="text-xl font-black text-neutral-100 tracking-[0.2em] font-headline">
+          TORQ JARVIS
+        </div>
+        <nav class="hidden lg:flex gap-6 font-manrope text-sm font-medium tracking-wide">
+          <a class="text-neutral-100 border-b-2 border-indigo-400 pb-1" href="#">Missions</a>
+          <a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Modules</a>
+          <a class="text-neutral-500 hover:text-indigo-100 transition-colors" href="#">Network</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="relative hidden sm:block">
+          <span
+            class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-500 material-symbols-outlined text-sm"
+            >search</span
+          >
+          <input
+            class="bg-surface-container-low border-b border-outline-variant text-xs tracking-widest px-10 py-2 focus:outline-none focus:border-primary w-64 uppercase"
+            placeholder="QUERY SYSTEM..."
+            type="text"
+          />
+        </div>
+        <div class="flex items-center gap-4 text-indigo-200">
+          <span class="material-symbols-outlined cursor-pointer hover:text-neutral-100"
+            >notifications_active</span
+          >
+          <span class="material-symbols-outlined cursor-pointer hover:text-neutral-100"
+            >settings</span
+          >
+          <span class="material-symbols-outlined cursor-pointer hover:text-neutral-100">tune</span>
+        </div>
+        <div
+          class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30"
+        >
+          <img
+            alt="Operator Profile"
+            class="w-full h-full object-cover grayscale"
+            data-alt="professional portrait of a tech executive with sharp lighting and dark studio background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcborU7rAIA1fQ9EAL5GoZyBw1FmV_nny2vjXI8Nrklv19FiTJ6bazomOB7m6gFvlr8vB3BIqWeYT1IzezX4gOalpez9l3cfMoOy-NPtc1ixFr84x-h59ZsbZA9VL1Hg7eLgTd9rqWVcjFkSWQYjHYZ2v3W0p2URd-xsNeUWmV0DPJDNDel7IJ6kLSmh9vDeuNSGKobnoob16bJCEwdk4HGj_D6wFnGbpniRg9Ft1S2s9qw1_9n7oM0zfaWOxURTvcRqH-pipuc8"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="ml-20 md:ml-64 pt-16 h-screen flex">
+      <!-- Center Column: Dependency Map -->
+      <section class="flex-1 bg-surface-container-low p-10 overflow-y-auto">
+        <div class="max-w-4xl mx-auto space-y-12">
+          <div class="space-y-2">
+            <h1 class="font-headline text-4xl font-extrabold tracking-tighter text-on-surface">
+              Mission: Synthesis Architecture
+            </h1>
+            <p class="text-on-surface-variant font-light max-w-xl">
+              Autonomous intelligence pipeline currently suspended due to upstream dependency
+              failure. Review the link topology below.
+            </p>
+          </div>
+          <!-- Dependency Flow Visual -->
+          <div class="relative">
+            <div class="space-y-16 relative z-10">
+              <!-- Node 1 -->
+              <div class="flex items-center gap-8">
+                <div
+                  class="w-16 h-16 rounded-sm bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-primary"
+                >
+                  <span class="material-symbols-outlined text-3xl">database</span>
+                </div>
+                <div
+                  class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-primary"
+                >
+                  <div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">
+                    Source Node Alpha
+                  </div>
+                  <div class="font-headline font-semibold text-lg">
+                    Market Intelligence Repository
+                  </div>
+                </div>
+              </div>
+              <!-- Node 2 (Broken Connection) -->
+              <div class="flex items-center gap-8 relative">
+                <div
+                  class="absolute -top-10 left-8 w-px h-10 bg-gradient-to-b from-primary to-transparent"
+                ></div>
+                <div
+                  class="w-16 h-16 rounded-sm bg-error-container/20 border border-error/30 flex items-center justify-center text-error"
+                >
+                  <span class="material-symbols-outlined text-3xl">link_off</span>
+                </div>
+                <div
+                  class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-error shadow-[0_0_30px_rgba(236,124,138,0.1)] relative"
+                >
+                  <div
+                    class="absolute -top-3 right-4 bg-error text-on-error text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter"
+                  >
+                    Asset Missing
+                  </div>
+                  <div class="text-[10px] uppercase tracking-widest text-error-dim mb-1">
+                    Critical Dependency Required
+                  </div>
+                  <div class="font-headline font-semibold text-lg text-on-surface">
+                    Research Module - Q3 Competitor Data
+                  </div>
+                  <div class="text-xs text-on-surface-variant mt-2">
+                    Required for: Global Strategy Synthesis (Project TORQ-IX)
+                  </div>
+                </div>
+                <div class="absolute -bottom-10 left-8 w-px h-10 broken-link-line opacity-30"></div>
+              </div>
+              <!-- Node 3 (Blocked Outcome) -->
+              <div class="flex items-center gap-8 opacity-40 grayscale">
+                <div
+                  class="w-16 h-16 rounded-sm bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-3xl">psychology</span>
+                </div>
+                <div
+                  class="flex-1 p-6 bg-surface-container-lowest rounded-sm border-l-4 border-outline-variant"
+                >
+                  <div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">
+                    Processing Node
+                  </div>
+                  <div class="font-headline font-semibold text-lg">
+                    Autonomous Strategy Synthesis
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bento Grid: Secondary Context -->
+          <div class="grid grid-cols-2 gap-4 pt-10">
+            <div class="bg-surface-container p-6 rounded-sm">
+              <div
+                class="text-xs font-headline font-bold tracking-[0.2em] mb-4 text-on-surface-variant"
+              >
+                GOVERNANCE LOG
+              </div>
+              <div class="space-y-3">
+                <div
+                  class="flex justify-between items-center text-xs py-2 border-b border-outline-variant/10"
+                >
+                  <span class="text-on-surface-variant">Policy Check</span>
+                  <span class="text-primary font-mono">PASSED</span>
+                </div>
+                <div
+                  class="flex justify-between items-center text-xs py-2 border-b border-outline-variant/10"
+                >
+                  <span class="text-on-surface-variant">Asset Availability</span>
+                  <span class="text-error font-mono">FAILED</span>
+                </div>
+                <div class="flex justify-between items-center text-xs py-2">
+                  <span class="text-on-surface-variant">Risk Assessment</span>
+                  <span class="text-secondary font-mono">CRITICAL</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container p-6 rounded-sm flex flex-col justify-center items-center text-center"
+            >
+              <span class="material-symbols-outlined text-4xl text-on-tertiary-fixed-variant mb-3"
+                >lock</span
+              >
+              <div class="text-[10px] uppercase tracking-widest text-on-surface-variant">
+                Status
+              </div>
+              <div class="font-headline font-bold text-xl uppercase tracking-tighter">
+                Executive Hold
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Right Intelligence Panel: Governance State -->
+      <aside
+        class="w-96 bg-surface-container-high border-l-0 shadow-[-10px_0_40px_rgba(0,0,0,0.5)] overflow-y-auto"
+      >
+        <div class="h-full flex flex-col">
+          <!-- Header Banner -->
+          <div class="bg-error-container/10 p-8 border-b border-error/10">
+            <div class="flex items-center gap-3 text-error mb-4">
+              <span
+                class="material-symbols-outlined text-2xl"
+                style="font-variation-settings: 'FILL' 1"
+                >gavel</span
+              >
+              <span class="text-xs font-headline font-black tracking-[0.3em] uppercase"
+                >Governance Protocol</span
+              >
+            </div>
+            <div class="text-4xl font-headline font-black tracking-tighter text-on-surface">
+              SYSTEM BLOCKED
+            </div>
+            <div class="mt-4 flex items-center gap-2">
+              <div class="h-1 flex-1 bg-error rounded-full"></div>
+              <div class="h-1 flex-1 bg-error/20 rounded-full"></div>
+              <div class="h-1 flex-1 bg-error/20 rounded-full"></div>
+            </div>
+          </div>
+          <div class="flex-1 p-8 space-y-8">
+            <!-- Reason Section -->
+            <div>
+              <div
+                class="text-[10px] font-headline font-bold text-error-dim uppercase tracking-widest mb-3"
+              >
+                Primary Reason
+              </div>
+              <div class="p-5 bg-error-container/5 rounded-sm border border-error/10">
+                <p class="text-on-surface text-sm font-medium leading-relaxed italic">
+                  "Mandatory intelligence vector 'Research Module - Q3 Competitor Data' is currently
+                  unavailable. Synthesis logic cannot proceed without verified baseline parameters."
+                </p>
+              </div>
+            </div>
+            <!-- Allowed Actions -->
+            <div>
+              <div
+                class="text-[10px] font-headline font-bold text-primary-dim uppercase tracking-widest mb-4"
+              >
+                Permitted Resolutions
+              </div>
+              <div class="space-y-3">
+                <button
+                  class="w-full flex items-center justify-between p-4 bg-surface-bright/50 hover:bg-surface-bright transition-all group rounded-sm border border-outline-variant/10"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary">warning</span>
+                    <span class="text-xs font-semibold text-on-surface"
+                      >Manual Override (High Risk)</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all"
+                    >chevron_right</span
+                  >
+                </button>
+                <button
+                  class="w-full flex items-center justify-between p-4 bg-primary-container text-on-primary-container hover:bg-primary-container/80 transition-all group rounded-sm"
+                >
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined">send</span>
+                    <span class="text-xs font-semibold">Notify Research Team</span>
+                  </div>
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                </button>
+              </div>
+            </div>
+            <!-- Blocked Actions -->
+            <div>
+              <div
+                class="text-[10px] font-headline font-bold text-on-surface-variant uppercase tracking-widest mb-4"
+              >
+                Restricted Functions
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="flex items-center gap-3 p-3 bg-surface-container-lowest opacity-40 cursor-not-allowed"
+                >
+                  <span class="material-symbols-outlined text-sm">block</span>
+                  <span class="text-xs text-on-surface-variant">Strategy Synthesis</span>
+                </div>
+                <div
+                  class="flex items-center gap-3 p-3 bg-surface-container-lowest opacity-40 cursor-not-allowed"
+                >
+                  <span class="material-symbols-outlined text-sm">block</span>
+                  <span class="text-xs text-on-surface-variant">Content Planning</span>
+                </div>
+              </div>
+            </div>
+            <!-- Visual Accent Image -->
+            <div class="pt-4">
+              <div
+                class="aspect-video w-full rounded-sm overflow-hidden grayscale contrast-125 brightness-75 relative group"
+              >
+                <img
+                  alt="System Core Visualization"
+                  class="w-full h-full object-cover"
+                  data-alt="abstract server room with blinking red indicator lights and complex cabling in a high-security facility"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzgtLK0s9GlyzM5JbctEHHTYJGx1AIWah0cfXiRcWe30zFtD-Q2W8s2oUQZtyEV4uS7AkfZO3LaafSfaweV8h8-51MpqQwi4D0Jgi7M3dA8SksWY0yro4SnHPJVizq_Pb1j4qE9TdNJz7Zimilv1AAYiW_u6HEzJwCKTV6RqNWo-9cx2ZbjTkyXJQ3UrJGzPhJCcgdLmFtyzhMtQlAEv5pO2EBokOFdzkjTmEUfs0QJC_lKcl8HL6dob-Ov5PUXx1uqjcGeVsozK4"
+                />
+                <div class="absolute inset-0 bg-error/10 mix-blend-overlay"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Status -->
+          <div
+            class="p-6 bg-surface-container-lowest border-t border-outline-variant/10 text-center"
+          >
+            <div
+              class="flex items-center justify-center gap-2 text-[10px] font-mono text-on-surface-variant uppercase tracking-widest"
+            >
+              <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              Governance Lockdown Active
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <!-- BottomNavBar (Authority: Shared Components JSON) -->
+    <nav
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 w-2/3 rounded-sm bg-neutral-900/60 backdrop-blur-md shadow-2xl shadow-black/80 flex items-center justify-center gap-6 p-4 max-w-4xl z-50"
+    >
+      <button
+        class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm"
+      >
+        <span class="material-symbols-outlined">mic</span>
+        <span class="font-inter text-xs uppercase tracking-widest">Voice Command</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm"
+      >
+        <span class="material-symbols-outlined">upload_file</span>
+        <span class="font-inter text-xs uppercase tracking-widest">Upload Data</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 px-6 py-2 text-neutral-400 hover:bg-neutral-800/80 hover:shadow-indigo-500/10 transition-all rounded-sm"
+      >
+        <span class="material-symbols-outlined">rocket_launch</span>
+        <span class="font-inter text-xs uppercase tracking-widest">Deploy Module</span>
+      </button>
+      <button
+        class="flex flex-col items-center gap-1 px-6 py-2 bg-indigo-500/20 text-indigo-100 rounded-sm ring-1 ring-indigo-500/50 transition-all"
+      >
+        <span class="material-symbols-outlined">cancel</span>
+        <span class="font-inter text-xs uppercase tracking-widest">Emergency Stop</span>
+      </button>
+    </nav>
+  </body>
+</html>

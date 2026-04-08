@@ -1,5 +1,7 @@
 # BRIEF MESTRE — TORQ BRAND FOUNDATION
+
 ## Sistema Operacional de Estruturação de Marca para Especialistas
+
 ### Versão 1.0 — fundação da futura skill multi-cliente do Grupo Torq
 
 ---
@@ -15,6 +17,7 @@
 Esta skill não existe para "fazer branding bonito".
 
 Ela existe para:
+
 - diagnosticar o especialista
 - entender mercado, concorrência e demanda
 - construir posicionamento e narrativa
@@ -30,6 +33,7 @@ Em termos de negócio, a skill formaliza a Fase 1 de estruturação do Grupo Tor
 ## 2. O QUE ESTA SKILL NÃO É
 
 Esta skill não é:
+
 - uma ferramenta de social media
 - um gerador de posts soltos
 - um criador de logo sem estratégia
@@ -52,6 +56,7 @@ Se uma recomendação visual, verbal ou editorial não aproximar o cliente de of
 O Grupo Torq é uma coprodutora de marketing direto para experts B2C com conhecimento validado e sem sistema de venda.
 
 O produto principal do Grupo Torq continua sendo:
+
 - posicionamento aplicado à conversão
 - oferta
 - VSL
@@ -64,6 +69,7 @@ A skill entra antes disso quando o especialista ainda precisa de base.
 ### Momento ideal de uso
 
 Usar esta skill quando o especialista:
+
 - tem conhecimento real e validado
 - tem método, resultados, autoridade ou reputação
 - ainda não possui apresentação digital forte o suficiente
@@ -84,6 +90,7 @@ Usar esta skill quando o especialista:
 ### Fit obrigatório
 
 Todo cliente processado pela skill deve cumprir os critérios mínimos do Grupo Torq:
+
 - conhecimento real e comprovado
 - pelo menos um case, prova, resultado documentável ou autoridade visível
 - venda B2C
@@ -94,6 +101,7 @@ Todo cliente processado pela skill deve cumprir os critérios mínimos do Grupo 
 ### Não usar quando
 
 Não usar esta skill quando o cliente:
+
 - ainda está descobrindo o nicho
 - nunca provou competência real
 - quer apenas estética sem base
@@ -112,6 +120,7 @@ A identidade visual deve ser consequência do posicionamento, e não o contrári
 ### Princípio 2 — Fatos, inferências e hipóteses não se misturam
 
 Toda saída deve separar claramente:
+
 - `Fatos confirmados`
 - `Inferências estratégicas`
 - `Hipóteses a validar`
@@ -125,6 +134,7 @@ A skill deve gerar processos e saídas replicáveis, e não depender de genialid
 ### Princípio 4 — Branding é infraestrutura
 
 O resultado da skill deve preparar o especialista para:
+
 - parecer coerente
 - comunicar valor
 - gerar autoridade
@@ -153,6 +163,7 @@ Objetivo:
 coletar e organizar todas as informações do cliente antes da análise.
 
 Entradas:
+
 - nome do especialista
 - nicho e subnicho
 - histórico profissional
@@ -165,6 +176,7 @@ Entradas:
 - referências visuais, se houver
 
 Saídas:
+
 - ficha do cliente
 - classificação de persona do Torq
 - status de fit
@@ -176,6 +188,7 @@ Objetivo:
 entender o mercado em que o especialista opera.
 
 Análises:
+
 - mercado
 - categoria
 - tendências
@@ -186,6 +199,7 @@ Análises:
 - diferenciações exploráveis
 
 Saídas:
+
 - dossiê de mercado
 - mapa competitivo
 - síntese de oportunidades
@@ -196,6 +210,7 @@ Objetivo:
 definir a espinha dorsal da marca.
 
 Entregas:
+
 - território de marca
 - categoria ocupada ou criada
 - promessa principal
@@ -211,6 +226,7 @@ Objetivo:
 traduzir a estratégia em comunicação usável.
 
 Entregas:
+
 - voz da marca
 - tom de voz
 - léxico permitido
@@ -229,6 +245,7 @@ Objetivo:
 traduzir a estratégia em direção visual consistente e premium.
 
 Entregas:
+
 - moodboards
 - rotas criativas
 - propostas de tipografia
@@ -244,6 +261,7 @@ Objetivo:
 consolidar tudo em um documento final impecável e acionável.
 
 Entregas:
+
 - Brand Bible completo
 - resumo executivo
 - sistema inicial de conteúdo
@@ -257,33 +275,42 @@ Entregas:
 Os módulos abaixo devem existir como seções conceituais da skill e, quando fizer sentido, como scripts separados.
 
 ### `qualify-client`
+
 - valida fit do especialista
 - identifica persona do Torq
 - define se o cliente está apto para a Fase 1
 
 ### `client-intake`
+
 - estrutura briefing
 - transforma informações brutas em dados utilizáveis
 
 ### `deep-research`
+
 - realiza pesquisa de mercado, concorrência, público e tendências
 
 ### `brand-strategy`
+
 - cria posicionamento, categoria, promessa, mecanismo e narrativa
 
 ### `verbal-identity`
+
 - cria o sistema de linguagem da marca
 
 ### `visual-system`
+
 - aciona as APIs do Gemini para gerar explorações visuais
 
 ### `content-engine`
+
 - transforma estratégia em pilares, formatos e séries de conteúdo
 
 ### `brand-bible-composer`
+
 - monta o documento final diagramado
 
 ### `torq-qc`
+
 - revisa consistência, aplicabilidade e elegância da entrega
 
 ---
@@ -293,6 +320,7 @@ Os módulos abaixo devem existir como seções conceituais da skill e, quando fi
 ### Etapa 1 — Coleta estruturada
 
 Coletar:
+
 - informações do especialista
 - material bruto
 - provas
@@ -303,6 +331,7 @@ Coletar:
 ### Etapa 2 — Qualificação
 
 Responder:
+
 - este cliente é ICP do Grupo Torq?
 - ele se encaixa na Persona 1 ou Persona 2?
 - precisa apenas da Fase 1 ou já pode avançar depois para oferta e funil?
@@ -310,6 +339,7 @@ Responder:
 ### Etapa 3 — Pesquisa profunda
 
 Executar:
+
 - análise de mercado
 - análise competitiva
 - análise de audiência
@@ -318,6 +348,7 @@ Executar:
 ### Etapa 4 — Síntese estratégica
 
 Definir:
+
 - diagnóstico
 - posicionamento
 - promessa
@@ -328,6 +359,7 @@ Definir:
 ### Etapa 5 — Tradução verbal
 
 Definir:
+
 - voz
 - tom
 - mensagens centrais
@@ -337,6 +369,7 @@ Definir:
 ### Etapa 6 — Tradução visual
 
 Gerar:
+
 - rotas criativas
 - referências visuais
 - propostas de identidade
@@ -345,6 +378,7 @@ Gerar:
 ### Etapa 7 — Composição do Brand Bible
 
 Montar:
+
 - capa
 - sumário
 - capítulos
@@ -356,6 +390,7 @@ Montar:
 ### Etapa 8 — QA e entrega
 
 Validar:
+
 - coerência estratégica
 - nível visual
 - consistência narrativa
@@ -369,6 +404,7 @@ Validar:
 Sem estes dados, a skill não deve produzir diagnóstico definitivo.
 
 ### Dados obrigatórios
+
 - nome do especialista
 - área de atuação
 - produto, serviço ou método atual
@@ -380,6 +416,7 @@ Sem estes dados, a skill não deve produzir diagnóstico definitivo.
 - limitações e aversões
 
 ### Dados desejáveis
+
 - depoimentos
 - proposta comercial atual
 - concorrentes percebidos
@@ -391,6 +428,7 @@ Sem estes dados, a skill não deve produzir diagnóstico definitivo.
 ### Se faltar dado crítico
 
 A skill deve:
+
 - sinalizar a ausência
 - evitar conclusões categóricas
 - trabalhar com hipótese marcada
@@ -403,6 +441,7 @@ A skill deve:
 Todo cliente atendido por esta skill deve receber um pacote estruturado.
 
 ### Saídas mínimas
+
 - diagnóstico executivo
 - mapa de mercado
 - mapa competitivo
@@ -415,6 +454,7 @@ Todo cliente atendido por esta skill deve receber um pacote estruturado.
 - Brand Bible final
 
 ### Saídas ideais
+
 - roteiro de apresentação interna do projeto
 - prompts reutilizáveis para peças futuras
 - biblioteca de referências visuais
@@ -448,6 +488,7 @@ Criar percepção de valor alto, clareza, sobriedade e profundidade.
 13. Encerramento
 
 ### Requisitos editoriais
+
 - diagramação sóbria e sofisticada
 - grid consistente
 - tipografia intencional
@@ -461,6 +502,7 @@ Criar percepção de valor alto, clareza, sobriedade e profundidade.
 Compor o documento final em `HTML/CSS` com template editorial próprio do Torq e exportar para PDF.
 
 Justificativa:
+
 - maior controle de layout
 - repetibilidade multi-cliente
 - consistência tipográfica
@@ -476,6 +518,7 @@ As integrações com Gemini são parte estrutural desta skill.
 ### Papel das APIs na skill
 
 Usar API para:
+
 - explorar direções visuais
 - gerar composições editoriais
 - produzir assets de apoio
@@ -489,12 +532,15 @@ Usar API para:
 ### Uso recomendado
 
 #### Camada textual e estratégica
+
 - utilizar modelos Flash para síntese, análise e estruturação
 
 #### Camada visual
+
 - utilizar os modelos de imagem do Gemini para geração visual
 
 #### Composição final
+
 - consolidar o conteúdo e os assets em um documento diagramado pelo pipeline do Torq
 
 ### Observação técnica importante
@@ -502,10 +548,12 @@ Usar API para:
 Os nomes dos modelos Gemini podem mudar com o tempo, especialmente em versões preview. A implementação definitiva deve confirmar os nomes ativos e a disponibilidade no momento da codificação.
 
 Diretriz prática:
+
 - usar modelo rápido para ideação e variações
 - usar modelo premium para páginas críticas e visuais de maior impacto
 
 ### O que não fazer
+
 - não depender do modelo visual para decidir estratégia
 - não tratar imagem gerada como identidade final sem curadoria
 - não entregar material bruto sem composição editorial
@@ -521,6 +569,7 @@ Se o cliente ainda não tem prova suficiente, isso deve aparecer no diagnóstico
 ### Regra 2 — Não prometer ROI como certeza
 
 Qualquer previsão deve ser tratada como:
+
 - cenário
 - hipótese
 - projeção baseada em premissas
@@ -532,6 +581,7 @@ Se a estratégia estiver fraca, a skill deve corrigir a estratégia antes de sof
 ### Regra 4 — Não perder o DNA do Grupo Torq
 
 Toda saída deve manter:
+
 - seriedade
 - clareza
 - técnica
@@ -592,6 +642,7 @@ torq-brand-foundation/
 ## 17. ENTREGA IDEAL DA SKILL PARA O GRUPO TORQ
 
 Quando madura, esta skill deve permitir que o Grupo Torq:
+
 - atenda vários especialistas em paralelo
 - reduza retrabalho estratégico
 - mantenha padrão alto de entrega
@@ -615,4 +666,4 @@ Depois da aprovação deste brief, os próximos artefatos a construir são:
 
 ---
 
-*Versão 1.0 — documento fundador da futura skill de branding do Grupo Torq. Deve ser atualizado sempre que houver mudança de operação, refinamento de método ou evolução das integrações visuais.*
+_Versão 1.0 — documento fundador da futura skill de branding do Grupo Torq. Deve ser atualizado sempre que houver mudança de operação, refinamento de método ou evolução das integrações visuais._

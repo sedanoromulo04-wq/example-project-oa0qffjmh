@@ -54,9 +54,5 @@
       "collection_notes": "{Como a coleta foi feita}"
     }
   },
-  "downstream_consumers": [
-    "torq-editorial-copy",
-    "torq-storytelling",
-    "torq-offer-engineering"
-  ]
+  "downstream_consumers": ["torq-editorial-copy", "torq-storytelling", "torq-offer-engineering"]
 }

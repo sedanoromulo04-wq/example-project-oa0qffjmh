@@ -1,6 +1,6 @@
 ---
 type: rules
-source: "Torq Internal + Figma MCP"
+source: 'Torq Internal + Figma MCP'
 date: 2026-04-08
 tags: [figma, design-system, torq, frontend]
 relevance: high

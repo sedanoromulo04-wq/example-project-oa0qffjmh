@@ -1,6 +1,6 @@
 ---
 type: implementation-plan
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-08
 tags: [torq, frontend, implementation, stitch, figma, jarvis]
 relevance: high

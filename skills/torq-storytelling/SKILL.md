@@ -71,11 +71,13 @@ Se o dossie estiver ausente ou nao aprovado, retornar:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Preciso de um pitch institucional para investidores com dossie aprovado e objetivo de reposicionamento premium."
 
 Output: "A skill deve selecionar o especialista narrativo correto, aplicar a mecanica ao caso e devolver a narrativa estruturada no filtro Torq."
 
 ### Exemplo 2
+
 Input: "Cria uma historia comovente para vender essa oferta. Ainda nao temos pesquisa de publico."
 
 Output: "A skill deve bloquear a execucao e exigir o behavioral_persona_dossier aprovado antes de escrever."

@@ -1,17 +1,17 @@
-const { Client } = require('pg');
+const { Client } = require('pg')
 
 async function main() {
-  const connectionString = process.env.SUPABASE_DB_URL;
+  const connectionString = process.env.SUPABASE_DB_URL
   if (!connectionString) {
-    throw new Error('SUPABASE_DB_URL is not set');
+    throw new Error('SUPABASE_DB_URL is not set')
   }
 
   const client = new Client({
     connectionString,
     ssl: { rejectUnauthorized: false },
-  });
+  })
 
-  await client.connect();
+  await client.connect()
   try {
     const tableRes = await client.query(`
       select table_schema, table_name
@@ -19,7 +19,7 @@ async function main() {
       where (table_schema = 'public' and table_name in ('activity_log', 'categories', 'torq_docs', 'attachments', 'doc_versions', 'profiles'))
          or (table_schema = 'storage' and table_name = 'buckets')
       order by table_schema, table_name
-    `);
+    `)
 
     const fnRes = await client.query(`
       select routine_schema, routine_name
@@ -27,23 +27,23 @@ async function main() {
       where routine_schema = 'public'
         and routine_name in ('search_docs')
       order by routine_schema, routine_name
-    `);
+    `)
 
-    console.log('Frontend tables:');
+    console.log('Frontend tables:')
     for (const row of tableRes.rows) {
-      console.log(`${row.table_schema}.${row.table_name}`);
+      console.log(`${row.table_schema}.${row.table_name}`)
     }
 
-    console.log('Frontend routines:');
+    console.log('Frontend routines:')
     for (const row of fnRes.rows) {
-      console.log(`${row.routine_schema}.${row.routine_name}`);
+      console.log(`${row.routine_schema}.${row.routine_name}`)
     }
   } finally {
-    await client.end();
+    await client.end()
   }
 }
 
 main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+  console.error(error.message)
+  process.exit(1)
+})

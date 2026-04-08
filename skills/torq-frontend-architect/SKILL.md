@@ -18,6 +18,7 @@ de telas soltas. Toda decisao de interface deve proteger a logica do Torq OS:
 contexto, roteamento, bloqueios, aprovacao e visibilidade operacional.
 
 ## Workflow
+
 1. Ler o prompt do Stitch, imagens de referencia, frontend existente, contratos da API do Jarvis e documentos de orquestracao do Torq.
 2. Confirmar qual e a fonte de verdade visual principal: Stitch, Figma, screenshots, HTML exportado ou layout ja existente.
 3. Identificar o modo do produto: cockpit Jarvis, biblioteca documental, area de cliente ou modo hibrido.
@@ -34,22 +35,26 @@ contexto, roteamento, bloqueios, aprovacao e visibilidade operacional.
 Entregar em portugues com estas secoes:
 
 ### 1. Fonte de Verdade Visual
+
 - origem principal
 - artefatos usados
 - conflitos detectados
 
 ### 2. Estrutura do Produto
+
 - telas principais
 - fluxo entre telas
 - papel de cada tela
 
 ### 3. Layout System
+
 - estrutura global
 - colunas
 - grids
 - comportamento responsivo
 
 ### 4. Design Tokens
+
 - cores
 - tipografia
 - espacamento
@@ -57,12 +62,14 @@ Entregar em portugues com estas secoes:
 - motion
 
 ### 5. Componentes Obrigatorios
+
 - nome
 - papel
 - dados exibidos
 - estados
 
 ### 6. Estados Criticos
+
 - empty
 - loading
 - blocked
@@ -71,12 +78,14 @@ Entregar em portugues com estas secoes:
 - error
 
 ### 7. Plano de Implementacao
+
 - o que reaproveitar
 - o que refatorar
 - o que criar do zero
 - ordem de entrega
 
 ### 8. Checklist de QA
+
 - fidelidade visual
 - responsividade
 - governanca
@@ -110,11 +119,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Transforma esse prompt do Stitch e essas screenshots na arquitetura do Jarvis."
 
 Output: "A skill deve devolver telas, componentes, layout, tokens, estados criticos e ordem de implementacao."
 
 ### Exemplo 2
+
 Input: "Quero saber se o frontend atual suporta o cockpit do Jarvis ou se precisamos reestruturar."
 
 Output: "A skill deve comparar frontend atual vs cockpit alvo e devolver o que reaproveitar, refatorar e criar do zero."

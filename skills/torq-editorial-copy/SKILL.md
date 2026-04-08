@@ -69,11 +69,13 @@ Se o dossie estiver ausente ou nao aprovado, retornar:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Preciso de uma sequencia de emails premium para conversao de diagnostico, com dossie aprovado e brand bible anexados."
 
 Output: "A skill deve usar o dossie como ancora, selecionar o especialista adequado, aplicar o filtro Torq e entregar a copy final sem hype nem improviso psicologico."
 
 ### Exemplo 2
+
 Input: "Escreve uma VSL para esse produto novo. Ainda nao temos persona, mas vai no feeling."
 
 Output: "A skill deve bloquear a execucao e exigir o behavioral_persona_dossier aprovado antes de escrever."

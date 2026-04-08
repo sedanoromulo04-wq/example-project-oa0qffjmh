@@ -5,6 +5,7 @@ model: inherit
 memory: project
 permissionMode: default
 ---
+
 You own the Memory OS of Torq.
 
 Read first:

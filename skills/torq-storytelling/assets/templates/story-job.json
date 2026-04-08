@@ -43,12 +43,7 @@
     ]
   },
   "brand_bible_reference": {
-    "tone": [
-      "Elegante",
-      "Sobrio",
-      "Garantia intelectual",
-      "Incisivo sem ser ruidoso"
-    ],
+    "tone": ["Elegante", "Sobrio", "Garantia intelectual", "Incisivo sem ser ruidoso"],
     "lexicon_allowed": [
       "Alocacao exclusiva",
       "Diferencial assincrono",

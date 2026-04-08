@@ -17,6 +17,7 @@ implementacao deve parecer intencional, premium e funcional, nunca um wireframe
 bonito sem lastro no sistema.
 
 ## Workflow
+
 1. Ler a arquitetura de frontend, o prompt do Stitch, imagens, exports visuais e o codigo atual.
 2. Identificar exatamente qual tela, secao ou estado sera implementado neste ciclo.
 3. Mapear os componentes que ja existem e decidir o que reaproveitar, refatorar ou substituir.
@@ -33,14 +34,17 @@ bonito sem lastro no sistema.
 Responder com foco em:
 
 ### 1. O que foi implementado
+
 - areas alteradas
 - comportamento esperado
 
 ### 2. O que foi preservado
+
 - componentes reaproveitados
 - padroes mantidos
 
 ### 3. O que ainda falta
+
 - dependencias externas
 - partes bloqueadas
 
@@ -70,11 +74,13 @@ Responder com foco em:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Implemente a tela principal do Jarvis com base nessas imagens e no blueprint aprovado."
 
 Output: "A skill deve codificar layout, componentes centrais, inspector e estados principais."
 
 ### Exemplo 2
+
 Input: "Quero que o login e o cockpit fiquem com o visual do Stitch, mas sem quebrar o que ja funciona."
 
 Output: "A skill deve traduzir o design para codigo preservando integracoes e build limpo."

@@ -1,322 +1,322 @@
 [
-    {
-        "name":  "projects/2609524893764998424/screens/8f33747ee8fe4d35971085e91d7695b4",
-        "title":  "Login - Authorized Access Only",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/fd239e308b744be8abd4fe43ba28fbc7",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujM4PJCs6WLrpKKQ4FizIxuO17f_qbNLuRyqqDVyDr-P8OClm5yC8DRVtmd065qmbGF8oms_QyZDiCJ3I2638obR6WsIwzqhbUpkUd_fxeC0aTtDHIcX64ffrwJBQaBAGPUmq5Xjd8_vG38bn--34TEKIYyNlU7JNJXOXfGSlqiHeS7p5muZY5NZ9JU5AmjKJOF4GtjWs0SOKOKhGTKzVbqV8kw45fv02cKjqAcXNU2ODEmgzLMm-ev0HM"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/0fff60f7b49c45e4824860334ce22c0e",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzYzNDY3YWM3OWMzYTQ3YTM5ODI5MmQ5M2QzMTA0NmVmEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+  {
+    "name": "projects/2609524893764998424/screens/8f33747ee8fe4d35971085e91d7695b4",
+    "title": "Login - Authorized Access Only",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/fd239e308b744be8abd4fe43ba28fbc7",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujM4PJCs6WLrpKKQ4FizIxuO17f_qbNLuRyqqDVyDr-P8OClm5yC8DRVtmd065qmbGF8oms_QyZDiCJ3I2638obR6WsIwzqhbUpkUd_fxeC0aTtDHIcX64ffrwJBQaBAGPUmq5Xjd8_vG38bn--34TEKIYyNlU7JNJXOXfGSlqiHeS7p5muZY5NZ9JU5AmjKJOF4GtjWs0SOKOKhGTKzVbqV8kw45fv02cKjqAcXNU2ODEmgzLMm-ev0HM"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/e55435ece66c4195aa2d713e3e6a5cc9",
-        "title":  "Voice Command Capture",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/252943bd6ed542988d0bcfe35197b6b4",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugy7uk-_OJkmdG-1DwIur4ONDfZMu38UjhDoGAcBXyvUczOZAK4w3m2NYbKzRMlkfOpB63cgNsemfEXMW0OZBUpAQva-dDq6nTVcYN76Ez8dgFVcAZjw9upUDZ-cJoMK9T7cXKdeQkn7y29Xhmj6ckTKdZaIE7P6jsy0rPToR50YVqXK_C6kePjDywxj7zZ222T1VvV3J4dhmWWYRBH3HB0KnZNdR0HujrGxlzdDuh0jINL-NydHEkUL0Y"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/3fed34ebb5ee4901bbd65ba1eaed9155",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2QyYzU4MThmNjgwYTQ0MDE4NjU5NDE2MzQ5MGJiOTY0EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/0fff60f7b49c45e4824860334ce22c0e",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzYzNDY3YWM3OWMzYTQ3YTM5ODI5MmQ5M2QzMTA0NmVmEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/1070cd31f4184dc7ab57f6745871ff24",
-        "title":  "Blocked State - Governance Dependency",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/fb1aafc669d04fe3862abeaf5eac8ba3",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujNwgmEWfiGcF1VXPCWDOMlMJt3hiMqen8rwJMc4JZAXN8bX9Zpt8CnRFdqLM41Vysesh6XUQEi3Q8AhWlST_Cw7UEWP_Qur36CCfHv0YipW1G2FIn6elI-X694L_vDFdgVHpUSbqF5NEGmoSNRn3owVN2QOaOqdCyl8Vo2nGz8AlZg4g1lN8eELARbuWGaR0JGWiHb3AQa5ue7W_tHNxZ3pOVV7pYHOfoQKDpTdmU8-q4rnQ_oqVLLVA"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/ba718daa10a94118997d9fe0bb5547a9",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzMwOTVhYTlmNmMxOTRhYTA5OWZkNWU5MzRkN2VjMzlhEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/e55435ece66c4195aa2d713e3e6a5cc9",
+    "title": "Voice Command Capture",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/252943bd6ed542988d0bcfe35197b6b4",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugy7uk-_OJkmdG-1DwIur4ONDfZMu38UjhDoGAcBXyvUczOZAK4w3m2NYbKzRMlkfOpB63cgNsemfEXMW0OZBUpAQva-dDq6nTVcYN76Ez8dgFVcAZjw9upUDZ-cJoMK9T7cXKdeQkn7y29Xhmj6ckTKdZaIE7P6jsy0rPToR50YVqXK_C6kePjDywxj7zZ222T1VvV3J4dhmWWYRBH3HB0KnZNdR0HujrGxlzdDuh0jINL-NydHEkUL0Y"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/32416f0ceb234e48970a7a19c0fa162f",
-        "title":  "Voice Capture: Command Review",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/d25b88e8560a439ebc1e7f3e9ff80314",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujDJQLEVCarN6I3eLmXk3OR7kieGt7_OaJxFRqKeZXAL27Fg9eIx5f8Z6LyrJK0SWBgccgrDZiRfId0P77h6fPRfKxSzZSxZYqsYwU2F-FeqFXwabwBVMubcIuKvChA7AJwsYrNchDCemjslL6zwOB6tvP5V1DeQQ6uJdNbDL2iO211wv_jd6MVL_jrmtsZ9PloXxwuRWr7UKCSxnXfgIIJRb41xVzDaRoU7LqF_jnnC104Z0lmSPysnAA"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/8f9b26467e4e4ad09db23fd54c666b02",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2M4OTFkYjA4OGI2MDQ5ZWNiNWY0YWM3ODMzMDE2ZTMwEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/3fed34ebb5ee4901bbd65ba1eaed9155",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2QyYzU4MThmNjgwYTQ0MDE4NjU5NDE2MzQ5MGJiOTY0EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/959a2895a4bd48d9bb39aa807a826989",
-        "title":  "Operator Login",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/2cb5fad0f4df4e7b9ceaaa0c5506d944",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugvC7z-pzKViBDPAiy_sDichl7ENLdnYtWOiVPSRE2Zh4_cdp7r5wzJ53lNi1s9xQaNukwke7zSJBHKp0Qq7Ddmot9PSrxJeHw4rx7XTCSme8g8_mf6jtBreqjrK19J9sYabrhfVdRk9mrPcqe-kPbGR0lesZYOschDLqiRvRJiA76OiiaFdF5i5s2UMkriauhb3Lwjg-qLFHatOJLoAwts3pxc6PRXsJhkG7zdxLsq1CIK5d-JKovvvho"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/504b17de853b4e2e93bd00ec5c0c5e94",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA2MWIyYmY4YmMwMjQ0MDJhZmY1YWQwMDNiZGQ3Mjc1EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/1070cd31f4184dc7ab57f6745871ff24",
+    "title": "Blocked State - Governance Dependency",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/fb1aafc669d04fe3862abeaf5eac8ba3",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujNwgmEWfiGcF1VXPCWDOMlMJt3hiMqen8rwJMc4JZAXN8bX9Zpt8CnRFdqLM41Vysesh6XUQEi3Q8AhWlST_Cw7UEWP_Qur36CCfHv0YipW1G2FIn6elI-X694L_vDFdgVHpUSbqF5NEGmoSNRn3owVN2QOaOqdCyl8Vo2nGz8AlZg4g1lN8eELARbuWGaR0JGWiHb3AQa5ue7W_tHNxZ3pOVV7pYHOfoQKDpTdmU8-q4rnQ_oqVLLVA"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/a8f07c5cebce48d1a675d16cd09cb0e1",
-        "title":  "System Blocked (Governance)",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/484bf5b01c454a0fb451195eacd870f2",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujOm6Y5ip0oycWg5Cy2SHLmuhSTIqZBV9Y_vB4bg86fdhCBr2nPreoS46J_BdRz4STBK2fOraZcJnh0Gl8KrkXhJErkNVxCxMe5KLSzppPpaVF70RXgitPc6zLAhO11npxRMbwp5IdmuGCne1X3_MXhqq9G0RqPYJpFBneSycHXfglZlrSvLI15j6vZaDRs2EfzLJkyPKcXKJ-vdGvHrpBkbN8Zut8uqAsrMpTRSVTvkXN1jNXSBqSCkv0"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/f280511efd9b4ad580f862fbf86e261b",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzgzMWRjOWI1NzVkNTQyMzg5NGExY2E1Mjc3MTQ0MWE4EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/ba718daa10a94118997d9fe0bb5547a9",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzMwOTVhYTlmNmMxOTRhYTA5OWZkNWU5MzRkN2VjMzlhEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/643e992cd1e0458d818eb11e11995b42",
-        "title":  "Empty State: Ready for Command",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/a9c75006d6ba49139998134204ad0f38",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uh6zXGGPSOmMhRXW71J5t7pBg7vkgb6268myU3KwgyuoSeNdOD4NzQa6PXI8FyYkyWpxmGrn33HhtE6nqWqq5hdbNF_OVupqc01XQHSCgWb9WvHWRNOmUcG64qlP6vxoqpX8fGI6MtCDFS-dEkv8TzonjC75Ji2NpWV_ybFWAO4z3XDgc1WQP-e6ujAahrccb5bA17hvos2uyTIKZBKI8DiwlG1j5b9KfX6Mf64MxEVBPf15eGb_7uLwkw"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/016b28603d974790ac11c1aa28ceb207",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZiYzAxODc2ZTBlMTRkMTM4YWEyYjkyZDI3ZGZiNDM0EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/32416f0ceb234e48970a7a19c0fa162f",
+    "title": "Voice Capture: Command Review",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/d25b88e8560a439ebc1e7f3e9ff80314",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujDJQLEVCarN6I3eLmXk3OR7kieGt7_OaJxFRqKeZXAL27Fg9eIx5f8Z6LyrJK0SWBgccgrDZiRfId0P77h6fPRfKxSzZSxZYqsYwU2F-FeqFXwabwBVMubcIuKvChA7AJwsYrNchDCemjslL6zwOB6tvP5V1DeQQ6uJdNbDL2iO211wv_jd6MVL_jrmtsZ9PloXxwuRWr7UKCSxnXfgIIJRb41xVzDaRoU7LqF_jnnC104Z0lmSPysnAA"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/f638cfdc18044598b3c09a125371d1af",
-        "title":  "Thinking State - Orchestration in Progress",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/05992bb809f44426ba8d6c3ad3eddc7a",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugIdgCQlbNy4hAovoVSKjVqa8rERDHzIrJFfT3lgmLLN981LkZafp0HOWgSMy8CnVoxg81ZK-SzfzLMkdskoxydsnjejJSHOX4j5pAJXRDiYEh0BdRNN6JiPo2wkcFQRUyO4nGbF-JtEV8EK-m90jWmyNr1DP_Uwq0ZMKbjFNPTZSHRSMxKDIy4YWzyuKfltsz8DW7iPtjjANzENpg01wr6WDlgH2Kq_SQhFp5eWTGc_41NNZvkZY1hBeI"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/5e836104bba04f188eb8a4530e293dd6",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA2OTZhNDc0MTE0NTQzMmU4MWU3YmE3ZWMxMzE2OGZjEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/8f9b26467e4e4ad09db23fd54c666b02",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2M4OTFkYjA4OGI2MDQ5ZWNiNWY0YWM3ODMzMDE2ZTMwEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/1ad89d55403a48dd8b945db2b9ecaa86",
-        "title":  "Active Mission Control",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/9a3cff056d934324a740418f62876961",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugysc29FrGm94k33spJidoaTtdNlrKfc86rxLXySCu5pdTSdx8JZF7gbFS2Bi_judv2lD_ub9Sm4860ZfMX28Lv10X1vNhJtAlKaeLJf-Oiw6LY0dhSyqW2gPspgpTyiA-c_uP82AukRHSMXyLFzuDjg3KxfWidfy0NgpUclFqnzelWyon8hTg-QkFd33OmX-h5A_wvFw6k-w1gmzRegNaFw6Iab20SWtfh6SG4qRZQiSDXUmjgiy-I49E"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/0aeee4180ff04fe490746abeb6035c75",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2NmYTM1OTE5MWU2YzRkZjI4YzFhZmVjMDkxOTE4YmQ5EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/959a2895a4bd48d9bb39aa807a826989",
+    "title": "Operator Login",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/2cb5fad0f4df4e7b9ceaaa0c5506d944",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugvC7z-pzKViBDPAiy_sDichl7ENLdnYtWOiVPSRE2Zh4_cdp7r5wzJ53lNi1s9xQaNukwke7zSJBHKp0Qq7Ddmot9PSrxJeHw4rx7XTCSme8g8_mf6jtBreqjrK19J9sYabrhfVdRk9mrPcqe-kPbGR0lesZYOschDLqiRvRJiA76OiiaFdF5i5s2UMkriauhb3Lwjg-qLFHatOJLoAwts3pxc6PRXsJhkG7zdxLsq1CIK5d-JKovvvho"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/827e00de11d3461894b9e2345ab88afb",
-        "title":  "Login: Torq Jarvis Access",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/85de35d09930432197c5b4896aad9ff4",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujry15sToqFtnyTqWtxgLqMaeo9A_hQDtgPtCdMgh-eLiP18D9OfCJaE9b6aYK65eeCPgV3-bgZkBMb6R0I_sK-802TGnv2jBAv4xmoRJZJEoEf-Il-aMh1edovsu9aWuCCOh4TIrkxdDo6sEFPICr6GDX_gMrsZiFz2MgXH4zWF0X1Miiup9TEFaxJo4XtHXdILHvHsr7qVuK2F3_5Q5tsg5EiCQySjYKTUvZ8oi3VDH1faerWGNepL_U"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/76300f8fdf2a435784dd0ee40965ced7",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q0ZWQ3ZjBlOGI2MjQ3MTc4Yzg4NjU3YjllZmE4MGViEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/504b17de853b4e2e93bd00ec5c0c5e94",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA2MWIyYmY4YmMwMjQ0MDJhZmY1YWQwMDNiZGQ3Mjc1EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/fa5bbcd7f6c84c159d6ba7666cff769d",
-        "title":  "Thinking State: AI Orchestration",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/5f91ef5f78784ab3bef7fd9315b83986",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhDG2_L7MPzVXcZzNDKyzJNHkUSKA9AD06f6J_A7FFz-XZ_zkL2itnpzqDzOhEMahx8_CX6gQt3ET_2aHNT8nuYoTs4S6kOrAtfy5k2RB32DrnXQwdXjJd0C4wfNe-Fk3S3Xxd5oYAzGrp2jDl5DQOiR1Ou3rnDKNSr0ab_uLeznvkac3YH3OpuHSsq6jPKPpGj5lvtcoNuRG_Mwv2LKvPiZYqC0PtyOpF-L7sHWlnxeV3UVUP7a0vq-MU"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/f3a1c36c28e54aed884cc1e6ca835572",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzk1YTU1YjM5N2U0ZjQ1ODY4NzYzMmYxODZlZjUyNmMzEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/a8f07c5cebce48d1a675d16cd09cb0e1",
+    "title": "System Blocked (Governance)",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/484bf5b01c454a0fb451195eacd870f2",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujOm6Y5ip0oycWg5Cy2SHLmuhSTIqZBV9Y_vB4bg86fdhCBr2nPreoS46J_BdRz4STBK2fOraZcJnh0Gl8KrkXhJErkNVxCxMe5KLSzppPpaVF70RXgitPc6zLAhO11npxRMbwp5IdmuGCne1X3_MXhqq9G0RqPYJpFBneSycHXfglZlrSvLI15j6vZaDRs2EfzLJkyPKcXKJ-vdGvHrpBkbN8Zut8uqAsrMpTRSVTvkXN1jNXSBqSCkv0"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/543430f189f6400a8607b7092c147055",
-        "title":  "Main Console: Operational Flow",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/8573b4813a794d529b8d075b33b3b80d",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugO2quN1a793h-lPo57cjdXWzUGbn_T_k4WgQRCas0-g9zKKJlGSFT_U9M4c0eYoVZl_C-jYYWcJZqA7dAMXvuBWZD7wY0KkBT0cSdutvclmmUX4VbnY7UqboUPkE_JRgq-GahL6lJ_MiA7BHfzsaD2iBpQcYZezCjsaV0RCnvbUtOsvIFubByau18wSuUVil9fwXaozyfOWnMD3U_x7L12Oi1YBNq3nn8wvKCGAsrfmCp3aVhNjkD7jg"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/0233932c3ced4620ae62fd438cfbce8f",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzIyMzBjODhjMmY0ZjQ0YmRhZjc4NjAxZjU2NjRiNzgxEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/f280511efd9b4ad580f862fbf86e261b",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzgzMWRjOWI1NzVkNTQyMzg5NGExY2E1Mjc3MTQ0MWE4EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/2d030b37e4624d9a9a00bb465fa5cf79",
-        "title":  "Ready for Command (Empty State)",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/39682719a7884283bc1b2b7f9177fe59",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujjZLlzFsscecuCvGZtdfP13BA1_daQN9gBdhouzO4EJEBjBMU0aqy8O9BV8vpijmhejSfoM5pXtB4V9xaLiYbMRVkVJ9Fj66uKoLgLUhA8Jo6ZeDMjuhMB0z7lv7inqustXe2N3jhUDaW5rm8lNfdplADuaIW91ScxvE0Fvja6H6qHDqOmr_8iDk3zXPAiOwjdpH158RGaT55PaghVNjY3yhKeuMGBT3sD40iIFmQYOjbSFiUPwczHWj8"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/45b04a644d1e4b8eb0703bba048eac6b",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQ5ZjFlYTA1MmNmMzQ5YjRhNjVhODJlMGJhYmY4ZGVmEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/643e992cd1e0458d818eb11e11995b42",
+    "title": "Empty State: Ready for Command",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/a9c75006d6ba49139998134204ad0f38",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uh6zXGGPSOmMhRXW71J5t7pBg7vkgb6268myU3KwgyuoSeNdOD4NzQa6PXI8FyYkyWpxmGrn33HhtE6nqWqq5hdbNF_OVupqc01XQHSCgWb9WvHWRNOmUcG64qlP6vxoqpX8fGI6MtCDFS-dEkv8TzonjC75Ji2NpWV_ybFWAO4z3XDgc1WQP-e6ujAahrccb5bA17hvos2uyTIKZBKI8DiwlG1j5b9KfX6Mf64MxEVBPf15eGb_7uLwkw"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/41032c00356343779a48021026535fdb",
-        "title":  "Empty Console - Awaiting Command",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/0bf734ff6420443e8bd9d73186e59c4e",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ujiDacHe9qFIkozollk0T0K8YsTg1WmUsSkjg5_prs9eg5ztOKfgFFykL0pCucrJxEgCG067-eOMOPo2V_abdVAAO2f-w7zPtuudvlUBgr5jN_8omZxZggCZQ7dEnRLfjReLZG_nOaEbQ80CHTc8FdRq1EwdiaQs6dsA38z8tvns7J9p2ea6G-kUTBaRtdV0h6b3n3MOEbX0qfRh8SiFlkhCS7C_mQnIuPSgQXz1AHnp4z5ZYvSmBhQt2w"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/f5dd14c789024e32a3019e40912dd5a7",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2JhOWQ5NjYyNDQ4OTRkOTFhMDQwNDI2YzViYmZjMTI3EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/016b28603d974790ac11c1aa28ceb207",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZiYzAxODc2ZTBlMTRkMTM4YWEyYjkyZDI3ZGZiNDM0EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/600bd739e0644e34a6b12832cbcc998b",
-        "title":  "Main Console - Strategic Orchestration",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/0e970e92ece74f8080a4d4fd82b3fe1f",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uitd_LLzCSlHDCnICaZMhCc4sQn3d5yImo8I7-TXSXokCrDY6zmbuH55e9MiovtnchQTl5VC5QC3TW-jeN7CAWS78uKKOoxwMOWo5ZmzCiW8RARN0DZqST6OBvHN7oAjR49zwKpwH4DF7zZVTShb5ENMSMpWidtYVpnHi2JZ1q-oxwIR_rkqFaWgIkkb4FsDI_Z5Xl13qpoDsdyAMgWAlvbyk6LlCdsjxkrRzYoFIWmLHw6nD3qGs8Hi_8"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/5dd9963de5754470b8535e041396eefd",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q0MzkzMmNhN2NhZDQyZjg5MTM0MDJjMjBhZjI0ODdkEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/f638cfdc18044598b3c09a125371d1af",
+    "title": "Thinking State - Orchestration in Progress",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/05992bb809f44426ba8d6c3ad3eddc7a",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugIdgCQlbNy4hAovoVSKjVqa8rERDHzIrJFfT3lgmLLN981LkZafp0HOWgSMy8CnVoxg81ZK-SzfzLMkdskoxydsnjejJSHOX4j5pAJXRDiYEh0BdRNN6JiPo2wkcFQRUyO4nGbF-JtEV8EK-m90jWmyNr1DP_Uwq0ZMKbjFNPTZSHRSMxKDIy4YWzyuKfltsz8DW7iPtjjANzENpg01wr6WDlgH2Kq_SQhFp5eWTGc_41NNZvkZY1hBeI"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/e6ffd026c2b2466a8c6c667a8311ac73",
-        "title":  "Action Approval: Founder Consent",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/5d1778997dca4d9b8255527fa37ebad0",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhoSnLfp2nhxeS-l_zLcil-IoZcACOqr-3f75JpM8UApYQ22NrI5U3JZ56kMq82V8dUhFRZV5k-xE14nYJqGJ5awWxR-2H9ve-4Kuo7_dWla9cXxTL8KOTHS41zb8yD1EAe6t-thBe46vaAzdeVkKt8eXS4R9oMY6_3RajYI5Y5dR-J4Jy161E5CTjVSgc3jEragsvB40Qd9zlDj_RCdodsj8EAMbrxpqDYH3xFmuli7ScmoquMxs1iyMA"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/abd83a117fe242a7897143eb7328eda6",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZmMzdiNjQ1MDhlMDRkMTZhYThlOGY0OTFhZmVlYTQ3EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/5e836104bba04f188eb8a4530e293dd6",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA2OTZhNDc0MTE0NTQzMmU4MWU3YmE3ZWMxMzE2OGZjEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/e353b142281c4c9b8f9c7aa7b6578b6d",
-        "title":  "Confirmation - Proposed Action Approval",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/97fabfb1f5e74fe0909615c5c1d42b56",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhs50Tmah95qd7a8kau71WpFXQ4FP8weBX4mVHGzyihqaWqCp1KJs3nGlFwMV89gXPcSCwTDepx-WR5-EfHC55DKY9RKVyQHx1F7T97OvWx1iSjfqFqRIMYJl2F9DT_MzuzQP93JJvqDMigJaq35laEu5sfiV2AW24h-SNvyPsueYibFpoN5wK2fSThYZ92sGKtCGrTCWx5X5PJtfPfkg4jTU5dl5ediLcB_50Wu3jc7BpaiTPmW0AUhwY"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/0aaf2264c4dc474c811c7d3fcdf5da18",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzI5YjU5ZjNmODdlMzQ5MmZhYTZiNzA3N2ZjYzA1OTg4EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/1ad89d55403a48dd8b945db2b9ecaa86",
+    "title": "Active Mission Control",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/9a3cff056d934324a740418f62876961",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugysc29FrGm94k33spJidoaTtdNlrKfc86rxLXySCu5pdTSdx8JZF7gbFS2Bi_judv2lD_ub9Sm4860ZfMX28Lv10X1vNhJtAlKaeLJf-Oiw6LY0dhSyqW2gPspgpTyiA-c_uP82AukRHSMXyLFzuDjg3KxfWidfy0NgpUclFqnzelWyon8hTg-QkFd33OmX-h5A_wvFw6k-w1gmzRegNaFw6Iab20SWtfh6SG4qRZQiSDXUmjgiy-I49E"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/7cef999e03a64da3bd538e63c0a29cd1",
-        "title":  "Blocked State: Governance Notice",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/f18f634336d14b82b0619dcc12768e81",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0ugtj6IIvuPYrOOyai6XnYjT8Bmb7lE5mOPsNXS2XuQlwVTLuO3OdHz7C0ZFH7nedcPbV-o9DZClDOVVZB3dOVRHw4U1eL6snzPVOs8SCyEvQYR2BB44qFwu-MAxhOzVHsuf_iy4-d2No4DTMRvh1mj13NX39oWMvTAZzEsaAuy0XIiiAx4PIY3iMz-6oCLPeZ4D52THmPrqzhw10QtslPBnKz6B-y75CrNQzWqyy_2Aqje2OtRr8mAUS3E"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/2b49cb9b2a4744c7895377340ca1cf8f",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzVjM2UyZWY5NWViYjRhYzdiZWM2ODE2MjllNmY4MzI2EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/0aeee4180ff04fe490746abeb6035c75",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2NmYTM1OTE5MWU2YzRkZjI4YzFhZmVjMDkxOTE4YmQ5EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/daf989b3fce7489fb8a9c1399b5a9a57",
-        "title":  "Action Approval (Governance)",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/4fbd9c295a8c458284f08a299df5567a",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uizQnf8ursK4t_26ZI6QaYaUokSUFqu2-bJMjcntnEiL_Ojk7EYRb8q1QMxP34SIwY6XSYjts7pfs5Y3rhVkmNBS4kpFjUtGMSbHLMB9CisPpg17P88zlQmk9PSpDxSj2pLGDhrKZoZkJUnhRtELS5FTuOiJZMkSO433izqj_pAmpj7_-NgyMFKlI_MMdd8CTiHBAfkSfjkB5d9TY6UAUEWckKFG8V_5Pe-e4x10B4hQZ7LMSZWRj4To1E"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/a1cc9277a00742679cf3c2e28b248682",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2MxODc0MmE5YzBjOTQ1ZWFiMjBjYTIxNWE5Mjg1ZTMzEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/827e00de11d3461894b9e2345ab88afb",
+    "title": "Login: Torq Jarvis Access",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/85de35d09930432197c5b4896aad9ff4",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujry15sToqFtnyTqWtxgLqMaeo9A_hQDtgPtCdMgh-eLiP18D9OfCJaE9b6aYK65eeCPgV3-bgZkBMb6R0I_sK-802TGnv2jBAv4xmoRJZJEoEf-Il-aMh1edovsu9aWuCCOh4TIrkxdDo6sEFPICr6GDX_gMrsZiFz2MgXH4zWF0X1Miiup9TEFaxJo4XtHXdILHvHsr7qVuK2F3_5Q5tsg5EiCQySjYKTUvZ8oi3VDH1faerWGNepL_U"
     },
-    {
-        "name":  "projects/2609524893764998424/screens/932bd0ef4e26404e88500980a8df8689",
-        "title":  "Neural Orchestration Flow",
-        "screenshot":  {
-                           "name":  "projects/2609524893764998424/files/21c567bd631142c890fcd3e59d26fe1b",
-                           "downloadUrl":  "https://lh3.googleusercontent.com/aida/ADBb0uhBvLRRDE6Upo0g7BhsxrEVCOakQxQDUYpb_DRSt1jX3VbYAwk3gekj249GCBHn_dJZgt1sK5yteIr7iWgYVWyBxPM0NMwRZUexQ87N34GEbUm2FWdIX1cB4cJZBGku-PCMinS7skK_jWPtQ4WzJWZ9tF_ItfL96EynLXnibFZg3X-s2vi1Zpt_Bs-ph9dT6S_IcvE6JCenBn0PkhtXudsO3emEZXgyjVuWxNdoZBlXr6bHNUK0q0FgvHs"
-                       },
-        "htmlCode":  {
-                         "name":  "projects/2609524893764998424/files/6adef8322c9a4feb9042c45640587ae2",
-                         "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2YyZjY3MTJkMDljMDRjNzhiNjRiNmM2MjIxOTMyNTlhEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
-                         "mimeType":  "text/html"
-                     },
-        "width":  "2560",
-        "height":  "2048",
-        "deviceType":  "DESKTOP"
-    }
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/76300f8fdf2a435784dd0ee40965ced7",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q0ZWQ3ZjBlOGI2MjQ3MTc4Yzg4NjU3YjllZmE4MGViEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/fa5bbcd7f6c84c159d6ba7666cff769d",
+    "title": "Thinking State: AI Orchestration",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/5f91ef5f78784ab3bef7fd9315b83986",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhDG2_L7MPzVXcZzNDKyzJNHkUSKA9AD06f6J_A7FFz-XZ_zkL2itnpzqDzOhEMahx8_CX6gQt3ET_2aHNT8nuYoTs4S6kOrAtfy5k2RB32DrnXQwdXjJd0C4wfNe-Fk3S3Xxd5oYAzGrp2jDl5DQOiR1Ou3rnDKNSr0ab_uLeznvkac3YH3OpuHSsq6jPKPpGj5lvtcoNuRG_Mwv2LKvPiZYqC0PtyOpF-L7sHWlnxeV3UVUP7a0vq-MU"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/f3a1c36c28e54aed884cc1e6ca835572",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzk1YTU1YjM5N2U0ZjQ1ODY4NzYzMmYxODZlZjUyNmMzEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/543430f189f6400a8607b7092c147055",
+    "title": "Main Console: Operational Flow",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/8573b4813a794d529b8d075b33b3b80d",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugO2quN1a793h-lPo57cjdXWzUGbn_T_k4WgQRCas0-g9zKKJlGSFT_U9M4c0eYoVZl_C-jYYWcJZqA7dAMXvuBWZD7wY0KkBT0cSdutvclmmUX4VbnY7UqboUPkE_JRgq-GahL6lJ_MiA7BHfzsaD2iBpQcYZezCjsaV0RCnvbUtOsvIFubByau18wSuUVil9fwXaozyfOWnMD3U_x7L12Oi1YBNq3nn8wvKCGAsrfmCp3aVhNjkD7jg"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/0233932c3ced4620ae62fd438cfbce8f",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzIyMzBjODhjMmY0ZjQ0YmRhZjc4NjAxZjU2NjRiNzgxEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/2d030b37e4624d9a9a00bb465fa5cf79",
+    "title": "Ready for Command (Empty State)",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/39682719a7884283bc1b2b7f9177fe59",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujjZLlzFsscecuCvGZtdfP13BA1_daQN9gBdhouzO4EJEBjBMU0aqy8O9BV8vpijmhejSfoM5pXtB4V9xaLiYbMRVkVJ9Fj66uKoLgLUhA8Jo6ZeDMjuhMB0z7lv7inqustXe2N3jhUDaW5rm8lNfdplADuaIW91ScxvE0Fvja6H6qHDqOmr_8iDk3zXPAiOwjdpH158RGaT55PaghVNjY3yhKeuMGBT3sD40iIFmQYOjbSFiUPwczHWj8"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/45b04a644d1e4b8eb0703bba048eac6b",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQ5ZjFlYTA1MmNmMzQ5YjRhNjVhODJlMGJhYmY4ZGVmEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/41032c00356343779a48021026535fdb",
+    "title": "Empty Console - Awaiting Command",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/0bf734ff6420443e8bd9d73186e59c4e",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujiDacHe9qFIkozollk0T0K8YsTg1WmUsSkjg5_prs9eg5ztOKfgFFykL0pCucrJxEgCG067-eOMOPo2V_abdVAAO2f-w7zPtuudvlUBgr5jN_8omZxZggCZQ7dEnRLfjReLZG_nOaEbQ80CHTc8FdRq1EwdiaQs6dsA38z8tvns7J9p2ea6G-kUTBaRtdV0h6b3n3MOEbX0qfRh8SiFlkhCS7C_mQnIuPSgQXz1AHnp4z5ZYvSmBhQt2w"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/f5dd14c789024e32a3019e40912dd5a7",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2JhOWQ5NjYyNDQ4OTRkOTFhMDQwNDI2YzViYmZjMTI3EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/600bd739e0644e34a6b12832cbcc998b",
+    "title": "Main Console - Strategic Orchestration",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/0e970e92ece74f8080a4d4fd82b3fe1f",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uitd_LLzCSlHDCnICaZMhCc4sQn3d5yImo8I7-TXSXokCrDY6zmbuH55e9MiovtnchQTl5VC5QC3TW-jeN7CAWS78uKKOoxwMOWo5ZmzCiW8RARN0DZqST6OBvHN7oAjR49zwKpwH4DF7zZVTShb5ENMSMpWidtYVpnHi2JZ1q-oxwIR_rkqFaWgIkkb4FsDI_Z5Xl13qpoDsdyAMgWAlvbyk6LlCdsjxkrRzYoFIWmLHw6nD3qGs8Hi_8"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/5dd9963de5754470b8535e041396eefd",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2Q0MzkzMmNhN2NhZDQyZjg5MTM0MDJjMjBhZjI0ODdkEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/e6ffd026c2b2466a8c6c667a8311ac73",
+    "title": "Action Approval: Founder Consent",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/5d1778997dca4d9b8255527fa37ebad0",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhoSnLfp2nhxeS-l_zLcil-IoZcACOqr-3f75JpM8UApYQ22NrI5U3JZ56kMq82V8dUhFRZV5k-xE14nYJqGJ5awWxR-2H9ve-4Kuo7_dWla9cXxTL8KOTHS41zb8yD1EAe6t-thBe46vaAzdeVkKt8eXS4R9oMY6_3RajYI5Y5dR-J4Jy161E5CTjVSgc3jEragsvB40Qd9zlDj_RCdodsj8EAMbrxpqDYH3xFmuli7ScmoquMxs1iyMA"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/abd83a117fe242a7897143eb7328eda6",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZmMzdiNjQ1MDhlMDRkMTZhYThlOGY0OTFhZmVlYTQ3EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/e353b142281c4c9b8f9c7aa7b6578b6d",
+    "title": "Confirmation - Proposed Action Approval",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/97fabfb1f5e74fe0909615c5c1d42b56",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhs50Tmah95qd7a8kau71WpFXQ4FP8weBX4mVHGzyihqaWqCp1KJs3nGlFwMV89gXPcSCwTDepx-WR5-EfHC55DKY9RKVyQHx1F7T97OvWx1iSjfqFqRIMYJl2F9DT_MzuzQP93JJvqDMigJaq35laEu5sfiV2AW24h-SNvyPsueYibFpoN5wK2fSThYZ92sGKtCGrTCWx5X5PJtfPfkg4jTU5dl5ediLcB_50Wu3jc7BpaiTPmW0AUhwY"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/0aaf2264c4dc474c811c7d3fcdf5da18",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzI5YjU5ZjNmODdlMzQ5MmZhYTZiNzA3N2ZjYzA1OTg4EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/7cef999e03a64da3bd538e63c0a29cd1",
+    "title": "Blocked State: Governance Notice",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/f18f634336d14b82b0619dcc12768e81",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugtj6IIvuPYrOOyai6XnYjT8Bmb7lE5mOPsNXS2XuQlwVTLuO3OdHz7C0ZFH7nedcPbV-o9DZClDOVVZB3dOVRHw4U1eL6snzPVOs8SCyEvQYR2BB44qFwu-MAxhOzVHsuf_iy4-d2No4DTMRvh1mj13NX39oWMvTAZzEsaAuy0XIiiAx4PIY3iMz-6oCLPeZ4D52THmPrqzhw10QtslPBnKz6B-y75CrNQzWqyy_2Aqje2OtRr8mAUS3E"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/2b49cb9b2a4744c7895377340ca1cf8f",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzVjM2UyZWY5NWViYjRhYzdiZWM2ODE2MjllNmY4MzI2EgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/daf989b3fce7489fb8a9c1399b5a9a57",
+    "title": "Action Approval (Governance)",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/4fbd9c295a8c458284f08a299df5567a",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uizQnf8ursK4t_26ZI6QaYaUokSUFqu2-bJMjcntnEiL_Ojk7EYRb8q1QMxP34SIwY6XSYjts7pfs5Y3rhVkmNBS4kpFjUtGMSbHLMB9CisPpg17P88zlQmk9PSpDxSj2pLGDhrKZoZkJUnhRtELS5FTuOiJZMkSO433izqj_pAmpj7_-NgyMFKlI_MMdd8CTiHBAfkSfjkB5d9TY6UAUEWckKFG8V_5Pe-e4x10B4hQZ7LMSZWRj4To1E"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/a1cc9277a00742679cf3c2e28b248682",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2MxODc0MmE5YzBjOTQ1ZWFiMjBjYTIxNWE5Mjg1ZTMzEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  },
+  {
+    "name": "projects/2609524893764998424/screens/932bd0ef4e26404e88500980a8df8689",
+    "title": "Neural Orchestration Flow",
+    "screenshot": {
+      "name": "projects/2609524893764998424/files/21c567bd631142c890fcd3e59d26fe1b",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhBvLRRDE6Upo0g7BhsxrEVCOakQxQDUYpb_DRSt1jX3VbYAwk3gekj249GCBHn_dJZgt1sK5yteIr7iWgYVWyBxPM0NMwRZUexQ87N34GEbUm2FWdIX1cB4cJZBGku-PCMinS7skK_jWPtQ4WzJWZ9tF_ItfL96EynLXnibFZg3X-s2vi1Zpt_Bs-ph9dT6S_IcvE6JCenBn0PkhtXudsO3emEZXgyjVuWxNdoZBlXr6bHNUK0q0FgvHs"
+    },
+    "htmlCode": {
+      "name": "projects/2609524893764998424/files/6adef8322c9a4feb9042c45640587ae2",
+      "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2YyZjY3MTJkMDljMDRjNzhiNjRiNmM2MjIxOTMyNTlhEgsSBxDXyrLO_xoYAZIBIwoKcHJvamVjdF9pZBIVQhMyNjA5NTI0ODkzNzY0OTk4NDI0\u0026filename=\u0026opi=89354086",
+      "mimeType": "text/html"
+    },
+    "width": "2560",
+    "height": "2048",
+    "deviceType": "DESKTOP"
+  }
 ]

@@ -1,180 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="light" lang="pt-br"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@200;400;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-low": "#f6f3ee",
-                        "background": "#fcf9f4",
-                        "surface-dim": "#dcdad5",
-                        "tertiary-container": "#111c2c",
-                        "tertiary-fixed-dim": "#bcc7dd",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed": "#d8e3fa",
-                        "error-container": "#ffdad6",
-                        "surface-container": "#f0ede8",
-                        "on-tertiary-fixed-variant": "#3c4759",
-                        "on-background": "#1c1c19",
-                        "outline": "#747878",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "primary-fixed": "#e5e2e1",
-                        "on-surface-variant": "#444748",
-                        "surface-container-highest": "#e5e2dd",
-                        "tertiary": "#000000",
-                        "surface-container-high": "#ebe8e3",
-                        "inverse-primary": "#c8c6c5",
-                        "on-tertiary-fixed": "#111c2c",
-                        "on-primary-fixed-variant": "#474646",
-                        "on-error-container": "#93000a",
-                        "outline-variant": "#c4c7c7",
-                        "secondary-container": "#fdc796",
-                        "inverse-surface": "#31302d",
-                        "on-secondary": "#ffffff",
-                        "on-error": "#ffffff",
-                        "primary": "#000000",
-                        "on-primary-fixed": "#1c1b1b",
-                        "surface-variant": "#e5e2dd",
-                        "secondary": "#7e562e",
-                        "on-tertiary-container": "#798498",
-                        "surface-bright": "#fcf9f4",
-                        "surface-tint": "#5f5e5e",
-                        "on-tertiary": "#ffffff",
-                        "on-primary-container": "#858383",
-                        "secondary-fixed": "#ffdcbf",
-                        "secondary-fixed-dim": "#f1bc8c",
-                        "surface": "#fcf9f4",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-fixed-variant": "#633f19",
-                        "on-secondary-container": "#79512a",
-                        "inverse-on-surface": "#f3f0eb",
-                        "error": "#ba1a1a",
-                        "primary-container": "#1c1b1b",
-                        "on-surface": "#1c1c19",
-                        "on-secondary-fixed": "#2d1600"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Newsreader", "serif"],
-                        "body": ["Manrope", "sans-serif"],
-                        "label": ["Manrope", "sans-serif"]
-                    }
-                },
+<html class="light" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@200;400;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'surface-container-low': '#f6f3ee',
+              background: '#fcf9f4',
+              'surface-dim': '#dcdad5',
+              'tertiary-container': '#111c2c',
+              'tertiary-fixed-dim': '#bcc7dd',
+              'on-primary': '#ffffff',
+              'tertiary-fixed': '#d8e3fa',
+              'error-container': '#ffdad6',
+              'surface-container': '#f0ede8',
+              'on-tertiary-fixed-variant': '#3c4759',
+              'on-background': '#1c1c19',
+              outline: '#747878',
+              'primary-fixed-dim': '#c8c6c5',
+              'primary-fixed': '#e5e2e1',
+              'on-surface-variant': '#444748',
+              'surface-container-highest': '#e5e2dd',
+              tertiary: '#000000',
+              'surface-container-high': '#ebe8e3',
+              'inverse-primary': '#c8c6c5',
+              'on-tertiary-fixed': '#111c2c',
+              'on-primary-fixed-variant': '#474646',
+              'on-error-container': '#93000a',
+              'outline-variant': '#c4c7c7',
+              'secondary-container': '#fdc796',
+              'inverse-surface': '#31302d',
+              'on-secondary': '#ffffff',
+              'on-error': '#ffffff',
+              primary: '#000000',
+              'on-primary-fixed': '#1c1b1b',
+              'surface-variant': '#e5e2dd',
+              secondary: '#7e562e',
+              'on-tertiary-container': '#798498',
+              'surface-bright': '#fcf9f4',
+              'surface-tint': '#5f5e5e',
+              'on-tertiary': '#ffffff',
+              'on-primary-container': '#858383',
+              'secondary-fixed': '#ffdcbf',
+              'secondary-fixed-dim': '#f1bc8c',
+              surface: '#fcf9f4',
+              'surface-container-lowest': '#ffffff',
+              'on-secondary-fixed-variant': '#633f19',
+              'on-secondary-container': '#79512a',
+              'inverse-on-surface': '#f3f0eb',
+              error: '#ba1a1a',
+              'primary-container': '#1c1b1b',
+              'on-surface': '#1c1c19',
+              'on-secondary-fixed': '#2d1600',
             },
-        }
+            borderRadius: {
+              DEFAULT: '0px',
+              lg: '0px',
+              xl: '0px',
+              full: '9999px',
+            },
+            fontFamily: {
+              headline: ['Newsreader', 'serif'],
+              body: ['Manrope', 'sans-serif'],
+              label: ['Manrope', 'sans-serif'],
+            },
+          },
+        },
+      }
     </script>
-<style>
-        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; }
-        .newsreader { font-family: 'Newsreader', serif; }
-        .manrope { font-family: 'Manrope', sans-serif; }
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #fcf9f4;
+      }
+      .newsreader {
+        font-family: 'Newsreader', serif;
+      }
+      .manrope {
+        font-family: 'Manrope', sans-serif;
+      }
     </style>
-</head>
-<body class="bg-background text-on-background overflow-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80">
-<div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white uppercase">VOL. I: THE MANIFESTO</div>
-<nav class="hidden md:flex gap-12">
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1" href="#">CH. 01</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 02</a>
-<a class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500" href="#">CH. 03</a>
-</nav>
-<div class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white">XII</div>
-</header>
-<!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20">
-<div class="flex flex-col gap-12">
-<div class="flex items-center gap-4 group cursor-pointer border-l-2 border-black dark:border-white pl-4 text-black dark:text-white font-bold">
-<span class="material-symbols-outlined text-sm">architecture</span>
-<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700">POSITIONING</span>
-</div>
-<div class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700">
-<span class="material-symbols-outlined text-sm">menu_book</span>
-<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700">NARRATIVE</span>
-</div>
-<div class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700">
-<span class="material-symbols-outlined text-sm">collections</span>
-<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700">AESTHETICS</span>
-</div>
-<div class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700">
-<span class="material-symbols-outlined text-sm">diamond</span>
-<span class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700">DISTRIBUTION</span>
-</div>
-</div>
-</aside>
-<!-- Main Canvas: Impactful Chapter Opener -->
-<main class="relative h-screen w-full flex flex-col items-center justify-center p-12 overflow-hidden select-none">
-<!-- Subtle Texture Background -->
-<div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
-<!-- Top Left Annotation -->
-<div class="absolute top-24 left-32 flex flex-col gap-2 z-10">
-<span class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope">REF. CODE // 88-01</span>
-<span class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope">LAT: 52.5200° N</span>
-</div>
-<!-- Top Right Annotation -->
-<div class="absolute top-24 right-32 flex flex-col items-end gap-2 z-10">
-<span class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope">STATUS: ARCHIVED</span>
-<div class="flex gap-1 items-center">
-<div class="w-8 h-[1px] bg-on-surface opacity-20"></div>
-<span class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope">04</span>
-</div>
-</div>
-<!-- Center Content -->
-<div class="relative z-20 flex flex-col items-center text-center">
-<!-- Chapter Number -->
-<div class="manrope font-extrabold text-sm tracking-[1em] uppercase text-secondary mb-12 translate-y-4">
-                CH. 01
-            </div>
-<!-- Massive Profound Keyword -->
-<h1 class="newsreader italic text-[12vw] md:text-[10vw] leading-none font-medium text-primary tracking-tight">
-                Essência
-            </h1>
-<!-- Decorative Subline -->
-<div class="mt-8 flex items-center gap-6">
-<div class="w-16 h-[1px] bg-primary opacity-10"></div>
-<p class="manrope uppercase tracking-[0.5em] text-[11px] text-on-surface opacity-60">
-                    THE SILENT AUTHORITY OF FORM
-                </p>
-<div class="w-16 h-[1px] bg-primary opacity-10"></div>
-</div>
-</div>
-<!-- Bottom Left Annotation -->
-<div class="absolute bottom-24 left-32 z-10 max-w-[200px]">
-<p class="font-sans text-[9px] leading-relaxed uppercase tracking-[0.2em] text-on-surface opacity-30 manrope">
-                A geometry of silence. The first movement towards a monolithic structure is the removal of the unnecessary.
-            </p>
-</div>
-<!-- Bottom Right Annotation -->
-<div class="absolute bottom-24 right-32 z-10 text-right">
-<p class="font-serif italic text-2xl newsreader text-on-surface opacity-20 mb-2">
-                "Omit needless things."
-            </p>
-<span class="font-sans text-[9px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope">STRATEGIC PRINCIPLE 0.1</span>
-</div>
-<!-- Artistic Background Element (Minimalist) -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[614px] border border-primary/5 pointer-events-none rotate-12"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[614px] border border-primary/5 pointer-events-none -rotate-6"></div>
-</main>
-<!-- Footer -->
-<footer class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none">
-<div class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e]">
-            PAGE 04/10 — STRATEGIC MONUMENT
+  </head>
+  <body class="bg-background text-on-background overflow-hidden">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-8 bg-[#fcf9f4]/80 backdrop-blur-xl dark:bg-[#121212]/80"
+    >
+      <div class="text-sm font-bold tracking-[0.3em] text-black dark:text-white uppercase">
+        VOL. I: THE MANIFESTO
+      </div>
+      <nav class="hidden md:flex gap-12">
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white border-b border-black dark:border-white pb-1"
+          href="#"
+          >CH. 01</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 02</a
+        >
+        <a
+          class="font-serif italic text-lg tracking-widest uppercase newsreader text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-500"
+          href="#"
+          >CH. 03</a
+        >
+      </nav>
+      <div
+        class="font-serif italic text-lg tracking-widest uppercase newsreader text-black dark:text-white"
+      >
+        XII
+      </div>
+    </header>
+    <!-- SideNavBar -->
+    <aside
+      class="fixed left-0 top-0 h-full flex flex-col justify-center items-start z-40 bg-transparent w-20"
+    >
+      <div class="flex flex-col gap-12">
+        <div
+          class="flex items-center gap-4 group cursor-pointer border-l-2 border-black dark:border-white pl-4 text-black dark:text-white font-bold"
+        >
+          <span class="material-symbols-outlined text-sm">architecture</span>
+          <span
+            class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            >POSITIONING</span
+          >
         </div>
-<div class="flex gap-8 pointer-events-auto">
-<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">ANNOTATIONS</a>
-<a class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300" href="#">LEGAL ARCHIVE</a>
-</div>
-</footer>
-</body></html>
+        <div
+          class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700"
+        >
+          <span class="material-symbols-outlined text-sm">menu_book</span>
+          <span
+            class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            >NARRATIVE</span
+          >
+        </div>
+        <div
+          class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700"
+        >
+          <span class="material-symbols-outlined text-sm">collections</span>
+          <span
+            class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            >AESTHETICS</span
+          >
+        </div>
+        <div
+          class="flex items-center gap-4 group cursor-pointer text-black/30 dark:text-white/30 pl-4 hover:text-[#7e562e] transition-all duration-700"
+        >
+          <span class="material-symbols-outlined text-sm">diamond</span>
+          <span
+            class="font-sans uppercase tracking-[0.2em] text-[10px] manrope opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            >DISTRIBUTION</span
+          >
+        </div>
+      </div>
+    </aside>
+    <!-- Main Canvas: Impactful Chapter Opener -->
+    <main
+      class="relative h-screen w-full flex flex-col items-center justify-center p-12 overflow-hidden select-none"
+    >
+      <!-- Subtle Texture Background -->
+      <div
+        class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"
+      ></div>
+      <!-- Top Left Annotation -->
+      <div class="absolute top-24 left-32 flex flex-col gap-2 z-10">
+        <span
+          class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope"
+          >REF. CODE // 88-01</span
+        >
+        <span
+          class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope"
+          >LAT: 52.5200° N</span
+        >
+      </div>
+      <!-- Top Right Annotation -->
+      <div class="absolute top-24 right-32 flex flex-col items-end gap-2 z-10">
+        <span
+          class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope"
+          >STATUS: ARCHIVED</span
+        >
+        <div class="flex gap-1 items-center">
+          <div class="w-8 h-[1px] bg-on-surface opacity-20"></div>
+          <span
+            class="font-sans text-[10px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope"
+            >04</span
+          >
+        </div>
+      </div>
+      <!-- Center Content -->
+      <div class="relative z-20 flex flex-col items-center text-center">
+        <!-- Chapter Number -->
+        <div
+          class="manrope font-extrabold text-sm tracking-[1em] uppercase text-secondary mb-12 translate-y-4"
+        >
+          CH. 01
+        </div>
+        <!-- Massive Profound Keyword -->
+        <h1
+          class="newsreader italic text-[12vw] md:text-[10vw] leading-none font-medium text-primary tracking-tight"
+        >
+          Essência
+        </h1>
+        <!-- Decorative Subline -->
+        <div class="mt-8 flex items-center gap-6">
+          <div class="w-16 h-[1px] bg-primary opacity-10"></div>
+          <p class="manrope uppercase tracking-[0.5em] text-[11px] text-on-surface opacity-60">
+            THE SILENT AUTHORITY OF FORM
+          </p>
+          <div class="w-16 h-[1px] bg-primary opacity-10"></div>
+        </div>
+      </div>
+      <!-- Bottom Left Annotation -->
+      <div class="absolute bottom-24 left-32 z-10 max-w-[200px]">
+        <p
+          class="font-sans text-[9px] leading-relaxed uppercase tracking-[0.2em] text-on-surface opacity-30 manrope"
+        >
+          A geometry of silence. The first movement towards a monolithic structure is the removal of
+          the unnecessary.
+        </p>
+      </div>
+      <!-- Bottom Right Annotation -->
+      <div class="absolute bottom-24 right-32 z-10 text-right">
+        <p class="font-serif italic text-2xl newsreader text-on-surface opacity-20 mb-2">
+          "Omit needless things."
+        </p>
+        <span
+          class="font-sans text-[9px] uppercase tracking-[0.3em] text-on-surface opacity-40 manrope"
+          >STRATEGIC PRINCIPLE 0.1</span
+        >
+      </div>
+      <!-- Artistic Background Element (Minimalist) -->
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[614px] border border-primary/5 pointer-events-none rotate-12"
+      ></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[614px] border border-primary/5 pointer-events-none -rotate-6"
+      ></div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="fixed bottom-0 w-full flex justify-between items-end px-12 py-10 z-50 pointer-events-none"
+    >
+      <div class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e]">
+        PAGE 04/10 — STRATEGIC MONUMENT
+      </div>
+      <div class="flex gap-8 pointer-events-auto">
+        <a
+          class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >ANNOTATIONS</a
+        >
+        <a
+          class="font-sans text-[9px] uppercase tracking-tighter manrope text-[#7e562e] opacity-60 hover:opacity-100 transition-opacity duration-300"
+          href="#"
+          >LEGAL ARCHIVE</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

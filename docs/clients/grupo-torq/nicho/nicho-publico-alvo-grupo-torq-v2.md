@@ -1,5 +1,7 @@
 # DOCUMENTO FUNDACIONAL v2 — GRUPO TORQ
+
 ## Nicho, Público-Alvo e ICP
+
 ### Fonte de verdade da empresa — consultada por todos os agentes do sistema
 
 ---
@@ -17,6 +19,7 @@ O Grupo Torq é uma **coprodutora de marketing direto**.
 Construímos funis de vendas, produzimos VSLs e escalamos negócios de experts através de arquitetura de conversão e tráfego pago.
 
 **Não somos:**
+
 - Agência de marketing de conteúdo
 - Produtora de vídeo ou conteúdo
 - Gestão de redes sociais
@@ -64,6 +67,7 @@ Não atendemos iniciantes. Não atendemos quem está descobrindo sua área. Aten
 **Conhecimento sem sistema de venda.**
 
 Todo cliente que chega ao Grupo Torq tem pelo menos um dos três:
+
 - Método que funciona com resultados comprovados
 - Autoridade reconhecida no seu mercado (físico ou digital)
 - Casos de sucesso reais com clientes ou alunos
@@ -81,6 +85,7 @@ O que falta em todos eles é o mesmo: **um funil de conversão estruturado, uma 
 ### O Inimigo que o Grupo Torq Combate
 
 O que está destruindo a possibilidade de venda dos experts:
+
 - A crença de que volume de conteúdo gera venda
 - A dependência do algoritmo como estratégia de negócio
 - A busca por viralização sem arquitetura de conversão
@@ -110,9 +115,10 @@ Na ilusão de que volume de conteúdo gera venda proporcional ao esforço. Não 
 Frustração profunda. Investe tempo, energia e dinheiro em conteúdo e não vende na proporção do esforço. Percebe que há pessoas no mercado que fazem menos conteúdo e faturam mais.
 
 **A frase que ele diz:**
-*"Estou postando todo dia, meu conteúdo é bom, tenho seguidores — mas não consigo vender. Não entendo o que estou fazendo de errado."*
+_"Estou postando todo dia, meu conteúdo é bom, tenho seguidores — mas não consigo vender. Não entendo o que estou fazendo de errado."_
 
 **Sinais de fit com o Grupo Torq:**
+
 - Tem audiência mínima (não precisa ser grande — precisa existir)
 - Tem produto ou serviço com preço definido
 - Já vendeu pelo menos uma vez
@@ -121,6 +127,7 @@ Frustração profunda. Investe tempo, energia e dinheiro em conteúdo e não ven
 - Entende que precisa de sistema, não de mais conteúdo
 
 **Sinais de não-fit:**
+
 - Ainda descobrindo sua área — sem nicho definido
 - Nunca vendeu — sem nenhum histórico de transação
 - Quer atalho rápido sem construção real
@@ -147,9 +154,10 @@ No teto do tempo. Não pode atender mais do que suas horas permitem. Não sabe c
 Estagnação na escala. Sabe que o que entrega é bom e funciona. Sabe que poderia alcançar muito mais pessoas. Não tem o sistema para isso.
 
 **A frase que ele diz:**
-*"Todo mundo que me conhece me recomenda, meus clientes têm resultados reais — mas não consigo crescer além do que já tenho. Não sei como entrar no digital sem virar mais um."*
+_"Todo mundo que me conhece me recomenda, meus clientes têm resultados reais — mas não consigo crescer além do que já tenho. Não sei como entrar no digital sem virar mais um."_
 
 **Sinais de fit com o Grupo Torq:**
+
 - Método comprovado com casos de sucesso reais e documentáveis
 - Reputação estabelecida — network ativo
 - Entende que precisa do digital mas não quer se tornar guru
@@ -157,6 +165,7 @@ Estagnação na escala. Sabe que o que entrega é bom e funciona. Sabe que poder
 - Tem disposição para aparecer: câmera, vídeo, presença pessoal
 
 **Sinais de não-fit:**
+
 - Negócio físico sem casos de sucesso comprovados
 - Não quer aparecer — quer delegar 100% da face do negócio
 - Quer resultado imediato sem fase de construção
@@ -185,12 +194,14 @@ Já está no digital. Tem base de audiência. O trabalho começa direto no posic
 ### Persona 2 — Entrada com Fase de Estruturação Prévia
 
 **Fase 1 — Estruturação (temporária):**
+
 - Rômulo assessora a criação dos primeiros conteúdos
 - Yan define posicionamento e categoria
 - Branding: logo, cores, tipografia, identidade visual
 - Construção de presença mínima nas plataformas certas
 
 **Fase 2 — Produto Principal:**
+
 - Construção da oferta e mecanismo único
 - Produção da VSL
 - Montagem do funil completo
@@ -243,7 +254,7 @@ Já está no digital. Tem base de audiência. O trabalho começa direto no posic
 
 ### A Pergunta Central da Qualificação
 
-*"Esse expert tem conhecimento real validado pelo mercado — mesmo que não saiba vendê-lo?"*
+_"Esse expert tem conhecimento real validado pelo mercado — mesmo que não saiba vendê-lo?"_
 
 - **Sim** → avança para diagnóstico
 - **Não** → não é ICP do Grupo Torq
@@ -335,4 +346,4 @@ Os itens abaixo são as próximas etapas desta documentação:
 
 ---
 
-*Documento v2 — construído com base no framework de Nicho e Público Alvo da Escola do Jonas, cruzado com as definições reais e operacionais do Grupo Torq. Atualizar sempre que houver mudança na estratégia, nos resultados ou no modelo.*
+_Documento v2 — construído com base no framework de Nicho e Público Alvo da Escola do Jonas, cruzado com as definições reais e operacionais do Grupo Torq. Atualizar sempre que houver mudança na estratégia, nos resultados ou no modelo._

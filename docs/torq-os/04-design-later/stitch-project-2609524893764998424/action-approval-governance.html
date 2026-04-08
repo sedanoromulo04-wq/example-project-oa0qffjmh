@@ -1,324 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-                  "on-tertiary-fixed-variant": "#536372",
-                  "on-primary-fixed-variant": "#545a75",
-                  "surface-container": "#191a1a",
-                  "secondary-fixed-dim": "#d6d4d3",
-                  "on-secondary-container": "#c1bfbe",
-                  "surface-container-lowest": "#000000",
-                  "on-tertiary-fixed": "#374655",
-                  "surface-dim": "#0e0e0e",
-                  "on-surface-variant": "#acabaa",
-                  "surface-container-highest": "#252626",
-                  "tertiary-container": "#dcedff",
-                  "on-tertiary": "#516170",
-                  "inverse-on-surface": "#565554",
-                  "secondary-container": "#3c3b3b",
-                  "secondary": "#9f9d9d",
-                  "surface-variant": "#252626",
-                  "primary-container": "#3f465f",
-                  "outline-variant": "#484848",
-                  "on-background": "#e7e5e4",
-                  "inverse-surface": "#fcf8f8",
-                  "on-surface": "#e7e5e4",
-                  "surface-container-high": "#1f2020",
-                  "surface-container-low": "#131313",
-                  "surface-bright": "#2c2c2c",
-                  "primary-dim": "#b1b7d6",
-                  "background": "#0e0e0e",
-                  "tertiary-fixed-dim": "#cedff1",
-                  "on-primary": "#393f58",
-                  "on-secondary-fixed-variant": "#5c5b5b",
-                  "error-dim": "#b95463",
-                  "secondary-dim": "#9f9d9d",
-                  "on-tertiary-container": "#495867",
-                  "surface-tint": "#bfc5e4",
-                  "surface": "#0e0e0e",
-                  "tertiary-dim": "#cedff1",
-                  "tertiary": "#f7f9ff",
-                  "error": "#ec7c8a",
-                  "on-error-container": "#ff97a3",
-                  "on-primary-container": "#c9cfee",
-                  "inverse-primary": "#575e79",
-                  "error-container": "#7f2737",
-                  "on-error": "#490013",
-                  "tertiary-fixed": "#dcedff",
-                  "primary": "#bfc5e4",
-                  "secondary-fixed": "#e5e2e1",
-                  "primary-fixed-dim": "#cdd3f3",
-                  "outline": "#767575",
-                  "primary-fixed": "#dce1ff",
-                  "on-primary-fixed": "#383e57",
-                  "on-secondary-fixed": "#403f3f",
-                  "on-secondary": "#202020"
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'on-tertiary-fixed-variant': '#536372',
+              'on-primary-fixed-variant': '#545a75',
+              'surface-container': '#191a1a',
+              'secondary-fixed-dim': '#d6d4d3',
+              'on-secondary-container': '#c1bfbe',
+              'surface-container-lowest': '#000000',
+              'on-tertiary-fixed': '#374655',
+              'surface-dim': '#0e0e0e',
+              'on-surface-variant': '#acabaa',
+              'surface-container-highest': '#252626',
+              'tertiary-container': '#dcedff',
+              'on-tertiary': '#516170',
+              'inverse-on-surface': '#565554',
+              'secondary-container': '#3c3b3b',
+              secondary: '#9f9d9d',
+              'surface-variant': '#252626',
+              'primary-container': '#3f465f',
+              'outline-variant': '#484848',
+              'on-background': '#e7e5e4',
+              'inverse-surface': '#fcf8f8',
+              'on-surface': '#e7e5e4',
+              'surface-container-high': '#1f2020',
+              'surface-container-low': '#131313',
+              'surface-bright': '#2c2c2c',
+              'primary-dim': '#b1b7d6',
+              background: '#0e0e0e',
+              'tertiary-fixed-dim': '#cedff1',
+              'on-primary': '#393f58',
+              'on-secondary-fixed-variant': '#5c5b5b',
+              'error-dim': '#b95463',
+              'secondary-dim': '#9f9d9d',
+              'on-tertiary-container': '#495867',
+              'surface-tint': '#bfc5e4',
+              surface: '#0e0e0e',
+              'tertiary-dim': '#cedff1',
+              tertiary: '#f7f9ff',
+              error: '#ec7c8a',
+              'on-error-container': '#ff97a3',
+              'on-primary-container': '#c9cfee',
+              'inverse-primary': '#575e79',
+              'error-container': '#7f2737',
+              'on-error': '#490013',
+              'tertiary-fixed': '#dcedff',
+              primary: '#bfc5e4',
+              'secondary-fixed': '#e5e2e1',
+              'primary-fixed-dim': '#cdd3f3',
+              outline: '#767575',
+              'primary-fixed': '#dce1ff',
+              'on-primary-fixed': '#383e57',
+              'on-secondary-fixed': '#403f3f',
+              'on-secondary': '#202020',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Manrope'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
           },
-          "borderRadius": {
-                  "DEFAULT": "0.125rem",
-                  "lg": "0.25rem",
-                  "xl": "0.5rem",
-                  "full": "0.75rem"
-          },
-          "fontFamily": {
-                  "headline": ["Manrope"],
-                  "body": ["Inter"],
-                  "label": ["Inter"]
-          }
         },
-      },
-    }
-  </script>
-<style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-    .glass-panel {
-      background: rgba(37, 38, 38, 0.7);
-      backdrop-filter: blur(24px);
-    }
-    .hydraulic-transition {
-      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    body {
-      background-color: #0e0e0e;
-      color: #e7e5e4;
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
-</head>
-<body class="antialiased overflow-hidden">
-<!-- Side Navigation Rail (Shared Component) -->
-<aside class="fixed left-0 top-0 h-full w-20 md:w-64 border-r-0 bg-neutral-950/80 backdrop-blur-3xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col h-full z-10">
-<div class="p-6">
-<span class="text-lg font-black tracking-tighter text-neutral-100 uppercase font-headline">TORQ JARVIS</span>
-<p class="text-[10px] text-indigo-300/60 tracking-[0.3em] font-headline mt-1">OPERATIONAL ALPHA</p>
-</div>
-<nav class="flex-1 mt-8">
-<!-- Active Item: System Logs (Contextual for this modal view) -->
-<a class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20" href="#">
-<span class="material-symbols-outlined">terminal</span>
-<span class="hidden md:block font-headline tracking-tight font-light">Mission Control</span>
-</a>
-<a class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20" href="#">
-<span class="material-symbols-outlined">history</span>
-<span class="hidden md:block font-headline tracking-tight font-light">Thread History</span>
-</a>
-<a class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20" href="#">
-<span class="material-symbols-outlined">hub</span>
-<span class="hidden md:block font-headline tracking-tight font-light">Neural Network</span>
-</a>
-<a class="flex items-center px-6 py-4 gap-4 text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 transition-all duration-300" href="#">
-<span class="material-symbols-outlined">analytics</span>
-<span class="hidden md:block font-headline tracking-tight">System Logs</span>
-</a>
-<a class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20" href="#">
-<span class="material-symbols-outlined">account_circle</span>
-<span class="hidden md:block font-headline tracking-tight font-light">Operator Profile</span>
-</a>
-</nav>
-</aside>
-<!-- Main Workspace Canvas -->
-<main class="ml-20 md:ml-64 min-h-screen bg-surface-container-low relative">
-<!-- Top App Bar (Shared Component) -->
-<header class="fixed top-0 right-0 w-[calc(100%-5rem)] md:w-[calc(100%-16rem)] z-40 bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16">
-<div class="flex items-center gap-8">
-<span class="text-xl font-black text-neutral-100 tracking-[0.2em] font-headline">TORQ JARVIS</span>
-<nav class="hidden lg:flex gap-6">
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors font-headline text-sm font-medium tracking-wide" href="#">Missions</a>
-<a class="text-neutral-100 border-b-2 border-indigo-400 font-headline text-sm font-medium tracking-wide" href="#">Modules</a>
-<a class="text-neutral-500 hover:text-indigo-100 transition-colors font-headline text-sm font-medium tracking-wide" href="#">Network</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors">notifications_active</span>
-<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors">settings</span>
-<span class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors">tune</span>
-<div class="w-8 h-8 rounded-full overflow-hidden ml-2 border border-outline-variant/30">
-<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male system operator in a dark tech-focused environment with subtle blue backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGqueLOZ8ZHVYsFpcTIVpYdj_MBM48lDqBdt2g_IW_armpg5iSzRDQVsnAV9UvM5S7l75R0XjxTn8-wuuSneUiI5jFkxTa0HOcHgBF5tt8uhqGCCLBR6HImZN_6gRl5FS4vu7fjYfMHI0lAQeRW9krfgZ1XGEiYN3KQFZxOPWf5V4SyNksqtg0oGrnPyXKn0OnyTY3ZT6mAYbWwzmZrw7X6KC4fmUeeAQHy0IW9O-HKyp-1VaMt3f0748dn__CbUwP2xDJk817x8A"/>
-</div>
-</div>
-</header>
-<!-- Background Content (Simulated Dashboard Workspace) -->
-<section class="pt-24 px-8 pb-32">
-<div class="max-w-6xl mx-auto space-y-12">
-<!-- Dashboard Header -->
-<div class="flex justify-between items-end">
-<div class="space-y-1">
-<h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">System Overview</h1>
-<p class="text-on-surface-variant font-body">Node 0x4492: Operational Status Optimal</p>
-</div>
-<div class="bg-surface-container-high px-4 py-2 rounded-sm text-xs font-label text-indigo-300/80 tracking-widest uppercase">
-            Active Module: Strategy_Asset_Beta
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(37, 38, 38, 0.7);
+        backdrop-filter: blur(24px);
+      }
+      .hydraulic-transition {
+        transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      body {
+        background-color: #0e0e0e;
+        color: #e7e5e4;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-hidden">
+    <!-- Side Navigation Rail (Shared Component) -->
+    <aside
+      class="fixed left-0 top-0 h-full w-20 md:w-64 border-r-0 bg-neutral-950/80 backdrop-blur-3xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] flex flex-col h-full z-10"
+    >
+      <div class="p-6">
+        <span class="text-lg font-black tracking-tighter text-neutral-100 uppercase font-headline"
+          >TORQ JARVIS</span
+        >
+        <p class="text-[10px] text-indigo-300/60 tracking-[0.3em] font-headline mt-1">
+          OPERATIONAL ALPHA
+        </p>
+      </div>
+      <nav class="flex-1 mt-8">
+        <!-- Active Item: System Logs (Contextual for this modal view) -->
+        <a
+          class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20"
+          href="#"
+        >
+          <span class="material-symbols-outlined">terminal</span>
+          <span class="hidden md:block font-headline tracking-tight font-light"
+            >Mission Control</span
+          >
+        </a>
+        <a
+          class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20"
+          href="#"
+        >
+          <span class="material-symbols-outlined">history</span>
+          <span class="hidden md:block font-headline tracking-tight font-light"
+            >Thread History</span
+          >
+        </a>
+        <a
+          class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20"
+          href="#"
+        >
+          <span class="material-symbols-outlined">hub</span>
+          <span class="hidden md:block font-headline tracking-tight font-light"
+            >Neural Network</span
+          >
+        </a>
+        <a
+          class="flex items-center px-6 py-4 gap-4 text-indigo-200 font-bold border-l-2 border-indigo-300 bg-neutral-800/30 transition-all duration-300"
+          href="#"
+        >
+          <span class="material-symbols-outlined">analytics</span>
+          <span class="hidden md:block font-headline tracking-tight">System Logs</span>
+        </a>
+        <a
+          class="flex items-center px-6 py-4 gap-4 text-neutral-500 hover:text-neutral-200 transition-all duration-300 hover:bg-neutral-800/20"
+          href="#"
+        >
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="hidden md:block font-headline tracking-tight font-light"
+            >Operator Profile</span
+          >
+        </a>
+      </nav>
+    </aside>
+    <!-- Main Workspace Canvas -->
+    <main class="ml-20 md:ml-64 min-h-screen bg-surface-container-low relative">
+      <!-- Top App Bar (Shared Component) -->
+      <header
+        class="fixed top-0 right-0 w-[calc(100%-5rem)] md:w-[calc(100%-16rem)] z-40 bg-neutral-900/40 backdrop-blur-2xl flex justify-between items-center px-8 h-16"
+      >
+        <div class="flex items-center gap-8">
+          <span class="text-xl font-black text-neutral-100 tracking-[0.2em] font-headline"
+            >TORQ JARVIS</span
+          >
+          <nav class="hidden lg:flex gap-6">
+            <a
+              class="text-neutral-500 hover:text-indigo-100 transition-colors font-headline text-sm font-medium tracking-wide"
+              href="#"
+              >Missions</a
+            >
+            <a
+              class="text-neutral-100 border-b-2 border-indigo-400 font-headline text-sm font-medium tracking-wide"
+              href="#"
+              >Modules</a
+            >
+            <a
+              class="text-neutral-500 hover:text-indigo-100 transition-colors font-headline text-sm font-medium tracking-wide"
+              href="#"
+              >Network</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <span
+            class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors"
+            >notifications_active</span
+          >
+          <span
+            class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors"
+            >settings</span
+          >
+          <span
+            class="material-symbols-outlined text-indigo-200 cursor-pointer hover:text-indigo-100 transition-colors"
+            >tune</span
+          >
+          <div class="w-8 h-8 rounded-full overflow-hidden ml-2 border border-outline-variant/30">
+            <img
+              class="w-full h-full object-cover"
+              data-alt="Close-up portrait of a professional male system operator in a dark tech-focused environment with subtle blue backlighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGqueLOZ8ZHVYsFpcTIVpYdj_MBM48lDqBdt2g_IW_armpg5iSzRDQVsnAV9UvM5S7l75R0XjxTn8-wuuSneUiI5jFkxTa0HOcHgBF5tt8uhqGCCLBR6HImZN_6gRl5FS4vu7fjYfMHI0lAQeRW9krfgZ1XGEiYN3KQFZxOPWf5V4SyNksqtg0oGrnPyXKn0OnyTY3ZT6mAYbWwzmZrw7X6KC4fmUeeAQHy0IW9O-HKyp-1VaMt3f0748dn__CbUwP2xDJk817x8A"
+            />
           </div>
-</div>
-<!-- Bento Grid Layout -->
-<div class="grid grid-cols-12 gap-6 h-[600px]">
-<!-- Main Chart Area -->
-<div class="col-span-8 bg-surface-container rounded-sm p-6 flex flex-col justify-between border-l border-primary/20">
-<div class="flex justify-between">
-<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Neural Flow Statistics</span>
-<span class="material-symbols-outlined text-primary-dim">trending_up</span>
-</div>
-<div class="h-64 bg-gradient-to-t from-primary/5 to-transparent flex items-end gap-1 px-2">
-<div class="w-full bg-primary/20 h-[30%]"></div>
-<div class="w-full bg-primary/20 h-[45%]"></div>
-<div class="w-full bg-primary/20 h-[38%]"></div>
-<div class="w-full bg-primary/40 h-[60%] border-t border-primary"></div>
-<div class="w-full bg-primary/20 h-[55%]"></div>
-<div class="w-full bg-primary/20 h-[70%]"></div>
-<div class="w-full bg-primary/20 h-[85%]"></div>
-</div>
-<div class="grid grid-cols-3 gap-8 border-t border-outline-variant/15 pt-6">
-<div>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Efficiency</p>
-<p class="text-2xl font-headline font-bold text-on-surface">98.4%</p>
-</div>
-<div>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Active Threads</p>
-<p class="text-2xl font-headline font-bold text-on-surface">1,402</p>
-</div>
-<div>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Latency</p>
-<p class="text-2xl font-headline font-bold text-on-surface">4ms</p>
-</div>
-</div>
-</div>
-<!-- Side Stats -->
-<div class="col-span-4 space-y-6">
-<div class="bg-surface-container-high p-6 rounded-sm h-1/2 flex flex-col justify-center gap-4">
-<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">security</span>
-<h3 class="text-lg font-headline font-semibold text-on-surface">Security Protocol L7</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">End-to-end encryption active. All neural nodes are synchronized across the global network.</p>
-</div>
-<div class="bg-surface-container-highest p-6 rounded-sm h-1/2 overflow-hidden relative group">
-<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity" data-alt="Abstract visualization of blockchain nodes and digital connections with a deep dark aesthetic and glowing blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5QlmHq_CwZwdlMY5D49rj0dSXawsBFBWix192XV8WptFyu8bc4hMQRvVZMDV5Dis3eslCUlGwJQA6sAQZG7OaZViP0gNXFen-thOyf3qFqW2rIA9LPBsCPKEQz_7F8BHsiEyyfZn79x0k3FUOcMTPlJdEPlJJkDA06A_KIpmzt16qzTeLfjKYckD2iIZcrzxGMzTNQNKvUJLWQvm96Y8HzKY4MhR4HYN93Lc_YaleodQz0YO-Y6Pj9-PaEKfR3JRTEjvJq8dbfE"/>
-<div class="relative z-10 flex flex-col h-full justify-between">
-<span class="text-[10px] font-label uppercase tracking-widest text-indigo-200">Asset Visualization</span>
-<div class="space-y-1">
-<p class="text-xl font-headline font-bold">ALPHA_STRAT</p>
-<p class="text-xs text-on-surface-variant">Ready for deployment</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Modal Overlay Backdrop -->
-<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4">
-<!-- HIGH-TRUST DIALOG BOX -->
-<div class="w-full max-w-2xl glass-panel border border-outline-variant/20 rounded-sm shadow-2xl shadow-black relative overflow-hidden hydraulic-transition">
-<!-- Animated Scanner Effect (Decorative) -->
-<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent blur-sm"></div>
-<!-- Header -->
-<div class="p-8 border-b border-outline-variant/10">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-<span class="text-[10px] font-label font-medium tracking-[0.3em] text-primary uppercase">Authorization Required</span>
-</div>
-<h2 class="text-2xl md:text-3xl font-headline font-extrabold tracking-tight text-on-surface leading-tight">
-            CONFIRM PROPOSED ACTION: <span class="text-primary-dim">DEPLOY STRATEGY ASSET</span>
-</h2>
-</div>
-<!-- Content Body -->
-<div class="p-8 space-y-8">
-<!-- Summary Section -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="space-y-4">
-<h4 class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Action Summary</h4>
-<div class="space-y-2">
-<div class="flex justify-between items-center text-sm font-body">
-<span class="text-on-secondary-fixed-variant">Target Node</span>
-<span class="text-on-surface font-semibold tracking-wider uppercase">Alpha-09-V</span>
-</div>
-<div class="flex justify-between items-center text-sm font-body">
-<span class="text-on-secondary-fixed-variant">System Priority</span>
-<span class="text-primary-dim font-semibold uppercase">Urgent</span>
-</div>
-<div class="flex justify-between items-center text-sm font-body">
-<span class="text-on-secondary-fixed-variant">Data Volume</span>
-<span class="text-on-surface font-semibold">14.2 TB</span>
-</div>
-</div>
-</div>
-<div class="space-y-4">
-<h4 class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Impact Forecast</h4>
-<div class="bg-surface-container-low p-4 rounded-sm">
-<p class="text-sm font-body text-on-surface leading-relaxed">
-                  Deployment will optimize network throughput by <span class="text-indigo-300 font-bold">24%</span> across all regional sub-sectors. Estimated completion: <span class="text-on-surface font-medium italic">140 seconds</span>.
+        </div>
+      </header>
+      <!-- Background Content (Simulated Dashboard Workspace) -->
+      <section class="pt-24 px-8 pb-32">
+        <div class="max-w-6xl mx-auto space-y-12">
+          <!-- Dashboard Header -->
+          <div class="flex justify-between items-end">
+            <div class="space-y-1">
+              <h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">
+                System Overview
+              </h1>
+              <p class="text-on-surface-variant font-body">
+                Node 0x4492: Operational Status Optimal
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-high px-4 py-2 rounded-sm text-xs font-label text-indigo-300/80 tracking-widest uppercase"
+            >
+              Active Module: Strategy_Asset_Beta
+            </div>
+          </div>
+          <!-- Bento Grid Layout -->
+          <div class="grid grid-cols-12 gap-6 h-[600px]">
+            <!-- Main Chart Area -->
+            <div
+              class="col-span-8 bg-surface-container rounded-sm p-6 flex flex-col justify-between border-l border-primary/20"
+            >
+              <div class="flex justify-between">
+                <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant"
+                  >Neural Flow Statistics</span
+                >
+                <span class="material-symbols-outlined text-primary-dim">trending_up</span>
+              </div>
+              <div
+                class="h-64 bg-gradient-to-t from-primary/5 to-transparent flex items-end gap-1 px-2"
+              >
+                <div class="w-full bg-primary/20 h-[30%]"></div>
+                <div class="w-full bg-primary/20 h-[45%]"></div>
+                <div class="w-full bg-primary/20 h-[38%]"></div>
+                <div class="w-full bg-primary/40 h-[60%] border-t border-primary"></div>
+                <div class="w-full bg-primary/20 h-[55%]"></div>
+                <div class="w-full bg-primary/20 h-[70%]"></div>
+                <div class="w-full bg-primary/20 h-[85%]"></div>
+              </div>
+              <div class="grid grid-cols-3 gap-8 border-t border-outline-variant/15 pt-6">
+                <div>
+                  <p class="text-[10px] text-on-surface-variant uppercase tracking-widest">
+                    Efficiency
+                  </p>
+                  <p class="text-2xl font-headline font-bold text-on-surface">98.4%</p>
+                </div>
+                <div>
+                  <p class="text-[10px] text-on-surface-variant uppercase tracking-widest">
+                    Active Threads
+                  </p>
+                  <p class="text-2xl font-headline font-bold text-on-surface">1,402</p>
+                </div>
+                <div>
+                  <p class="text-[10px] text-on-surface-variant uppercase tracking-widest">
+                    Latency
+                  </p>
+                  <p class="text-2xl font-headline font-bold text-on-surface">4ms</p>
+                </div>
+              </div>
+            </div>
+            <!-- Side Stats -->
+            <div class="col-span-4 space-y-6">
+              <div
+                class="bg-surface-container-high p-6 rounded-sm h-1/2 flex flex-col justify-center gap-4"
+              >
+                <span
+                  class="material-symbols-outlined text-primary text-4xl"
+                  style="font-variation-settings: 'FILL' 1"
+                  >security</span
+                >
+                <h3 class="text-lg font-headline font-semibold text-on-surface">
+                  Security Protocol L7
+                </h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  End-to-end encryption active. All neural nodes are synchronized across the global
+                  network.
                 </p>
-</div>
-</div>
-</div>
-<!-- Next Safe Move Box -->
-<div class="bg-surface-container-highest border-l-2 border-primary-dim p-5">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary-dim mt-1">navigation</span>
-<div class="space-y-1">
-<p class="text-xs font-label text-primary-dim uppercase tracking-widest">Next Safe Move</p>
-<p class="text-sm text-on-surface leading-relaxed font-body">
-                  Proceed with deployment while maintaining a secondary neural shunt. This ensures a 0.5s rollback window should synchronization drift exceed 40ms.
-                </p>
-</div>
-</div>
-</div>
-<!-- Critical Warning -->
-<div class="flex items-center gap-3 py-2 px-1">
-<span class="material-symbols-outlined text-error-dim">warning</span>
-<p class="text-xs font-label text-on-surface-variant tracking-wide">
-              No publication without human approval. TORQ JARVIS policy restricts autonomous external dissemination.
-            </p>
-</div>
-</div>
-<!-- Footer Actions -->
-<div class="p-8 pt-0 flex flex-col md:flex-row gap-4 items-center justify-end">
-<button class="w-full md:w-auto px-8 py-3 text-sm font-headline font-semibold text-on-tertiary-fixed-variant hover:text-on-surface transition-colors">
-            Review Details
-          </button>
-<button class="w-full md:w-auto px-10 py-3 rounded-sm bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm tracking-wide shadow-lg shadow-primary/10 hover:brightness-110 active:scale-95 transition-all">
-            Confirm &amp; Deploy
-          </button>
-</div>
-</div>
-</div>
-<!-- Bottom Command Composer (Shared Component) -->
-<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-2/3 rounded-sm bg-neutral-900/60 backdrop-blur-md flex items-center justify-center gap-6 p-4 max-w-4xl shadow-2xl shadow-black/80 z-20 outline-variant/15">
-<button class="flex flex-col items-center gap-1 group">
-<div class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm">
-<span class="material-symbols-outlined">mic</span>
-</div>
-<span class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100">Voice Command</span>
-</button>
-<button class="flex flex-col items-center gap-1 group">
-<div class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm">
-<span class="material-symbols-outlined">upload_file</span>
-</div>
-<span class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100">Upload Data</span>
-</button>
-<button class="flex flex-col items-center gap-1 group">
-<div class="p-2 bg-indigo-500/20 text-indigo-100 transition-all rounded-sm">
-<span class="material-symbols-outlined">rocket_launch</span>
-</div>
-<span class="font-inter text-[10px] uppercase tracking-widest text-indigo-100">Deploy Module</span>
-</button>
-<button class="flex flex-col items-center gap-1 group">
-<div class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm">
-<span class="material-symbols-outlined">cancel</span>
-</div>
-<span class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100">Emergency Stop</span>
-</button>
-</nav>
-</main>
-</body></html>
+              </div>
+              <div
+                class="bg-surface-container-highest p-6 rounded-sm h-1/2 overflow-hidden relative group"
+              >
+                <img
+                  class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                  data-alt="Abstract visualization of blockchain nodes and digital connections with a deep dark aesthetic and glowing blue accents"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5QlmHq_CwZwdlMY5D49rj0dSXawsBFBWix192XV8WptFyu8bc4hMQRvVZMDV5Dis3eslCUlGwJQA6sAQZG7OaZViP0gNXFen-thOyf3qFqW2rIA9LPBsCPKEQz_7F8BHsiEyyfZn79x0k3FUOcMTPlJdEPlJJkDA06A_KIpmzt16qzTeLfjKYckD2iIZcrzxGMzTNQNKvUJLWQvm96Y8HzKY4MhR4HYN93Lc_YaleodQz0YO-Y6Pj9-PaEKfR3JRTEjvJq8dbfE"
+                />
+                <div class="relative z-10 flex flex-col h-full justify-between">
+                  <span class="text-[10px] font-label uppercase tracking-widest text-indigo-200"
+                    >Asset Visualization</span
+                  >
+                  <div class="space-y-1">
+                    <p class="text-xl font-headline font-bold">ALPHA_STRAT</p>
+                    <p class="text-xs text-on-surface-variant">Ready for deployment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal Overlay Backdrop -->
+      <div
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4"
+      >
+        <!-- HIGH-TRUST DIALOG BOX -->
+        <div
+          class="w-full max-w-2xl glass-panel border border-outline-variant/20 rounded-sm shadow-2xl shadow-black relative overflow-hidden hydraulic-transition"
+        >
+          <!-- Animated Scanner Effect (Decorative) -->
+          <div
+            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent blur-sm"
+          ></div>
+          <!-- Header -->
+          <div class="p-8 border-b border-outline-variant/10">
+            <div class="flex items-center gap-3 mb-2">
+              <span
+                class="material-symbols-outlined text-primary text-xl"
+                style="font-variation-settings: 'FILL' 1"
+                >verified_user</span
+              >
+              <span
+                class="text-[10px] font-label font-medium tracking-[0.3em] text-primary uppercase"
+                >Authorization Required</span
+              >
+            </div>
+            <h2
+              class="text-2xl md:text-3xl font-headline font-extrabold tracking-tight text-on-surface leading-tight"
+            >
+              CONFIRM PROPOSED ACTION: <span class="text-primary-dim">DEPLOY STRATEGY ASSET</span>
+            </h2>
+          </div>
+          <!-- Content Body -->
+          <div class="p-8 space-y-8">
+            <!-- Summary Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <h4
+                  class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant"
+                >
+                  Action Summary
+                </h4>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center text-sm font-body">
+                    <span class="text-on-secondary-fixed-variant">Target Node</span>
+                    <span class="text-on-surface font-semibold tracking-wider uppercase"
+                      >Alpha-09-V</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center text-sm font-body">
+                    <span class="text-on-secondary-fixed-variant">System Priority</span>
+                    <span class="text-primary-dim font-semibold uppercase">Urgent</span>
+                  </div>
+                  <div class="flex justify-between items-center text-sm font-body">
+                    <span class="text-on-secondary-fixed-variant">Data Volume</span>
+                    <span class="text-on-surface font-semibold">14.2 TB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h4
+                  class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant"
+                >
+                  Impact Forecast
+                </h4>
+                <div class="bg-surface-container-low p-4 rounded-sm">
+                  <p class="text-sm font-body text-on-surface leading-relaxed">
+                    Deployment will optimize network throughput by
+                    <span class="text-indigo-300 font-bold">24%</span> across all regional
+                    sub-sectors. Estimated completion:
+                    <span class="text-on-surface font-medium italic">140 seconds</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Next Safe Move Box -->
+            <div class="bg-surface-container-highest border-l-2 border-primary-dim p-5">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary-dim mt-1">navigation</span>
+                <div class="space-y-1">
+                  <p class="text-xs font-label text-primary-dim uppercase tracking-widest">
+                    Next Safe Move
+                  </p>
+                  <p class="text-sm text-on-surface leading-relaxed font-body">
+                    Proceed with deployment while maintaining a secondary neural shunt. This ensures
+                    a 0.5s rollback window should synchronization drift exceed 40ms.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Critical Warning -->
+            <div class="flex items-center gap-3 py-2 px-1">
+              <span class="material-symbols-outlined text-error-dim">warning</span>
+              <p class="text-xs font-label text-on-surface-variant tracking-wide">
+                No publication without human approval. TORQ JARVIS policy restricts autonomous
+                external dissemination.
+              </p>
+            </div>
+          </div>
+          <!-- Footer Actions -->
+          <div class="p-8 pt-0 flex flex-col md:flex-row gap-4 items-center justify-end">
+            <button
+              class="w-full md:w-auto px-8 py-3 text-sm font-headline font-semibold text-on-tertiary-fixed-variant hover:text-on-surface transition-colors"
+            >
+              Review Details
+            </button>
+            <button
+              class="w-full md:w-auto px-10 py-3 rounded-sm bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-sm tracking-wide shadow-lg shadow-primary/10 hover:brightness-110 active:scale-95 transition-all"
+            >
+              Confirm &amp; Deploy
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Command Composer (Shared Component) -->
+      <nav
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 w-2/3 rounded-sm bg-neutral-900/60 backdrop-blur-md flex items-center justify-center gap-6 p-4 max-w-4xl shadow-2xl shadow-black/80 z-20 outline-variant/15"
+      >
+        <button class="flex flex-col items-center gap-1 group">
+          <div
+            class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm"
+          >
+            <span class="material-symbols-outlined">mic</span>
+          </div>
+          <span
+            class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100"
+            >Voice Command</span
+          >
+        </button>
+        <button class="flex flex-col items-center gap-1 group">
+          <div
+            class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm"
+          >
+            <span class="material-symbols-outlined">upload_file</span>
+          </div>
+          <span
+            class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100"
+            >Upload Data</span
+          >
+        </button>
+        <button class="flex flex-col items-center gap-1 group">
+          <div class="p-2 bg-indigo-500/20 text-indigo-100 transition-all rounded-sm">
+            <span class="material-symbols-outlined">rocket_launch</span>
+          </div>
+          <span class="font-inter text-[10px] uppercase tracking-widest text-indigo-100"
+            >Deploy Module</span
+          >
+        </button>
+        <button class="flex flex-col items-center gap-1 group">
+          <div
+            class="p-2 text-neutral-400 group-hover:bg-neutral-800/80 group-hover:text-indigo-100 transition-all rounded-sm"
+          >
+            <span class="material-symbols-outlined">cancel</span>
+          </div>
+          <span
+            class="font-inter text-[10px] uppercase tracking-widest text-neutral-400 group-hover:text-indigo-100"
+            >Emergency Stop</span
+          >
+        </button>
+      </nav>
+    </main>
+  </body>
+</html>

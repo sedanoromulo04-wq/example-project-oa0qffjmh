@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+const { Client } = require('pg')
 
 const expectedTables = [
   'workspaces',
@@ -36,47 +36,50 @@ const expectedTables = [
   'agent_context_packs',
   'jarvis_actions',
   'tool_events',
-];
+]
 
 async function main() {
-  const connectionString = process.env.SUPABASE_DB_URL;
+  const connectionString = process.env.SUPABASE_DB_URL
   if (!connectionString) {
-    throw new Error('SUPABASE_DB_URL is not set');
+    throw new Error('SUPABASE_DB_URL is not set')
   }
 
   const client = new Client({
     connectionString,
     ssl: { rejectUnauthorized: false },
-  });
+  })
 
-  await client.connect();
+  await client.connect()
   try {
     const extRes = await client.query(`
       select extname
       from pg_extension
       where extname in ('vector', 'pgcrypto')
       order by extname
-    `);
+    `)
 
-    const tableRes = await client.query(`
+    const tableRes = await client.query(
+      `
       select table_name
       from information_schema.tables
       where table_schema = 'public'
       and table_name = any($1::text[])
       order by table_name
-    `, [expectedTables]);
+    `,
+      [expectedTables],
+    )
 
-    console.log('Extensions:', extRes.rows.map((r) => r.extname).join(', '));
-    console.log('Tables found:', tableRes.rows.length);
+    console.log('Extensions:', extRes.rows.map((r) => r.extname).join(', '))
+    console.log('Tables found:', tableRes.rows.length)
     for (const row of tableRes.rows) {
-      console.log(row.table_name);
+      console.log(row.table_name)
     }
   } finally {
-    await client.end();
+    await client.end()
   }
 }
 
 main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+  console.error(error.message)
+  process.exit(1)
+})

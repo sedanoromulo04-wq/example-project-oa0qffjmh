@@ -1,6 +1,6 @@
 ---
 type: methodology
-source: "Torq Internal"
+source: 'Torq Internal'
 date: 2026-04-07
 tags: [torq-os, client-operations, kickoff, orchestration, supabase]
 relevance: high
@@ -61,12 +61,15 @@ The default sequence for a client operation is:
 ### Phase 0. Executive Intake
 
 Owner:
+
 - `torq-c-level-strategy`
 
 Required record:
+
 - `client-operation-brief`
 
 Decision:
+
 - where the client truly is now
 - what must happen next
 - which module owns the next move
@@ -74,14 +77,17 @@ Decision:
 ### Phase 1. Commercial Qualification
 
 Owner:
+
 - `torq-commercial-diagnostic`
 
 Required inputs:
+
 - client context
 - call notes
 - founder constraints
 
 Output:
+
 - fit verdict
 - scope recommendation
 - next best stage
@@ -89,14 +95,17 @@ Output:
 ### Phase 2. Research and Market Truth
 
 Owner:
+
 - `torq-market-intelligence`
 
 Required inputs:
+
 - approved intake
 - category context
 - market questions
 
 Output:
+
 - `research-dossier`
 - facts, inferences, hypotheses
 - recommended strategic handoff
@@ -104,29 +113,35 @@ Output:
 ### Phase 3. Behavioral Intelligence
 
 Owner:
+
 - `behavioral-persona-architect`
 
 Required inputs:
+
 - business directive
 - research dataset
 - governance metadata
 
 Output:
+
 - approved `behavioral_persona_dossier`
 
 ### Phase 4. Strategic Foundation
 
 Owners:
+
 - `torq-brand-foundation`
 - `torq-c-level-strategy`
 - `torq-storytelling` when narrative framing is required
 
 Required inputs:
+
 - approved research
 - approved behavioral dossier
 - fit-confirmed client context
 
 Output:
+
 - `brand-bundle`
 - narrative direction
 - verbal and visual north star
@@ -134,15 +149,18 @@ Output:
 ### Phase 5. Conversion Assets
 
 Owners:
+
 - `torq-offer-engineering`
 - `torq-storytelling`
 - `torq-editorial-copy`
 
 Required inputs:
+
 - approved strategic foundation
 - approved behavioral dossier
 
 Output:
+
 - offer logic
 - narrative container
 - copy assets
@@ -150,12 +168,15 @@ Output:
 ### Phase 6. Editorial Derivation
 
 Owner:
+
 - `torq-content-planning`
 
 Required inputs:
+
 - approved offer, story, or copy assets
 
 Output:
+
 - `content-plan`
 - channel roles
 - briefs for production
@@ -163,14 +184,17 @@ Output:
 ### Phase 7. Governance and Queue
 
 Owners:
+
 - `torq-approval-governance`
 - `torq-distribution-ops`
 
 Required inputs:
+
 - approved public asset
 - human approver metadata
 
 Output:
+
 - `approval-job`
 - `distribution-job`
 - measured learning loop
@@ -180,6 +204,7 @@ Output:
 ### Vision Chief
 
 Owns:
+
 - macro priority
 - phase correction
 - conflict arbitration
@@ -187,6 +212,7 @@ Owns:
 ### COO Orchestrator
 
 Owns:
+
 - sequence
 - ownership
 - state progression
@@ -194,6 +220,7 @@ Owns:
 ### CMO Architect
 
 Owns:
+
 - positioning relevance
 - market interpretation
 - demand logic
@@ -201,6 +228,7 @@ Owns:
 ### CIO Engineer
 
 Owns:
+
 - data discipline
 - record integrity
 - system interoperability
@@ -208,6 +236,7 @@ Owns:
 ### CAIO Architect
 
 Owns:
+
 - automation boundaries
 - risk controls
 - AI usage posture

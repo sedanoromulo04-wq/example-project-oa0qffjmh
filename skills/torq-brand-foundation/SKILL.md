@@ -50,6 +50,7 @@ Construir a base estratégica e visual de especialistas que já têm conheciment
 Entregar um pacote estruturado em português com este formato:
 
 ### 1. Diagnóstico Executivo
+
 - estágio do especialista
 - fit com o Grupo Torq
 - persona do Torq
@@ -57,11 +58,13 @@ Entregar um pacote estruturado em português com este formato:
 - gaps críticos
 
 ### 2. Fatos, Inferências e Hipóteses
+
 - `Fatos confirmados`
 - `Inferências estratégicas`
 - `Hipóteses a validar`
 
 ### 3. Mapa de Mercado
+
 - categoria
 - subnicho
 - tendências
@@ -69,12 +72,14 @@ Entregar um pacote estruturado em português com este formato:
 - riscos
 
 ### 4. Mapa Competitivo
+
 - concorrentes diretos
 - concorrentes indiretos
 - padrões de comunicação
 - lacunas exploráveis
 
 ### 5. Posicionamento
+
 - território de marca
 - promessa principal
 - mecanismo ou método
@@ -83,6 +88,7 @@ Entregar um pacote estruturado em português com este formato:
 - mensagem central
 
 ### 6. Sistema Verbal
+
 - voz
 - tom
 - léxico permitido
@@ -94,6 +100,7 @@ Entregar um pacote estruturado em português com este formato:
 - manifesto curto
 
 ### 7. Sistema Visual
+
 - direção criativa
 - referências conceituais
 - paleta
@@ -103,6 +110,7 @@ Entregar um pacote estruturado em português com este formato:
 - prompts ou instruções para geração visual via Gemini
 
 ### 8. Sistema Inicial de Conteúdo
+
 - pilares
 - séries
 - formatos
@@ -110,18 +118,21 @@ Entregar um pacote estruturado em português com este formato:
 - cadência inicial
 
 ### 9. Monetização e Conversão
+
 - oportunidades de oferta
 - pré-requisitos de venda
 - cenários de ROI com premissas
 - riscos de execução
 
 ### 10. Roadmap e Próximos Passos
+
 - 30 dias
 - 60 dias
 - 90 dias
 - handoff para oferta, VSL, funil e tráfego
 
 ### 11. Brand Bible Final
+
 - documento diagramado com padrão premium
 - linguagem editorial sóbria
 - coerência entre texto e imagem
@@ -173,16 +184,19 @@ Entregar um pacote estruturado em português com este formato:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Temos um especialista offline em nutrição esportiva com clínica consolidada, bons depoimentos, método validado, quase nenhuma presença digital e queremos estruturar posicionamento, identidade e um brand bible completo para preparar a entrada dele no digital."
 
 Output: "A skill classifica o cliente como Persona 2, valida o fit com o Grupo Torq, mapeia mercado e concorrentes, define posicionamento, narrativa, voz, direção visual, pilares de conteúdo e entrega um Brand Bible premium com próximos passos para oferta, VSL e funil."
 
 ### Exemplo 2
+
 Input: "Quero só uma logo bonita e uns posts para Instagram de um mentor de negócios que ainda nem vendeu nada."
 
 Output: "A skill não segue para branding. Ela devolve diagnóstico de não-fit, explica que o cliente ainda não tem prova real nem base suficiente e lista os pré-requisitos necessários antes da Fase 1 do Torq."
 
 ### Exemplo 3
+
 Input: "Temos um professor de esporte com autoridade física, cases de alunos, produto inicial validado e precisamos criar um livro sagrado da marca com pesquisa de mercado, concorrentes, identidade verbal, sistema visual via Gemini e plano de conteúdo."
 
 Output: "A skill executa o fluxo completo da Fase 1, usa pesquisa profunda e integrações Gemini para explorar a direção visual, organiza tudo em um Brand Bible premium e fecha com roadmap 30/60/90 dias e handoff para a próxima etapa comercial."

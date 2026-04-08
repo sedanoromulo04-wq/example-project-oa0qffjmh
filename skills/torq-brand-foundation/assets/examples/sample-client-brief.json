@@ -32,16 +32,8 @@
     "Evitar estética infantilizada de esporte",
     "Manter autoridade técnica e sobriedade"
   ],
-  "values": [
-    "Disciplina",
-    "Família",
-    "Técnica",
-    "Respeito"
-  ],
-  "channels": [
-    "Instagram",
-    "WhatsApp"
-  ],
+  "values": ["Disciplina", "Família", "Técnica", "Respeito"],
+  "channels": ["Instagram", "WhatsApp"],
   "competitors": [
     "Treinadores que viralizam no Instagram sem sistema",
     "Cursos genéricos de beach sports"

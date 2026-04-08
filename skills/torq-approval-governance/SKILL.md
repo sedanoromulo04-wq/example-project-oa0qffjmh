@@ -22,6 +22,7 @@ validacao humana explicita, prova minima e aderencia ao tom Torq.
 - Nao pressupor execucao local na maquina do usuario.
 
 ## Workflow
+
 1. Ler o ativo alvo e o payload vindo do Supabase, da API ou do front-end.
 2. Confirmar o tipo do ativo, o dono do ativo e o estado operacional atual.
 3. Validar claims, prova disponivel, aderencia ao tom, clareza do CTA e risco reputacional.
@@ -37,12 +38,14 @@ validacao humana explicita, prova minima e aderencia ao tom Torq.
 Entregar em portugues com estas secoes:
 
 ### 1. Resumo do Ativo
+
 - asset id
 - asset type
 - owner
 - current state
 
 ### 2. Checklist de Governanca
+
 - claims
 - prova
 - tom
@@ -50,16 +53,19 @@ Entregar em portugues com estas secoes:
 - risco reputacional
 
 ### 3. Facts, Inferences, Hypotheses
+
 - `facts`
 - `inferences`
 - `hypotheses`
 
 ### 4. Decisao
+
 - `approved`
 - `changes_required`
 - `blocked`
 
 ### 5. Proxima Acao
+
 - owner
 - ajustes necessarios
 - estado seguinte permitido
@@ -81,11 +87,13 @@ Entregar em portugues com estas secoes:
 ## Examples
 
 ### Exemplo 1
+
 Input: "Revisa este carrossel de LinkedIn que ja passou por conteudo e copy e me diz se pode entrar na fila."
 
 Output: "A skill deve avaliar claims, prova, tom e CTA, emitir decisao e permitir `queued` apenas se houver aprovacao humana explicita."
 
 ### Exemplo 2
+
 Input: "Pode publicar isso direto, ainda esta em draft mas eu confio."
 
 Output: "A skill deve bloquear a solicitacao, apontar que o estado e invalido para publicacao e exigir estrategist review e founder review."

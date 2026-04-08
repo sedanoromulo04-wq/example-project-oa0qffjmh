@@ -115,6 +115,7 @@ Claude Code não está instalado. Acesse claude.ai/code para instalar.
 
 **"Permission denied" ao criar ~/.claude/skills/"**
 Rodar com permissão correta:
+
 ```bash
 mkdir -p ~/.claude/skills/criar-skill/references
 chmod 755 ~/.claude/skills/criar-skill
@@ -122,6 +123,7 @@ chmod 755 ~/.claude/skills/criar-skill
 
 **"curl: command not found"**
 Usar wget como alternativa:
+
 ```bash
 wget -q https://raw.githubusercontent.com/okjpg/skill-creator/main/skills/criar-skill/SKILL.md -O ~/.claude/skills/criar-skill/SKILL.md
 ```
